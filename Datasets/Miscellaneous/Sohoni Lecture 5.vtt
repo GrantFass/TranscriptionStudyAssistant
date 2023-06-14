@@ -1,0 +1,1033 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.170
+<v Sohoni, Sohum>Good afternoon class. How's it going?</v>
+
+00:00:10.820 --> 00:00:11.290
+<v Sohoni, Sohum>Hello.</v>
+
+00:00:28.140 --> 00:00:31.300
+<v Sohoni, Sohum>People are tired from being in week nine supposed.</v>
+
+00:00:36.470 --> 00:00:40.000
+<v Sohoni, Sohum>Alright, so let's see, so I.</v>
+
+00:00:53.000 --> 00:00:56.060
+<v Sohoni, Sohum>I have put in a an activity there.</v>
+
+00:00:56.820 --> 00:01:27.460
+<v Sohoni, Sohum>Which has an individual submission, but I'd like for you to try to do it as a group, and in fact we will when we meet on Friday for the small group discussions, we will discuss that activity as small groups. OK, it's about bit manipulation. It's it's simple program that I want you to actually write in Mars, which it takes in in number from a user and then checks to see if like one particular bit in that number is a one or zero. OK, so.</v>
+
+00:01:27.510 --> 00:01:57.100
+<v Sohoni, Sohum>It's pretty straightforward activity, but I'm hoping it will again illustrate the need for a bit masking and things like that. OK, so we can we can discuss that activity on Friday and it's going to be do Sunday night. So anytime before or after the Friday discussion, you can go ahead and submit it. So I want you to work on it as a group, but it's an individual submission on canvas, so I want everyone to have, say, a copy of the program handy.</v>
+
+00:01:57.530 --> 00:02:00.010
+<v Sohoni, Sohum>So you can submit it. Any questions about that?</v>
+
+00:02:06.010 --> 00:02:25.620
+<v Sohoni, Sohum>OK, so let's get back to pipelining. And now with two different sections at different different pace, I'm kind of forgetting where we were with pipelining, so I'm going to select a slide here, and you tell me.</v>
+
+00:02:25.670 --> 00:02:25.860
+<v Sohoni, Sohum>See.</v>
+
+00:02:26.970 --> 00:02:31.100
+<v Sohoni, Sohum>How comfortable are you with this slide and weather?</v>
+
+00:02:32.200 --> 00:02:33.240
+<v Sohoni, Sohum>We need to talk.</v>
+
+00:02:34.070 --> 00:02:35.280
+<v Sohoni, Sohum>What happened to the slide?</v>
+
+00:02:36.210 --> 00:02:44.980
+<v Sohoni, Sohum>Whether we need to talk about this in detail. OK, so here's here's the slide. I think in this section I've already talked about this quite a bit.</v>
+
+00:02:45.990 --> 00:02:49.910
+<v Sohoni, Sohum>So let me know you need more discussion on this. You have questions.</v>
+
+00:02:51.420 --> 00:02:52.850
+<v Sohoni, Sohum>Should I go to the next slide?</v>
+
+00:03:07.900 --> 00:03:10.690
+<v Furst, Elias>I think we're OK with this.</v>
+
+00:03:13.030 --> 00:03:13.590
+<v Sohoni, Sohum>Right?</v>
+
+00:03:14.250 --> 00:03:18.610
+<v Sohoni, Sohum>So can someone summarize why we have bubbles? What's going on here?</v>
+
+00:03:23.160 --> 00:03:24.530
+<v Furst, Elias>So dumb.</v>
+
+00:03:25.380 --> 00:03:27.240
+<v Furst, Elias>This the second instruction.</v>
+
+00:03:28.060 --> 00:03:28.840
+<v Furst, Elias>Needs.</v>
+
+00:03:30.290 --> 00:03:32.830
+<v Furst, Elias>The result from the first instruction.</v>
+
+00:03:33.170 --> 00:03:33.600
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:03:33.850 --> 00:03:47.300
+<v Furst, Elias>So it needs to be delayed by a two steps so that the first instruction can finish and right back the value in time for the for the for the second instruction to decode it.</v>
+
+00:03:47.730 --> 00:03:58.790
+<v Sohoni, Sohum>OK, very good. I'll ask a few more questions just to make sure. Everyone's on on this page and someone other than Elias can can answer the questions. So this.</v>
+
+00:03:59.580 --> 00:04:04.340
+<v Sohoni, Sohum>Second question is why is it in clock cycle 5?</v>
+
+00:04:05.380 --> 00:04:08.740
+<v Sohoni, Sohum>Do we get the correct value of S 0?</v>
+
+00:04:10.640 --> 00:04:14.640
+<v Schilling, Atreyu>That's the cycle that the first instruction rights.</v>
+
+00:04:15.370 --> 00:04:18.570
+<v Schilling, Atreyu>The uh, to register as 02.</v>
+
+00:04:19.080 --> 00:04:30.850
+<v Sohoni, Sohum>OK, very good, but if we look at that clock cycle, that first instruction is writing and the second instruction seems to be reading at the same time. How come that's not a conflict?</v>
+
+00:04:33.360 --> 00:04:35.250
+<v Schilling, Atreyu>They're using different sides of the.</v>
+
+00:04:36.640 --> 00:04:37.120
+<v Schilling, Atreyu>Uhm?</v>
+
+00:04:38.410 --> 00:04:40.100
+<v Schilling, Atreyu>Register that camera what it's called.</v>
+
+00:04:43.980 --> 00:04:44.390
+<v Schilling, Atreyu>Different.</v>
+
+00:04:41.140 --> 00:04:45.210
+<v Sohoni, Sohum>Not different sides of the register. It's different sides of the clock cycle.</v>
+
+00:04:45.510 --> 00:04:46.040
+<v Schilling, Atreyu>Cloud</v>
+
+00:04:46.870 --> 00:04:50.360
+<v Sohoni, Sohum>Right, so so yeah, that's an excellent answer so.</v>
+
+00:04:51.290 --> 00:05:21.550
+<v Sohoni, Sohum>The first instruction it look at the shading on this right? So the first instruction is going to write in the first half of the clock cycle, and basically it happens on the rising edge of the clock. OK, so the writing to the register is going to happen on the rising edge of the clock, and so and the reading is going to happen on the falling edge of the clock. So the clock is a square wave, right? It goes up comes down, so that's why we can guarantee that the right happens before the read, and that avoids the problem of having to delay it even one more.</v>
+
+00:05:22.170 --> 00:05:39.060
+<v Sohoni, Sohum>Cycle 'cause if that the opposite was true, right? If we were trying to read before we were writing, then we would have to push this out by even one more clock, because they're right wouldn't have happened. And so that's little bit of a genius way. I think of fixing that particular issue.</v>
+
+00:05:40.550 --> 00:05:44.620
+<v Sohoni, Sohum>Especially given that it's it's not only a structural hazard.</v>
+
+00:05:45.460 --> 00:06:16.190
+<v Sohoni, Sohum>I mean, there's not only a data hazard, but also a structural hazard that we're trying to resolve, because this structure here this physical structure, the register file is being accessed by different instructions in the same clock cycle. We define pipelining as different parts of the hardware operating on different parts of different instructions at the same time, right? And this violates that because one instruction is doing the right back while the other is getting a decode stage and they both access the same physical.</v>
+
+00:06:16.410 --> 00:06:39.210
+<v Sohoni, Sohum>Infrastructure or same hardware, and so we're solving two issues there. One we're resolving the issue of simultaneous access in terms of like software. You can think of there. I don't know if you've actually dealt with situations where two threads are trying to read or write to the same variable, so it's similar situation, but in hardware.</v>
+
+00:06:40.760 --> 00:06:59.810
+<v Sohoni, Sohum>So what is all going bad? But we're also resolving it in a smart way by doing the right first and then reading so we don't have an additional delay. OK, so third question, I'll ask before we move on is what's up with the bubbles? What? What does work from a hardware perspective? What is happening when we do a bubble?</v>
+
+00:07:01.110 --> 00:07:02.650
+<v Sohoni, Sohum>Or when we show a bubble here.</v>
+
+00:07:05.860 --> 00:07:07.660
+<v Geoffrey, Timothy>Is it a no op by chance?</v>
+
+00:07:08.120 --> 00:07:10.610
+<v Sohoni, Sohum>Excellent answer, yes. It's a no op.</v>
+
+00:07:11.170 --> 00:07:15.800
+<v Sohoni, Sohum>And does anyone remember what is the 32 bit pattern for a no OP?</v>
+
+00:07:19.200 --> 00:07:20.170
+<v Kreitzman, Colton>It's all zeros.</v>
+
+00:07:20.470 --> 00:07:47.070
+<v Sohoni, Sohum>It's all zeros. That's the only 32 bit pattern of an instruction that I would expect you to try to remember. OK, because it's all zeros and what happens is that hardware isn't shown here, but essentially in the decode stage there is a bunch of hardware that is doing these checks right? It's it's keeping track of the three instructions that are currently in the pipeline, right? In various stages of the remaining stages of the pipeline.</v>
+
+00:07:48.170 --> 00:08:08.190
+<v Sohoni, Sohum>With respect to what is their destination register, and then it's checking for the current instruction. That is indeed code does that match with anything that is in flight. So these instructions are called in flight when they're in the pipeline, right? Or we active instructions which are not yet written back, so it's checking against those.</v>
+
+00:08:09.250 --> 00:08:39.720
+<v Sohoni, Sohum>Register operands to make sure there isn't a conflict. If it finds a conflict, it ends up overwriting the read the instruction that's currently in the decode stage with all zeros, and so that's called squashing the instructions so it's cautiously instruction by just overwriting it with all zeros, and it makes a note to re fetch that instruction at the appropriate time. OK, that's how the hardware handles is tall or inserting a no op Ed. Inserting a bubble in the pipeline.</v>
+
+00:08:40.430 --> 00:08:41.700
+<v Sohoni, Sohum>Any questions on that?</v>
+
+00:08:50.720 --> 00:08:52.870
+<v Sohoni, Sohum>So did we look at the alternative?</v>
+
+00:08:54.100 --> 00:08:57.150
+<v Sohoni, Sohum>To stalling in this case senior remember that.</v>
+
+00:09:01.130 --> 00:09:02.470
+<v Furst, Elias>yeah, that's dumb.</v>
+
+00:09:03.100 --> 00:09:04.780
+<v Furst, Elias>That's forwarding, is it not?</v>
+
+00:09:04.460 --> 00:09:32.450
+<v Sohoni, Sohum>That is, forwarding that is correct, excellent. So the thing to note right is that T0 gets added to T1, right? Or the contents of T0 and T1 get added in this stage here, right? So clock cycle 123 in clock cycle three. We've done the addition, so at the end of clock cycle three we have the result, and so we might as well have a path where the output is forwarded directly to the input of the.</v>
+
+00:09:33.040 --> 00:09:33.630
+<v Sohoni, Sohum>Hum.</v>
+
+00:09:34.270 --> 00:09:55.550
+<v Sohoni, Sohum>Blu so that we can use it for the subsequent computation. Yeah, now I remember talking about this and someone was asking at the end of class like how will that work? 'cause it won't it constantly recompute the the input if we keep forwarding, and so the forwarding happens just once it's held and.</v>
+
+00:09:56.300 --> 00:10:04.730
+<v Sohoni, Sohum>The multiplexer allows that value to go through and then it blocks again any changes, so there's hardware to take care of that situation.</v>
+
+00:10:05.440 --> 00:10:06.090
+<v Sohoni, Sohum>Uhm?</v>
+
+00:10:07.080 --> 00:10:13.450
+<v Sohoni, Sohum>Any questions 'cause right now I believe we stopped here last time. So any questions on the forwarding?</v>
+
+00:10:23.080 --> 00:10:23.510
+<v Sohoni, Sohum>Let</v>
+
+00:10:23.570 --> 00:10:31.050
+<v Sohoni, Sohum>we switch the screens that I'm sharing and give you some more examples here on what's going on OK.</v>
+
+00:10:32.580 --> 00:10:35.720
+<v Sohoni, Sohum>Let me share the laptop screen so I want to write on it.</v>
+
+00:10:36.910 --> 00:10:38.980
+<v Sohoni, Sohum>K Let me duplicate this slide.</v>
+
+00:10:47.790 --> 00:11:08.660
+<v Sohoni, Sohum>OK, so we're seeing here if forwarding that happening. Want to make sure I duplicate it? Yeah, forwarding that's happening to the immediate next instruction. OK, what if we did? What if we had another instruction? Let's say it's an ad dollar T3?</v>
+
+00:11:08.710 --> 00:11:10.700
+<v Sohoni, Sohum>Be a man.</v>
+
+00:11:11.860 --> 00:11:14.390
+<v Sohoni, Sohum>Dollar yes zero.</v>
+
+00:11:15.630 --> 00:11:17.050
+<v Sohoni, Sohum>Donald E3</v>
+
+00:11:18.560 --> 00:11:25.460
+<v Sohoni, Sohum>right? If this was the next instruction here, and let me also just for clarity, mark the clock cycles instead of the times.</v>
+
+00:11:34.930 --> 00:11:37.860
+<v Sohoni, Sohum>Alright, what if this was the next instruction?</v>
+
+00:11:39.090 --> 00:11:44.870
+<v Sohoni, Sohum>Would it require any forwarding or would it get the the right value at the right time?</v>
+
+00:11:52.420 --> 00:11:57.150
+<v Schilling, Atreyu>I think it would still require the forwarding from the first instruction, because it would be.</v>
+
+00:11:57.880 --> 00:12:01.440
+<v Schilling, Atreyu>You would have to have two operations or two side operations in between them.</v>
+
+00:12:03.360 --> 00:12:04.490
+<v Schilling, Atreyu>For it to not have to.</v>
+
+00:12:05.240 --> 00:12:12.150
+<v Sohoni, Sohum>Yeah, so we're going. So let's map it out. It's going to get into its fetch stage here.</v>
+
+00:12:13.380 --> 00:12:16.580
+<v Sohoni, Sohum>Right, it's going to be in decode at this point.</v>
+
+00:12:17.330 --> 00:12:33.520
+<v Sohoni, Sohum>And if we just map it up when it's decoding and essentially reading its registers, this is the first instruction is still in clock cycle. Who or which is the MEM stage for it, right? So it's not yet written back. It's right back happens here.</v>
+
+00:12:34.340 --> 00:12:38.590
+<v Sohoni, Sohum>So when this instruction is in its execute stage.</v>
+
+00:12:40.010 --> 00:12:47.550
+<v Sohoni, Sohum>That's where the right back is happening, so we will get the old value if we read here. So it will require a.</v>
+
+00:12:49.170 --> 00:12:52.480
+<v Sohoni, Sohum>Forwarding path like this?</v>
+
+00:12:54.420 --> 00:13:00.520
+<v Sohoni, Sohum>For it to work correctly, 'cause that makes sense, is that OK with everyone?</v>
+
+00:13:07.590 --> 00:13:09.110
+<v Sohoni, Sohum>Any questions on this?</v>
+
+00:13:16.570 --> 00:13:26.140
+<v Sohoni, Sohum>So let me change colors here and point out another thing. If instead of T3 if this guy was also S 0.</v>
+
+00:13:27.480 --> 00:13:34.240
+<v Sohoni, Sohum>Right, so both its operands, R zero, that forwarding path would be shown like this to the bottom.</v>
+
+00:13:36.830 --> 00:13:49.270
+<v Sohoni, Sohum>I mean, yeah, I would draw it better than this, but essentially the source would still be the output of the X on there, but it would go to the bottom input of the ALU because that's the second operand.</v>
+
+00:13:50.060 --> 00:13:55.940
+<v Sohoni, Sohum>Is that making sense? Is that something you're comfortable with? The idea that this is the first?</v>
+
+00:13:56.630 --> 00:13:58.710
+<v Sohoni, Sohum>So this is read data one.</v>
+
+00:14:01.040 --> 00:14:02.720
+<v Sohoni, Sohum>And this is read data tool.</v>
+
+00:14:06.370 --> 00:14:08.220
+<v Sohoni, Sohum>Right, so if we go up here.</v>
+
+00:14:11.190 --> 00:14:21.460
+<v Sohoni, Sohum>So what we read from data one and data 2 on the register file maps to the top input of the ALU in the bottom input of failure, as we're done trying to show.</v>
+
+00:14:22.260 --> 00:14:23.280
+<v Sohoni, Sohum>Any questions on that?</v>
+
+00:14:33.550 --> 00:14:51.300
+<v Sohoni, Sohum>Right, so details on how the hardware checks for these dependencies, or the hazards and how the actual forwarding paths work and what is the fully pipelined data path and control look like.</v>
+
+00:14:52.060 --> 00:14:59.060
+<v Sohoni, Sohum>When you have all these paths included and these additional multiplexers to have these additional inputs potentially come in.</v>
+
+00:14:59.920 --> 00:15:02.170
+<v Sohoni, Sohum>All of that is out of the scope of this class.</v>
+
+00:15:02.900 --> 00:15:07.360
+<v Sohoni, Sohum>K So you don't have to worry about the detailed implementation of all of this.</v>
+
+00:15:08.130 --> 00:15:36.980
+<v Sohoni, Sohum>On the book gives some description and you you're welcome to read it if you get it, that's great. If you don't, don't worry too much about it conceptually. I want you to understand that when we do pipelining, we run into problems like this. OK, where we didn't have these issues when we were in the non pipeline machine, right? So structural hazards, data hazards as well as control hazards and all briefly talk about control hazards.</v>
+
+00:15:37.910 --> 00:15:51.680
+<v Sohoni, Sohum>Because I mean, it's just a matter of really understanding what happens when you have a branch, right? So when you have a branch instruction that branch let me duplicate this slide as well before I start messing it.</v>
+
+00:15:53.170 --> 00:15:54.510
+<v Sohoni, Sohum>Can't duplicate from here.</v>
+
+00:16:00.000 --> 00:16:02.150
+<v Sohoni, Sohum>So when we have a branch instruction.</v>
+
+00:16:03.910 --> 00:16:06.400
+<v Sohoni, Sohum>The branch isn't actually resolved.</v>
+
+00:16:07.860 --> 00:16:09.930
+<v Sohoni, Sohum>Until this stage here.</v>
+
+00:16:10.630 --> 00:16:11.050
+<v Sohoni, Sohum>Period.</v>
+
+00:16:12.640 --> 00:16:16.910
+<v Sohoni, Sohum>Branch resolution what do we mean by branch resolution? Seeing none 1/2?</v>
+
+00:16:18.390 --> 00:16:19.230
+<v Sohoni, Sohum>Yes or.</v>
+
+00:16:19.790 --> 00:16:20.570
+<v Sohoni, Sohum>Say what it is.</v>
+
+00:16:21.810 --> 00:16:22.320
+<v Bultman, Joshua>Like</v>
+
+00:16:23.400 --> 00:16:25.870
+<v Bultman, Joshua>when it's determined whether it should branch or not.</v>
+
+00:16:26.780 --> 00:16:30.070
+<v Sohoni, Sohum>Correct, that's one part of it. The other part would be.</v>
+
+00:16:37.240 --> 00:16:37.850
+<v Bultman, Joshua>I'm not sure.</v>
+
+00:16:38.700 --> 00:16:50.110
+<v Sohoni, Sohum>OK, well the resolution you've answered correctly, so whether it's taken or not is the resolution. Once it's resolved, whether it's taken or not, what else do we need in order to finish our branch?</v>
+
+00:16:56.110 --> 00:16:57.750
+<v Sohoni, Sohum>Let's say the branches to be taken.</v>
+
+00:17:00.410 --> 00:17:02.530
+<v Schilling, Atreyu>You need to feed that into the PC.</v>
+
+00:17:02.860 --> 00:17:33.970
+<v Sohoni, Sohum>Right, you need you need the branch target address right? We need to know where what the PC needs to be updated to, where we branching 2 right? So both of those pieces of information are obtained in the EECS stage, right? This is where we're comparing the two registers, so we know whether the branches to be taken or not. And this is where we're capturing or or calculating the branch address so we know where to branch to. Now. Once again, if we have a sequence of instructions.</v>
+
+00:17:34.220 --> 00:17:35.450
+<v Sohoni, Sohum>Right where?</v>
+
+00:17:36.740 --> 00:18:06.240
+<v Sohoni, Sohum>Things are in the pipeline. The branch instruction is here in the execute stage. There's likely not likely. There's guaranteed to be a subsequent instruction in decode stage and another instruction in its fetch stage, right? So by the time we're finished figuring out whether to branch or not, we already have two instructions in the pipeline, which were essentially fetched as PC four and PC Plus eight, right? So this will be the PC Plus four instruction.</v>
+
+00:18:06.420 --> 00:18:22.760
+<v Sohoni, Sohum>This will be the PC Plus eight instruction. Now we realized, for example, that we're branching two PC Plus twenty OK. So instead of these two, we really should have PC 20. Let me change colors here.</v>
+
+00:18:24.220 --> 00:18:32.060
+<v Sohoni, Sohum>Grill instructions we want in these stages or PC Plus 20 and PC Plus 24 is that making sense? These numbers.</v>
+
+00:18:41.660 --> 00:18:44.080
+<v Sohoni, Sohum>Presuming that target is.</v>
+
+00:18:46.160 --> 00:18:47.560
+<v Sohoni, Sohum>PC Plus 20.</v>
+
+00:18:49.280 --> 00:18:49.900
+<v Sohoni, Sohum>So.</v>
+
+00:18:50.750 --> 00:19:02.750
+<v Sohoni, Sohum>We the point isn't the exact numbers, but the point is we've got the wrong instructions in the pipeline. Would you agree with that? If we determine that we do need to branch, then the next two instructions.</v>
+
+00:19:03.400 --> 00:19:05.520
+<v Sohoni, Sohum>Or the incorrect instructions in the pipeline.</v>
+
+00:19:07.180 --> 00:19:07.890
+<v Sohoni, Sohum>OK with that.</v>
+
+00:19:08.900 --> 00:19:09.220
+<v Bultman, Joshua>Yep.</v>
+
+00:19:10.210 --> 00:19:16.560
+<v Sohoni, Sohum>Right, so then what do we do right? So there is there is again two options, one is.</v>
+
+00:19:18.640 --> 00:19:31.070
+<v Sohoni, Sohum>The moment we decode the branch and figure out that this is a branch instruction we could put in a stall to say, OK, well, it since it's a branch we really worker, we fetched in PC Plus four here isn't.</v>
+
+00:19:31.970 --> 00:20:02.190
+<v Sohoni, Sohum>Really, we don't know whether that instruction is what we need or not, so let's stall for a couple of cycles until we figure out whether to branch and where to branch, and then we can resume execution. So that's one potential way of solving that problem. Another is to let through PC four and PC Plus eight here, right? And when we determine that the branch is really should and that should have been taken, then again, we turn these into no OPS, right? We squash them by making them all zeros.</v>
+
+00:20:02.240 --> 00:20:09.730
+<v Sohoni, Sohum>And then we fetch from PC Plus 20 and then 24 and so on and so forth. So subsequent branch can be done and so.</v>
+
+00:20:10.700 --> 00:20:29.180
+<v Sohoni, Sohum>There is an advantage to doing it that way because there is a chance if we just say it's a 5050 chance that a branch is taken or not taken. If that's the case then we can at least be right 50% of the times and not waste two cycles in case the branches not taken.</v>
+
+00:20:30.140 --> 00:20:31.040
+<v Sohoni, Sohum>Does that make sense?</v>
+
+00:20:40.100 --> 00:20:41.170
+<v Bultman, Joshua>So the the.</v>
+
+00:20:42.480 --> 00:20:43.640
+<v Bultman, Joshua>Are you saying that the.</v>
+
+00:20:45.180 --> 00:20:46.750
+<v Bultman, Joshua>Population action taken.</v>
+
+00:20:47.460 --> 00:20:48.620
+<v Bultman, Joshua>Even, even if they're.</v>
+
+00:20:50.040 --> 00:20:50.300
+<v Bultman, Joshua>But</v>
+
+00:20:53.130 --> 00:20:53.780
+<v Bultman, Joshua>they're on.</v>
+
+00:20:53.040 --> 00:20:54.820
+<v Sohoni, Sohum>I'm sorry you're breaking up a little bit.</v>
+
+00:20:58.290 --> 00:21:03.920
+<v Bultman, Joshua>So are there are the operations actually executed even if they're not going to be taken? Is that what you're saying?</v>
+
+00:21:05.230 --> 00:21:10.620
+<v Sohoni, Sohum>Yeah, well, the operations aren't fully executed, right? So that that brings up an important.</v>
+
+00:21:11.100 --> 00:21:34.230
+<v Sohoni, Sohum>Uhm, term that we should be aware of, which is UM, committing or how should I say let's let's just call it updating the state of the machine so the state of the machine is only updated either when you're writing to memory, right? If it's like a store word instruction, or whenever you right back to the register file.</v>
+
+00:21:35.660 --> 00:21:36.160
+<v Sohoni, Sohum>That</v>
+
+00:21:36.860 --> 00:21:53.120
+<v Sohoni, Sohum>is that understood like what do I mean by updating the state of the machine, until here when you're fetching and decoding, you're not really making any changes, even in execute. For that matter, you're not making any changes to the state of the machine. All these are the persistent elements, right? Let me.</v>
+
+00:21:54.830 --> 00:21:59.130
+<v Sohoni, Sohum>Change colors once again so this.</v>
+
+00:22:00.410 --> 00:22:02.940
+<v Sohoni, Sohum>This these are the two places.</v>
+
+00:22:03.840 --> 00:22:34.260
+<v Sohoni, Sohum>'cause we're not really writing to instruction memory. We're only reading from it. I'm not going to mark that out, but these two places are where the state of the machine is held, right? These are state elements, so we either update memory or we update the register file, and neither of those happens in the fetch and decode stage is. So those instructions, even when we're not, even if they are the incorrect instructions, right? We still fetch, we can still fetch and decode them without having to worry about.</v>
+
+00:22:34.320 --> 00:22:52.920
+<v Sohoni, Sohum>Any changes that they have made because once we figure out that we've gone down the wrong path, we can simply turn those into no OPS and then again it it will look just like this. So those instructions that we fetched accidentally are going to be squashed and then the correct instruction is going to be fetched.</v>
+
+00:22:54.930 --> 00:22:55.810
+<v Sohoni, Sohum>Start making sense.</v>
+
+00:22:57.450 --> 00:22:58.640
+<v Bultman, Joshua>OK, yeah, I think I got it now.</v>
+
+00:22:59.170 --> 00:23:02.410
+<v Sohoni, Sohum>Yeah, I probably could pull up is slightly better.</v>
+
+00:23:03.610 --> 00:23:18.670
+<v Sohoni, Sohum>Set of slides that actually shows that. So give me one moment while I do that. But again, it's mainly more so the concept of what is going on rather than the details. In this case there that I want you to think about.</v>
+
+00:23:19.380 --> 00:23:23.250
+<v Sohoni, Sohum>Uhm, while I'm looking that up, let me.</v>
+
+00:23:24.350 --> 00:23:41.910
+<v Sohoni, Sohum>Also continue by by saying so that the one option is to just guess that we're not branching, but there are better ways to go about it and they tend to fall into like stuff again that I would consider to be out of the scope of this class, but we could start.</v>
+
+00:23:42.560 --> 00:24:09.040
+<v Sohoni, Sohum>Guessing whether a branch is going to be taken or not, and it sounds like a really hard thing to do, but we actually can do a pretty good job and I'll give you an example. Let's say you've got a loop that's that's running like you know 1000 times, and that loop always goes back to the top of the loop, right? So we get to the last statement. You go back to the top so you can guess based on history of.</v>
+
+00:24:10.090 --> 00:24:36.880
+<v Sohoni, Sohum>You know the fact that it's taken again and again and again. You can guess that this branch is going to be taken because it seems to be going back to the top of the loop and it's those kind of hardware based predictions can work really well, and that's essentially called branch prediction. So we're predicting that the branch is taken or it's not taken. Eventually it does get resolved, so we know whether we predicted correctly or not, and we can build pretty smart hardware without.</v>
+
+00:24:37.730 --> 00:24:59.930
+<v Sohoni, Sohum>Having two bigger cost in terms of the hardware or like number of transistors and the time it takes and all of that to have very good branch prediction even higher than 90% accuracy in terms of both predicting whether the branch is taken or not, but also predicting the branch target address, which is slightly more complicated to do.</v>
+
+00:25:00.890 --> 00:25:12.180
+<v Sohoni, Sohum>But yeah, I'll I'll stop there. Let me see if I have some ordered branching slides 'cause my plan really this term wasn't too.</v>
+
+00:25:12.790 --> 00:25:16.000
+<v Sohoni, Sohum>Get into branch prediction, but since I was talking about it.</v>
+
+00:25:17.150 --> 00:25:17.600
+<v Sohoni, Sohum>Right?</v>
+
+00:25:19.350 --> 00:25:21.020
+<v Sohoni, Sohum>Excited and talked about it.</v>
+
+00:25:22.630 --> 00:25:28.900
+<v Sohoni, Sohum>So no, this is not the right set of slides, and if I can't find it in a in a minute, I'll I'll give up on it, but.</v>
+
+00:25:29.740 --> 00:25:31.950
+<v Sohoni, Sohum>Do you have questions on what I just described?</v>
+
+00:25:43.820 --> 00:25:52.470
+<v Sohoni, Sohum>OK, you know what? Let's forget about branch prediction. Let me talk about one more case where we have a situation where.</v>
+
+00:25:54.140 --> 00:25:55.770
+<v Sohoni, Sohum>Oh, I've missed this slide up.</v>
+
+00:25:58.220 --> 00:26:01.730
+<v Sohoni, Sohum>Sorry, I was teaching this in about 1:00 o'clock section and I.</v>
+
+00:26:04.130 --> 00:26:06.140
+<v Sohoni, Sohum>I need to load a different slide now.</v>
+
+00:26:10.070 --> 00:26:11.060
+<v Sohoni, Sohum>Alright, let's go.</v>
+
+00:26:12.700 --> 00:26:13.380
+<v Sohoni, Sohum>Slides.</v>
+
+00:26:14.430 --> 00:26:18.480
+<v Sohoni, Sohum>So there are situations where you cannot.</v>
+
+00:26:20.530 --> 00:26:28.580
+<v Sohoni, Sohum>Just forward OK and this. Here is an example of that situation where we have what is called a load use hazard.</v>
+
+00:26:29.220 --> 00:26:49.040
+<v Sohoni, Sohum>And again, it's pretty logical. It's it's quite straightforward. We've gotta load word instruction followed by a sub OK, and in this case because the load word gets the actual value that's going to get loaded into that register only at the end of the MEM stage, right? Which is cycle 4 here.</v>
+
+00:26:49.770 --> 00:27:02.760
+<v Sohoni, Sohum>Uhm, and you need that in in the if you were doing a decode here, right? Without putting in a bubble, you really wouldn't have it ready because you would have to go back in time.</v>
+
+00:27:04.310 --> 00:27:13.000
+<v Sohoni, Sohum>'cause this if this guy was here right? If this sub instruction was here then we just again mark up the clock cycles.</v>
+
+00:27:14.910 --> 00:27:16.400
+<v Sohoni, Sohum>So in clock cycle.</v>
+
+00:27:17.480 --> 00:27:29.770
+<v Sohoni, Sohum>Three is where it would be in its decode. Normally if it was fetched here right at that point, there is no possible way for us to forward this value, because it would have to go back in time.</v>
+
+00:27:30.740 --> 00:27:47.150
+<v Sohoni, Sohum>Right, 'cause it's an only at the end of clock cycle 4. Do we get the value that we're eventually going to write into S 0 and that we can still forward here and then do the right back while this guy executes? But we do have to stall?</v>
+
+00:27:47.910 --> 00:27:51.990
+<v Sohoni, Sohum>It's unavoidable. Do you understand why it's unavoidable in this situation?</v>
+
+00:27:58.940 --> 00:28:01.240
+<v Bultman, Joshua>Because, like you physically don't have the value yet.</v>
+
+00:28:02.260 --> 00:28:09.790
+<v Sohoni, Sohum>Correct, you haven't accessed the memory yard, and that's where the value is coming from. So if you don't have the value, there is nothing you can do.</v>
+
+00:28:11.440 --> 00:28:17.980
+<v Sohoni, Sohum>So that's why you have to stop and there is like clever ways that the compiler gets around this problem.</v>
+
+00:28:19.120 --> 00:28:48.880
+<v Sohoni, Sohum>But again, that's this is just for your information, not something I expect you to remember or you know, talk about on the final or anything like that, but the compiler usually looks down at the instructions that it has created from, you know, the high level code and what it does is it finds an instruction that does not have a conflict from one of the instructions down here and it moves it in between so that we don't waste a clock cycle by stalling.</v>
+
+00:28:50.170 --> 00:29:20.780
+<v Sohoni, Sohum>That's pretty neat and I used to teach a whole entire semester long course on compiler optimizations, and this is one of the the low level optimizations that the compiler does after it is generated. Assembly code and it says OK, I can move some things around which don't really affect the program flow, but would still work well with the pipeline. And remember, this is a very simple pipeline with just five stages when you have deeper pipelines. When you have like 20 stages or.</v>
+
+00:29:20.830 --> 00:29:36.840
+<v Sohoni, Sohum>50 stages then you're going to have a lot more distance between this fetch end this mem stage, right? So which means you're going to have many more spots in here that need to be filled in in those situations, and that's one of the reasons why.</v>
+
+00:29:37.580 --> 00:29:50.380
+<v Sohoni, Sohum>You can't really just say well going from a single stage. Two five stages seems like a great idea. Why don't we just do 500 stages, right? It's because of problems like these where you're going to have to.</v>
+
+00:29:51.090 --> 00:30:21.120
+<v Sohoni, Sohum>Create a lot more forwarding paths, but then also run into issues where you know if this was twenty stages you couldn't just do this, you would have to have some new instructions in between or have more stalls. So be pretty wasteful and that's what ended up happening on a lot of the deep pipelines that Intel and AMD built in the 2004 2005 time frame. They were just wasting a lot of cycles doing noobs.</v>
+
+00:30:21.420 --> 00:30:22.630
+<v Sohoni, Sohum>Running at high speeds.</v>
+
+00:30:25.270 --> 00:30:29.100
+<v Sohoni, Sohum>Questions on overall pipelining hazards.</v>
+
+00:30:40.490 --> 00:30:53.240
+<v Rolando, Jackson>I guess I'm mostly just wondering how you're going to phrase questions about them, like what specifically are you going to? I'm I'm and I'm not saying just like hey, what are questions you're gonna ask on the test or whatever but like.</v>
+
+00:30:53.000 --> 00:30:53.360
+<v Sohoni, Sohum>Here.</v>
+
+00:30:53.940 --> 00:31:00.840
+<v Rolando, Jackson>Like do we have to like? Are we gonna have to sort of like be able to deduce whether or not it's going to skip or?</v>
+
+00:31:01.320 --> 00:31:01.680
+<v Sohoni, Sohum>Yep.</v>
+
+00:31:02.280 --> 00:31:02.560
+<v Sohoni, Sohum>Yep.</v>
+
+00:31:01.990 --> 00:31:07.120
+<v Rolando, Jackson>Or if it's going to just just bridge just bridge the results like you were showing or.</v>
+
+00:31:07.650 --> 00:31:38.010
+<v Sohoni, Sohum>Yeah, so this word I'm showing currently as this slide is very much the kind of question you can expect on the final exam and in good running a little behind in covering this topic. So this would have also been like a quiz. Four question and I'm I'm trying to see if I can squeeze in a quiz 400 quiz five, which I hope to do so. So you're you'll find a very similar question if we do quiz four toward is currently on the slide, and again very similar question.</v>
+
+00:31:38.070 --> 00:31:48.900
+<v Sohoni, Sohum>On the final exam, so let me tell you what the question is. So so I've given you 12345 instructions here and the question will be around.</v>
+
+00:31:49.600 --> 00:31:50.940
+<v Sohoni, Sohum>Marking up.</v>
+
+00:31:52.040 --> 00:31:59.360
+<v Sohoni, Sohum>Or in some form like you're on canvas, it's kind of hard to pull that off, but essentially asking about whether.</v>
+
+00:32:00.470 --> 00:32:04.660
+<v Sohoni, Sohum>We need any forwarding paths here, whether we need.</v>
+
+00:32:05.670 --> 00:32:07.170
+<v Sohoni, Sohum>Any stalls over here?</v>
+
+00:32:08.450 --> 00:32:19.260
+<v Sohoni, Sohum>OK, so let's actually take the rest of this class period and do this as an activity. So look at the slide that's currently being shown and.</v>
+
+00:32:20.080 --> 00:32:20.770
+<v Sohoni, Sohum>Uhm?</v>
+
+00:32:21.860 --> 00:32:28.350
+<v Sohoni, Sohum>In your mind or on a piece of paper somewhere, try to figure out are there any conflicts.</v>
+
+00:32:29.660 --> 00:32:33.400
+<v Sohoni, Sohum>Right? Are there any data hazards here and if there are?</v>
+
+00:32:34.260 --> 00:32:42.190
+<v Sohoni, Sohum>What are those data hazards and will they require any stalling? Or will forwarding be required?</v>
+
+00:32:42.790 --> 00:32:49.050
+<v Sohoni, Sohum>Or you don't require any stalling or forwarding, like there's no hazards, OK, so.</v>
+
+00:32:50.170 --> 00:33:03.790
+<v Sohoni, Sohum>Take take a few minutes. I'll give you 5 minutes, let's say and try to figure out all all these details in terms of what are the conflicts water, the forwarding paths, and then we'll discuss that in about 5 minutes.</v>
+
+00:33:12.990 --> 00:33:14.940
+<v Sohoni, Sohum>Let me know if you have any questions.</v>
+
+00:38:00.040 --> 00:38:01.830
+<v Sohoni, Sohum>OK, it's been 5 minutes.</v>
+
+00:38:03.870 --> 00:38:04.660
+<v Sohoni, Sohum>So.</v>
+
+00:38:05.450 --> 00:38:10.160
+<v Sohoni, Sohum>Let's go instruction by instruction. So for the second instruction.</v>
+
+00:38:10.880 --> 00:38:13.160
+<v Sohoni, Sohum>Have you identified any conflicts?</v>
+
+00:38:22.280 --> 00:38:22.980
+<v Geoffrey, Timothy>Yes.</v>
+
+00:38:24.330 --> 00:38:26.480
+<v Sohoni, Sohum>And what conflicts have here? Dent ified?</v>
+
+00:38:27.650 --> 00:38:30.220
+<v Geoffrey, Timothy>Do you want this causing all sorts of trouble?</v>
+
+00:38:31.080 --> 00:38:31.520
+<v Geoffrey, Timothy>Oh</v>
+
+00:38:31.340 --> 00:38:31.740
+<v Sohoni, Sohum>OK.</v>
+
+00:38:32.370 --> 00:38:36.970
+<v Sohoni, Sohum>31 is a destination here, right? And it's a source here.</v>
+
+00:38:37.950 --> 00:38:44.220
+<v Sohoni, Sohum>So we've got problems. So will this require stalling or can we do forwarding?</v>
+
+00:38:46.460 --> 00:38:47.930
+<v Bultman, Joshua>I think you can do forwarding here, right?</v>
+
+00:38:49.960 --> 00:38:50.340
+<v Sohoni, Sohum>K.</v>
+
+00:38:51.330 --> 00:38:54.200
+<v Sohoni, Sohum>So we're going to forward.</v>
+
+00:38:54.870 --> 00:38:57.290
+<v Sohoni, Sohum>The value from here down to.</v>
+
+00:38:58.140 --> 00:39:00.270
+<v Sohoni, Sohum>Here, right, it's the 2nd.</v>
+
+00:39:01.480 --> 00:39:05.400
+<v Sohoni, Sohum>Right, the first the top one is S2, the second operand is T1.</v>
+
+00:39:06.190 --> 00:39:08.340
+<v Sohoni, Sohum>So everyone OK with that path.</v>
+
+00:39:15.230 --> 00:39:18.260
+<v Sohoni, Sohum>I guess I could have drawn it better, but other than that?</v>
+
+00:39:19.750 --> 00:39:21.100
+<v Sohoni, Sohum>Do a straight line.</v>
+
+00:39:22.780 --> 00:39:23.640
+<v Sohoni, Sohum>Kinda straight.</v>
+
+00:39:25.370 --> 00:39:31.760
+<v Sohoni, Sohum>OK, so that's one issue. Is there anything else that needs to be done for the second instruction?</v>
+
+00:39:37.250 --> 00:39:38.170
+<v Bultman, Joshua>Yeah, I think that's it.</v>
+
+00:39:39.220 --> 00:39:49.780
+<v Sohoni, Sohum>Yeah, I mean, given the information that we have right, we don't know what was before the ad and whether S2 has a conflict or not. We don't. We don't really know.</v>
+
+00:39:50.750 --> 00:40:10.740
+<v Sohoni, Sohum>A bird in a question like this. We'll assume that anything not shown is not going to cause any conflicts. OK, alright, so instruction 3 then load word S20 dollar T one. Do we have a problem? Do we have to stall? Can we forward? What are your? What is your answer?</v>
+
+00:40:12.320 --> 00:40:13.750
+<v Schilling, Atreyu>this also needs 21.</v>
+
+00:40:14.530 --> 00:40:16.380
+<v Sohoni, Sohum>It also needs T1, right?</v>
+
+00:40:22.630 --> 00:40:26.340
+<v Sohoni, Sohum>And will it get done in time?</v>
+
+00:40:28.200 --> 00:40:30.530
+<v Furst, Elias>I think it needs to stall.</v>
+
+00:40:32.540 --> 00:40:32.930
+<v Furst, Elias>I.</v>
+
+00:40:33.830 --> 00:40:36.390
+<v Furst, Elias>'cause I don't it can't forward right?</v>
+
+00:40:37.940 --> 00:40:59.760
+<v Sohoni, Sohum>Well, what is? What is Steven? So let's actually make up some values here. OK, let's say T0 contains. I mean T3 contains 0 and T2 contains of five. So the result of adding zero and five is going to be 5. So this value of five that really should get written to T1 at some point is what we need over here, right?</v>
+
+00:41:01.580 --> 00:41:05.070
+<v Sohoni, Sohum>It's also what we need over here. Would that be correct?</v>
+
+00:41:09.900 --> 00:41:10.210
+<v Schilling, Atreyu>Yep.</v>
+
+00:41:10.550 --> 00:41:10.960
+<v Bultman, Joshua>Yep.</v>
+
+00:41:12.180 --> 00:41:15.320
+<v Sohoni, Sohum>So if that's the case, it sounds like we have that value.</v>
+
+00:41:16.860 --> 00:41:21.970
+<v Sohoni, Sohum>As we need it right, when is this guy going to need? The value is going to need it here.</v>
+
+00:41:22.740 --> 00:41:30.480
+<v Sohoni, Sohum>And it looks, let's just mark up the clock cycles 1234567.</v>
+
+00:41:31.110 --> 00:41:37.790
+<v Sohoni, Sohum>Dude, so right. So in clock cycle three we have the value 5 available to us right?</v>
+
+00:41:41.390 --> 00:41:42.650
+<v Sohoni, Sohum>But that point.</v>
+
+00:41:45.690 --> 00:41:49.010
+<v Sohoni, Sohum>What's going on here? Can we read the value from the register file?</v>
+
+00:41:51.210 --> 00:41:52.770
+<v Schilling, Atreyu>It has been written yet so now.</v>
+
+00:41:53.340 --> 00:41:58.890
+<v Sohoni, Sohum>Correct, so we cannot read it from the register file, but it's available to us so we can.</v>
+
+00:41:59.910 --> 00:42:01.090
+<v Sohoni, Sohum>Forward the value.</v>
+
+00:42:01.800 --> 00:42:08.060
+<v Sohoni, Sohum>We use a different color. Let's use it. White, green, so that value is available to us here.</v>
+
+00:42:09.010 --> 00:42:16.690
+<v Sohoni, Sohum>And we actually need it down here, right? This is. This is where we need that value in clock cycle 5.</v>
+
+00:42:17.430 --> 00:42:18.120
+<v Sohoni, Sohum>No.</v>
+
+00:42:19.720 --> 00:42:23.340
+<v Sohoni, Sohum>There's a question on where that value comes from.</v>
+
+00:42:24.220 --> 00:42:28.400
+<v Sohoni, Sohum>There's actually a correct answer in terms of the hardware.</v>
+
+00:42:29.200 --> 00:42:30.710
+<v Sohoni, Sohum>Where is it going to come from?</v>
+
+00:42:32.000 --> 00:42:39.910
+<v Sohoni, Sohum>And without getting into details, I'm going to say it's coming from this interstage buffer that we have here, OK?</v>
+
+00:42:40.510 --> 00:42:50.800
+<v Sohoni, Sohum>Because that value is eventually going to get written to the register file. OK, but it's available to us over here. Initially. It was here, then it got written.</v>
+
+00:42:51.720 --> 00:42:56.290
+<v Sohoni, Sohum>As we go from 1 clock cycle to another, it's available to us over here.</v>
+
+00:42:59.750 --> 00:43:09.840
+<v Sohoni, Sohum>And there I mean, some of this is replicated, so it's little bit hard to really give you the correct answer, but essentially we have that value.</v>
+
+00:43:10.550 --> 00:43:12.690
+<v Sohoni, Sohum>And we can use it without.</v>
+
+00:43:13.660 --> 00:43:20.660
+<v Sohoni, Sohum>Needing to stall cases, the point we're trying to make. OK, so T1 over here.</v>
+
+00:43:22.210 --> 00:43:24.120
+<v Sohoni, Sohum>Any questions related to this?</v>
+
+00:43:37.330 --> 00:43:40.000
+<v Bultman, Joshua>So the data path just can't cross into.</v>
+
+00:43:41.300 --> 00:43:41.970
+<v Bultman, Joshua>Different.</v>
+
+00:43:43.630 --> 00:43:43.940
+<v Bultman, Joshua>Like</v>
+
+00:43:44.580 --> 00:43:46.480
+<v Bultman, Joshua>sections, I guess or.</v>
+
+00:43:47.820 --> 00:43:51.140
+<v Bultman, Joshua>Like it it it can only go like straight down right? I can't go from.</v>
+
+00:43:53.210 --> 00:43:54.140
+<v Bultman, Joshua>Lu</v>
+
+00:43:54.950 --> 00:43:59.870
+<v Bultman, Joshua>like the first tail you output to just directly to the alien input.</v>
+
+00:44:01.010 --> 00:44:01.660
+<v Bultman, Joshua>For the third.</v>
+
+00:44:01.550 --> 00:44:09.910
+<v Sohoni, Sohum>They can actually let me do this. Let me. I'm thinking about this and I should. Maybe you're better path to show you would be.</v>
+
+00:44:10.520 --> 00:44:24.420
+<v Sohoni, Sohum>It's kinda hard to show on this diagram, so that's why I was hesitating to do it. But let me just I want to give you correct information, even if it's a little hard to see. So in reality it's going to come from here.</v>
+
+00:44:25.900 --> 00:44:27.650
+<v Sohoni, Sohum>OK this.</v>
+
+00:44:28.430 --> 00:44:32.910
+<v Sohoni, Sohum>Interstage buffer is going to get the correct value.</v>
+
+00:44:33.680 --> 00:44:40.950
+<v Sohoni, Sohum>In that transition from clock cycle, three to clock cycle four, it's going to have the correct value stored in there.</v>
+
+00:44:41.710 --> 00:44:48.350
+<v Sohoni, Sohum>OK, so and the reason why I'm saying it's kind of hard to see is because the output of the ALU.</v>
+
+00:44:49.660 --> 00:44:53.020
+<v Sohoni, Sohum>Right, and it's actually unfortunate that I've drawn.</v>
+
+00:44:54.340 --> 00:45:00.420
+<v Sohoni, Sohum>This red line the way I've drawn it. Let me see if there is there must be some sort of eraser.</v>
+
+00:45:01.550 --> 00:45:02.510
+<v Sohoni, Sohum>Can't see it.</v>
+
+00:45:05.450 --> 00:45:07.480
+<v Sohoni, Sohum>Umm, let's see.</v>
+
+00:45:08.660 --> 00:45:10.720
+<v Sohoni, Sohum>Oh, this looks like an eraser, yeah?</v>
+
+00:45:11.620 --> 00:45:15.800
+<v Sohoni, Sohum>OK yeah, so let me erase so good it's gone.</v>
+
+00:45:19.440 --> 00:45:25.150
+<v Sohoni, Sohum>This forwarding path is coming from the URL you this guy.</v>
+
+00:45:26.210 --> 00:45:31.310
+<v Sohoni, Sohum>Don't here. OK, So what I'm trying to say is there is a difference between.</v>
+
+00:45:32.360 --> 00:45:38.400
+<v Sohoni, Sohum>Words coming from the email you here and word gets stored in the interstage buffer.</v>
+
+00:45:39.130 --> 00:45:41.850
+<v Sohoni, Sohum>Maybe I shouldn't be complicating things like that.</v>
+
+00:45:43.260 --> 00:45:45.350
+<v Sohoni, Sohum>Or do you guys but so.</v>
+
+00:45:46.510 --> 00:45:50.420
+<v Sohoni, Sohum>Let's let's just say that the value is available to us.</v>
+
+00:45:51.250 --> 00:45:56.160
+<v Sohoni, Sohum>And we can forward it so we don't need to stop you OK with that.</v>
+
+00:46:02.840 --> 00:46:03.210
+<v Sohoni, Sohum>OK.</v>
+
+00:46:02.870 --> 00:46:03.240
+<v Schilling, Atreyu>Works.</v>
+
+00:46:03.980 --> 00:46:08.280
+<v Sohoni, Sohum>Yeah, 'cause I think I may have been leading you down a path that doesn't really matter.</v>
+
+00:46:08.730 --> 00:46:10.020
+<v Sohoni, Sohum>Uhm so.</v>
+
+00:46:10.750 --> 00:46:41.320
+<v Sohoni, Sohum>And again, conceptually, that's really what where we want you to be in in being able to understand that the values are there and they eventually get written back. So this is where the right back happens for our key one, right? And that should be fine, and then the actual value of Pi were whatever the you know we calculated those are there there in the pipeline and we use buffers and multiplexers and what not to make sure that the right value gets to the right place.</v>
+
+00:46:42.150 --> 00:46:50.960
+<v Sohoni, Sohum>Any questions about South two here we we've got an S2 down here and we've got an S2 down in here as well. Is this going to be a problem?</v>
+
+00:46:56.740 --> 00:46:57.290
+<v Schilling, Atreyu>No.</v>
+
+00:46:58.670 --> 00:46:59.160
+<v Sohoni, Sohum>Why?</v>
+
+00:47:10.820 --> 00:47:11.390
+<v Sohoni, Sohum>Correct?</v>
+
+00:46:58.960 --> 00:47:11.920
+<v Schilling, Atreyu>'cause it's it's just one of them is reading a previous value of us too and the second one is writing a value into it, so it doesn't matter what S2 was in the first instruction or in the second instruction or second and third, I guess.</v>
+
+00:47:12.320 --> 00:47:28.280
+<v Sohoni, Sohum>Yeah, 'cause if we switch these two right then we would have a problem because this would be destination and that would be source. But since that's not the case then we don't have a problem so we can read this fine and whenever this gets written it gets written so no problem there.</v>
+
+00:47:29.540 --> 00:47:32.630
+<v Sohoni, Sohum>Alright, moving along to the next instruction.</v>
+
+00:47:33.450 --> 00:47:36.730
+<v Sohoni, Sohum>The end immediate dollar to $1.00 S 11.</v>
+
+00:47:37.510 --> 00:47:39.210
+<v Sohoni, Sohum>Do we have any problems here?</v>
+
+00:47:45.990 --> 00:47:48.860
+<v Schilling, Atreyu>Dollar US one hasn't been read yet or written to yet.</v>
+
+00:47:50.010 --> 00:47:52.480
+<v Sohoni, Sohum>Correct record, so Dollar S 1.</v>
+
+00:47:53.600 --> 00:48:21.360
+<v Sohoni, Sohum>It's a source, right? And it's a destination of here, so this dollar S one is going to get written in clock cycles six over here, whereas it's getting red in clock cycle five over here, right? So once again, there's going to be a problem. We can't go back in time, right? So we're going to get the old value unless we do something about it. So what can we do at this point?</v>
+
+00:48:23.540 --> 00:48:32.170
+<v Schilling, Atreyu>Something that was done from Clarks occur cycle, one to cycle three or sorry instruction would do instruction three you forward this one.</v>
+
+00:48:30.840 --> 00:48:42.740
+<v Sohoni, Sohum>Correct, yeah, something similar. We want to forward so this value is 4 S. One is available right here. It's going to be in this interstage buffer, or let's say.</v>
+
+00:48:43.430 --> 00:48:49.230
+<v Sohoni, Sohum>Can be forwarded across as the input to the LUK.</v>
+
+00:48:50.170 --> 00:48:59.630
+<v Sohoni, Sohum>So don't worry too much about where I'm marking this up here. What is important is you identifying which instruction it's coming from.</v>
+
+00:49:00.830 --> 00:49:09.600
+<v Sohoni, Sohum>OK, so we can just Marco path from from here down to the input to the ALU alright.</v>
+
+00:49:10.260 --> 00:49:14.360
+<v Sohoni, Sohum>And again, same argument with T1T1 is a destination here.</v>
+
+00:49:15.660 --> 00:49:29.360
+<v Sohoni, Sohum>So it is really doesn't matter, so we're OK with T1 and so that's and I what about the S2T1 we need any forwarding there? Or any stalls or anything?</v>
+
+00:49:37.250 --> 00:49:41.300
+<v Bultman, Joshua>I think you need a forward from the load work so from.</v>
+
+00:49:43.280 --> 00:49:45.080
+<v Bultman, Joshua>Where the memory is.</v>
+
+00:49:45.750 --> 00:49:48.440
+<v Bultman, Joshua>I like the loading from the memory down to the alien.</v>
+
+00:49:49.040 --> 00:49:49.400
+<v Sohoni, Sohum>So.</v>
+
+00:49:49.460 --> 00:49:51.660
+<v Sohoni, Sohum>For which register.</v>
+
+00:49:53.870 --> 00:49:54.990
+<v Bultman, Joshua>Offer S2.</v>
+
+00:49:55.490 --> 00:49:55.880
+<v Sohoni, Sohum>OK.</v>
+
+00:49:56.910 --> 00:50:05.460
+<v Sohoni, Sohum>So as to is a source here, it's a destination over here, right? So that S2 is going to get.</v>
+
+00:50:07.380 --> 00:50:08.910
+<v Sohoni, Sohum>Written here.</v>
+
+00:50:10.520 --> 00:50:17.280
+<v Sohoni, Sohum>Right and where do we need it? We need it at the BQ down here. So yeah, we can forward from here down to here.</v>
+
+00:50:18.440 --> 00:50:28.660
+<v Sohoni, Sohum>Or actually it's going to come from here from this bus, not from really the interstage buffer. OK, let's let's just say it's coming from 'cause we're going to read it here, right?</v>
+
+00:50:30.080 --> 00:50:35.380
+<v Sohoni, Sohum>Read what should be going into S2 from memory.</v>
+
+00:50:38.160 --> 00:50:48.480
+<v Sohoni, Sohum>So we'll have again will have the value. It won't be written until this cycle here, but the value that's going to get written there is available to us, so it can be an input to.</v>
+
+00:50:49.140 --> 00:50:58.940
+<v Sohoni, Sohum>Our branch instruction. Oh, I'm one minute over, I'm sorry. Well, let's finish this up very quickly. Is the other source also something that needs to forward it?</v>
+
+00:51:06.070 --> 00:51:18.940
+<v Sohoni, Sohum>The fact that I'm picking a new color should be a hint. There 31 is the second source, right? BQ has two source registers. It's comparing the two registers we see T1 as a destination anywhere.</v>
+
+00:51:21.580 --> 00:51:22.100
+<v Schilling, Atreyu>Demonstrate.</v>
+
+00:51:21.570 --> 00:51:22.660
+<v Bultman, Joshua>Yeah, for the end I.</v>
+
+00:51:23.070 --> 00:51:28.510
+<v Sohoni, Sohum>Yeah, in the end I so clearly there's conflict there as well, so that's going to come from here.</v>
+
+00:51:29.930 --> 00:51:30.970
+<v Sohoni, Sohum>Or and I'm missing it.</v>
+
+00:51:33.140 --> 00:51:44.870
+<v Sohoni, Sohum>Bottle there, so both of these operands for the week you need forwarding one from a previous instruction from the Lord Word, one from the and I and none of them require a stall.</v>
+
+00:51:45.650 --> 00:51:46.110
+<v Sohoni, Sohum>OK.</v>
+
+00:51:46.790 --> 00:51:58.550
+<v Sohoni, Sohum>So that's the sort of thing I want you to wrap your head around. Uhm again, I'm sorry. Two minutes over now, so let me stop and we can talk more about this tomorrow.</v>
+
+00:52:02.270 --> 00:52:03.440
+<v Sohoni, Sohum>Work, take care.</v>
+
+00:52:03.850 --> 00:52:04.750
+<v Bultman, Joshua>Thank you bye.</v>
+
+00:52:04.970 --> 00:52:05.430
+<v Sohoni, Sohum>Here.</v>
+
+00:52:05.730 --> 00:52:06.310
+<v Furst, Elias>Thank you.</v>
+
+00:52:07.240 --> 00:52:07.640
+<v Rolando, Jackson>Thanks.</v>

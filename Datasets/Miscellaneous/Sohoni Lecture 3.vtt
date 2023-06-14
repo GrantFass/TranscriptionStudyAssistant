@@ -1,0 +1,1051 @@
+WEBVTT
+
+0:0:0.0 --> 0:0:1.320
+<v Bultman, Joshua>Good afternoon. How are you doing?</v>
+
+0:0:2.660 --> 0:0:3.420
+<v Sohoni, Sohum>Right.</v>
+
+0:0:5.150 --> 0:0:8.810
+<v Sohoni, Sohum>Let us go through the practice final exam.</v>
+
+0:0:37.620 --> 0:0:55.980
+<v Sohoni, Sohum>Uh, so I'm OK if we don't get to it either. But essentially it's very similar to the activity we did yesterday, except that it includes the complexity of having a block, which means you gotta ignore the lower extra lower bits.</v>
+
+0:0:57.120 --> 0:1:9.40
+<v Sohoni, Sohum>So yeah, as I said let's skip it for now. If we get to it. We get to it. Otherwise, we can talk about it in the small groups tomorrow or we might not get to it at all, I'm OK with that.</v>
+
+0:1:10.210 --> 0:1:17.280
+<v Sohoni, Sohum>All right. Any questions in general about the test before we start going through question by question starting with number 2?</v>
+
+0:1:25.730 --> 0:1:45.800
+<v Sohoni, Sohum>So in my 1:00 o'clock section, people ask me about like, why do questions have so many points? I was using a different scale. This was from 2019. We had the course was 10,000 points total. The final was 2000 points or 20% and that that's why the points per question or so high.</v>
+
+0:1:46.590 --> 0:1:49.350
+<v Sohoni, Sohum>For you, it's just going to be out of 100 points.</v>
+
+0:1:50.10 --> 0:1:53.980
+<v Sohoni, Sohum>It's all relative anyway, but just quick clarification there.</v>
+
+0:1:55.270 --> 0:1:56.300
+<v Sohoni, Sohum>Alright. Question.</v>
+
+0:1:56.530 --> 0:1:56.830
+<v Sohoni, Sohum>Cool.</v>
+
+0:1:58.490 --> 0:2:3.660
+<v Sohoni, Sohum>Does someone want to give me an answer to this one or do you have a clarifying question?</v>
+
+0:2:4.860 --> 0:2:6.0
+<v Sohoni, Sohum>So do you want to ask me?</v>
+
+0:2:13.180 --> 0:2:13.460
+<v Furst, Elias>So.</v>
+
+0:2:13.510 --> 0:2:15.60
+<v Furst, Elias>So I think, UM.</v>
+
+0:2:16.550 --> 0:2:17.770
+<v Furst, Elias>This one is.</v>
+
+0:2:18.580 --> 0:2:21.930
+<v Furst, Elias>It'll it'll. There will be a problem. Where?</v>
+
+0:2:22.990 --> 0:2:25.330
+<v Furst, Elias>Uh, since Italy function, it won't.</v>
+
+0:2:26.50 --> 0:2:28.940
+<v Furst, Elias>Uhm, save the correct return address.</v>
+
+0:2:29.980 --> 0:2:37.30
+<v Furst, Elias>So it'll like call itself and it'll just get lost and not know where to resume.</v>
+
+0:2:37.650 --> 0:2:39.940
+<v Furst, Elias>A program that called it.</v>
+
+0:2:40.870 --> 0:2:41.540
+<v Sohoni, Sohum>Exactly.</v>
+
+0:2:40.930 --> 0:2:43.270
+<v Furst, Elias>That could then you can fix that by just.</v>
+
+0:2:44.950 --> 0:2:49.20
+<v Furst, Elias>Putting the return address onto the stack with whatever else.</v>
+
+0:2:50.100 --> 0:2:57.540
+<v Sohoni, Sohum>Perfect. I could not have given a better answer. Excellent. Any questions about the answer that alliance just gave us?</v>
+
+0:3:3.710 --> 0:3:18.340
+<v Sohoni, Sohum>Good. Great. Let's keep moving then. Question three. Explain why a 500 stage pipeline for MIPS might not be such a good idea. OK and try to give more than one reason. I'm looking for pilots.</v>
+
+0:3:19.40 --> 0:3:20.80
+<v Sohoni, Sohum>Different reasons.</v>
+
+0:3:25.270 --> 0:3:41.850
+<v Schilling, Atreyu>Either the program is gonna work very, very slowly to do, like at least the 1st 500 clock cycles are going to be nothing, or the clock cycles are going to be incredibly fast. If that were to be the case, like not OK fast.</v>
+
+0:3:42.850 --> 0:3:46.190
+<v Sohoni, Sohum>Right. And what would not be OK with a very short clock?</v>
+
+0:3:49.280 --> 0:3:50.370
+<v Schilling, Atreyu>That's a great question actually.</v>
+
+0:3:51.780 --> 0:3:54.630
+<v Sohoni, Sohum>It's right there would be a problem. What would it be?</v>
+
+0:3:55.460 --> 0:3:55.840
+<v Furst, Elias>Wait.</v>
+
+0:3:55.240 --> 0:3:57.120
+<v Bultman, Joshua>You probably have to add more stalls, right?</v>
+
+0:3:58.530 --> 0:4:10.560
+<v Sohoni, Sohum>That's yes, that's independent of the earlier line of these shorter clock. But yeah, you you would require more stalls because there's two different reasons why we might have to have more stalls.</v>
+
+0:4:18.630 --> 0:4:19.100
+<v Sohoni, Sohum>Yeah.</v>
+
+0:4:13.770 --> 0:4:23.840
+<v Bultman, Joshua>One, there's probably going to be conflicts between the different stages, right? So that something is trying to access something that's being written to. So you have to make sure that you stall.</v>
+
+0:4:24.330 --> 0:4:28.510
+<v Sohoni, Sohum>Yeah. So a lot more data hazards might require more stalls, yes.</v>
+
+0:4:29.20 --> 0:4:36.800
+<v Schilling, Atreyu>If you extend the UM pipeline without like actually changing what's happening in it then?</v>
+
+0:4:37.170 --> 0:4:40.80
+<v Schilling, Atreyu>Uhm, data is just your.</v>
+
+0:4:53.940 --> 0:4:54.350
+<v Sohoni, Sohum>Uh-huh.</v>
+
+0:4:40.830 --> 0:5:1.450
+<v Schilling, Atreyu>To the point between like something actually being done and it being saved are going to be further detached and like the point of it starting and actually being able to be transmitted to something else, they're going to be really, really far apart. So you're going to inevitably have to stall because you can't come. It's just going to take too long for instructions to get from point A to point B.</v>
+
+0:5:1.660 --> 0:5:11.690
+<v Sohoni, Sohum>Right. Yeah. So that's kind of around the same point I would call it just one point, which is there will be more data hazards requiring more stalls.</v>
+
+0:5:14.730 --> 0:5:16.160
+<v Furst, Elias>So I was thinking.</v>
+
+0:5:17.570 --> 0:5:21.560
+<v Furst, Elias>Uh, if you tried to increase the throughput so much?</v>
+
+0:5:22.150 --> 0:5:30.220
+<v Furst, Elias>Uh, it just get really hot, like the chip physically wouldn't be able to do that and it just end up as slow as the smaller pipeline anyway.</v>
+
+0:5:30.630 --> 0:5:45.40
+<v Sohoni, Sohum>Right. So that brings us back to the original .3 you mentioned about the smaller clock period, right or a higher clock cycle, so faster clock. So that means the machine is going to heat up because there is a direct relationship between.</v>
+
+0:5:46.240 --> 0:6:14.430
+<v Sohoni, Sohum>The power consumed and the clock frequency and the power that's consumed eventually gets translated to heat. So we've got two different points. What we could say one would be the power consumption would be very high because of the short clock cycle and a second related problem would be that we would have issues cooling the machine at such a high frequency. So if it's running at 10,000 GHz, right, or 10,000 Giga Hertz is too much.</v>
+
+0:6:15.700 --> 0:6:44.510
+<v Sohoni, Sohum>Even if it's running at 10 GHz, we're going to have a problem trying to cool the machine down. If you have a big case and a huge heat sink and maybe liquid cooling and whatnot, you might be able to do it, but that's going to be expensive. But you know, if it's for a laptop or something, you can't really build a cooling system that's going to work to avoid melting the chip down at that frequency. So that's going to be a problem, right? So we've so far had heat power consumption.</v>
+
+0:6:44.840 --> 0:6:51.60
+<v Sohoni, Sohum>And a lot of stalling due to data hazards. So we've got three points so far. Can we think of a couple more things?</v>
+
+0:6:55.700 --> 0:6:56.600
+<v Sohoni, Sohum>Excellent point.</v>
+
+0:6:52.960 --> 0:6:56.750
+<v Bultman, Joshua>Uh, it would add hardware complexity for the chips instead.</v>
+
+0:6:57.200 --> 0:7:16.20
+<v Sohoni, Sohum>Yep, hardware complexity, because you've got so many stages that itself adds hardware complexity. But then to do the checking for data hazards, it's going to be a whole lot more checks involved, right? Because we've got so many different permutations of source and destination registers, so hardware complexity.</v>
+
+0:7:16.720 --> 0:7:48.760
+<v Sohoni, Sohum>That can be one point, or it could be more than one point, because the complexity itself is going to be a problem, but then more complex hardware requires higher cost of development. You're going to need more hardware engineers. You're going to need more time to do simulations, and figuring out, you know, if that hardware is working or not correctly, and fixing issues with it. So development cycle is going to go high. All of that is going to lead to a much higher cost in terms of design and verification and all of those things.</v>
+
+0:7:48.810 --> 0:7:50.760
+<v Sohoni, Sohum>So we can say we've got four points now.</v>
+
+0:7:51.450 --> 0:7:52.320
+<v Sohoni, Sohum>Anything else?</v>
+
+0:7:53.120 --> 0:8:9.270
+<v Schilling, Atreyu>I would say unless you have an instruction has to do 500 different distinct things, you're not gonna get any value out of it. There's simply no point in having 500 stages. If you, uh, instructional needs to do even 10 things.</v>
+
+0:8:10.670 --> 0:8:16.80
+<v Schilling, Atreyu>What are you gonna do with the other 490 stages that you're just like, kind of are there?</v>
+
+0:8:19.280 --> 0:8:20.440
+<v Schilling, Atreyu>It's like 1/2 point.</v>
+
+0:8:15.290 --> 0:8:46.890
+<v Sohoni, Sohum>Yeah, I think that's maybe on some parts. I understand your point, but it is a little bit of a simplification that you're making in terms of how pipelining is designed. So one could really, I think I mentioned, I don't know if it was in your section or the other sections. So just the fact of patching and instruction where assigning one clock cycle to it in our five stage pipeline. But the fetch itself could be broken down into further sub stages, which would be.</v>
+
+0:8:49.390 --> 0:9:3.810
+<v Sohoni, Sohum>He indexing into a cache, doing the tag match in the cache, reading the actual data buffer in the instruction cache. Sorry, it's called a data buffer. I have to use that term, although it's misleading.</v>
+
+0:9:4.270 --> 0:9:33.800
+<v Sohoni, Sohum>Uh and then transferring from the buffer into the register, so that itself can be divided into five or six stages, and so we can cook up like different parts for the five parts that we've already seen. Not all of them are easily divisible. So yeah, you you do make a good point that it will be hard to figure out what the division of Labor needs to be across the 500 stages. So yeah.</v>
+
+0:9:33.970 --> 0:9:36.880
+<v Sohoni, Sohum>That's certainly an acceptable point. If you mentioned that.</v>
+
+0:9:37.570 --> 0:9:39.140
+<v Sohoni, Sohum>Anything else that comes to mind?</v>
+
+0:9:49.470 --> 0:9:53.860
+<v Sohoni, Sohum>Would increase or similar complexity also be a problem? Uh.</v>
+
+0:9:55.980 --> 0:10:10.150
+<v Sohoni, Sohum>So the assembler itself is somewhat independent of the underlying hardware. The assembler job is to convert from the source assembly down to the instructions set encoding.</v>
+
+0:10:10.940 --> 0:10:27.420
+<v Sohoni, Sohum>Right. So we're not really talking about changing the instruction set itself were just the implementation of it in the pipelining is changing and that's actually an important thing to understand. We're not really changing what's called the ISA or the instruction set architecture itself.</v>
+
+0:10:28.750 --> 0:10:32.680
+<v Bultman, Joshua>Ah OK, so how do how do noobs get added?</v>
+
+0:10:33.780 --> 0:10:39.980
+<v Bultman, Joshua>In between for stalls is that is that something happened at Primus? Understanding how that gets actually implemented?</v>
+
+0:10:38.840 --> 0:10:56.740
+<v Sohoni, Sohum>Yeah. So that happens at runtime, so they are similar is all compiling right. It's it's part of the compilation process. If you want to look at it that way. So that's all at what's called static time versus runtime, which is when you're actually executing the program. So those kind of dependencies and all that.</v>
+
+0:10:58.210 --> 0:11:0.260
+<v Sohoni, Sohum>Well, yeah, I guess the way I explained it.</v>
+
+0:11:1.400 --> 0:11:2.440
+<v Sohoni, Sohum>One could.</v>
+
+0:11:3.310 --> 0:11:5.810
+<v Sohoni, Sohum>OK, let me backtrack a little bit so.</v>
+
+0:11:7.40 --> 0:11:23.240
+<v Sohoni, Sohum>Yes, it could affect the compiler. I wasn't really thinking a similar so much when you said assembler. It didn't make sense to me, but if you think of it as the compiler, it could change the complexity of the compiler because compilers.</v>
+
+0:11:24.520 --> 0:11:42.420
+<v Sohoni, Sohum>2A You know, in the many optimizations that they do at the tail end of the optimization chain, there are optimizations that are done that are specific to the architecture on which you're you're compiling, so that compiler optimization would become more complicated because it would.</v>
+
+0:11:43.30 --> 0:11:56.710
+<v Sohoni, Sohum>No, sort of like how many stages do we hand or do we need to move instructions around to avoid stalls and things like that. So yes, that part will become more complicated, but the run of the mill assembler doesn't.</v>
+
+0:11:57.950 --> 0:12:5.830
+<v Sohoni, Sohum>Prior to do all those optimizations. So that's why I wasn't thinking the assembler would get more complex. But yeah, that's a good point. I hadn't thought of that.</v>
+
+0:12:8.330 --> 0:12:9.780
+<v Sohoni, Sohum>So yeah.</v>
+
+0:12:8.340 --> 0:12:20.710
+<v Schilling, Atreyu>Is there something to be said about like a pipeline is only as fast as its slowest component? Like if you have 500 stages then it's going to be held up by whatever the slowest thing is. So unless you can.</v>
+
+0:12:20.820 --> 0:12:21.510
+<v Sohoni, Sohum>Absolutely.</v>
+
+0:12:21.610 --> 0:12:26.850
+<v Schilling, Atreyu>Divide all those things down until you have basically everything at the same speed it's gonna take.</v>
+
+0:12:27.560 --> 0:12:29.260
+<v Schilling, Atreyu>Basically the same amount of time anyway.</v>
+
+0:12:28.940 --> 0:12:37.820
+<v Sohoni, Sohum>Yeah. No, that's that's a really good point. I would expect a grad student to answer that who's taken, like, your computer architecture course, so well done.</v>
+
+0:12:38.340 --> 0:12:41.660
+<v Sohoni, Sohum>Uh, so yeah, the the.</v>
+
+0:12:42.560 --> 0:13:5.280
+<v Sohoni, Sohum>The stages are run at the same clock, right? You can't really have a different clock for different stages 'cause they're going lock step right? Any instruction can be at any stage and you can't really change the clock per stage, so all of them are going to be running at exactly the same clock and you want to be able to have.</v>
+
+0:13:6.340 --> 0:13:37.50
+<v Sohoni, Sohum>Uhm, the clock be as large as the longest stage in work or the longest running stage in in the in the pipeline. And again this this is a little bit of an advanced topic. I don't want to spend too much time on it, but yes, we will have to find or at least subdivide in some way every stage down to that really short clock period that we would have if we had five under stage pipeline or we would have to have a longer cord period.</v>
+
+0:13:37.100 --> 0:13:43.790
+<v Sohoni, Sohum>Which means they're part of 500 stage pipeline with a long clock period. Everything is actually slowing down. Instead of speeding up.</v>
+
+0:13:44.540 --> 0:13:46.240
+<v Sohoni, Sohum>So that would be a problem, yes.</v>
+
+0:13:51.60 --> 0:13:58.790
+<v Sohoni, Sohum>So I'll mention a something that has not been mentioned yet, but is maybe you'll think it's obvious once I say it.</v>
+
+0:13:59.60 --> 0:14:29.160
+<v Sohoni, Sohum>Uh, so we talked about data hazards right. There will be more stalling because of data hazards. There's also going to be more stalling because of control hazards, right? Branches. Because in our five stage pipeline, we saw the branch got resolved in the third stage in a 500 stage pipeline. Branches are going to get resolved in say the 300 stage or something like that. And so 299 other instructions will already have been patched and within that sequence there is a very, very high likelihood that there's going to be.</v>
+
+0:14:29.210 --> 0:14:37.350
+<v Sohoni, Sohum>Other branches that we've also fetched and they might lead to like some other path. So the these states space for exploring.</v>
+
+0:14:38.230 --> 0:14:43.290
+<v Sohoni, Sohum>All of the possible branching just blows up when you go beyond like 10.</v>
+
+0:14:43.900 --> 0:14:48.950
+<v Sohoni, Sohum>Uh, I would say go beyond twenty stages in a pipeline because.</v>
+
+0:14:50.160 --> 0:15:11.690
+<v Sohoni, Sohum>Roughly speaking, the if we do an analysis of different programs about one, I think it's one in five or one in six instructions tends to be a branch instruction, and if that's the case, then if you've got 200 plus instructions in the pipeline. If not many many branches in there right, 40 or so branches and.</v>
+
+0:15:12.440 --> 0:15:17.80
+<v Sohoni, Sohum>That's going to be hard to figure out the branch prediction and all those kind of things so.</v>
+
+0:15:17.860 --> 0:15:21.760
+<v Sohoni, Sohum>There will be more stalls bottom line because of branching as well.</v>
+
+0:15:24.240 --> 0:15:31.460
+<v Sohoni, Sohum>Right. So everyone gets to do stuff like why it's not a good idea to have a very deep pipeline. Do you have any questions about this question?</v>
+
+0:15:39.110 --> 0:15:43.480
+<v Sohoni, Sohum>K I'm not hearing any questions. Let's move on to #4.</v>
+
+0:15:44.660 --> 0:16:6.380
+<v Sohoni, Sohum>So #4 is pretty straightforward in terms of what it's asking you to do. We've done a full activity on this topic. So essentially you're going to take that decimal number converted into binary fixed point, then do the scientific notation and then do the IEEE 754 representation of that.</v>
+
+0:16:7.70 --> 0:16:10.280
+<v Sohoni, Sohum>Uhm, does anyone have any questions about?</v>
+
+0:16:11.80 --> 0:16:11.960
+<v Sohoni, Sohum>This question.</v>
+
+0:16:15.710 --> 0:16:17.480
+<v Bultman, Joshua>I was having trouble just converting.</v>
+
+0:16:18.600 --> 0:16:21.620
+<v Bultman, Joshua>Uhm, the decimal into binary?</v>
+
+0:16:22.810 --> 0:16:25.410
+<v Bultman, Joshua>So I gotta research the method again probably.</v>
+
+0:16:26.390 --> 0:16:26.890
+<v Bultman, Joshua>For.</v>
+
+0:16:26.600 --> 0:16:27.750
+<v Schilling, Atreyu>That's a big number.</v>
+
+0:16:28.10 --> 0:16:28.330
+<v Bultman, Joshua>Yeah.</v>
+
+0:16:30.690 --> 0:16:31.20
+<v Bultman, Joshua>Out.</v>
+
+0:16:30.290 --> 0:16:38.640
+<v Sohoni, Sohum>Yeah, I mean, big numbers are not necessary or enemy, right? I mean, let's let me see what am I trying to do here. Let me try to.</v>
+
+0:16:39.350 --> 0:16:40.680
+<v Sohoni, Sohum>Write out a few.</v>
+
+0:16:41.780 --> 0:16:58.170
+<v Sohoni, Sohum>So it's sort 6640625, right? We want to multiply that by two and we get one point something, right? Uh, did anyone do this? You have some answers for me or do you want me to do it live?</v>
+
+0:17:6.800 --> 0:17:17.310
+<v Sohoni, Sohum>OK, let me do it. I'm not hearing anything, so there will be a zero carry one that'll give me a 5. That'll be your two carry one. That'll be an 8.</v>
+
+0:17:17.980 --> 0:17:29.190
+<v Sohoni, Sohum>Then I'll get it to carry one so that and that'll give me a three carry one right. So it'll give me this. So I'll put a one here actually that's a cleaner way of doing it.</v>
+
+0:17:30.830 --> 0:17:49.110
+<v Sohoni, Sohum>Then I'll get rid of this guy and do this multiplication. Might just do it on the next line, so I get a zero, which I'll ignore. Then I'll get a 5 * 2 is 0 again. Well, right. This one out. Carry one. So 2 * 2 is 4 + 1 is 5.</v>
+
+0:17:49.870 --> 0:17:53.710
+<v Sohoni, Sohum>26 caddy 1/5.</v>
+
+0:17:54.560 --> 0:18:1.110
+<v Sohoni, Sohum>And then six birds. So this is zero point. So we get a 0 here. Multiply that by two.</v>
+
+0:18:3.0 --> 0:18:9.620
+<v Sohoni, Sohum>Quickly going to run out of space, but I mean, I'm not planning to do the whole thing, but just working it out a little bit.</v>
+
+0:18:10.310 --> 0:18:14.720
+<v Sohoni, Sohum>And then we get word zero again carry 1/5.</v>
+
+0:18:15.460 --> 0:18:22.100
+<v Sohoni, Sohum>UH-2 carry 11, carry one and I'll give us three. So 1.3.</v>
+
+0:18:23.350 --> 0:18:25.340
+<v Sohoni, Sohum>Two, so we get one here.</v>
+
+0:18:26.540 --> 0:18:27.410
+<v Sohoni, Sohum>Cuz.</v>
+
+0:18:28.800 --> 0:18:30.640
+<v Sohoni, Sohum>So everyone following what I'm doing here.</v>
+
+0:18:35.190 --> 0:18:36.340
+<v Geoffrey, Timothy>Great. That's got a one.</v>
+
+0:18:38.480 --> 0:18:39.920
+<v Sohoni, Sohum>Sorry, what did you have a question?</v>
+
+0:18:40.790 --> 0:18:44.530
+<v Geoffrey, Timothy>Yeah. Why? Why does 0.6 get a one?</v>
+
+0:18:46.520 --> 0:18:48.520
+<v Schilling, Atreyu>3.6 * 2 gets a one.</v>
+
+0:18:48.280 --> 0:18:50.480
+<v Geoffrey, Timothy>Oh, OK, fair enough.</v>
+
+0:18:51.50 --> 0:18:59.10
+<v Sohoni, Sohum>Yeah, I'm multiplying out. So 2 * 0 is zero. I ignored that 2 * 5 is zero. Carry one 2 * 2 is 4 plus 1/5.</v>
+
+0:18:59.640 --> 0:19:30.210
+<v Sohoni, Sohum>And two times one is 2/2 times, three is 6, so I get 0.625 here, so that's why I put a zero up there again into two. So I keep doing that. Eventually I'm going to consume this number because it's 625. I already know that it is going to work out like it's not an infinitely repeating thing and then I'll get the later part like the dot part is all of this stuff here right going this way? So it will be 1010.</v>
+
+0:19:30.710 --> 0:19:35.320
+<v Sohoni, Sohum>Whatever else comes up, there's going to be a one, I'm assuming because of this six here.</v>
+
+0:19:35.980 --> 0:19:37.130
+<v Sohoni, Sohum>And so on.</v>
+
+0:19:38.740 --> 0:19:41.980
+<v Sohoni, Sohum>Right, this that makes sense to me. Is that what you will?</v>
+
+0:19:42.940 --> 0:19:43.720
+<v Sohoni, Sohum>Getting as well.</v>
+
+0:19:44.770 --> 0:19:46.680
+<v Bultman, Joshua>Yeah, that makes sense to me now. Thank you.</v>
+
+0:19:47.450 --> 0:19:48.360
+<v Sohoni, Sohum>OK, cool.</v>
+
+0:19:49.440 --> 0:20:18.810
+<v Sohoni, Sohum>So yeah, so that will give us the first step, which is, you know, whatever string of ones and zeros, dot string of ones and zeros then you move the data around and adjust the exponent to get the normalized scientific notation. Then whatever you get at that point, you're going to get the bias added to that. So you add 127 to whatever exponent you have in order to get the exponent part of the 754 standard representation.</v>
+
+0:20:19.120 --> 0:20:28.660
+<v Sohoni, Sohum>You would put a one in the sign bit because this is a negative number and then water fraction. We got out of this whole exercise here is going to be in the fraction part.</v>
+
+0:20:29.690 --> 0:20:30.560
+<v Sohoni, Sohum>Questions.</v>
+
+0:20:39.550 --> 0:20:47.980
+<v Sohoni, Sohum>Well, there's a question in the chat. Will we be able to use a calculator to use for converting the decimal points? So like the calculation that I just did?</v>
+
+0:20:52.240 --> 0:20:58.10
+<v Sohoni, Sohum>Either case, I mean the answer is yes, you can use a calculator for or whatever you want. You can use the Internet.</v>
+
+0:20:59.20 --> 0:21:1.340
+<v Sohoni, Sohum>You can use Google to give you the answer.</v>
+
+0:21:2.970 --> 0:21:3.410
+<v Sohoni, Sohum>So.</v>
+
+0:21:4.580 --> 0:21:5.130
+<v Sohoni, Sohum>Uhm.</v>
+
+0:21:6.400 --> 0:21:14.100
+<v Sohoni, Sohum>Yeah, I mean, we're doing this test over canvas, so I'm not really going to be in a position to have you write these things out like this.</v>
+
+0:21:14.800 --> 0:21:22.400
+<v Sohoni, Sohum>And so the questions are more likely going to be in the multiple choice type of format, so.</v>
+
+0:21:23.600 --> 0:21:36.270
+<v Sohoni, Sohum>There's a few places where I get to give you partial credit and do like look at your steps and so on, and most of that is going to be in programs or questions like these. Here. The short answer questions.</v>
+
+0:21:36.330 --> 0:21:36.550
+<v Sohoni, Sohum>Yes.</v>
+
+0:21:37.610 --> 0:21:42.600
+<v Sohoni, Sohum>Alright, sorry. Take it. There's no more questions on that one. So there's question 5 now.</v>
+
+0:21:43.250 --> 0:21:59.440
+<v Sohoni, Sohum>Uhm, following floating point addition operation is to be completed. So yeah, this is kind of a time consuming but pretty straightforward simple question where there's actually a typo. This is this shouldn't be a tool, there should be nothing there.</v>
+
+0:22:0.520 --> 0:22:3.490
+<v Sohoni, Sohum>Uhm, now it looks like a one bird.</v>
+
+0:22:4.920 --> 0:22:23.180
+<v Sohoni, Sohum>We can't do anything better. Hum. So yeah, this is supposed to be a decimal now. I mean, a binary number. So it's 1.011 into 2 to the power of negative one and 1.0101 into 2 to the power two. What are the steps that you would need to add these two numbers?</v>
+
+0:22:26.790 --> 0:22:28.260
+<v Schilling, Atreyu>Convert them all the same power.</v>
+
+0:22:29.710 --> 0:22:33.680
+<v Sohoni, Sohum>So it would be the first number that you do to the two to the power of 2, right?</v>
+
+0:22:36.510 --> 0:22:37.780
+<v Sohoni, Sohum>What would be the next step?</v>
+
+0:22:44.410 --> 0:22:45.20
+<v Schilling, Atreyu>Adam.</v>
+
+0:22:46.300 --> 0:22:48.180
+<v Sohoni, Sohum>Well, yeah, I added the fractional parts right.</v>
+
+0:22:50.390 --> 0:22:53.320
+<v Sohoni, Sohum>And what would be the next step after that?</v>
+
+0:23:7.100 --> 0:23:11.350
+<v Sohoni, Sohum>So after adding or if you get this sort of string.</v>
+
+0:23:13.210 --> 0:23:14.620
+<v Bultman, Joshua>Do you want to put it back into the?</v>
+
+0:23:15.330 --> 0:23:18.830
+<v Bultman, Joshua>Standard scientific notation by shifting the power little bit.</v>
+
+0:23:19.460 --> 0:23:19.820
+<v Bultman, Joshua>Yep.</v>
+
+0:23:19.170 --> 0:23:21.960
+<v Sohoni, Sohum>Right. You want to normalize it, right? So you would end up.</v>
+
+0:23:22.110 --> 0:23:23.0
+<v Sohoni, Sohum>Is uh.</v>
+
+0:23:24.940 --> 0:23:29.770
+<v Sohoni, Sohum>Something like this would be 2 to the power one or three one. Did we just do?</v>
+
+0:23:32.180 --> 0:23:32.990
+<v Bultman, Joshua>B3 right.</v>
+
+0:23:33.770 --> 0:23:34.810
+<v Sohoni, Sohum>Yeah, that's what I think.</v>
+
+0:23:36.10 --> 0:23:48.970
+<v Sohoni, Sohum>Right. So you, you. Yeah, so you get the exponents to be the same, you add the fractional parts, then you check if the number is not normalized. You normalize the number and that's that. That's your answer. OK. So that would be.</v>
+
+0:23:49.20 --> 0:24:15.150
+<v Sohoni, Sohum>Maybe you would list those steps in in a. You would actually do those steps in B and then for see you're going to compute the base 10 values. You're going to take this and convert this back to a decimal, or convert not back but converted to a decimal and then in step four or party you're going to convert these guys into their decimal equivalents and make sure that.</v>
+
+0:24:16.640 --> 0:24:20.800
+<v Sohoni, Sohum>You've got the right number based on the decimal side of things.</v>
+
+0:24:21.580 --> 0:24:29.280
+<v Sohoni, Sohum>So is this a? It's a long question. It's got many parts to it. So it would take like 10-15 minutes to do, but.</v>
+
+0:24:30.130 --> 0:24:33.450
+<v Sohoni, Sohum>I don't think it's a particularly difficult one. Any questions on this?</v>
+
+0:24:43.520 --> 0:24:46.110
+<v Sohoni, Sohum>Hey, I'm not hearing questions, so it's keep going.</v>
+
+0:24:48.80 --> 0:25:8.730
+<v Sohoni, Sohum>Alright, so you've been passed with. Writing a function is different exponent which will take in court. And if you're not talking girl mute ourselves which will take in as parameters 232 bit floating point numbers in single precision format passed in as pointers in register at a one.</v>
+
+0:25:9.480 --> 0:25:9.740
+<v Sohoni, Sohum>K.</v>
+
+0:25:10.610 --> 0:25:19.680
+<v Sohoni, Sohum>You are to write a function using only integer operations that will determine if the exponent is the same for both numbers. OK.</v>
+
+0:25:20.700 --> 0:25:29.900
+<v Sohoni, Sohum>If the exponent is the same value of zero, will be returned by the function in V0, if the exponent is different in non 0 value will be returned. Alright. So how do we do this?</v>
+
+0:25:38.90 --> 0:25:39.580
+<v Schilling, Atreyu>I gotta retrieve the.</v>
+
+0:25:44.670 --> 0:25:45.80
+<v Sohoni, Sohum>Right.</v>
+
+0:25:40.810 --> 0:25:46.630
+<v Schilling, Atreyu>32 bit floating point numbers from the pointers first after soon or we sorry.</v>
+
+0:25:47.600 --> 0:25:56.340
+<v Schilling, Atreyu>Went too fast. Uh, save the pointer and the stack pointer and stuff like that. Move the stack and save stuff onto this stack and do whatever we need to do.</v>
+
+0:25:56.950 --> 0:25:57.410
+<v Sohoni, Sohum>Sure.</v>
+
+0:25:58.590 --> 0:26:7.230
+<v Sohoni, Sohum>And then, yeah, so you're going to get the two numbers using load address because you've been given addresses for those two numbers, right?</v>
+
+0:26:12.920 --> 0:26:15.250
+<v Sohoni, Sohum>Then what do you do? That's it's important.</v>
+
+0:26:16.690 --> 0:26:17.310
+<v Bultman, Joshua>You could.</v>
+
+0:26:18.20 --> 0:26:18.920
+<v Bultman, Joshua>Do Anand.</v>
+
+0:26:20.350 --> 0:26:20.760
+<v Sohoni, Sohum>OK.</v>
+
+0:26:20.100 --> 0:26:22.780
+<v Bultman, Joshua>Immediate and and just do.</v>
+
+0:26:23.680 --> 0:26:26.660
+<v Bultman, Joshua>The for the first bit would be 0.</v>
+
+0:26:26.990 --> 0:26:27.520
+<v Sohoni, Sohum>Uh-huh.</v>
+
+0:26:27.860 --> 0:26:32.860
+<v Bultman, Joshua>And then the next 8-8 bits would be ones and then the rest of the bits will be 0.</v>
+
+0:26:33.480 --> 0:26:38.860
+<v Bultman, Joshua>So that way that you you get the exponent for each number by itself. So you do that for both numbers really.</v>
+
+0:26:39.900 --> 0:27:9.840
+<v Sohoni, Sohum>Right. So yeah, exactly because in the IEEE 754 format, right, we've got the sign bit, then we've got the exponent and then the rest of it is the fraction, right. So that's why our mask is going to look like that. So this mask is easier to express in hexadecimal. So it would be 7 F 800000. I think one more 0, right, we've got 1234567.</v>
+
+0:27:9.890 --> 0:27:16.880
+<v Sohoni, Sohum>8 digits. No. Yeah, so this would be the 32 bit mask that we have. Any questions on how we got this mask?</v>
+
+0:27:23.290 --> 0:27:32.940
+<v Sohoni, Sohum>That's that's the main part of this question, right? And so we can do an end with or we can do Anand immediate with this or we could put this in a register.</v>
+
+0:27:34.210 --> 0:27:38.880
+<v Sohoni, Sohum>I'd rather put it in a register 'cause. We're going to use it again so we can do the.</v>
+
+0:27:38.940 --> 0:27:39.140
+<v Sohoni, Sohum>Yeah.</v>
+
+0:27:40.990 --> 0:27:49.850
+<v Sohoni, Sohum>You know, ending just like an R type instruction with both of the register. So let's say we put this guy into T zero. We put this guy into T1.</v>
+
+0:27:50.390 --> 0:28:3.950
+<v Sohoni, Sohum>Uhm, so we can do the masking and store back to T0 and T1 so that now those registers contain only these bits isolated, right? The exponent bits? What do we do next?</v>
+
+0:28:13.240 --> 0:28:15.330
+<v Sohoni, Sohum>So we're going to have two numbers.</v>
+
+0:28:19.0 --> 0:28:20.140
+<v Sohoni, Sohum>So in this.</v>
+
+0:28:22.60 --> 0:28:25.510
+<v Sohoni, Sohum>We've got zero XC, something 0 yyy something, right?</v>
+
+0:28:27.780 --> 0:28:30.270
+<v Sohoni, Sohum>What is the program asking us to do next?</v>
+
+0:28:32.980 --> 0:28:35.560
+<v Kreitzman, Colton>Would you wanna do a branch not equal?</v>
+
+0:28:38.80 --> 0:28:41.410
+<v Sohoni, Sohum>Yeah, you could do a branch if equal, you could do a branch if not equal.</v>
+
+0:28:43.260 --> 0:28:45.830
+<v Sohoni, Sohum>And do what with the branching.</v>
+
+0:28:48.610 --> 0:28:58.650
+<v Kreitzman, Colton>You would compare those two numbers to see if they're the same and then branched too. Uh, I guess. Presumably presumably a different function depending on that outcome.</v>
+
+0:28:59.610 --> 0:29:7.360
+<v Sohoni, Sohum>I don't have to be a different function. I often hear the students say you want to branch two way function. I don't really need a function.</v>
+
+0:29:8.250 --> 0:29:20.830
+<v Sohoni, Sohum>One side of the branch, let's say what is what is being asked of us. We want to put a zero in V0. If they're the same, right? So if we do a branch if not equal, then we want to put maybe a one in V0, right?</v>
+
+0:29:22.960 --> 0:29:29.780
+<v Sohoni, Sohum>Even if it's a branch, if equal, then we want to put a zero in V0 and then for the other case.</v>
+
+0:29:30.660 --> 0:29:31.400
+<v Sohoni, Sohum>Portal one.</v>
+
+0:29:32.320 --> 0:29:33.120
+<v Sohoni, Sohum>They're making sense.</v>
+
+0:29:35.420 --> 0:29:35.890
+<v Kreitzman, Colton>Yeah.</v>
+
+0:29:36.370 --> 0:29:45.70
+<v Sohoni, Sohum>Yeah, I mean, it could just be cord where you jump over the part that's not being used. So you get one branch in one jump instead of actually calling a procedure.</v>
+
+0:29:45.860 --> 0:29:52.950
+<v Sohoni, Sohum>Procedures are expensive to call. Generally speaking, we don't. We want to avoid procedures if we can. There's another.</v>
+
+0:29:54.600 --> 0:30:0.690
+<v Sohoni, Sohum>Tricky sort of way to get the last part done, which is more efficient. So anyone have any?</v>
+
+0:29:59.940 --> 0:30:6.60
+<v Schilling, Atreyu>Yeah, isn't there like set this register to the equality of the other two? I can't remember what the.</v>
+
+0:30:6.240 --> 0:30:9.130
+<v Schilling, Atreyu>Uhm, instruction is but it's.</v>
+
+0:30:9.450 --> 0:30:10.310
+<v Sohoni, Sohum>Yes, Sir.</v>
+
+0:30:9.780 --> 0:30:13.820
+<v Schilling, Atreyu>Yeah, you pass in like V0 and then you have the two numbers and it checks out there.</v>
+
+0:30:13.90 --> 0:30:17.610
+<v Sohoni, Sohum>Yeah, you could just set it equal. There's an even simpler thing that you can do.</v>
+
+0:30:29.380 --> 0:30:46.830
+<v Sohoni, Sohum>Right. So assuming these two are in T0 and T1 like I pointed out here right? Like assuming we've loaded them in T0T1, we've matched them and the result of the mask is also in T0 and T1. You could simply do a subtraction, right, which if they are equal, V 0 is going to have a zero in it.</v>
+
+0:30:47.470 --> 0:30:50.800
+<v Sohoni, Sohum>If they're not equal, V 0 is going to have some non 0 value in it.</v>
+
+0:30:55.630 --> 0:30:56.350
+<v Sohoni, Sohum>Making sense?</v>
+
+0:31:4.720 --> 0:31:9.420
+<v Sohoni, Sohum>No, I don't see any reactions here. Oh, I got a thumbs up, all right.</v>
+
+0:31:9.230 --> 0:31:10.290
+<v Bultman, Joshua>Yeah, that makes sense to me.</v>
+
+0:31:10.760 --> 0:31:24.650
+<v Sohoni, Sohum>Yeah. OK, right. And it's totally fine if someone used branches, that's fine. If you wanted to do it with procedures, that's fine as well. Although may I wouldn't take off points, but there could not be something I'd want to promote.</v>
+
+0:31:25.160 --> 0:31:37.70
+<v Sohoni, Sohum>Uhm, branching is how I would have done it, but one of the students in the 1:00 o'clock section said, well, I'll do it with subtraction and I was like you really smart? So yeah, so you could do it that way as well.</v>
+
+0:31:37.710 --> 0:31:43.170
+<v Sohoni, Sohum>Uhm, any other questions? Let someone trying to do this a different way.</v>
+
+0:31:55.410 --> 0:32:11.750
+<v Sohoni, Sohum>So it does mention masking here, but you could solve this problem without masking. Now obviously I want you to understand my asks because that's something that is somewhat commonly used in computer science, especially in embedded systems and so on.</v>
+
+0:32:12.360 --> 0:32:12.970
+<v Sohoni, Sohum>Uhm.</v>
+
+0:32:13.960 --> 0:32:44.150
+<v Sohoni, Sohum>So understanding the concept of isolating some bits within a bigger field of bids, it's pretty important thing to do. However, if you wanted to, you could actually take these two numbers right? And instead of creating a mask, you could shift them out, right? Well, you could shift them one to the left to get rid of the sign bit and then shift them 23 bits or whatever two. Or at that point it'll be 24 bits through the right to get rid of everything else so that it's.</v>
+
+0:32:44.210 --> 0:33:5.570
+<v Sohoni, Sohum>Just a string of zeros with the exponent isolated in the lower 8 bits, right? You could do it for both of the numbers and then you could do the subtraction or branching or whatever. So that's another way of doing it. It's not the way I would want you to do it, but it would be the way that could also get full credit if you did it right. You have any questions on that?</v>
+
+0:33:12.950 --> 0:33:14.240
+<v Kreitzman, Colton>I guess I have a question.</v>
+
+0:33:16.130 --> 0:33:16.810
+<v Kreitzman, Colton>So.</v>
+
+0:33:18.400 --> 0:33:19.280
+<v Kreitzman, Colton>If you have.</v>
+
+0:33:20.120 --> 0:33:23.800
+<v Kreitzman, Colton>So if you have those 32 bit floating point numbers as the parameters.</v>
+
+0:33:25.180 --> 0:33:25.840
+<v Kreitzman, Colton>Uhm.</v>
+
+0:33:27.380 --> 0:33:30.490
+<v Kreitzman, Colton>You could just immediately use the shifting on them like you don't need to.</v>
+
+0:33:32.80 --> 0:33:40.770
+<v Kreitzman, Colton>I don't know. I guess I don't know how you would do it anyways, but it's already represented in that kind of binary form no matter which way you set those values.</v>
+
+0:33:41.320 --> 0:33:59.130
+<v Sohoni, Sohum>Yeah. Yeah. So that's a very important point. I'm glad you asked that question. So at the end of the day, right, this a zero and a one is pointing to a string, a 32 bit string. And I keep saying string 'cause. That's how we learned it, but 32 bit.</v>
+
+0:34:0.130 --> 0:34:2.430
+<v Sohoni, Sohum>Sequence of zeros and ones right?</v>
+
+0:34:3.510 --> 0:34:16.600
+<v Sohoni, Sohum>How we treat it is up to us. We can read it in as an integer if we read it in as a floating point number, that's going to be a problem. So this is asking you to use only integer operations, so we treat that.</v>
+
+0:34:17.410 --> 0:34:20.750
+<v Sohoni, Sohum>Those 32 bits, whatever they are as an integer.</v>
+
+0:34:21.820 --> 0:34:39.230
+<v Sohoni, Sohum>And I've said this before like 832 bit number is just 32 bits. You can treat it as a sign number. You can treat it as an unsigned number or you can treat it as an address. If you use you know and load address on it is really up to the programmer to say what those 32 bits actually mean.</v>
+
+0:34:40.780 --> 0:34:41.900
+<v Sohoni, Sohum>They're making sense, Colton.</v>
+
+0:34:42.980 --> 0:34:43.640
+<v Kreitzman, Colton>Yep, thank you.</v>
+
+0:34:44.70 --> 0:34:44.920
+<v Sohoni, Sohum>OK, cool.</v>
+
+0:34:45.570 --> 0:34:59.0
+<v Schilling, Atreyu>If we're tasked with writing a procedure on the final, should we expect to have to do the like, save the stack pointer incremented, save a bunch of stuff onto it, or should that like be explicitly stated if we need to do that or?</v>
+
+0:35:0.370 --> 0:35:14.330
+<v Sohoni, Sohum>I would recommend a good question. I would recommend that you save any registers that you're planning to use. So in this case I wouldn't save anything because the T registers aren't.</v>
+
+0:35:15.920 --> 0:35:35.990
+<v Sohoni, Sohum>There are temporary registers you're not expected to save those if you're using any of the S registers. If you're messing with Dollar RA or anything like that, then I would expect you to save those particular registers that you're using. If you're not touching anything, there's no reason for the epilogue and prologue and all that stuff, yeah.</v>
+
+0:35:39.750 --> 0:35:40.900
+<v Sohoni, Sohum>Their answer your question.</v>
+
+0:35:42.590 --> 0:35:42.930
+<v Schilling, Atreyu>Yeah.</v>
+
+0:35:43.950 --> 0:35:47.800
+<v Sohoni, Sohum>Alright, good. Let's keep going then. Uhm.</v>
+
+0:35:48.570 --> 0:36:10.670
+<v Sohoni, Sohum>Alright, so here's the program that you're supposed to write called count caps. Actually, it's a function which will take a pointer to a string in a zero, and will count the number of capital letters in the string, and it's even given that it's a null terminated string and you're also given the range of capital ASCII letters 65 to 90 inclusive at both ends.</v>
+
+0:36:11.410 --> 0:36:24.360
+<v Sohoni, Sohum>So yeah, I would say this is pretty straightforward programme. You've already done something that was a two caps, right? Did you do it in? In your section? Do you remember doing that program?</v>
+
+0:36:24.470 --> 0:36:25.90
+<v Schilling, Atreyu>Yeah, yeah.</v>
+
+0:36:24.810 --> 0:36:25.450
+<v Gaty, William>Yes.</v>
+
+0:36:24.880 --> 0:36:26.0
+<v Bultman, Joshua>Yeah, yeah, we did that.</v>
+
+0:36:26.250 --> 0:36:45.860
+<v Sohoni, Sohum>So this is actually the simpler version of two caps, right? If you have two caps open and handy, you can just copy that code and paste it in Mars as a new program and then remove the parts that are actually doing the conversion and instead just have a counter that counts the number of times it's true that it is a.</v>
+
+0:36:47.340 --> 0:36:50.240
+<v Sohoni, Sohum>Capital letter where it's like within that range of ASCII.</v>
+
+0:36:50.940 --> 0:36:52.710
+<v Sohoni, Sohum>Any questions on this?</v>
+
+0:37:2.120 --> 0:37:15.400
+<v Sohoni, Sohum>Well, no questions. OK, so yeah, so you simply run it through a loop and just check whether each. Oh, let me ask you a question to get each of the letters one by one. Which instruction do you think you'll be using?</v>
+
+0:37:18.910 --> 0:37:19.920
+<v Bultman, Joshua>Loaded dress.</v>
+
+0:37:23.650 --> 0:37:26.560
+<v Sohoni, Sohum>Ah, Luna dress will load.</v>
+
+0:37:27.410 --> 0:37:28.760
+<v Sohoni, Sohum>32 bits, right?</v>
+
+0:37:33.100 --> 0:37:33.610
+<v Kreitzman, Colton>So but.</v>
+
+0:37:30.20 --> 0:37:34.20
+<v Bultman, Joshua>That's true. Would it be the load word overload? Bite look. But I think there's a little better, isn't.</v>
+
+0:37:34.240 --> 0:37:47.970
+<v Sohoni, Sohum>Yeah, lured by because you want to get individual letters. Right, load word would also load 32 bits. Or you could do it, but it's becomes really complicated if you load the four letters at a time and then you've got to shift and.</v>
+
+0:37:48.340 --> 0:38:18.210
+<v Sohoni, Sohum>Uh, you know, masquerain shift and all that. It's much easier to just use lowered bite. It automatically puts it in the lower 8 bits and makes life simple for comparison. So yeah, you run it through a loop in which you're doing load byte load pilot for until you get the null Terminator, and then you stop. At that point, you're done. Whatever your counter value is, you can put that in V0 because that's where you want to keep the count, and that's that. So.</v>
+
+0:38:18.810 --> 0:38:43.80
+<v Sohoni, Sohum>I guess there's no other questions on that one. So this one is sort of like the driver or the main for the function that you just wrote up here, OK, because what it's saying is right, a segment of code that will declare your name as in all Terminator ASCII string in the data segment and then write a segment of code that will invoke the count caps function written about to count the number of caps in your name.</v>
+
+0:38:43.920 --> 0:38:46.940
+<v Sohoni, Sohum>K UM, any questions on this question?</v>
+
+0:38:51.0 --> 0:38:57.610
+<v Bultman, Joshua>Would you want us to like print out how much there was or is it just enough to to say that we stored in a register or something?</v>
+
+0:38:59.750 --> 0:39:18.670
+<v Sohoni, Sohum>Yeah, like this question 8 is not really asking you to do anything with that number, right? So yeah, I'm OK if you don't do anything with it. So as long as you just do dot data and then do DA task easy and put your name there and then just, you know, call this procedure.</v>
+
+0:39:19.370 --> 0:39:23.890
+<v Sohoni, Sohum>So do a jump and link to count caps. That's that's about it. That's the whole thing.</v>
+
+0:39:26.30 --> 0:39:26.720
+<v Sohoni, Sohum>That makes sense.</v>
+
+0:39:32.370 --> 0:39:32.820
+<v Bultman, Joshua>Yep.</v>
+
+0:39:34.330 --> 0:39:49.840
+<v Sohoni, Sohum>OK, good. We're making good progress here. Alright. So the last few questions, one of them on the data path, we've done the data path many Times Now. So I don't know if anyone has a question on this, but if you do, please go ahead and ask me.</v>
+
+0:39:50.740 --> 0:39:51.680
+<v Sohoni, Sohum>Your question.</v>
+
+0:39:58.670 --> 0:40:3.400
+<v Sohoni, Sohum>So if you don't, I'm going to assume that you are very comfortable with this.</v>
+
+0:40:5.760 --> 0:40:9.300
+<v Rolando, Jackson>On the the output for the.</v>
+
+0:40:10.410 --> 0:40:11.240
+<v Rolando, Jackson>Uh hum.</v>
+
+0:40:12.940 --> 0:40:16.960
+<v Rolando, Jackson>Uh in in the registers rectangle there are two outputs.</v>
+
+0:40:17.580 --> 0:40:18.60
+<v Rolando, Jackson>Uhm.</v>
+
+0:40:18.700 --> 0:40:21.740
+<v Rolando, Jackson>What is the output for a uh?</v>
+
+0:40:25.350 --> 0:40:26.760
+<v Rolando, Jackson>Uh read data 2.</v>
+
+0:40:27.420 --> 0:40:32.220
+<v Rolando, Jackson>'cause I I remember there was a there was a there was a question on a quiz that I was a little confused about.</v>
+
+0:40:33.10 --> 0:40:33.540
+<v Rolando, Jackson>Uhm.</v>
+
+0:40:35.820 --> 0:40:36.160
+<v Sohoni, Sohum>Yeah.</v>
+
+0:40:37.560 --> 0:40:37.840
+<v Sohoni, Sohum>Sure.</v>
+
+0:40:34.810 --> 0:40:39.400
+<v Rolando, Jackson>Yeah. What's the output for? Read it if two during a during. I think it was a load word instruction.</v>
+
+0:40:39.40 --> 0:40:49.420
+<v Sohoni, Sohum>Yeah, this is a load word. Very similar situation towards on the what was on the quiz. So which register is going to be or read data to. In this case that's the real trick.</v>
+
+0:40:57.100 --> 0:41:4.630
+<v Sohoni, Sohum>You only two options as zero and T0 right? Which of those two do you think is going to be read data? One which do you think is going to be read data 2?</v>
+
+0:41:11.360 --> 0:41:11.680
+<v Sohoni, Sohum>Yep.</v>
+
+0:41:7.70 --> 0:41:14.260
+<v Rolando, Jackson>History data one would be S 0 or the value in S0 and read it. It would be the value in T0.</v>
+
+0:41:19.500 --> 0:41:19.780
+<v Rolando, Jackson>Yeah.</v>
+
+0:41:14.660 --> 0:41:23.220
+<v Sohoni, Sohum>Correct. So what's you've been told value in T0 is this value here. So that's what's going to be in on the read data to bus.</v>
+
+0:41:23.790 --> 0:41:24.600
+<v Rolando, Jackson>OK. Gotcha.</v>
+
+0:41:25.110 --> 0:41:25.440
+<v Sohoni, Sohum>Yep.</v>
+
+0:41:26.560 --> 0:41:28.310
+<v Sohoni, Sohum>Good. Any other questions?</v>
+
+0:41:37.30 --> 0:42:0.980
+<v Sohoni, Sohum>So this question in its current form is not likely to be on the test 'cause again, it's going to be on canvas, so it'll be much more, you know, closer to the question that you saw on the quiz where I had multiple choice questions for the various lines, whether it will control lines or data lines. OK, so that's what it's going to look like on your final.</v>
+
+0:42:3.730 --> 0:42:5.480
+<v Sohoni, Sohum>So yeah, let's keep going.</v>
+
+0:42:8.70 --> 0:42:17.0
+<v Sohoni, Sohum>Right. So again, we did an activity on this. I think the last quiz was also asking you about the data path, right. If I remember correctly.</v>
+
+0:42:17.410 --> 0:42:29.400
+<v Sohoni, Sohum>Uh, so yeah, this again on the final exam, the question that you will see in canvas will be closer to the question you did on the quiz then having to actually draw any paths or anything like that.</v>
+
+0:42:31.210 --> 0:42:42.480
+<v Sohoni, Sohum>But conceptually it's the same thing. You gotta identify where the hazards are. You have to identify if there is any stalling required, and so on and so forth. So any questions on this question?</v>
+
+0:43:0.430 --> 0:43:12.340
+<v Sohoni, Sohum>OK, I don't see any questions. So with that gets us to the last question on the test, which is convert the following truth table to equation and draw the corresponding circuit.</v>
+
+0:43:13.330 --> 0:43:16.500
+<v Sohoni, Sohum>So do you just want to do this? We have enough time to do it.</v>
+
+0:43:18.230 --> 0:43:20.260
+<v Sohoni, Sohum>What would be the equation?</v>
+
+0:43:29.470 --> 0:43:30.520
+<v Rolando, Jackson>For some of products.</v>
+
+0:43:34.480 --> 0:43:37.930
+<v Rolando, Jackson>Uh, not a be Nazi.</v>
+
+0:43:39.840 --> 0:43:43.100
+<v Rolando, Jackson>Or a not BC.</v>
+
+0:43:44.360 --> 0:43:46.700
+<v Rolando, Jackson>Or maybe not. See.</v>
+
+0:43:48.330 --> 0:43:50.600
+<v Sohoni, Sohum>Right. So we take each of these guys.</v>
+
+0:43:52.70 --> 0:44:13.370
+<v Sohoni, Sohum>Right. And we look at what are the corresponding values of a B&C that give us an output of 1, so is zero. That's why not a V is one. That's why BC is 0. So Nazi same thing for all three. So this is our equation and putting it into a circuit without any simplification means that we're going to have.</v>
+
+0:44:13.930 --> 0:44:16.190
+<v Sohoni, Sohum>Ah well, started with the wrong.</v>
+
+0:44:17.220 --> 0:44:18.580
+<v Sohoni, Sohum>Wouldn't let me reset.</v>
+
+0:44:23.300 --> 0:44:27.550
+<v Sohoni, Sohum>So we want to have an or gate to begin with at the end, right?</v>
+
+0:44:31.630 --> 0:44:37.0
+<v Sohoni, Sohum>Which is going to be a three input or gate. Each of those three inputs are coming through ends.</v>
+
+0:44:38.760 --> 0:44:39.970
+<v Sohoni, Sohum>Make room for that.</v>
+
+0:44:41.370 --> 0:44:47.640
+<v Sohoni, Sohum>And then for these and gates, we've got in the first case, let's just Mark AB&C.</v>
+
+0:44:48.650 --> 0:44:52.310
+<v Sohoni, Sohum>In the first case, is going through an inverter.</v>
+
+0:44:53.440 --> 0:44:55.660
+<v Sohoni, Sohum>B is going through as is.</v>
+
+0:44:56.450 --> 0:45:2.100
+<v Sohoni, Sohum>And see is going through an inverter as well. I'm going to run on turn out of space here, but.</v>
+
+0:45:2.880 --> 0:45:5.560
+<v Sohoni, Sohum>Let's just do it and I'll do one more.</v>
+
+0:45:6.180 --> 0:45:21.280
+<v Sohoni, Sohum>And gate input just so we see the signals. So it goes through as is. So I'll use this part here to let me go through B gets inverted. So I'll put an inverter on be.</v>
+
+0:45:25.60 --> 0:45:30.410
+<v Sohoni, Sohum>And then see goes through as is. So let me mark see up like this.</v>
+
+0:45:31.150 --> 0:45:48.800
+<v Sohoni, Sohum>And so make sure that you show the connections boldly and then well, I guess we have time to finish the last one as well. We might not have space, but we have time. So we do a B&C prime. So we already got C prime. So let's borrow C prime from here.</v>
+
+0:45:49.580 --> 0:45:51.250
+<v Sohoni, Sohum>And then we've got a.</v>
+
+0:45:52.520 --> 0:46:5.370
+<v Sohoni, Sohum>We could actually grab it from here. This is not how I would recommend you draw it, but I'm doing that anyway. Is it terrible drawing? Then I'll grab be from here.</v>
+
+0:46:6.580 --> 0:46:7.720
+<v Sohoni, Sohum>Now put it this way.</v>
+
+0:46:8.350 --> 0:46:15.80
+<v Sohoni, Sohum>K So yeah, it cleaner version of this circuit would be ideal, but that's what the circuit looks like.</v>
+
+0:46:17.780 --> 0:46:19.480
+<v Sohoni, Sohum>Right. Any questions?</v>
+
+0:46:21.50 --> 0:46:33.950
+<v Sohoni, Sohum>We did review yesterday. We've done review today. UM, as I said, we could do the question one from the exam in small groups tomorrow, but feel free to bring in any other questions you might have as well.</v>
+
+0:46:34.890 --> 0:47:2.700
+<v Sohoni, Sohum>And if you've not solved the exam, I highly recommend solving it, watching me talk about it is is one thing. Actually doing the questions is a different matter altogether, so I highly recommend if you haven't done it, even if you listened in on all the solutions, still go ahead and solve things. And if you want to put up your solutions in our teams chat and check with other students in the class if they got the same thing.</v>
+
+0:47:4.190 --> 0:47:10.650
+<v Sohoni, Sohum>Go ahead and do that. I have no objection to any of that. If you solve the whole exam and you want me to take a look at it.</v>
+
+0:47:11.710 --> 0:47:17.490
+<v Sohoni, Sohum>I don't mind doing that either, just give me 24 hours to to go through it.</v>
+
+0:47:18.290 --> 0:47:20.610
+<v Sohoni, Sohum>OK. Any questions?</v>
+
+0:47:25.320 --> 0:47:26.970
+<v Kreitzman, Colton>When will the exam be available again?</v>
+
+0:47:28.850 --> 0:47:30.620
+<v Sohoni, Sohum>Which exam this one?</v>
+
+0:47:32.100 --> 0:47:32.580
+<v Kreitzman, Colton>Yeah.</v>
+
+0:47:33.180 --> 0:47:35.100
+<v Sohoni, Sohum>This one is being there for a week now.</v>
+
+0:47:33.360 --> 0:47:37.830
+<v Kreitzman, Colton>Or no? I mean my phone. I meant the actual exam.</v>
+
+0:47:38.490 --> 0:47:46.120
+<v Sohoni, Sohum>Oh, the actual exam is at your exam time, so I believe for your section that is going to be Wednesday from 2:00 to 4:00.</v>
+
+0:47:47.680 --> 0:47:50.170
+<v Kreitzman, Colton>But we could just access it from at home, right?</v>
+
+0:47:51.20 --> 0:47:59.140
+<v Sohoni, Sohum>Yes, it's on canvas. So yeah, you don't have to come to the room that's assigned for the exam. You can take it from home, from the dorm or anywhere you like.</v>
+
+0:48:1.250 --> 0:48:1.780
+<v Kreitzman, Colton>Thank you.</v>
+
+0:48:10.420 --> 0:48:11.690
+<v Sohoni, Sohum>Any other questions?</v>
+
+0:48:23.920 --> 0:48:29.130
+<v Sohoni, Sohum>OK. Well, if there's no other questions, then I think I will let you guys go.</v>
+
+0:48:31.0 --> 0:48:34.390
+<v Sohoni, Sohum>And I will see you tomorrow in small groups. OK, take care.</v>
+
+0:48:35.400 --> 0:48:36.440
+<v Bultman, Joshua>Thank you. Bye.</v>
+
+0:48:37.200 --> 0:48:37.650
+<v Sohoni, Sohum>Bye.</v>
+
+0:48:37.780 --> 0:48:38.180
+<v Regan, Aidan>Thank you.</v>

@@ -1,0 +1,592 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.290
+<v Sohoni, Sohum>I am feeling better.</v>
+
+00:00:02.290 --> 00:00:02.780
+<v Rolando, Jackson>Awesome.</v>
+
+00:00:03.920 --> 00:00:04.270
+<v Sohoni, Sohum>Yeah.</v>
+
+00:00:05.700 --> 00:00:08.470
+<v Sohoni, Sohum>I hope this keeps going in the same direction.</v>
+
+00:00:11.660 --> 00:00:16.030
+<v Sohoni, Sohum>Alright, so let me share my screen.</v>
+
+00:00:16.970 --> 00:00:24.460
+<v Sohoni, Sohum>And I'll say a couple of things. One, I sent an announcement about this. There's a bonus or reflection assignment.</v>
+
+00:00:25.310 --> 00:00:44.740
+<v Sohoni, Sohum>That I've created and I put it in the week seven module and it's pretty straightforward. I think you know there description says it all. It's 1 to 1.5 pages. It's worth 20 points and it's giving you 5 questions as a starting point to think about.</v>
+
+00:00:45.440 --> 00:00:58.520
+<v Sohoni, Sohum>Or do you want to write it's? It's mainly just a reflection on what you've learned so far and how you did on the midterm specifically, and how might you do better on the rest of the stuff that we do in this course.</v>
+
+00:00:58.960 --> 00:01:01.700
+<v Sohoni, Sohum>OK, so any questions about this assignment?</v>
+
+00:01:11.840 --> 00:01:13.390
+<v Sohoni, Sohum>OK, I take that as a no.</v>
+
+00:01:15.830 --> 00:01:25.770
+<v Sohoni, Sohum>Alright, so the rest of this class period. I am planning to just go over the midterm exam one by one. As I said in my announcement, the test has been graded.</v>
+
+00:01:26.430 --> 00:01:30.870
+<v Sohoni, Sohum>And the higher score was 100. I'm very happy to see that someone scored.</v>
+
+00:01:31.460 --> 00:01:34.060
+<v Sohoni, Sohum>A full points on their test, well done.</v>
+
+00:01:34.680 --> 00:01:44.000
+<v Sohoni, Sohum>And the average score on this section was, I believe, Eddie one, which is not great, but I think it's not bad for an average.</v>
+
+00:01:46.010 --> 00:02:11.570
+<v Sohoni, Sohum>So yeah, let me start just going through a question by question on their test. So the first question was and again, I've sort of minimized the window where I normally would see hands going up and things like that. So if anyone has a question, just go ahead and interrupt me, 'cause otherwise I might not know. So I'm not looking at the chat, I'm not looking at hands, so just unmute and start talking OK?</v>
+
+00:02:12.500 --> 00:02:42.880
+<v Sohoni, Sohum>Uhm, alright, so question one. Write a program in Mars to accomplish the following initialize register T0 with a number of your choice between one and 25 right UR as in the programmers choice and use masking to overwrite the top 4 bits of this number to be all ones without affecting the value of the lower 28 bits right. Output this value to the console, then apply them asking to clear the lower 8 bits of this number without.</v>
+
+00:02:42.930 --> 00:02:52.680
+<v Sohoni, Sohum>Affecting the top 24 bits right clear means making zero set means making one, so we want to make the lower 8 bits 0.</v>
+
+00:02:53.370 --> 00:03:10.490
+<v Sohoni, Sohum>Right without affecting the top 24 bits. So this is a 32 bit number as all numbers in MIPS are going to be, and then you finally output the that final value to the console, right? So I'm going to bring up my Mars window and show you the.</v>
+
+00:03:11.910 --> 00:03:18.160
+<v Sohoni, Sohum>What I would think is the most straightforward solution to this problem. OK, and I saw a number of.</v>
+
+00:03:18.880 --> 00:03:40.040
+<v Sohoni, Sohum>Other solutions, many of which I had to test to see if they were right, and if you believe you you turned in a correct solution that was actually working and you did not get points for it, please let me know. I did give individual feedback for this question to anybody who lost points, so if you lost points and didn't get any feedback.</v>
+
+00:03:40.660 --> 00:04:06.770
+<v Sohoni, Sohum>I mean, either you really didn't turn anything more than a couple of lines of code, or there was something very specific that I pointed out as being incorrect. OK, so let's look at the code first line. We just put a number in there, so I just put in the number 25. It could be any number for that matter, but it said between 0 and 25. So let's just do 25.</v>
+
+00:04:07.320 --> 00:04:07.930
+<v Sohoni, Sohum>Uhm?</v>
+
+00:04:08.690 --> 00:04:17.610
+<v Sohoni, Sohum>And again, this is one way to do it. There's many different ways you could have used the load immediate instruction, which would translate into something like this.</v>
+
+00:04:18.420 --> 00:04:19.140
+<v Sohoni, Sohum>Uhm?</v>
+
+00:04:20.180 --> 00:04:50.100
+<v Sohoni, Sohum>Yeah, there's at least 10 different ways you could do this, but this is one of those straightforward ways of saying OK, take register zero and the number 25 to that, and then put that result in was, I think wanted it to do NT0, right? Let's just change that pretty 0, so if we change that to T0, let's make sure we change this down here to TO as well. But anyway, that's not important. The important part is we've initialized T0.</v>
+
+00:04:50.410 --> 00:04:57.210
+<v Sohoni, Sohum>Now we're creating a mask and this is where the trick was, right? So F is all ones.</v>
+
+00:04:58.010 --> 00:04:58.750
+<v Sohoni, Sohum>So.</v>
+
+00:05:00.100 --> 00:05:07.290
+<v Sohoni, Sohum>Top 4 bits in a 32 bit number. Being 1 means that top hex digit is going to be F.</v>
+
+00:05:08.570 --> 00:05:17.970
+<v Sohoni, Sohum>OK, so if and then the remaining 7 hexadecimal digits are all going to be 0, right? So we do that.</v>
+
+00:05:18.680 --> 00:05:33.930
+<v Sohoni, Sohum>The next step, so again, many of you who didn't get full points, probably had something incorrect going on here, either with the mask being incorrect or not using the mask or not using the OR property for.</v>
+
+00:05:34.570 --> 00:06:04.720
+<v Sohoni, Sohum>Uhm, I mean as we learned in digital logic in the first few weeks, right that you or anything with the one the result is going to be a one. And that's why this mask looks like this where the top 4 bits are ones so that when we are with those four bits, we're going to force the top 4 bits of our result to be all ones and the remaining 7 digits here, or the remaining 28 bits are going to be unaffected because.</v>
+
+00:06:04.770 --> 00:06:34.620
+<v Sohoni, Sohum>Ordering anything with the zero gives you back whatever the original thing was with which you were ordering. OK, so this is where again, if you lost points mainly because you were either shifting or trying to do something else here which would not accomplish what we're trying to accomplish. So I'll just pause here for a moment and see if there are questions, and in fact in the meantime, I'll assemble and steps through so you see T0 has been loaded with.</v>
+
+00:06:35.380 --> 00:06:44.830
+<v Sohoni, Sohum>The blind, I mean the decimal #25, which is hexadecimal 19 and then as we step in the OR.</v>
+
+00:06:45.560 --> 00:06:47.190
+<v Sohoni, Sohum>Mix well.</v>
+
+00:06:47.240 --> 00:06:52.190
+<v Sohoni, Sohum>We have to do it so the OR here is going to put.</v>
+
+00:06:53.390 --> 00:06:53.950
+<v Sohoni, Sohum>Uhm?</v>
+
+00:06:55.510 --> 00:06:57.410
+<v Sohoni, Sohum>It might change something. Let me see.</v>
+
+00:06:58.660 --> 00:07:22.790
+<v Sohoni, Sohum>OK, yeah, so again, instructions got translated to a few other things in the actual code, so there were a number of moving. You know other assembly instructions here that happened, but in any case what's happening here is we see that the top 4 bits are now one in T2 and the remaining bits are unchanged. So you see the 19 down here as being unchanged.</v>
+
+00:07:34.170 --> 00:07:35.010
+<v Sohoni, Sohum>No questions.</v>
+
+00:07:42.700 --> 00:07:46.310
+<v Sohoni, Sohum>If you guys can still hear me give me a thumbs up or some sign.</v>
+
+00:07:48.260 --> 00:07:49.200
+<v Rolando, Jackson>Yep, I'm still here.</v>
+
+00:07:49.680 --> 00:08:19.260
+<v Sohoni, Sohum>OK alright OK good 'cause I thought there might be a few questions but OK alright let's just keep going. So we did the mask and as we were stepping through a man you saw that we could move from T2 to a zero. The reason we are doing this is because we're going to do an output here, right? The syscall to output an integer is to put a one in V0. So we do that and then whatever is in a 0 gets out pooted.</v>
+
+00:08:19.890 --> 00:08:24.810
+<v Sohoni, Sohum>So if we were stepping through our program, that output will come through.</v>
+
+00:08:25.970 --> 00:08:48.210
+<v Sohoni, Sohum>Which again, it won't make any sense on the console as we're stepping through because you know. So here's that number that's been output. If it's a large negative number and it's being treated as a signed number by default, and that's why it's just a large negative number. But again, that's not where the magic is. It's really the register.</v>
+
+00:08:49.140 --> 00:08:52.100
+<v Sohoni, Sohum>That's where you see what's what's going on much better.</v>
+
+00:08:52.610 --> 00:09:22.940
+<v Sohoni, Sohum>Uhm, so we did that. Next we're going to use the property that ending anything with a 0 gives you a zero. So again we want to clear the lower 8 bits. So we want those two hexadecimal digits or those two. Those two, or those eight lower bits to be all zeros and everything else to be a one because again, the property of the end now is. If you add anything with the one you get back whatever was there. If you add anything with a 0.</v>
+
+00:09:23.080 --> 00:09:34.610
+<v Sohoni, Sohum>It becomes a 0 right? So that's how we're efficiently clearing the lower 8 bits without affecting the top bids. And so when we do that, if we keep stepping through.</v>
+
+00:09:36.520 --> 00:09:58.210
+<v Sohoni, Sohum>What we're going to see in T3, right? 'cause we're now putting the result in T3 is that our lower bids have been cleared so that 19 hexadecimal that was there is now all zeros and we end up with 0X F. 00000000. OK, 470 is not 8.</v>
+
+00:09:59.350 --> 00:10:11.910
+<v Sohoni, Sohum>So if we go through the rest of the programs pretty straightforward again, just doing the syscall to output this new number with just cut out. Put it here, and then we hit the syscall for exiting.</v>
+
+00:10:13.100 --> 00:10:15.300
+<v Sohoni, Sohum>Questions on question one.</v>
+
+00:10:20.450 --> 00:10:20.810
+<v Leonard, Benjamin>No.</v>
+
+00:10:23.360 --> 00:10:28.850
+<v Sohoni, Sohum>Any questions OK, some of you for this last part did a shift right?</v>
+
+00:11:00.290 --> 00:11:06.820
+<v Sohoni, Sohum>One other comment I want to make is some of you were using a lower address instead of a move.</v>
+
+00:11:07.660 --> 00:11:28.570
+<v Sohoni, Sohum>So number of you actually not just some of you number of you instead of the move instruction used, the load address pseudo op and I did not take off any points for that, but that is certainly not something I would prefer. I I would certainly advise you to use the move instruction when you're doing stuff between registers.</v>
+
+00:11:29.120 --> 00:11:35.150
+<v Sohoni, Sohum>Uhm, and try to stick to the loads for more memory related things, OK?</v>
+
+00:11:35.800 --> 00:12:01.980
+<v Sohoni, Sohum>So it's important to understand that a load address specifies a particular address, and usually that addresses in the data segment. And let's just use that convention and keep the LDA instruction reserved for actually going out to memory and getting stuff from there. Whether it's the address of a string or the address of a variable or whatever it might be, so copying from one register to another just use the move instruction.</v>
+
+00:12:04.720 --> 00:12:07.430
+<v Sohoni, Sohum>Right, so that was that.</v>
+
+00:12:08.210 --> 00:12:26.280
+<v Sohoni, Sohum>And if you have questions, just as I said, feel free to interrupt next question on the test was what are the changes that one might have to make if we were to take the MIPS architecture and turn it into a 16 bit architecture where each instruction is just 16 bits. OK, so.</v>
+
+00:12:27.940 --> 00:12:30.970
+<v Sohoni, Sohum>I was looking for just some.</v>
+
+00:12:31.870 --> 00:12:54.640
+<v Sohoni, Sohum>Like sense, making off like the instruction being 32 bits in your maps that you are studying right now and then, if that instruction length went from 32 bits to 16 bits, what changes would have to be made? And as long as you hit some of the points I tried to give you full credit for this question. I think I graded it quite liberally.</v>
+
+00:12:54.700 --> 00:12:57.360
+<v Sohoni, Sohum>The UM so.</v>
+
+00:12:58.100 --> 00:13:06.370
+<v Sohoni, Sohum>Hope you are happy with the score that you got. Uhm, would someone want to volunteer and tell us what what they wrote in got points for?</v>
+
+00:13:11.620 --> 00:13:14.840
+<v Sohoni, Sohum>I saw some really excellent answers by the way for this question.</v>
+
+00:13:26.360 --> 00:13:27.630
+<v Sohoni, Sohum>Partner volunteers</v>
+
+00:13:28.310 --> 00:13:33.080
+<v Sohoni, Sohum>it's already been graded. You got if you got full points. Be confident to speak up.</v>
+
+00:13:36.270 --> 00:13:40.580
+<v Bultman, Joshua>I could remind I wasn't completely happy with it, but here one second let me grab it.</v>
+
+00:13:44.660 --> 00:13:45.600
+<v Sohoni, Sohum>Yeah, go ahead, go ahead.</v>
+
+00:13:47.220 --> 00:13:49.050
+<v Bultman, Joshua>One second, I gotta pull it up.</v>
+
+00:13:49.440 --> 00:13:49.830
+<v Sohoni, Sohum>OK.</v>
+
+00:14:02.660 --> 00:14:03.040
+<v Bultman, Joshua>OK.</v>
+
+00:14:04.860 --> 00:14:12.280
+<v Bultman, Joshua>So I said since you have far fewer combinations for instructions, you would wanna further limit the number of registers.</v>
+
+00:14:12.950 --> 00:14:28.340
+<v Bultman, Joshua>If you have fewer registers, it will only take a few orbits in an instruction to address a certain at register. For example, if you limit the number of registers to 8 instead of 32, you would only need 3 bits instead of five to like address or register.</v>
+
+00:14:28.610 --> 00:14:29.010
+<v Sohoni, Sohum>Yep.</v>
+
+00:14:29.450 --> 00:14:32.320
+<v Bultman, Joshua>And instruction, will it also have to be restructured?</v>
+
+00:14:33.050 --> 00:14:44.760
+<v Bultman, Joshua>And likely the number of bits each element used would have to be decreased in order to accommodate larger numbers. There would likely be more pseudo instructions that would split instructions into two or more.</v>
+
+00:14:45.570 --> 00:14:46.900
+<v Bultman, Joshua>I'm just so so you can like.</v>
+
+00:14:48.000 --> 00:14:52.200
+<v Bultman, Joshua>Uh, we have more use bigger numbers.</v>
+
+00:14:53.560 --> 00:14:56.190
+<v Bultman, Joshua>And then loading into an out of memory would probably also be.</v>
+
+00:14:56.960 --> 00:14:59.490
+<v Bultman, Joshua>Uh mused had to be used more since you have to.</v>
+
+00:15:00.280 --> 00:15:00.710
+<v Bultman, Joshua>Ah.</v>
+
+00:15:02.170 --> 00:15:04.830
+<v Bultman, Joshua>You don't have as much space in their registers to store things.</v>
+
+00:15:05.270 --> 00:15:08.700
+<v Sohoni, Sohum>Correct, you don't have as many registers exactly, Yep?</v>
+
+00:15:10.530 --> 00:15:12.650
+<v Sohoni, Sohum>Good good, excellent. Did you have anything else?</v>
+
+00:15:16.250 --> 00:15:16.990
+<v Bultman, Joshua>Nope, that was it.</v>
+
+00:15:17.370 --> 00:15:21.680
+<v Sohoni, Sohum>OK, good. Did someone else have anything else that they wanted to add to this?</v>
+
+00:15:28.500 --> 00:15:37.660
+<v Rosynek, Paige>I had a question, does this 16 bit architecture mean that you have 16 registers and then like a 64 means you have 64 registers?</v>
+
+00:15:38.080 --> 00:15:57.900
+<v Sohoni, Sohum>No, is 16 bit. Architecture means that your instructions are 16 bits wide, and then correspondingly just about everything else, like the registers themselves would be 16 bits wide. The buses that connect various components in the hardware, they would be 16 bits wide and and so on.</v>
+
+00:15:59.050 --> 00:16:00.200
+<v Rosynek, Paige>OK, thank you.</v>
+
+00:16:00.850 --> 00:16:07.850
+<v Sohoni, Sohum>Yeah, and again in the question itself I I did mention where each instruction is just 16 bits so that that sort of indicates that.</v>
+
+00:16:11.800 --> 00:16:17.530
+<v Sohoni, Sohum>He gave a question and any other questions or any anything else anyone put in for this answer.</v>
+
+00:16:18.420 --> 00:16:20.920
+<v Sohoni, Sohum>I know there's a few other things one could talk about.</v>
+
+00:16:31.660 --> 00:16:52.810
+<v Sohoni, Sohum>So what about the immediate field? So in our I type instructions. We've got 16 bits. Currently, when we have a 32 bit instruction, we've got 16 bits to specify our immediate operands, right? Whether it be the target of a branch, or whether it's like we just did an or immediate or and and immediate and stuff like that.</v>
+
+00:16:53.280 --> 00:16:53.990
+<v Sohoni, Sohum>Uhm?</v>
+
+00:16:55.850 --> 00:17:26.030
+<v Sohoni, Sohum>We wouldn't have 16 bits anymore for that offset right? Because the whole instruction is now just 16 bits, so one would assume that we would have only 8 bit offsets, so the the range of numbers that we could specify that we would also become smaller. The range in which we can jump up or down would become smaller. The total address space would become much smaller as well, right? Right now with 32 bit architecture, when you look at Mars.</v>
+
+00:17:26.370 --> 00:17:41.200
+<v Sohoni, Sohum>Got like a 32 bit address space, right? Which means you have two to the power 32 different possible addresses where stuff could be in a 16 bit architecture. You're going to have just two to the power 16 different.</v>
+
+00:17:41.930 --> 00:17:49.590
+<v Sohoni, Sohum>UHM, addresses where things can be, so the total address space, the total memory that you can access will also be much smaller.</v>
+
+00:17:51.790 --> 00:18:20.010
+<v Sohoni, Sohum>So yeah, these were some of the things I was looking for. Some of you talked about performance as well, like the instructions would be smaller and maybe quicker to execute. Which which is true per instruction. But to do the same amount of work you would need more instructions. So that would be a good point to mention as well. And as I was saying if you had some of these elements in there, I tended to give you full points.</v>
+
+00:18:20.970 --> 00:18:43.540
+<v Sohoni, Sohum>If you like hard, just one thing you talked about, maybe I gave you half the number of points, but really I wasn't looking to see like 10 different things being mentioned to get full 10 points even like two or three things correctly mentioned would have gotten you 10 points on this question so any anything else on this one that we want to talk about.</v>
+
+00:18:52.490 --> 00:19:22.420
+<v Sohoni, Sohum>OK, well then the rest of these should be somewhat quick. Let's see. So each maps instruction is how many bytes? So it's 4 bytes. I think everybody got this one right. Uh, moving on. Yeah, the encoding of the different instructions. So encoding pipe for the add unsigned instruction, but this one takes 3 different registers, so it's an R type instruction. The Addi instruction is and I type right. It's an ad immediate.</v>
+
+00:19:22.530 --> 00:19:25.480
+<v Sohoni, Sohum>You specify like an immediate number.</v>
+
+00:19:26.730 --> 00:19:27.410
+<v Sohoni, Sohum>Which would.</v>
+
+00:19:28.140 --> 00:19:29.900
+<v Sohoni, Sohum>Make it the I type instruction.</v>
+
+00:19:30.570 --> 00:19:48.720
+<v Sohoni, Sohum>Where does the encoding of the Lord word so again lowered word has the offset in it and we've looked at in the slides you would have seen the load. Word has the opcode, a couple of registers and then the remaining 16 bits are used for the offset, so that makes it and I type instruction.</v>
+
+00:19:49.320 --> 00:19:50.010
+<v Sohoni, Sohum>Uhm?</v>
+
+00:19:50.830 --> 00:20:04.360
+<v Sohoni, Sohum>The branch not equal instruction or the be any instruction. Again, that's also taking an opcode. The two registers that it's comparing to see if they are equal or not, and then the branch target.</v>
+
+00:20:04.900 --> 00:20:20.100
+<v Sohoni, Sohum>Uhm, offset essentially and again, we've seen all of this in action. We've seen the slides. We've seen the code, so that's an R type instruction as well. OK, any questions on the encoding stuff before we move on to.</v>
+
+00:20:21.650 --> 00:20:22.410
+<v Sohoni, Sohum>Next question.</v>
+
+00:20:28.260 --> 00:20:57.570
+<v Sohoni, Sohum>Alright, so for the code shown below, what will be the offset in the 16 bit immediate field of the PEQ instruction, right? So we've got a T0 register loaded with 131 loaded with three and then we have a beak. If they're equal or not equal again, it doesn't matter what we're looking for is. Where is this target equal so that target equal is 1?</v>
+
+00:20:57.810 --> 00:21:15.050
+<v Sohoni, Sohum>Two instructions away, right so week you would have to skip over a couple of these instructions so the add instruction as well as the J exit instruction in order to get to the ad. I, which is the actual target of the branch if equal. So what do you think is the answer?</v>
+
+00:21:23.410 --> 00:21:24.910
+<v Furst, Elias>It's gonna be two, yeah?</v>
+
+00:21:25.380 --> 00:21:42.690
+<v Sohoni, Sohum>Don't be too yeah, we're so again we're skipping over 2 instructions, the ad and the J and that's why the the offset is going to be 2 and again we went over this in somewhat detail in in class so should not come as a surprise.</v>
+
+00:21:43.500 --> 00:22:07.810
+<v Sohoni, Sohum>And again, if there is a question on the final on something like this, I'm not going to be mean and give you like a branch target. That's a negative number because those are harder for our brain to process. This is much easier, it's just skip to instructions class. It's going to be two. OK, so this question here. The program counter? That's a really important question.</v>
+
+00:22:08.450 --> 00:22:38.490
+<v Sohoni, Sohum>OK, it's so it's a register that points to the next instruction to be executed. So again, remember that it is the program counter itself is not a location in memory, it is a registered OK. It has a value that is a location in memory, but the program counter itself is a register. Also, it's not a register that contains the instruction, right? Our instructions are also 32 bits. Our addresses are also 32 bits.</v>
+
+00:22:39.000 --> 00:23:05.550
+<v Sohoni, Sohum>Program counter is a register that always contains the address of the next instruction to be executed, so it's pointing to the next instruction. It doesn't actually have that next instruction in it, right? So this is again, maybe just one of those things you gotta memorize, but it's an important enough thing that I want you to memorize this. OK, so it's program counter always points to the next instruction questions on this.</v>
+
+00:23:12.740 --> 00:23:15.980
+<v Sohoni, Sohum>Alright, not hearing any questions, so let's keep going.</v>
+
+00:23:18.320 --> 00:23:31.150
+<v Sohoni, Sohum>Instruction that compares two registers to see if their contents equal and changes the control flow based on that comparison. That's pretty much the definition of a branch instruction, right? So the correct answer is branch.</v>
+
+00:23:32.400 --> 00:23:35.470
+<v Sohoni, Sohum>Lower immediate instruction is an example of.</v>
+
+00:23:36.120 --> 00:24:00.380
+<v Sohoni, Sohum>A pseudo instruction. Again, we spent a good deal of time looking at the load immediate and how it turns into. If it's like a big 32 bit number turns into a load upper immediate and then and or immediate or if it's a small number like something that fits in 16 bits, then the load immediate turns into an ad immediate when it's assembled, right? So it's a pseudo instruction or a pseudo op.</v>
+
+00:24:02.250 --> 00:24:07.260
+<v Sohoni, Sohum>All right, yeah? So this is also another really interesting and useful question.</v>
+
+00:24:08.580 --> 00:24:12.270
+<v Sohoni, Sohum>So you're given a string of zeros and ones.</v>
+
+00:24:13.210 --> 00:24:15.240
+<v Sohoni, Sohum>And whenever you see something like this.</v>
+
+00:24:15.890 --> 00:24:25.430
+<v Sohoni, Sohum>It might look tempting to say that, oh, that looks like it's 6 bits. It must be an awkward or it starts with a one, so it must be a negative number.</v>
+
+00:24:26.280 --> 00:24:38.520
+<v Sohoni, Sohum>None of that is true. OK, a string of zeros and ones could be anything depending on the context in which it is being used. So it's really just a string of zeros and ones.</v>
+
+00:24:40.460 --> 00:24:42.670
+<v Sohoni, Sohum>Any questions debate on this?</v>
+
+00:24:48.980 --> 00:24:53.450
+<v Sohoni, Sohum>Alright, this is the kind of question you might get asked on an interview and.</v>
+
+00:24:54.410 --> 00:24:55.550
+<v Sohoni, Sohum>Just give the right answer.</v>
+
+00:24:57.140 --> 00:25:17.990
+<v Sohoni, Sohum>OK, so if we are dealing with 32 bits signed numbers and we add a negative number to a positive number, which of the following statements is true? OK, so if you think about it right, these are signed numbers. One of them is a negative number. One of them is a positive number and we're adding them.</v>
+
+00:25:26.610 --> 00:25:29.530
+<v Sohoni, Sohum>Or any issue with things spilling over.</v>
+
+00:25:30.820 --> 00:25:47.050
+<v Sohoni, Sohum>And if that doesn't make sense, just think about like a simple case. Let's say the maximum number that we can have is 10. OK, and if we're saying that I'm going to add a negative 4/2 positive 6.</v>
+
+00:25:47.690 --> 00:25:48.090
+<v Sohoni, Sohum>Right?</v>
+
+00:25:48.810 --> 00:25:51.310
+<v Sohoni, Sohum>There is no way that that's going to exceed 10.</v>
+
+00:25:52.010 --> 00:26:09.440
+<v Sohoni, Sohum>Right? 'cause you're negative 4 + 6 is 2, so if the maximum that we have right and their opposites signed, then when we add them, that's never going to exceed the capacity of 32 bits. So that's why the first statement is true.</v>
+
+00:26:10.100 --> 00:26:16.800
+<v Sohoni, Sohum>Uh, and the other statements are false. Did anyone have any confusion or any question about this question?</v>
+
+00:26:23.460 --> 00:26:25.100
+<v Sohoni, Sohum>OK, well we'll keep going.</v>
+
+00:26:25.980 --> 00:26:40.760
+<v Sohoni, Sohum>Alright, so for the equation F = a prime D prime or a prime C or B prime CD prime, which of the following lists all the literals? OK, so again ABCD are just four variables. They're not all the literals.</v>
+
+00:26:41.190 --> 00:26:55.740
+<v Sohoni, Sohum>OK, and then this list has all of them in a prime BB prime, CC prime and DD prime. However, in the equation right there isn't any occurrence of a.</v>
+
+00:26:57.920 --> 00:27:00.280
+<v Sohoni, Sohum>If you look at it, it's got a prime.</v>
+
+00:27:00.970 --> 00:27:01.870
+<v Sohoni, Sohum>It's good.</v>
+
+00:27:02.740 --> 00:27:20.780
+<v Sohoni, Sohum>B prime, so there isn't an occurrence of be either there is a C, but no occurrence of a C prime. And then there is a deep prime, but no occurrence of a D, so clearly not all of these are literals for this equation, and so the answer is none of the above.</v>
+
+00:27:24.520 --> 00:27:29.890
+<v Sohoni, Sohum>Right, I'll keep going unless someone ask questions. I want to ask whether you have a question each time.</v>
+
+00:27:31.060 --> 00:27:49.150
+<v Sohoni, Sohum>OK, select all of the statements below that are true for the following equation. OK, so if of ABC equals ABC Prime or ABC, is it in the sum of products form? Yes it is. These are two products and they are. There is a some of these two products.</v>
+
+00:27:49.740 --> 00:27:53.710
+<v Sohoni, Sohum>Uh, we can. It cannot be further simplified. Is that true?</v>
+
+00:27:54.480 --> 00:28:05.190
+<v Sohoni, Sohum>That's not true because you could take the AB and do see prime or C right and end up with just the AB so it can be further simplified. So this is not true.</v>
+
+00:28:05.940 --> 00:28:15.500
+<v Sohoni, Sohum>Next is a. It is in the sum of minterms canonical form and there's a typo here, but hopefully that wasn't off putting.</v>
+
+00:28:16.770 --> 00:28:47.720
+<v Sohoni, Sohum>Is it a sum of minterms? Yes, because if of ABC and both of these terms have all of the variables in them in either true or complimented form, that's the definition of sum of minterms. So it is a sum and both of these terms arm in terms, so it is in the sum of minterms form and then finally it represents the OR function for three inputs, that's just simply not true based on the equation, because it's saying F = a B.</v>
+
+00:28:48.460 --> 00:28:56.370
+<v Sohoni, Sohum>That is not the equation for the order of three inputs or of three inputs would be F = A or B or C.</v>
+
+00:28:59.000 --> 00:29:00.870
+<v Sohoni, Sohum>Alright, let's keep going.</v>
+
+00:29:02.660 --> 00:29:26.560
+<v Sohoni, Sohum>Which equation fits the truth table below, assuming that the equation has not been simplified right? So this was a pretty straightforward question. All you had to do was look at F, look at where the F is 1 right, and for each of those, see if you see a term there. So the first F being one is a prime B prime C where she says here. So this looks promising.</v>
+
+00:29:27.720 --> 00:29:32.000
+<v Sohoni, Sohum>Up next, one is a B prime C.</v>
+
+00:29:32.620 --> 00:29:45.630
+<v Sohoni, Sohum>Which is here is great. And then we've got ABC Prime, which is this third term. So there are only three occurrences of a one in the output column, and this one captures all three.</v>
+
+00:29:46.900 --> 00:29:58.290
+<v Sohoni, Sohum>And so none of the others is a match. And again, we're saying it's not being simplified or anything, so just a quick look at these and 10 seconds we should know that this is the right answer.</v>
+
+00:30:00.660 --> 00:30:16.740
+<v Sohoni, Sohum>Alright, for the truth table below, the simplified equation will be F equals what? So we've got one one over here and one one over here. And again, this was one of those things you could work out.</v>
+
+00:30:17.980 --> 00:30:49.970
+<v Sohoni, Sohum>So you could either just look at this and say, well, quite clearly, if he's one only, whenever B is 1 irrespective of any of the other variable values. So F = B and I've shown it in different forms, so that you should be getting credit for this if you got any of these 4 answers in there, and if you had a correct answer, but it was not one of these four, please let me know. I'll be happy to give you points for this one so.</v>
+
+00:30:50.150 --> 00:30:52.180
+<v Sohoni, Sohum>You could do it like that or.</v>
+
+00:30:53.030 --> 00:31:11.310
+<v Sohoni, Sohum>You could again take these out as a prime BC prime or a prime BC or ABC Prime or ABC. Write it out and then simplify it until you end up with just the V.</v>
+
+00:31:12.420 --> 00:31:14.520
+<v Sohoni, Sohum>That was the expected answer here.</v>
+
+00:31:17.840 --> 00:31:22.240
+<v Sohoni, Sohum>I'm taking a pause here 'cause this might be a place where there could be questions.</v>
+
+00:31:25.980 --> 00:31:28.070
+<v Sohoni, Sohum>Let's say I also wanted to drink my tea.</v>
+
+00:31:30.380 --> 00:31:31.050
+<v Sohoni, Sohum>Alright.</v>
+
+00:31:31.730 --> 00:32:01.380
+<v Sohoni, Sohum>OK, the equation for the following circuit after applying De Morgan's OK, so that's a big hint given, and that's because we've got a compliment at the output of this circuit, right? So we've gotten a coming in inverted going to the OR gate and then a B. So it's essentially a prime or B, and then the whole thing is complemented. So this is a prime or be whole primed, is what the actual equation would look like once you applied in Morgans.</v>
+
+00:32:02.070 --> 00:32:04.070
+<v Sohoni, Sohum>You would get a prime prime.</v>
+
+00:32:04.830 --> 00:32:22.100
+<v Sohoni, Sohum>And B prime right when you do the A prime or behold, primed dim organs. So that would give you a prime prime and B prime. A prime prime is nothing but a, so you end up with a B prime. That's why this is the correct answer.</v>
+
+00:32:24.620 --> 00:32:25.900
+<v Sohoni, Sohum>Questions.</v>
+
+00:32:33.200 --> 00:32:50.510
+<v Sohoni, Sohum>OK, alright so this one was straight from the textbook actually. So knowing that 2 to the power 31 is whatever this number is. What is the base 10 value of the following signed twos complement number? So we've got one followed by all zeros.</v>
+
+00:32:51.270 --> 00:32:51.690
+<v Sohoni, Sohum>Right?</v>
+
+00:32:52.830 --> 00:33:04.800
+<v Sohoni, Sohum>And again, this is one of those. Just you gotta know this or you can look it up or look at it in the textbook or whatever. So the answer would be negative 2147 blah blah blah blah.</v>
+
+00:33:07.460 --> 00:33:08.670
+<v Sohoni, Sohum>So that's that.</v>
+
+00:33:10.010 --> 00:33:40.030
+<v Sohoni, Sohum>Alright, if you mohror last question actually. Yeah, so in Mars the first byte of the data segment is at which address. So the first byte. Again, this is just straight up from Mars. We saw where the the data segment or the DOT data segment starts, and that's at zero X 10010 and one of the students pointed out when we took the test. This was missing a zero and because that was the correct answer.</v>
+
+00:33:40.080 --> 00:33:55.190
+<v Sohoni, Sohum>And it had a typo in it. I regretted the test to include full points for everybody on this last question, so you may have selected something else which was actually incorrect, but you still got full points on the test for this question.</v>
+
+00:33:56.580 --> 00:33:56.960
+<v Sohoni, Sohum>OK.</v>
+
+00:33:57.830 --> 00:34:00.720
+<v Sohoni, Sohum>And that's that I was quicker than I thought.</v>
+
+00:34:02.520 --> 00:34:08.320
+<v Sohoni, Sohum>So we've got 15 minutes left for questions that you might have for me.</v>
+
+00:34:20.770 --> 00:34:21.850
+<v Sohoni, Sohum>Well, this is hawkward.</v>
+
+00:34:24.480 --> 00:34:25.560
+<v Sohoni, Sohum>I thought it.</v>
+
+00:34:26.160 --> 00:34:32.540
+<v Sohoni, Sohum>Doing the test and explaining everything would certainly take up a full 50 minutes, but I guess it didn't.</v>
+
+00:34:38.320 --> 00:34:40.970
+<v Sohoni, Sohum>So what questions do you have? What do you want to talk about?</v>
+
+00:34:43.850 --> 00:34:45.410
+<v Sohoni, Sohum>Or should we just end early?</v>
+
+00:34:52.830 --> 00:34:55.880
+<v Furst, Elias>I'm ready to end early if everyone else is.</v>
+
+00:34:57.420 --> 00:35:05.970
+<v Toohill, Teresa>I feel like you explained some of the stuff I was struggling with on the exam pretty well, so thank you, so I'm.</v>
+
+00:35:05.510 --> 00:35:06.740
+<v Sohoni, Sohum>Yeah, you're welcome.</v>
+
+00:35:08.150 --> 00:35:11.440
+<v Sohoni, Sohum>And since we're online, this is recorded and it'll stay there.</v>
+
+00:35:12.210 --> 00:35:13.730
+<v Sohoni, Sohum>You know our teams chat.</v>
+
+00:35:14.930 --> 00:35:16.410
+<v Sohoni, Sohum>I mean the meeting chat, I suppose.</v>
+
+00:35:17.610 --> 00:35:19.430
+<v Sohoni, Sohum>When the final comes around as well.</v>
+
+00:35:24.050 --> 00:35:28.400
+<v Toohill, Teresa>I did want to ask. I was pretty sure we only have one midterm, is that correct?</v>
+
+00:35:28.680 --> 00:35:37.310
+<v Sohoni, Sohum>That is correct. You have only one midterm, you've got two more quizzes to go. And because we have the bonus assignment this week.</v>
+
+00:35:37.960 --> 00:35:51.930
+<v Sohoni, Sohum>Uh, I did not put a quiz on for this week. You will have a quiz next week and then you'll have a quiz the week after as well. So weeks, eight and nine each will have one quiz and then we'll just have the final exam in week 11.</v>
+
+00:35:53.260 --> 00:35:54.050
+<v Toohill, Teresa>OK, thank you.</v>
+
+00:35:55.040 --> 00:35:55.500
+<v Sohoni, Sohum>Welcome.</v>
+
+00:35:58.990 --> 00:36:08.660
+<v Sohoni, Sohum>OK, well so maybe I'll just let you guys out early. Uh, maybe you can spend that time starting work on the bonus reflection assignment, OK?</v>
+
+00:36:09.320 --> 00:36:21.850
+<v Sohoni, Sohum>And on your reading assignments for this week, I know the reading assignments are a lot this week, so do budget time for for those. And when we meet next time, we'll start looking at floating point numbers.</v>
+
+00:36:22.690 --> 00:36:23.470
+<v Sohoni, Sohum>In class.</v>
+
+00:36:24.500 --> 00:36:25.370
+<v Sohoni, Sohum>Alright then.</v>
+
+00:36:26.470 --> 00:36:27.700
+<v Sohoni, Sohum>I have a good evening.</v>
+
+00:36:28.150 --> 00:36:29.310
+<v Bultman, Joshua>You too thank you.</v>
+
+00:36:30.020 --> 00:36:30.440
+<v Furst, Elias>Thank you.</v>
+
+00:36:32.300 --> 00:36:33.510
+<v Toohill, Teresa>Have a great day. Thank you.</v>

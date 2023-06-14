@@ -1,0 +1,829 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:07.870
+<v Sohoni, Sohum>So for today's class I was really just thinking mainly to pull up the the data path stuff again.</v>
+
+00:00:08.530 --> 00:00:17.820
+<v Sohoni, Sohum>And answer questions and we could also do an activity. So let me share my other screen here.</v>
+
+00:00:22.770 --> 00:00:28.060
+<v Sohoni, Sohum>And just continue to go over so. So in the small groups on Friday.</v>
+
+00:00:30.390 --> 00:00:32.080
+<v Sohoni, Sohum>But I'd like to continue.</v>
+
+00:00:33.220 --> 00:00:41.420
+<v Sohoni, Sohum>Asking you if you have any questions, so for those of you who weren't clear about what was going on, I asked you to watch the video on YouTube.</v>
+
+00:00:42.020 --> 00:00:42.710
+<v Sohoni, Sohum>Uhm?</v>
+
+00:00:43.570 --> 00:00:51.000
+<v Sohoni, Sohum>And so yeah, I'm I'm just going to pause here and see what questions are still their work.</v>
+
+00:00:52.380 --> 00:00:54.420
+<v Sohoni, Sohum>Or do you want to know more about this?</v>
+
+00:01:07.710 --> 00:01:09.580
+<v Sohoni, Sohum>No questions really.</v>
+
+00:01:14.810 --> 00:01:15.680
+<v Sohoni, Sohum>So.</v>
+
+00:01:16.860 --> 00:01:20.190
+<v Sohoni, Sohum>Be sure there's no questions or wait for a little bit longer.</v>
+
+00:01:31.760 --> 00:01:36.090
+<v Sohoni, Sohum>So let me open up a simple program in Mars.</v>
+
+00:01:37.480 --> 00:01:40.830
+<v Sohoni, Sohum>And let's play around with it a little bit.</v>
+
+00:01:53.490 --> 00:02:02.920
+<v Sohoni, Sohum>OK, let's let's see if there is a load word there is naughty load word instruction here. Never mind let me open a different program.</v>
+
+00:02:11.440 --> 00:02:13.410
+<v Sohoni, Sohum>No, there isn't a load word here either.</v>
+
+00:02:16.510 --> 00:02:23.900
+<v Sohoni, Sohum>OK, let's go with the program that we have. So what I'm asking you or going to ask you is.</v>
+
+00:02:27.470 --> 00:02:31.860
+<v Sohoni, Sohum>For a program like this, right for example?</v>
+
+00:02:32.620 --> 00:02:41.590
+<v Sohoni, Sohum>For this instruction, be any dollar one dollar 00X FFFF. If I were to ask you the same question.</v>
+
+00:02:43.560 --> 00:02:48.060
+<v Sohoni, Sohum>About the data path, let me see if I can resize this.</v>
+
+00:02:49.850 --> 00:02:51.760
+<v Sohoni, Sohum>No, I can resize that.</v>
+
+00:02:53.330 --> 00:02:54.190
+<v Sohoni, Sohum>That's funny.</v>
+
+00:02:56.170 --> 00:02:57.220
+<v Sohoni, Sohum>I really think.</v>
+
+00:02:59.230 --> 00:02:59.710
+<v Sohoni, Sohum>Right?</v>
+
+00:03:00.850 --> 00:03:02.010
+<v Sohoni, Sohum>OK, that's better.</v>
+
+00:03:06.010 --> 00:03:15.330
+<v Sohoni, Sohum>Maybe it's better, I don't know. So what I'm trying to do here is to see if I can sort of align both of these. So for this program here.</v>
+
+00:03:16.300 --> 00:03:21.090
+<v Sohoni, Sohum>Right, if I want to say four there be any dollar one dollar 00 XFF.</v>
+
+00:03:22.160 --> 00:03:38.240
+<v Sohoni, Sohum>If I give you this stuff here, would you be able to answer the question about what are the values at all of these question marks here and then? Also, what would be the values for each of these control signals that we see here?</v>
+
+00:03:41.410 --> 00:03:43.660
+<v Sohoni, Sohum>How, how confident are you guys you can do it?</v>
+
+00:04:03.690 --> 00:04:05.250
+<v Sohoni, Sohum>I can't hear anything from you.</v>
+
+00:04:10.880 --> 00:04:14.700
+<v Toohill, Teresa>I'm not really sure if I can answer on behalf of everyone else, but sure.</v>
+
+00:04:16.240 --> 00:04:18.700
+<v Sohoni, Sohum>Sure, to 10 minutes to try to work this out.</v>
+
+00:04:20.000 --> 00:04:22.300
+<v Toohill, Teresa>Yeah, I think that sounds good.</v>
+
+00:04:23.040 --> 00:04:23.510
+<v Sohoni, Sohum>OK.</v>
+
+00:04:23.130 --> 00:04:26.930
+<v Schilling, Atreyu>Can you move the the box a little bit up just to see the bottom?</v>
+
+00:04:32.380 --> 00:04:32.990
+<v Schilling, Atreyu>Not fair enough.</v>
+
+00:04:27.850 --> 00:04:40.280
+<v Sohoni, Sohum>Yeah, I mean this diagram is on canvas, so you can always just download it. But yeah I can, so I don't want to lose it completely. Oh, that seems to be working. That's fine.</v>
+
+00:04:41.420 --> 00:05:00.700
+<v Sohoni, Sohum>Yeah, and I don't really have a way of magnifying this in Mars unfortunately. So essentially again, just just to be clear, I'm asking you for the be any instruction that you see here, which is our, let's say, 1234 fifth instruction in the sequence.</v>
+
+00:05:01.350 --> 00:05:10.670
+<v Sohoni, Sohum>For that, be any instruction. What would be the values at each of these question marks? All right, I'll give you 10 minutes to work this out.</v>
+
+00:05:11.950 --> 00:05:16.110
+<v Sohoni, Sohum>And I will work it out myself. I guess in the mean time.</v>
+
+00:05:17.960 --> 00:05:19.390
+<v Sohoni, Sohum>I'll meet you in 10 minutes.</v>
+
+00:05:23.660 --> 00:05:30.790
+<v Sohoni, Sohum>So when you're done, just raise your hand and keep it raised so that I can have a count of how many people are done right.</v>
+
+00:15:24.410 --> 00:15:28.080
+<v Sohoni, Sohum>Alright, it's one. It's a it's been 10 minutes.</v>
+
+00:15:30.950 --> 00:15:35.390
+<v Sohoni, Sohum>So and I don't see any hands going up, so we might have a problem.</v>
+
+00:15:38.920 --> 00:15:44.030
+<v Sohoni, Sohum>Sir, tell me what's going on, where are you stuck? Work? Do you need help with?</v>
+
+00:15:44.900 --> 00:15:45.960
+<v Schilling, Atreyu>Forgot to click the button.</v>
+
+00:15:47.010 --> 00:15:49.500
+<v Sohoni, Sohum>Oh, so you you're done.</v>
+
+00:15:50.910 --> 00:15:51.440
+<v Furst, Elias>I.</v>
+
+00:15:53.080 --> 00:15:55.570
+<v Furst, Elias>I don't understand what's in the registers.</v>
+
+00:15:56.390 --> 00:16:02.440
+<v Sohoni, Sohum>Yeah, and that's the tricky part in this particular question, we can figure it out.</v>
+
+00:16:03.190 --> 00:16:14.450
+<v Sohoni, Sohum>A couple of different ways. One, we could look at what's getting loaded here, right? So in register P2 or registered 10. We've got a 7.</v>
+
+00:16:15.550 --> 00:16:17.380
+<v Sohoni, Sohum>In register T0.</v>
+
+00:16:18.610 --> 00:16:21.260
+<v Sohoni, Sohum>Uh, or register eight. We have a one.</v>
+
+00:16:21.870 --> 00:16:25.110
+<v Sohoni, Sohum>Then that one is left shifted once.</v>
+
+00:16:25.970 --> 00:16:27.150
+<v Sohoni, Sohum>Which makes it a 2.</v>
+
+00:16:28.320 --> 00:16:33.440
+<v Sohoni, Sohum>Right, so everything with me so far in terms of what's in registered 10 and register 8.</v>
+
+00:16:34.660 --> 00:16:35.060
+<v Furst, Elias>Yeah.</v>
+
+00:16:35.490 --> 00:16:35.880
+<v Kreitzman, Colton>Yep.</v>
+
+00:16:36.310 --> 00:16:39.360
+<v Sohoni, Sohum>OK, good then we've got a.</v>
+
+00:16:40.620 --> 00:16:46.050
+<v Sohoni, Sohum>So we had a pseudo op, the branch of greater than P2T0 top.</v>
+
+00:16:47.110 --> 00:17:12.240
+<v Sohoni, Sohum>Which got translated into a couple different instructions, the SLT and Benny and I just picked the BND at random and so it made this problem a little tougher than what you would expect to see on a quiz or an exam. But that's good. It's always better to do the tougher ones in class. So what is this instruction here? The SLT dollar one dollar eight dollar one So what what does it do?</v>
+
+00:17:16.090 --> 00:17:18.740
+<v Bultman, Joshua>It sets the first register to come.</v>
+
+00:17:20.750 --> 00:17:25.690
+<v Bultman, Joshua>One if if the Register 8 is less than registered 10, I think.</v>
+
+00:17:26.060 --> 00:17:32.430
+<v Sohoni, Sohum>Alright, excellent after you you still have your hand up. I'm assuming it indicates you're done. You can lower that.</v>
+
+00:17:33.040 --> 00:17:33.620
+<v Sohoni, Sohum>Uhm?</v>
+
+00:17:34.680 --> 00:17:41.400
+<v Sohoni, Sohum>Does anyone have a question about that too? We have a different answer on what SLT does.</v>
+
+00:17:46.940 --> 00:17:55.550
+<v Sohoni, Sohum>So if that's what's going on, and we know that dollar eight contains 8, two and dollar ten contains A7 with dollar eight.</v>
+
+00:17:56.430 --> 00:17:59.880
+<v Sohoni, Sohum>Is it less than what dollar 10 is the values?</v>
+
+00:18:03.220 --> 00:18:03.820
+<v Bultman, Joshua>Yes.</v>
+
+00:18:03.780 --> 00:18:04.470
+<v Kreitzman, Colton>Yes.</v>
+
+00:18:04.410 --> 00:18:14.950
+<v Sohoni, Sohum>Yeah, 'cause two is less than seven, right? So if that's the case then dollar one is going to have a one in it right? It's sets that register so so dollar one.</v>
+
+00:18:15.690 --> 00:18:22.710
+<v Sohoni, Sohum>Has a one in it and then what we're doing with the branch, if not equal, is we're comparing.</v>
+
+00:18:23.700 --> 00:18:38.140
+<v Sohoni, Sohum>Weather 1 This these two registers are equal or not. One of the registers is the registered 0, so it always contains 0, so we know what's in that register, and then the other register we just found out contains A1.</v>
+
+00:18:40.570 --> 00:18:46.550
+<v Sohoni, Sohum>So given all of that information now, can we answer the questions at the different question marks?</v>
+
+00:18:51.230 --> 00:18:53.780
+<v Sohoni, Sohum>I mean, some of them we could have answered earlier too.</v>
+
+00:18:58.010 --> 00:18:58.710
+<v Bultman, Joshua>Yeah, I think so.</v>
+
+00:18:59.380 --> 00:19:02.490
+<v Sohoni, Sohum>Yeah, OK, and in terms of.</v>
+
+00:19:03.410 --> 00:19:24.820
+<v Sohoni, Sohum>So in terms of like what I might ask on the final exam, it's likely going to be not as complicated as this. First of all, and secondly, it might give you some hints in terms of what kind of instruction it is. So what I mean by that is at the moment we're looking at a.</v>
+
+00:19:25.480 --> 00:19:39.560
+<v Sohoni, Sohum>Uhm, and I type instruction right? In which case these bottom two question marks don't really make sense. I mean, it's it's in fact and I type instruction that doesn't use the third register at all.</v>
+
+00:19:40.340 --> 00:19:56.730
+<v Sohoni, Sohum>Umbreit, so we've got these two that are being compared and based on that, would taking a branch or not taking a branch. So in fact even the Alu stuff here becomes a little bit meaningless. Would you agree?</v>
+
+00:19:59.660 --> 00:20:00.510
+<v Bultman, Joshua>Uhm?</v>
+
+00:20:00.420 --> 00:20:00.700
+<v Schilling, Atreyu>Or the.</v>
+
+00:20:01.500 --> 00:20:09.210
+<v Bultman, Joshua>I don't think so. I when it isn't, don't they sit? Doesn't the ALU subtract those two values to see if the the output is 0?</v>
+
+00:20:09.660 --> 00:20:13.320
+<v Sohoni, Sohum>Yeah, that's right. Good someone paying attention.</v>
+
+00:20:14.070 --> 00:20:30.190
+<v Sohoni, Sohum>Uh, so yeah, alright, so let's walk through as much as we can answer right and then I'll show you something else. So why don't we get some volunteers to tell me what did you get for? Bids 21 through 25 of the instruction.</v>
+
+00:20:42.140 --> 00:20:43.540
+<v Sohoni, Sohum>No well in tears on that.</v>
+
+00:20:43.720 --> 00:20:44.420
+<v Schilling, Atreyu>It's not just.</v>
+
+00:20:45.300 --> 00:20:46.810
+<v Schilling, Atreyu>00001</v>
+
+00:20:47.990 --> 00:20:48.900
+<v Sohoni, Sohum>Uhm?</v>
+
+00:20:48.960 --> 00:20:50.130
+<v Schilling, Atreyu>The the 1st.</v>
+
+00:20:52.280 --> 00:21:14.390
+<v Sohoni, Sohum>Yes, so that would be the first source operand, right? So it's be any dollar one dollar zero, right? So the first operand or the first register that's being compared? The first source is registered one, so it would be 00001, right? So it's 5 bits, first four or zero lines. But is 1 excellent?</v>
+
+00:21:15.640 --> 00:21:20.260
+<v Sohoni, Sohum>And you could, you can tell me what's a big bits 16 through 20 going to be.</v>
+
+00:21:24.230 --> 00:21:25.190
+<v Bultman, Joshua>Just zeros.</v>
+
+00:21:26.020 --> 00:21:26.720
+<v Sohoni, Sohum>Just Tyra.</v>
+
+00:21:25.890 --> 00:21:27.850
+<v Bultman, Joshua>'cause it's there. Is this error register.</v>
+
+00:21:27.760 --> 00:21:38.430
+<v Sohoni, Sohum>Exactly since it's specifying the zero register, the number of the zero register is also all zeroes, so that's going to be all zeros for all 5 bits.</v>
+
+00:21:39.650 --> 00:21:46.710
+<v Sohoni, Sohum>Good, let's move on. Let's ignore these bottom two question marks for now. What would be in read data one?</v>
+
+00:21:52.950 --> 00:21:53.320
+<v Schilling, Atreyu>1.</v>
+
+00:21:54.120 --> 00:22:09.800
+<v Sohoni, Sohum>Yeah, we just work that out right with these set less than and all that so and it's just coincidence that register one has a one in it at this point, but that's that's what is going on and then what's going to be the value here on the second Alu source.</v>
+
+00:22:11.050 --> 00:22:11.540
+<v Toohill, Teresa>0.</v>
+
+00:22:12.580 --> 00:22:26.300
+<v Sohoni, Sohum>It's going to be 0 because that's what we read from the zero register, right? So this multiplexer here for example is going to pass through this value that we read and not the sign extended value of the lower 16 bits of the instruction.</v>
+
+00:22:27.000 --> 00:22:35.410
+<v Sohoni, Sohum>Right and why? Is that? Because that signal here on Elu source is going to be. It's going to be 0 as you're going to be 1.</v>
+
+00:22:36.300 --> 00:22:36.710
+<v Schilling, Atreyu>0.</v>
+
+00:22:37.460 --> 00:22:44.870
+<v Sohoni, Sohum>It's going to be 0 excellent because zero indicates the upper value being passed through. One indicates a lower value being passed through.</v>
+
+00:22:45.740 --> 00:23:06.870
+<v Sohoni, Sohum>In this case, we will sure that we need the upper one alright, and when it does the comparison. Since this is a branch, if not equal right, and I'll explain this in, I don't know whether it was small groups or whether it was in class, but this is a somewhat simplified diagram, so even though the result is not actually going to be a 0.</v>
+
+00:23:07.490 --> 00:23:39.640
+<v Sohoni, Sohum>For the intents and purposes of this branch instruction, this signal is actually going to be high because that's what is going to indicate that this branch should be taken so the branch signal here is going to be high, so the other input to the and gate is going to be high. Since this is a branch, if not equal, we're going to negate the output of this zero, which would have been zero but is now a one because we need gated that so both these inputs to the and gate are going to be one which is going to drive this control signal.</v>
+
+00:23:39.700 --> 00:23:44.440
+<v Sohoni, Sohum>On the marks here, which is now going to take the bottom value.</v>
+
+00:23:45.220 --> 00:24:08.420
+<v Sohoni, Sohum>Right instead of their top value, so they're top value is just PC Plus 4. Instead, he's going to take the addition of PC four and the offset that's coming through from here and and so on. And we'll get to that in a second. But that's essentially from the end user perspective. That's what's going on. It's indicating that the branch should be taken.</v>
+
+00:24:09.260 --> 00:24:14.960
+<v Sohoni, Sohum>Is that part clear 'cause that we talked about it before, but it's sort of also kind of new.</v>
+
+00:24:18.380 --> 00:24:23.040
+<v Bultman, Joshua>Yeah, I was a little confused. If that was actually going to send a high or low signal, but it makes sense now.</v>
+
+00:24:23.940 --> 00:24:37.220
+<v Sohoni, Sohum>Yeah, and that's mainly to simplify their diagram. There's more circuitry involved that we would have had to show, so this diagram works for a branch if equal it it's a little misleading for a branch if not equal.</v>
+
+00:24:43.210 --> 00:24:47.320
+<v Sohoni, Sohum>And I'm happy to talk more about that if there is any confusion at all at this point.</v>
+
+00:24:55.460 --> 00:25:07.590
+<v Sohoni, Sohum>OK, so then the result of the early operation, right? The L, you just performed a subtraction and that result is going to be what it stopped acting.</v>
+
+00:25:07.980 --> 00:25:10.010
+<v Sohoni, Sohum>Zero from one, I'm assuming.</v>
+
+00:25:11.400 --> 00:25:12.900
+<v Sohoni, Sohum>Or something of that sort, right?</v>
+
+00:25:14.680 --> 00:25:15.000
+<v Bultman, Joshua>Yep.</v>
+
+00:25:14.330 --> 00:25:22.580
+<v Sohoni, Sohum>So that is yeah, that result is going to be here. So let's say it's a positive one. It's going to be over here, and that gets passed through.</v>
+
+00:25:24.450 --> 00:25:26.150
+<v Sohoni, Sohum>Minimize this for a moment.</v>
+
+00:25:27.580 --> 00:25:51.150
+<v Sohoni, Sohum>That's good that goes through to this multiplexer. Here that goes through onto this bus over here and the reason for that is because we're not reading from data memory here, right? So anything that was read from this bus is ignored. That one goes through that one goes through all the way to the right data part. But is it going to write to a register in this case or not?</v>
+
+00:25:53.430 --> 00:25:54.260
+<v Bultman, Joshua>No, it won't.</v>
+
+00:25:55.360 --> 00:26:08.420
+<v Sohoni, Sohum>Yeah, none of the regular registers right? They only register. It's actually writing to. Is the program counter, so only the PC gets updated, but none of the registers are updated, so their edge rights symbol or signal here is going to be low.</v>
+
+00:26:09.230 --> 00:26:19.060
+<v Sohoni, Sohum>And so it doesn't really matter at that point. What was on this bus over here? Or what was the value of the right data?</v>
+
+00:26:20.360 --> 00:26:22.670
+<v Sohoni, Sohum>I mean the right register over here.</v>
+
+00:26:24.540 --> 00:26:25.360
+<v Sohoni, Sohum>That makes sense.</v>
+
+00:26:33.630 --> 00:26:39.950
+<v Sohoni, Sohum>So let me actually show you something else. So what I did in addition to.</v>
+
+00:26:41.250 --> 00:27:11.380
+<v Sohoni, Sohum>I'm just trying to figure out the logic with what's going to be in the registers given the program was. I looked at what was the value of the instruction itself, right? So this instruction got encoded as zero X 1420 F UFD, right? So you take that sequence of hexadecimal digits right? This 142 and you expand each of these out so the one becomes 0001, and so on and so forth. You expand these out to the 32 bit.</v>
+
+00:27:11.430 --> 00:27:16.020
+<v Sohoni, Sohum>Pattern and then you rearrange it to be a.</v>
+
+00:27:16.790 --> 00:27:26.760
+<v Sohoni, Sohum>Uhm, like and I type encoding right? So the 1st 6 bits are the opcodes next 5 bits or registered one. Next 5 bits are registered 2.</v>
+
+00:27:27.370 --> 00:27:38.120
+<v Sohoni, Sohum>Uh, and then we've got the 16 bit offset, and I'm guessing that I got the D right, but I wasn't really paying all that much attention is. Can someone confirm that D actually is 1101?</v>
+
+00:27:39.040 --> 00:27:40.080
+<v Sohoni, Sohum>So if it's something else.</v>
+
+00:27:41.590 --> 00:27:42.660
+<v Furst, Elias>Yeah, that's correct.</v>
+
+00:27:43.220 --> 00:28:06.390
+<v Sohoni, Sohum>OK, alright, so that's correct. Then this is the 16 bit value that we have on the bottom here, right? So these bits zero through 15 are that sequence of ones followed by zero one that gets sign extended. OK, so if we go back here essentially this 16 bit value let me copy that and.</v>
+
+00:28:12.880 --> 00:28:22.430
+<v Sohoni, Sohum>That gets sign extended and what we mean by that is that essentially we're going to have 16 ones, 123456.</v>
+
+00:28:25.820 --> 00:28:32.020
+<v Sohoni, Sohum>1616 ones appended. Because this was the sign of that 16 bit number, right?</v>
+
+00:28:32.710 --> 00:28:50.890
+<v Sohoni, Sohum>The one was the sign bit. That sign bit got replicated 16 times, so that's what we mean by sign extended. When we pull up with this guy again. So this sign extension turns that 16 bit value into into a 32 bit value. That value is making its way up here.</v>
+
+00:28:51.600 --> 00:29:04.540
+<v Sohoni, Sohum>Right, it's remember it's also one of the inputs to the multiplexer, but that one gets rejected. But if you follow the bus it goes all the way up top. Here it gets left shifted twice, right?</v>
+
+00:29:05.280 --> 00:29:07.460
+<v Sohoni, Sohum>Then when we do the left shifting.</v>
+
+00:29:09.210 --> 00:29:09.820
+<v Sohoni, Sohum>Blue</v>
+
+00:29:12.830 --> 00:29:21.520
+<v Sohoni, Sohum>to get 2 zeros appended here and then the two leading ones are going to disappear, so this is the value that we end up with OK.</v>
+
+00:29:22.540 --> 00:29:32.890
+<v Sohoni, Sohum>And so it's going to do assigned addition of this guy and whatever is PC Plus four over here. This is what this adder does. Everyone with me on that.</v>
+
+00:29:39.430 --> 00:29:43.740
+<v Sohoni, Sohum>Let me ask, is someone not with me on that? Do you have questions on what I just explained?</v>
+
+00:29:54.350 --> 00:29:55.440
+<v Furst, Elias>I mean I, I get it.</v>
+
+00:29:57.410 --> 00:29:57.940
+<v Sohoni, Sohum>OK.</v>
+
+00:29:59.020 --> 00:30:00.360
+<v Sohoni, Sohum>Anyone wanna second that?</v>
+
+00:30:01.970 --> 00:30:02.670
+<v Bultman, Joshua>Yep, I got it.</v>
+
+00:30:03.310 --> 00:30:26.060
+<v Sohoni, Sohum>OK, good two people alright. OK so I'm I'm still gonna leave it open if someone has questions please please don't hesitate to ask them now is that I'm really uhm so that's what's going on here with trying to figure out what is the the branch target address. And in this case this is a negative offset obviously, and let me go back to the code to sort of.</v>
+
+00:30:27.020 --> 00:30:56.480
+<v Sohoni, Sohum>Make sure that it's clear from that perspective as well, so top is up here, right? This label is up here. So what it's saying is I want to go back a couple of instructions right? Why a couple? Because at the end right at the after you execute dot? Well, actually it might be better to look at it here so when you do the be any actually, that's what it's for, right? It's going to say if it was.</v>
+
+00:30:56.930 --> 00:31:00.660
+<v Sohoni, Sohum>If that would be just going up one.</v>
+
+00:31:01.610 --> 00:31:02.930
+<v Sohoni, Sohum>Right now it's saying.</v>
+
+00:31:03.940 --> 00:31:25.930
+<v Sohoni, Sohum>Two, let's go back and look at the code so it's going back to the SLL instruction. So what's the address of the SL? It's 0X0 at 4040? Right after that, we've got two a. I'm sorry, I'm looking at the wrong column. Sorry it's zero X 00400008.</v>
+
+00:31:26.660 --> 00:31:31.480
+<v Sohoni, Sohum>Right after the eight, we've got the C and then we've got the 10.</v>
+
+00:31:32.790 --> 00:31:45.740
+<v Sohoni, Sohum>10 is the program counter address for the be any instruction. Now what's going to happen is at the end of this right. If we look at the data path then what the PC Plus 4?</v>
+
+00:31:46.490 --> 00:31:50.580
+<v Sohoni, Sohum>Actually is is 1/4 and remember it's the PC Plus 4.</v>
+
+00:31:52.270 --> 00:31:56.540
+<v Sohoni, Sohum>So if you look at the PC, the logic over here, the program counter value.</v>
+
+00:31:57.280 --> 00:32:06.500
+<v Sohoni, Sohum>Has a four added to it by this ad or over here, and that is the first operand or the first source operand to this adder.</v>
+
+00:32:08.190 --> 00:32:13.530
+<v Sohoni, Sohum>Right, so that value is going to be let me bring up my Word document and.</v>
+
+00:32:14.510 --> 00:32:22.300
+<v Sohoni, Sohum>Just mentioned that as well. So what did we say that value was? We'll just do it in in Hex so you won't remember.</v>
+
+00:32:25.100 --> 00:32:29.010
+<v Sohoni, Sohum>It's a little too much to ask to remember that all right. Let's look it up.</v>
+
+00:32:30.520 --> 00:32:44.680
+<v Sohoni, Sohum>So that would be the PC Plus four at that point would be 0014, right? So it's 0X0. Let's copy the whole thing. I don't want to be lazy, so zero X 004.</v>
+
+00:32:44.730 --> 00:32:45.120
+<v Sohoni, Sohum>Or</v>
+
+00:32:46.930 --> 00:32:49.980
+<v Sohoni, Sohum>00014.</v>
+
+00:32:50.940 --> 00:33:00.510
+<v Sohoni, Sohum>So that's one of the inputs to the PC. Any questions on why that is? One of the inputs to the to the this ad or over here?</v>
+
+00:33:04.190 --> 00:33:06.450
+<v Sohoni, Sohum>If there are questions about that, ask me now.</v>
+
+00:33:17.540 --> 00:33:39.550
+<v Sohoni, Sohum>OK, I'm not hearing any questions, so that's basically the the address of the branch instruction, plus four is how we got that input, and then the second input is what we got from the instruction itself, which was the offset right? We took the immediate field. We sign extended that we left shifted it twice and that gave us this other, whereas the word file.</v>
+
+00:33:40.900 --> 00:33:42.950
+<v Sohoni, Sohum>So this is the the bottom input.</v>
+
+00:33:43.700 --> 00:33:54.240
+<v Sohoni, Sohum>This is their top input and then it's going to add the two numbers right? So essentially it's doing a negative offset essentially and.</v>
+
+00:33:54.950 --> 00:34:25.950
+<v Sohoni, Sohum>That is going to take us back to the top. So this is where the source code comes in handy. So from here, instead of going to the next instruction, it gives us a negative offset to go back to the top. Now because Bday is a pseudo op, the calculation looks a little odd. Normally we would go 2 instructions up right? Because that would be the object itself and then the SL. But because it was a pseudo up there were two instructions that came out of this one.</v>
+
+00:34:26.240 --> 00:34:29.110
+<v Sohoni, Sohum>Essentially, we're skipping back three instructions.</v>
+
+00:34:30.770 --> 00:34:32.840
+<v Sohoni, Sohum>Does that make sense? That last part?</v>
+
+00:34:36.230 --> 00:34:36.650
+<v Bultman, Joshua>Yep.</v>
+
+00:34:37.430 --> 00:34:40.300
+<v Bultman, Joshua>And so so those those pseudo OPS are.</v>
+
+00:34:41.890 --> 00:34:42.910
+<v Bultman, Joshua>Kind of calculated.</v>
+
+00:34:43.690 --> 00:34:44.850
+<v Bultman, Joshua>Adam compile time.</v>
+
+00:34:46.640 --> 00:34:56.560
+<v Sohoni, Sohum>Yeah, so the pseudo app gets translated to actual assembly instructions at assembly time. Yeah, you can call it compile time. It's the same thing but.</v>
+
+00:34:58.080 --> 00:34:58.660
+<v Sohoni, Sohum>That's true.</v>
+
+00:34:57.930 --> 00:35:00.230
+<v Bultman, Joshua>So so does there have to be 2 passes then because?</v>
+
+00:35:01.360 --> 00:35:02.470
+<v Bultman, Joshua>In order for.</v>
+
+00:35:03.460 --> 00:35:06.220
+<v Bultman, Joshua>The pseudo opt to know what the offset is.</v>
+
+00:35:06.790 --> 00:35:37.050
+<v Sohoni, Sohum>Yeah, yeah, that's a good point, yeah, and if you take a compiler construction course at some point, then yeah, you'll get into a whole lot more details on how this happens, so I'll very briefly mention what's going on if it's useful because there's something called a symbol table, and essentially it keeps track of all the symbols. So in our case, a label like top would be one of the symbols, and it's going to keep track off. OK, this is the label and then what's the corresponding address to that?</v>
+
+00:35:37.420 --> 00:35:50.090
+<v Sohoni, Sohum>And yeah, once it figures those things out, there will be a second pass to figure out. OK, what should be the offset and that offset then gets calculated and you get this be any instruction generated, Yep.</v>
+
+00:35:52.050 --> 00:35:53.120
+<v Bultman, Joshua>Cool, thank you.</v>
+
+00:35:53.600 --> 00:35:54.510
+<v Sohoni, Sohum>Yep, Yep.</v>
+
+00:35:55.540 --> 00:36:09.210
+<v Sohoni, Sohum>Right, so essentially it's going back three instructions, which is what that negative offset comes out to. And if you did the calculation for all of this, you'd end up with the same number.</v>
+
+00:36:17.590 --> 00:36:35.500
+<v Sohoni, Sohum>So I think one instruction would be all FS2 instructions up would be FE3 instructions up is FD, so it's a little hard to count backwards, especially in in hex, but that's what it comes down to. That's why it's FD.</v>
+
+00:36:40.140 --> 00:36:48.270
+<v Sohoni, Sohum>We can definitely test this theory by adding some bogus instruction in between. So let's just add a no op assemble again.</v>
+
+00:36:48.900 --> 00:36:52.520
+<v Sohoni, Sohum>And there we go. We've got FC now instead of every.</v>
+
+00:36:57.080 --> 00:36:58.290
+<v Sohoni, Sohum>Does that make sense?</v>
+
+00:37:04.140 --> 00:37:08.250
+<v Furst, Elias>Is is the offset is the offset in terms of?</v>
+
+00:37:10.330 --> 00:37:18.260
+<v Furst, Elias>Uh, like the the number of instructions when it's assembled or the number of like written instructions.</v>
+
+00:37:25.460 --> 00:37:26.650
+<v Furst, Elias>Right, OK?</v>
+
+00:37:19.230 --> 00:37:34.970
+<v Sohoni, Sohum>It's the number of instructions after assembly, 'cause these are the addresses of those actual instructions, right? So? So yeah, it's it's a relative address essentially. And so yeah, the number of instructions matters, not the number of of.</v>
+
+00:37:35.910 --> 00:37:37.740
+<v Sohoni, Sohum>Like source code instructions.</v>
+
+00:37:39.900 --> 00:37:40.980
+<v Sohoni, Sohum>Yeah, and we can.</v>
+
+00:37:41.780 --> 00:37:42.540
+<v Sohoni, Sohum>You can do it.</v>
+
+00:37:38.180 --> 00:37:44.320
+<v Furst, Elias>OK oh OK. Yeah, that makes that makes a lot more sense. I was like the offsets wrong, but no, it's.</v>
+
+00:37:44.950 --> 00:37:45.360
+<v Furst, Elias>OK.</v>
+
+00:37:44.870 --> 00:37:57.310
+<v Sohoni, Sohum>No, we can do another quick test here as well, right? Let's load a large number into T5. I don't think we're using that, UM, so let's just put 0X.</v>
+
+00:37:57.370 --> 00:37:58.250
+<v Sohoni, Sohum>So.</v>
+
+00:37:59.430 --> 00:38:00.200
+<v Sohoni, Sohum>4.6.</v>
+
+00:38:01.670 --> 00:38:21.440
+<v Sohoni, Sohum>And I'm picking a large number because this instruction would then get assembled into two separate instructions as well, right? So we've got the LUI and DRI, and you can see from FC it went down to FA and not to FB because this one instruction we load immediate translated into 2 instructions in between.</v>
+
+00:38:27.970 --> 00:38:28.840
+<v Sohoni, Sohum>How about that?</v>
+
+00:38:30.110 --> 00:38:31.670
+<v Furst, Elias>Alright, I I get that.</v>
+
+00:38:33.030 --> 00:39:02.640
+<v Sohoni, Sohum>Good so yeah. I mean I'm spending a lot of time on this because, you know, as I said earlier, this is the crux. This is where all the information that you've been working on this term is really coming together, right? You? You're really putting together stuff like OK, what? What is an assembly instruction? What does it do? Or does it look like? How is it stored? How does the computer actually go from one instruction to another in terms of, you know, running a program and while in this case?</v>
+
+00:39:02.690 --> 00:39:08.580
+<v Sohoni, Sohum>We got the bonus of really getting into the branch instruction as well, which is one of the more complicated instructions.</v>
+
+00:39:10.790 --> 00:39:14.580
+<v Sohoni, Sohum>So we're gonna board for 10 minutes, 10 ish minutes left.</v>
+
+00:39:15.350 --> 00:39:18.980
+<v Sohoni, Sohum>Uhm, said anything on here that we haven't really covered.</v>
+
+00:39:20.710 --> 00:39:24.270
+<v Sohoni, Sohum>Or any questions? Well, just open it up. Any questions at this point?</v>
+
+00:39:28.640 --> 00:39:32.520
+<v Sohoni, Sohum>Would be advanced questions could be what you might think is silly questions.</v>
+
+00:39:51.300 --> 00:39:51.740
+<v Sohoni, Sohum>Sure.</v>
+
+00:39:35.820 --> 00:39:53.300
+<v Toohill, Teresa>This is not necessarily relating to this topic specifically, but it's about the final. I have extended test time, so I'm wondering like if I is the exam going to be like online or how? How is that the final exam? If you're able to tell us now, I don't know.</v>
+
+00:39:52.800 --> 00:39:55.940
+<v Sohoni, Sohum>Yeah I can. So exam is going to be online.</v>
+
+00:39:56.910 --> 00:40:13.040
+<v Sohoni, Sohum>And anyone with additional time can certainly reach out to me and let me know whether you'd like the time upfront or after like the extension and it it will be a timed exam. It's not a take home, so yeah, you do need to think about time.</v>
+
+00:40:13.640 --> 00:40:14.960
+<v Toohill, Teresa>OK, thank you so much.</v>
+
+00:40:15.160 --> 00:40:16.170
+<v Sohoni, Sohum>Yeah, you're welcome.</v>
+
+00:40:18.810 --> 00:40:41.090
+<v Sohoni, Sohum>We're gonna use that I guess. Reminds me you must have seen the announcement, but for those who didn't see the announcement, the rest of this term will be just done online. So there was a an email from the president that came out on Friday. I think. Uh me, and he said, if you've been teaching online the last few weeks and want to continue teaching online just to maintain.</v>
+
+00:40:41.800 --> 00:40:50.310
+<v Sohoni, Sohum>The continuity of medium of instruction, I guess, was the phrase he used. Then he is fine with that, so I'll just requested to teach online throughout.</v>
+
+00:40:51.160 --> 00:40:51.700
+<v Sohoni, Sohum>Uhm?</v>
+
+00:40:54.360 --> 00:41:01.550
+<v Sohoni, Sohum>I guess I could make another announcement related to that. So this Friday we're not going to be meeting in small groups.</v>
+
+00:41:02.220 --> 00:41:21.150
+<v Sohoni, Sohum>We're not going to have class at all, 'cause I've got my finally got. My MRI is scheduled for my brain and neck and all that, so that's going to be all afternoon on Friday, so I'm going to have to cancel classes for Friday. So let me ask you a question. Would you rather do the small groups on Thursday then?</v>
+
+00:41:22.610 --> 00:41:25.620
+<v Sohoni, Sohum>Or do you want Thursday to be a regular class?</v>
+
+00:41:30.740 --> 00:41:38.730
+<v Leonard, Benjamin>I guess my question is how would it affect like the classes after that if we do a small groups session?</v>
+
+00:41:38.350 --> 00:41:53.430
+<v Sohoni, Sohum>Oh yeah, that's a good question. So frankly, I we've got about two weeks worth of content remaining in terms of what I need to cover in class. So we've almost got like a full extra week at our disposal.</v>
+
+00:41:54.520 --> 00:41:57.200
+<v Leonard, Benjamin>Oh, then I definitely would like small groups.</v>
+
+00:41:58.750 --> 00:41:59.420
+<v Bultman, Joshua>Same here.</v>
+
+00:41:57.830 --> 00:42:00.600
+<v Sohoni, Sohum>OK, so that's one four or more, yeah?</v>
+
+00:41:59.660 --> 00:42:01.960
+<v Furst, Elias>Yeah I I I support this.</v>
+
+00:42:02.770 --> 00:42:03.050
+<v Sohoni, Sohum>Oh</v>
+
+00:42:02.550 --> 00:42:03.920
+<v Toohill, Teresa>Yeah I have.</v>
+
+00:42:03.060 --> 00:42:04.050
+<v Gaty, William>I'd be up for that.</v>
+
+00:42:05.120 --> 00:42:09.770
+<v Sohoni, Sohum>alright, I get it. That's an overwhelming yes for small groups on Thursday.</v>
+
+00:42:10.920 --> 00:42:17.020
+<v Sohoni, Sohum>Good, I'm just making a note of that and I'll send an announcement for those who might miss it during class today.</v>
+
+00:42:19.080 --> 00:42:21.400
+<v Sohoni, Sohum>Cool, so that's that's all second.</v>
+
+00:42:23.720 --> 00:42:36.580
+<v Sohoni, Sohum>So yeah, then when we meet on Wednesday, we'll start with pipelining. I think you you're reading assignment might be do that night for pipelining. I forget exactly what the date is, but we will get started on pipelining.</v>
+
+00:42:37.450 --> 00:42:38.650
+<v Sohoni, Sohum>On Wednesday, yeah.</v>
+
+00:42:41.290 --> 00:42:44.120
+<v Sohoni, Sohum>Well, we still have 40 minutes almost.</v>
+
+00:42:45.310 --> 00:42:52.470
+<v Sohoni, Sohum>Let's maybe get back to this diagram and see if there are any lingering questions about the activity we did today.</v>
+
+00:42:53.140 --> 00:42:55.360
+<v Sohoni, Sohum>Uhm and.</v>
+
+00:42:56.490 --> 00:42:58.990
+<v Sohoni, Sohum>Anything sexually related to this?</v>
+
+00:43:00.710 --> 00:43:03.480
+<v Schilling, Atreyu>What does Alu control give to the ALU?</v>
+
+00:43:04.440 --> 00:43:35.040
+<v Sohoni, Sohum>Good question. So a loop control is driven by those lower 5 bits of the instruction. Lower 6 bits of the instruction, lower 6 bits for an R type. Instructions are the funk field, right? The function field, and So what? It's telling the Alu essentially is whether to add or subtract or do a shift left or shift right or those kind of things. So it's it's the localized sort of control, or the localized opcode for the ALU itself.</v>
+
+00:43:37.850 --> 00:43:40.660
+<v Sohoni, Sohum>So so if you remember all the R type instructions.</v>
+
+00:43:41.230 --> 00:43:46.040
+<v Sohoni, Sohum>A man that had the Alu going on. They all had an awkward of all zeros.</v>
+
+00:43:50.870 --> 00:43:53.750
+<v Sohoni, Sohum>Elephant drives the earlier itself.</v>
+
+00:43:54.720 --> 00:43:58.770
+<v Bultman, Joshua>So in in the instruction that we were doing, that would just be 0 right because?</v>
+
+00:43:59.630 --> 00:44:01.800
+<v Bultman, Joshua>It's and I type. It was nine type.</v>
+
+00:44:03.070 --> 00:44:03.750
+<v Sohoni, Sohum>Ah.</v>
+
+00:44:03.810 --> 00:44:07.410
+<v Sohoni, Sohum>Uh, so actually that's where the the.</v>
+
+00:44:08.360 --> 00:44:13.300
+<v Sohoni, Sohum>Diagram cheats a little bit in order to simplify things, so it's actually.</v>
+
+00:44:15.000 --> 00:44:18.470
+<v Sohoni, Sohum>I go there mate. That's it's essentially wrong in terms of.</v>
+
+00:44:19.140 --> 00:44:26.300
+<v Sohoni, Sohum>Order diagram is showing us for our particular instruction because the alias still needs to do a subtraction on a branch instruction.</v>
+
+00:44:28.150 --> 00:44:33.210
+<v Sohoni, Sohum>I'm so the URL you control behind the scenes is going to actually be.</v>
+
+00:44:34.210 --> 00:44:36.130
+<v Sohoni, Sohum>Given the value of.</v>
+
+00:44:37.200 --> 00:44:43.750
+<v Sohoni, Sohum>Is subtraction so essentially the Lu is going to be told somehow or the other to do a subtraction because it's a branch instruction?</v>
+
+00:44:44.620 --> 00:44:45.090
+<v Bultman, Joshua>OK.</v>
+
+00:44:45.800 --> 00:44:57.900
+<v Sohoni, Sohum>Yeah, and that's actually not captured in this diagram, again to to keep it simple, if we started adding all the little behind the scenes, that's going on in the hardware. This diagram quickly becomes a little too hard to read.</v>
+
+00:45:08.230 --> 00:45:10.530
+<v Sohoni, Sohum>Good questions, other questions.</v>
+
+00:45:24.320 --> 00:45:28.570
+<v Sohoni, Sohum>So I'm not hearing other questions. Let me bring up the Word document I had here.</v>
+
+00:45:29.020 --> 00:45:44.090
+<v Sohoni, Sohum>Uh, so I've broken the instruction down here. According to the I type format, right? But if you were asked a question on what are going to be, the values forbids 11 through 15. Yes, we do have an answer for that.</v>
+
+00:45:44.920 --> 00:45:45.360
+<v Sohoni, Sohum>Right?</v>
+
+00:45:46.410 --> 00:45:50.070
+<v Sohoni, Sohum>Because it would be these 5 bits here, they're all ones.</v>
+
+00:45:51.450 --> 00:45:56.420
+<v Sohoni, Sohum>So if someone ever asks you even for a Nair type, what is this going to be?</v>
+
+00:45:57.090 --> 00:45:58.270
+<v Sohoni, Sohum>You can actually look it up.</v>
+
+00:45:59.060 --> 00:46:07.680
+<v Sohoni, Sohum>As long as you have like the actual encoding of the instruction. If you don't, obviously, I'm not expecting you to memorize anything like that.</v>
+
+00:46:08.880 --> 00:46:10.760
+<v Sohoni, Sohum>You really can't memorize.</v>
+
+00:46:12.220 --> 00:46:15.530
+<v Sohoni, Sohum>Although in this case, because you know the offset is effed.</v>
+
+00:46:16.360 --> 00:46:23.880
+<v Sohoni, Sohum>You probably would have been able to get that, but I won't ask a question that that's complicated. That's that complicated on an exam.</v>
+
+00:46:32.650 --> 00:46:39.430
+<v Sohoni, Sohum>So similarly, it's just a bit pattern, right? So all of this stuff, these 26 bits.</v>
+
+00:46:40.450 --> 00:47:10.670
+<v Sohoni, Sohum>Our pass through here, little bit zero through 25, they're actually left shifted. Here you create a jump address as well. You as in a hardware creates jump address as well, and then it ignores that when it gets to this multiplexer. So again, that's the point I'm trying to drive home, which might be confusing to some still, but I really want you to understand the hardware does all of this stuff in parallel. Calculates the jump address for non jump instructions. It calculates the branch.</v>
+
+00:47:10.830 --> 00:47:20.660
+<v Sohoni, Sohum>Christopher Non branch instructions as well and then it costs them away because then it and by that time it knows that this is not a branch or a junk.</v>
+
+00:47:27.250 --> 00:47:31.660
+<v Sohoni, Sohum>And that is going to be of some importance when we start looking at pipelining.</v>
+
+00:47:33.360 --> 00:47:41.720
+<v Sohoni, Sohum>Which is the plan for Wednesday as well as maybe a couple of class Peters on eight Week 9.</v>
+
+00:47:42.970 --> 00:47:45.110
+<v Sohoni, Sohum>Or maybe even three class periods in Week 9.</v>
+
+00:47:50.710 --> 00:47:54.690
+<v Sohoni, Sohum>Alright, what about a couple of minutes short? Any last questions?</v>
+
+00:48:14.610 --> 00:48:14.900
+<v Sohoni, Sohum>OK.</v>
+
+00:48:14.960 --> 00:48:15.800
+<v Sohoni, Sohum>Yeah so.</v>
+
+00:48:16.970 --> 00:48:19.900
+<v Sohoni, Sohum>I'll stop the recording and.</v>
+
+00:48:20.930 --> 00:48:25.700
+<v Sohoni, Sohum>I'll let you guys go because yeah, if you have questions you can always ask in the.</v>

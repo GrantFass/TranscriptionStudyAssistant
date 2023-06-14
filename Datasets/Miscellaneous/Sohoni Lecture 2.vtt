@@ -1,0 +1,865 @@
+WEBVTT
+
+0:0:0.0 --> 0:0:0.630
+<v Bultman, Joshua>Hello.</v>
+
+0:0:2.140 --> 0:0:2.420
+<v Schilling, Atreyu>Hey.</v>
+
+0:0:2.210 --> 0:0:2.580
+<v Sohoni, Sohum>Hey.</v>
+
+0:0:5.230 --> 0:0:8.890
+<v Sohoni, Sohum>Alright, so let me pick up where we left off.</v>
+
+0:0:11.440 --> 0:0:12.180
+<v Sohoni, Sohum>When was it?</v>
+
+0:0:13.430 --> 0:0:14.160
+<v Sohoni, Sohum>Last time.</v>
+
+0:0:15.530 --> 0:0:23.40
+<v Sohoni, Sohum>Uhm so I wanna say I'm not feeling all that great today so we'll see how much we can do.</v>
+
+0:0:24.30 --> 0:0:28.360
+<v Sohoni, Sohum>I'm hoping to get through most of the cache stuff at this point.</v>
+
+0:0:30.450 --> 0:0:32.710
+<v Sohoni, Sohum>So let me share my screen.</v>
+
+0:0:36.970 --> 0:0:39.460
+<v Sohoni, Sohum>And go into presentation mode.</v>
+
+0:0:45.110 --> 0:1:0.670
+<v Sohoni, Sohum>Alright, so the the we looked at what the memory hierarchy is supposed to be doing right? And we talked about cash is a little bit so let's and most importantly let me go back a couple slides we talked about.</v>
+
+0:1:1.470 --> 0:1:8.930
+<v Sohoni, Sohum>Why caches work right? And then we talked about locality? That's that's what makes caching really work so.</v>
+
+0:1:9.630 --> 0:1:39.710
+<v Sohoni, Sohum>The fact that we're spending a good deal of our code as well as their data, that the code accesses is spent in a small portion of the the code, or the small portion of the memory, which means we access it again and again. That's temporal locality, and then we talked about how things that are nearby are also likely to be accessed nearby in terms of space, so address spaces specifically what we mean, and that allows us to do intelligent things like prefetching and stuff like that so.</v>
+
+0:1:41.30 --> 0:1:54.960
+<v Sohoni, Sohum>Given that basis for caching right? And I think that's like the most important thing you need to know about caching is locality and why caches work. But here are some additional things that.</v>
+
+0:1:55.760 --> 0:2:11.690
+<v Sohoni, Sohum>I think you should be aware of, at least in terms of like how a cache works now. The details of some of these things. Again, they don't matter too much, but conceptually at the very least I'd like all S CS and CS students too.</v>
+
+0:2:12.830 --> 0:2:42.700
+<v Sohoni, Sohum>You be familiar with what these things are OK, and many of them thankfully are pretty simple, as in like a cache hit. For example, you look for something in the cache, you find it, it's called a cache hit. If you look for 100 things and you find 80 of those, you've gotta hit rate of 8080% right or .8? Uh, latency is the time it takes to access something. So from the time the CPU requests something until that.</v>
+
+0:2:42.970 --> 0:2:59.660
+<v Sohoni, Sohum>Data is furnished to the CPU, so for example, you want to put something in register T zero from the time the CPU makes that request. Until that 32 bit value gets written into T0. Those many cycles clock cycles typically.</v>
+
+0:3:0.440 --> 0:3:5.730
+<v Sohoni, Sohum>Or picoseconds or NS or whatever it is. That's called the latency.</v>
+
+0:3:6.730 --> 0:3:36.110
+<v Sohoni, Sohum>The Miss penalty of a cache is essentially the latency of the next level. OK, so an L1 cache miss is going to seek data in the level 2 cache. If we find it in the level 2 cache, that Miss penalty is the latency of the level 2 cache. If we miss in the Level 2 and we have to go to the main memory, the latency of the main memory would be the miss penalty of the level tools. Assuming there isn't a Level 3. So essentially next level latency equals current levels miss penalty.</v>
+
+0:3:36.960 --> 0:3:45.720
+<v Sohoni, Sohum>Uhm, cache size is also again a pretty straightforward concept. Here is essentially how big is the cache, like how many kilobytes?</v>
+
+0:3:47.310 --> 0:3:49.520
+<v Sohoni, Sohum>And that's that's that.</v>
+
+0:3:50.320 --> 0:3:58.80
+<v Sohoni, Sohum>Uh, for the next three things it starts to get a little complicated, so we'll visit that if we have time.</v>
+
+0:3:58.140 --> 0:4:13.640
+<v Sohoni, Sohum>In, uh, associativity I think we can visit today and then replacement policies related to associativity, and I'll maybe I'll very quickly give a block size definition 'cause it's it's sort of mentioned in the slide as well, so.</v>
+
+0:4:14.880 --> 0:4:22.210
+<v Sohoni, Sohum>If it's CPU requires a word of data, right? So like that would be 32 bits in MIPS if we need 32 bits or data.</v>
+
+0:4:22.720 --> 0:4:23.370
+<v Sohoni, Sohum>Uhm?</v>
+
+0:4:24.800 --> 0:4:40.250
+<v Sohoni, Sohum>We could provide the CPU 32 bits of data. That's fine, but the question is how much data do we want to bring into the cache when when we require, let's say something at address 0, just to keep things simple, if we're trying to get something that is at address 0.</v>
+
+0:4:41.310 --> 0:5:11.210
+<v Sohoni, Sohum>Are we going to get only the 32 bits that are address 0 or do we want to get more? Why more? Well more because we just said that they're special locality for getting something at zero. Then it's quite likely that the CPU will also want something that's at address 4, and something that's an address 8 and so on and so forth. OK, so the concept of a block or where the block size comes in is essentially just like how many words.</v>
+
+0:5:11.640 --> 0:5:35.610
+<v Sohoni, Sohum>Are we going to get for every time we access something? OK, so that's like the the size of transfer between the cache and it's next level. So in the level one cache. For example, if we want to store 4 words at a time, then the block size would be 4 * 32, which is what 132 or no?</v>
+
+0:5:36.600 --> 0:5:39.350
+<v Sohoni, Sohum>Or 128 I believe would be the.</v>
+
+0:5:40.90 --> 0:5:42.770
+<v Sohoni, Sohum>In block size for in that case.</v>
+
+0:5:43.430 --> 0:5:45.40
+<v Sohoni, Sohum>Any questions on any of that?</v>
+
+0:5:56.50 --> 0:5:59.310
+<v Sohoni, Sohum>K I'm assuming that being no questions.</v>
+
+0:6:1.450 --> 0:6:2.900
+<v Sohoni, Sohum>Alright, let me keep going.</v>
+
+0:6:3.680 --> 0:6:9.250
+<v Sohoni, Sohum>Uh, so I think let's let's talk about, uh, let me keep going.</v>
+
+0:6:10.330 --> 0:6:18.920
+<v Sohoni, Sohum>So yeah, let's talk about replacement. That's the one thing that I didn't really talk about. Well, that and associativity so.</v>
+
+0:6:19.760 --> 0:6:33.780
+<v Sohoni, Sohum>Uhm, caches or small right? And well, even if they weren't small they they're always going to be some finite size. Which means that once we have a lot of things in the cache right once the cache is full so as to say.</v>
+
+0:6:34.660 --> 0:6:55.280
+<v Sohoni, Sohum>Then to bring something new into the cache, we need to kick something out, right? And that's where the replacement policy comes from. There are various policies available, like just random like pick any block and just get rid of that or a first in first out right. Whatever we brought in first can be removed first.</v>
+
+0:6:56.620 --> 0:7:10.200
+<v Sohoni, Sohum>Or we could have something called least recently used, which by the way, is the most commonly used and the most effective strategy. And then there is least frequently used as well, which is like a cousin of least recently used.</v>
+
+0:7:10.820 --> 0:7:11.590
+<v Sohoni, Sohum>Uhm?</v>
+
+0:7:13.20 --> 0:7:40.810
+<v Sohoni, Sohum>Again, the details aren't thing matter too much in terms of like how would you create a policy in the hardware like this and so on. But the logic I think is something to to be aware of, which is why least recently used. Why do you think that might be a good policy? Can can anyone guess or have you come across this in your reading? You want to give an answer for why LR URL if you both might be worthwhile policies.</v>
+
+0:7:43.870 --> 0:7:45.420
+<v Furst, Elias>Hum so.</v>
+
+0:7:46.420 --> 0:7:57.440
+<v Furst, Elias>LRU is is good 'cause, uh, since because of temporal locality. If you if something is the least recently used, your like least likely to use it again.</v>
+
+0:7:58.680 --> 0:8:29.750
+<v Sohoni, Sohum>Correct exactly so if we moved away from that part of the code, right? And we're doing something else then that stale data that's there in in the cache is unlikely for us to be touching again. 'cause now we're working with something else, something we're working somewhere else in the memory. So exactly, that's that's the logic behind and various simulations and various actual observations of caches have proved that tends to be a very effective strategy and.</v>
+
+0:8:30.50 --> 0:8:37.200
+<v Sohoni, Sohum>Toward every cache that I'm aware of uses LRU or LF you.</v>
+
+0:8:38.730 --> 0:8:46.200
+<v Sohoni, Sohum>Whichever is easier to implement in in the hardware. OK, it's usually it's LR. Use some cases we look at LSU.</v>
+
+0:8:47.320 --> 0:8:47.690
+<v Bultman, Joshua>Oh</v>
+
+0:8:47.420 --> 0:8:49.140
+<v Sohoni, Sohum>Alright, yeah question.</v>
+
+0:8:49.160 --> 0:8:56.340
+<v Bultman, Joshua>does so does that work with like blocks? 'cause like it it if you're like looping through something in the program.</v>
+
+0:8:56.850 --> 0:8:57.230
+<v Sohoni, Sohum>Yeah.</v>
+
+0:8:57.520 --> 0:9:0.680
+<v Bultman, Joshua>You could be just about to use something that is like.</v>
+
+0:9:1.670 --> 0:9:5.390
+<v Bultman, Joshua>Uh, you could just be about to retrieve something that was.</v>
+
+0:9:5.900 --> 0:9:15.310
+<v Bultman, Joshua>Are used in that in that same block 'cause you're like looping through like a for each loop or something, so it is it is it with block sizes or just like?</v>
+
+0:9:17.400 --> 0:9:19.70
+<v Bultman, Joshua>Words and bytes and stuff like that.</v>
+
+0:9:18.810 --> 0:9:29.70
+<v Sohoni, Sohum>Yeah no, I get the question. So all of this applies to blocks. OK, now in just a second we're going to start looking through some slides that are.</v>
+
+0:9:29.840 --> 0:9:46.820
+<v Sohoni, Sohum>Not going to use blocks, so it's odd that I would say that everything is blocks, but the next set of slides is really just an oversimplification just to understand how caches work, but the answer is everything in a cache is done in blocks, so.</v>
+
+0:9:47.490 --> 0:10:5.20
+<v Sohoni, Sohum>We're not like within a block is not something that would be monitored, but essentially the block itself is marked in the cache as resend or not recent. Or there's usually some hardware mechanism to keep track of access is in the cache, but all of this is done at the block level.</v>
+
+0:10:5.830 --> 0:10:6.260
+<v Bultman, Joshua>OK.</v>
+
+0:10:5.740 --> 0:10:7.880
+<v Sohoni, Sohum>This is that answer your question. Do you have a follow up?</v>
+
+0:10:7.550 --> 0:10:9.60
+<v Bultman, Joshua>Yes, yeah yeah that the answers it.</v>
+
+0:10:9.730 --> 0:10:16.540
+<v Sohoni, Sohum>OK good alright good good question then yeah feel free to interrupt if anyone has a question, OK?</v>
+
+0:10:17.580 --> 0:10:18.380
+<v Sohoni, Sohum>Alright, so.</v>
+
+0:10:18.440 --> 0:10:26.120
+<v Sohoni, Sohum>So when we talk about associativity, OK, uhm what we're essentially.</v>
+
+0:10:27.130 --> 0:10:34.310
+<v Sohoni, Sohum>Talking about is how are we organizing the space that we have in the cache? OK, so on this slide?</v>
+
+0:10:34.980 --> 0:10:57.230
+<v Sohoni, Sohum>Again, this is extremely simplified and will continue using the Super simplified example, which doesn't really map to reality, but is there to make you understand what's going on. So on the left hand side so there's actually two squares. Let's look at the left square or rectangle and in the left rectangle which is labeled direct mapped OK.</v>
+
+0:10:58.320 --> 0:11:9.860
+<v Sohoni, Sohum>We have on the left hand side main memory right OK or the address space for the machine and in this case it's just the three bit address space and then on the right hand side is the cache.</v>
+
+0:11:10.350 --> 0:11:29.500
+<v Sohoni, Sohum>OK, so our cache has four blocks, or in our case here just 4 bytes or whatever you want to call it. OK, so four locations just to keep things simple, so it's got four locations and what we're saying when we say it's a direct mapped cache is that there is a clear.</v>
+
+0:11:30.440 --> 0:11:30.910
+<v Sohoni, Sohum>Hum.</v>
+
+0:11:31.740 --> 0:11:41.300
+<v Sohoni, Sohum>Modulus operation we can do to figure out where in the cache a particular address is going to map. 2. OK so.</v>
+
+0:11:42.890 --> 0:11:44.920
+<v Sohoni, Sohum>I'm going to go slowly here, but.</v>
+
+0:11:45.920 --> 0:11:52.400
+<v Sohoni, Sohum>If you're to not slowing down for, it's not clear. Please feel free to interrupt and ask. So what we're saying is.</v>
+
+0:11:53.240 --> 0:11:56.540
+<v Sohoni, Sohum>If it's four possible locations right then.</v>
+
+0:11:57.340 --> 0:12:27.520
+<v Sohoni, Sohum>Each of I mean if it's four possible locations, we need 2 bits in order to identify where things are going right, so the bottom 2 bits of this address tell us whether something is going to map to location 0, right? If both the lower 2 bits R0 then it's going to map to location 0. If the bit slower, 2 bits R 01, it's going to map 2 location one right? Which is why I'm showing in Gray that 001 as well as 101 both map too.</v>
+
+0:12:27.620 --> 0:12:39.590
+<v Sohoni, Sohum>Location one OK and so on and so forth. So 010 goes to 2110 goes to two, and so on and so forth. So that is what's called a direct mapped cache.</v>
+
+0:12:40.520 --> 0:12:40.950
+<v Sohoni, Sohum>OK.</v>
+
+0:12:41.710 --> 0:12:44.540
+<v Sohoni, Sohum>Uhm, any questions on what I just said?</v>
+
+0:12:55.480 --> 0:13:25.70
+<v Sohoni, Sohum>OK, so I'll quickly just mention what it two way set associative cache looks like, and then we'll go through. An example. Will walk through a pattern of access for the direct mapped cache, and then if we get time and I'm still up to teaching then I will go through a an associative example as well. So in a set associative cache we have two sets here. OK, these both these caches their direct mapped and the set associative cache in this example.</v>
+
+0:13:25.550 --> 0:13:31.540
+<v Sohoni, Sohum>Are both the same size? They both can hold four blocks of data OK.</v>
+
+0:13:32.230 --> 0:14:2.270
+<v Sohoni, Sohum>But in the set associative cache, we are just dividing this into two sets for now, which are called, which will be used, or rather, which will be mapped to using just the last bit. At this point. OK, so anything that has the last bit R zero, it's going to go to set zero. So all of these white blocks in the second diagram here they all go into set zero, they all mapped to set zero and then all the ones that end with one which is 0.</v>
+
+0:14:2.510 --> 0:14:26.980
+<v Sohoni, Sohum>1011101 and 111. All of these memory locations or these addresses map to set one, so we're using just because we have only two sets, we need only one bit to determine between zero and one right. The two possible sets that it can map, and then within the set there are two locations here which tells us that.</v>
+
+0:14:27.850 --> 0:14:28.450
+<v Sohoni, Sohum>You know?</v>
+
+0:14:29.330 --> 0:14:34.600
+<v Sohoni, Sohum>It could be any one of these four blocks in any one of these two positions.</v>
+
+0:14:36.20 --> 0:14:38.860
+<v Sohoni, Sohum>Exact making sense quickly some sense.</v>
+
+0:14:44.940 --> 0:14:45.240
+<v Bultman, Joshua>Yep.</v>
+
+0:14:47.580 --> 0:14:49.30
+<v Sohoni, Sohum>Sorry, I didn't catch that really.</v>
+
+0:14:50.500 --> 0:14:51.220
+<v Bultman, Joshua>Sorry, Yep.</v>
+
+0:14:51.800 --> 0:14:52.170
+<v Sohoni, Sohum>OK.</v>
+
+0:14:52.260 --> 0:14:57.450
+<v Furst, Elias>I I'm I don't really understand how the second one is.</v>
+
+0:14:58.240 --> 0:15:4.180
+<v Furst, Elias>Helpful because like you know it's somewhere in the set, but.</v>
+
+0:15:3.900 --> 0:15:4.180
+<v Sohoni, Sohum>Yep.</v>
+
+0:15:5.400 --> 0:15:6.70
+<v Furst, Elias>Uhm?</v>
+
+0:15:6.990 --> 0:15:10.640
+<v Furst, Elias>How do you know? How do you like? Find where it is beyond that.</v>
+
+0:15:16.620 --> 0:15:17.100
+<v Furst, Elias>OK.</v>
+
+0:15:11.420 --> 0:15:27.170
+<v Sohoni, Sohum>Right, so I'll give a quick answer and then we'll walk through the examples, which should make it clear. So the quick answer is in this case we're going to compare the top 2 bits of each of these things that are in the set to see if it's a match.</v>
+
+0:15:29.300 --> 0:15:52.530
+<v Sohoni, Sohum>OK, and in this example on the left hand side with the direct map, we still wouldn't be sure if it was blocked 001 or 1:01 that was in location one, right? 'cause only one of them can be there at any one point, so we're still going to do some kind of what's called tag matching, and that tag would be just the top one bit. In this case the tag would be the top two bids in the set associative cache.</v>
+
+0:15:53.890 --> 0:15:54.520
+<v Furst, Elias>OK.</v>
+
+0:15:55.610 --> 0:16:2.240
+<v Sohoni, Sohum>Alright good good that you're happy with this. 'cause it'll be clearer when we walk through the example in the next few minutes, OK?</v>
+
+0:16:3.40 --> 0:16:18.910
+<v Sohoni, Sohum>Alright, so just to illustrate how the cache behaves, I've created a bunch of animation in this slide up so we were again just looking at the direct mapped cache is. Here is the 8 blocks of memory, the four blocks in the cache.</v>
+
+0:16:19.620 --> 0:16:26.330
+<v Sohoni, Sohum>Uhm, and the access pattern I just randomly generated some 3 bit patterns here.</v>
+
+0:16:26.940 --> 0:16:53.950
+<v Sohoni, Sohum>Uh, actually I wasn't totally random. I wanted to make sure you understood things. So this is the pattern and we'll see it in each of the slides, so you don't need to memorize it or write it down or anything like that. OK, and what's going to happen is that we're going to access memory in this order in the 1234, right? And we're going to try to see where in the cache this is going to map and whether it's going to be a hit or a miss. OK, there's almost like a game I don't want to say that.</v>
+
+0:16:55.300 --> 0:17:14.760
+<v Sohoni, Sohum>Their tag that's being shown in this column isn't really the tag, it's the full address that I'm showing here just for clarity. In reality it would only be in our case to top one bit and and that will get clear as we walk through this and hopefully it's maybe it's already clear from your your reading.</v>
+
+0:17:15.900 --> 0:17:27.410
+<v Sohoni, Sohum>So just as an illustration, when we access 010IN memory, our cache is initially empty and so there's nothing in the cache and so.</v>
+
+0:17:28.420 --> 0:17:42.330
+<v Sohoni, Sohum>Everything that we try to access is going to be a mess initially, right? Unless it's already in the cache. So for this first access to 010 it's going to be a hit or miss. Can someone tell me?</v>
+
+0:17:50.940 --> 0:17:51.430
+<v Bultman, Joshua>Thomas</v>
+
+0:17:52.60 --> 0:18:1.740
+<v Sohoni, Sohum>OK, good just said that. So thanks and more importantly the the thing to notice is where it's going to go right? So as I said.</v>
+
+0:18:2.600 --> 0:18:24.940
+<v Sohoni, Sohum>Because we've got four possible locations, we can use the last two bits to figure out where things map to. And in our case this is 010, so 10 is 2 right? The lower 2 bits, R10? That's two, so it's going to go into this block over here, right? This location or this index as it is called, so the index?</v>
+
+0:18:25.860 --> 0:18:45.500
+<v Sohoni, Sohum>Is we index into the cache using how many other bits that we need for this right? That index is going to be 2 and the tank is going to be zero. I'm just showing the full address 010 here. OK, any questions on what's shown on this slide 'cause the next several slides follow this example?</v>
+
+0:18:46.760 --> 0:18:49.690
+<v Sohoni, Sohum>If anything is not clear, now would be a good time to ask.</v>
+
+0:18:57.770 --> 0:18:59.160
+<v Sohoni, Sohum>OK, so I'll keep going.</v>
+
+0:19:0.310 --> 0:19:4.290
+<v Sohoni, Sohum>So on this next access 4011.</v>
+
+0:19:4.950 --> 0:19:8.450
+<v Sohoni, Sohum>What do you think is going to happen? Are we going to get a hit or a miss?</v>
+
+0:19:9.420 --> 0:19:12.30
+<v Sohoni, Sohum>And where in the cache are we going to index?</v>
+
+0:19:24.450 --> 0:19:26.710
+<v Bultman, Joshua>probably gonna miss again. It's gonna be in the third one.</v>
+
+0:19:28.120 --> 0:19:28.840
+<v Bultman, Joshua>Or 4th one.</v>
+
+0:19:27.650 --> 0:19:34.420
+<v Sohoni, Sohum>Excellent answers, so it's it's going to be in the well. It's going to be in three because one one is 3, right?</v>
+
+0:19:34.10 --> 0:19:35.190
+<v Bultman, Joshua>Yeah, the 4th 1 yet.</v>
+
+0:19:35.780 --> 0:20:5.840
+<v Sohoni, Sohum>Right, yeah, and we'll just use the number 3. That's fine. We'll go 0123, so it's going to go to location 3 or index three, and it's going to be a miss because there was nothing there right? And the cache we haven't looked at the details, but every cache blog or every cache index I should say he's going to have like a valid bit, which says whether the stuff there is valid or not. OK, so and when it's empty, naturally all the bits are going to mark it as invalid.</v>
+
+0:20:5.880 --> 0:20:8.190
+<v Sohoni, Sohum>So we've got 011.</v>
+
+0:20:9.340 --> 0:20:19.130
+<v Sohoni, Sohum>Come as the tag or zero to be more specific is the tag and one one is where we're indexing into the cache OK, and it's going to be a mess.</v>
+
+0:20:20.570 --> 0:20:32.680
+<v Sohoni, Sohum>Next one so at this point now we cache has two blocks 010 and 011 and we have an access to 110. What's going to happen here? Hit or miss? And where does this go?</v>
+
+0:20:45.870 --> 0:20:48.320
+<v Furst, Elias>This is this is gonna be a mess, right?</v>
+
+0:20:50.730 --> 0:20:51.160
+<v Furst, Elias>Hum.</v>
+
+0:20:50.420 --> 0:20:54.50
+<v Sohoni, Sohum>Yeah, can you speak a little bit? There's some background noise on it.</v>
+
+0:20:54.130 --> 0:21:4.710
+<v Furst, Elias>Yeah, so it's gonna be a mess because 110 isn't in the cache and it's gonna. It's gonna go to index 2.</v>
+
+0:21:6.150 --> 0:21:36.260
+<v Sohoni, Sohum>Excellent answer, so because the last two bits R10, it's going to go to index two and it's going to say it's going to try to match the tag, which is one with what's in the cache currently, which has a 0, so it's going to say, oh, I've got to the the correct location. There is something there, but it's not what I was looking for, and that's the reason why it's going to be a miss. And in fact there's going to be a cache replacement happening here, which means.</v>
+
+0:21:36.510 --> 0:21:40.890
+<v Sohoni, Sohum>That we're going to remove whatever is currently there or essentially override.</v>
+
+0:21:42.50 --> 0:21:57.560
+<v Sohoni, Sohum>The data at that location and update the tag to reflect that it's now got 110 in there. OK and not 010. And remember this is not the data this is. These are the addresses, so there's going to be a completely separate.</v>
+
+0:21:58.70 --> 0:22:3.390
+<v Sohoni, Sohum>Uhm, or it's called the data array, which is going to actually hold those.</v>
+
+0:22:3.930 --> 0:22:13.300
+<v Sohoni, Sohum>The actual value that should be at each of those locations is is that part clear, like we're just looking at addresses here, and that we're not even looking at the actual data.</v>
+
+0:22:14.510 --> 0:22:15.640
+<v Sohoni, Sohum>Any questions on that?</v>
+
+0:22:24.870 --> 0:22:27.280
+<v Sohoni, Sohum>Any questions overall or do you want me to move on?</v>
+
+0:22:34.380 --> 0:22:37.220
+<v Sohoni, Sohum>OK, so now this is our cash.</v>
+
+0:22:37.270 --> 0:22:51.440
+<v Sohoni, Sohum>Dash the standards of the cache. We've got 110 and 011 in the cache blocks zero and one are still empty and then we have an access to 111. What's going to happen now? Hit miss. Where does this map?</v>
+
+0:22:53.340 --> 0:22:55.150
+<v Sohoni, Sohum>Someone who's not answered so far.</v>
+
+0:23:19.280 --> 0:23:23.990
+<v Sohoni, Sohum>Either you should answer or ask me a question if it is not clear what the answer is.</v>
+
+0:23:29.660 --> 0:23:34.10
+<v Geoffrey, Timothy>Uh, I think it's gonna mess and it's gonna get mapped to index 3.</v>
+
+0:23:34.900 --> 0:23:55.290
+<v Sohoni, Sohum>Excellent good, glad to know that people are following. So yes, that's exactly what's going to happen. It's going to be a mess because again, 11 means we're going to index into 3. Three has 011, but we're looking for 111 and that's why it's going to be a miss. Which means we're also going to evict 011 and get the.</v>
+
+0:23:55.340 --> 0:23:59.510
+<v Sohoni, Sohum>The block at 111 OK.</v>
+
+0:24:0.770 --> 0:24:3.910
+<v Sohoni, Sohum>So this keeps going. So now we're at 1:01.</v>
+
+0:24:4.660 --> 0:24:9.940
+<v Sohoni, Sohum>What's going on here? Well, where do we index? Is there a hit? Miss what's going on in our cache?</v>
+
+0:24:12.60 --> 0:24:16.210
+<v Schilling, Atreyu>Is that gonna indexed to one and then miss because there's nothing there?</v>
+
+0:24:16.550 --> 0:24:17.620
+<v Sohoni, Sohum>Correct exactly.</v>
+
+0:24:18.270 --> 0:24:48.930
+<v Sohoni, Sohum>I was getting the. The idea is going to go to one because the last two bits or 01 and there's nothing there, so it's going to be invalid and now consider that to be a main. So so far we've really only had Mrs. Which is unfortunate and I think that trend will continue with my example here. OK, so the next axis is 010, which now is going to again I'm not going to keep asking because I think everyone following it's going to map 210 which is 2 but 110 is in the cache not 010.</v>
+
+0:24:48.980 --> 0:25:18.330
+<v Sohoni, Sohum>So because we hand with 010 at one point, but we evicted that, this is also going to be a miss. OK, and now we're going to have 010 in the cache. Next accesses to 000, which is again empty at this point. So again a miss. And that's going to leave us with a cache that now has stuff in each of the possible locations, right? So we've got four blocks in the cache at this moment. Now when we access 110.</v>
+
+0:25:19.300 --> 0:25:33.700
+<v Sohoni, Sohum>We're still going to miss, OK, because block two had 010 in their next when we access 101, we finally get our first hit. OK because 101 is in the cache.</v>
+
+0:25:34.590 --> 0:25:49.360
+<v Sohoni, Sohum>And so we're happy with that. Next, we access 111, so also in the cache. And then finally we access 010, which is also again going to be a miss because we now have 110 in the cache, OK?</v>
+
+0:25:50.350 --> 0:25:54.280
+<v Sohoni, Sohum>So that's the run through for a direct mapped cache.</v>
+
+0:25:54.870 --> 0:26:0.830
+<v Sohoni, Sohum>Do you have any questions? Did you have any observations about what just happened?</v>
+
+0:26:2.200 --> 0:26:7.190
+<v Sohoni, Sohum>I'll just leave it open and the moment and ask ask that question any questions, observations.</v>
+
+0:26:17.500 --> 0:26:21.490
+<v Geoffrey, Timothy>Wouldn't this have a hit rate of like less than 10%?</v>
+
+0:26:22.20 --> 0:26:27.470
+<v Sohoni, Sohum>Correct, this has a very poor hit rate and that's an excellent observation. Thanks for bringing it up.</v>
+
+0:26:28.170 --> 0:26:54.620
+<v Sohoni, Sohum>And this illustrates a couple of things. One direct mapped cache is. If you look at the final outcome right, we utilize block to albator index two was utilized quite a lot and we had a lot of misses in there, so this points to this idea that direct mapped cache is can tend to have lower hit rates because there could be times and if we go back all the way.</v>
+
+0:26:55.800 --> 0:27:27.550
+<v Sohoni, Sohum>Here, right up there were two blocks in the cache that were empty, right. There were two positions or two indexes in the cache that were empty, and we'd already started seeing conflicts on Index 2. So we we were getting Mrs here, right? Actually, it's even one further back. We're getting misses here for two, but we clearly see there's room in the cache, and if this was not a direct mapped cache, but if it was, let's say the exact opposite of a direct map.</v>
+
+0:27:27.600 --> 0:27:53.370
+<v Sohoni, Sohum>Cache, which is a fully associative cache. Then we could have used one of these other two positions to put one there and thereby kept both 010 and 110 in the cache. OK, so one extreme is there direct mapped cache. The other extreme is fully associative where we don't have any indexing at all, right? We just say anything can go anywhere in the cache.</v>
+
+0:27:54.400 --> 0:28:23.570
+<v Sohoni, Sohum>And all we have to do is match the tags, but the obvious downside being we have to match all the tags in that case which is hardware wise. Very expensive, especially if you have thousands of blocks in the cache. You don't want to do thousands of comparisons every time you're trying to look something up in the cache, which is why usually speaking most large structures and by large I mean anything more than like 8 blocks or so is not going to have fully associative.</v>
+
+0:28:24.430 --> 0:28:45.220
+<v Sohoni, Sohum>Oh structures it's going to have something in between, which is called a set associative cache. OK, so we looked at an example of a set associative cache. Let's try to do the same access pattern with a set associative cache. In this case we've got set zero and set 1.</v>
+
+0:28:46.190 --> 0:28:48.800
+<v Sohoni, Sohum>OK, and I want you to.</v>
+
+0:28:49.940 --> 0:28:52.410
+<v Sohoni, Sohum>Well, I guess I don't know what's the best way to do this.</v>
+
+0:28:54.920 --> 0:28:58.870
+<v Sohoni, Sohum>Maybe I'll just share my other screen and write this one out.</v>
+
+0:29:1.580 --> 0:29:4.530
+<v Sohoni, Sohum>Yeah, I'll, I guess I'll do that and I'll ask you.</v>
+
+0:29:5.710 --> 0:29:10.630
+<v Sohoni, Sohum>What do you what the answer should be? So let me share this other screen.</v>
+
+0:29:21.530 --> 0:29:23.50
+<v Sohoni, Sohum>No, not sharing it dude.</v>
+
+0:29:28.0 --> 0:29:32.550
+<v Sohoni, Sohum>OK, and let's use this access pattern here.</v>
+
+0:29:33.220 --> 0:29:37.130
+<v Sohoni, Sohum>And talk about how things are going to map OK.</v>
+
+0:29:38.0 --> 0:29:38.870
+<v Sohoni, Sohum>So.</v>
+
+0:29:41.850 --> 0:29:43.300
+<v Sohoni, Sohum>For the first one.</v>
+
+0:29:44.950 --> 0:29:49.160
+<v Sohoni, Sohum>For the first axis, where do you think it'll go? Set zero or set 1?</v>
+
+0:29:54.770 --> 0:29:55.240
+<v Bultman, Joshua>0.</v>
+
+0:29:56.200 --> 0:29:57.50
+<v Sohoni, Sohum>Alright, why?</v>
+
+0:29:58.740 --> 0:30:1.510
+<v Bultman, Joshua>Because the last bit is 0 or.</v>
+
+0:30:1.820 --> 0:30:5.10
+<v Sohoni, Sohum>The last bit is zero. Excellent good so.</v>
+
+0:30:5.880 --> 0:30:13.760
+<v Sohoni, Sohum>What we're saying is we're going to look at only the last bit now because there are only two possible locations, right all zero.</v>
+
+0:30:14.300 --> 0:30:20.330
+<v Sohoni, Sohum>Ones are going to go to set zero. All ones are going to go to set one so excellent. So the first time around.</v>
+
+0:30:21.520 --> 0:30:24.980
+<v Sohoni, Sohum>We're going to get. I don't know if there's a good way to.</v>
+
+0:30:26.310 --> 0:30:27.490
+<v Sohoni, Sohum>Organized this.</v>
+
+0:30:32.340 --> 0:30:35.800
+<v Sohoni, Sohum>Let's move that. Let's remove this drawing.</v>
+
+0:30:37.360 --> 0:30:39.180
+<v Sohoni, Sohum>Uhm no, it looks ugly.</v>
+
+0:30:40.260 --> 0:30:40.830
+<v Sohoni, Sohum>Sorry.</v>
+
+0:30:42.220 --> 0:30:48.390
+<v Sohoni, Sohum>OK, so we go to set zero and I wanted to make this bigger, that's why.</v>
+
+0:30:50.740 --> 0:30:56.410
+<v Sohoni, Sohum>And in the first case, we pulled 010 over here.</v>
+
+0:30:57.640 --> 0:30:58.90
+<v Sohoni, Sohum>OK.</v>
+
+0:30:59.310 --> 0:31:7.110
+<v Sohoni, Sohum>But it doesn't matter initially where we put stuff, as long as it's there somewhere in set zero. OK, next access, where is that going to go?</v>
+
+0:31:10.410 --> 0:31:11.20
+<v Kreitzman, Colton>At 1:00</v>
+
+0:31:11.870 --> 0:31:17.0
+<v Sohoni, Sohum>Good one, let's pick a color. Other probably more visible.</v>
+
+0:31:17.680 --> 0:31:23.30
+<v Sohoni, Sohum>Uhm, and we'll just put it here at 011. Next one.</v>
+
+0:31:27.550 --> 0:31:29.720
+<v Sohoni, Sohum>110 What's happening there?</v>
+
+0:31:38.460 --> 0:31:39.620
+<v Schilling, Atreyu>It's going into set 0.</v>
+
+0:31:40.750 --> 0:32:10.320
+<v Sohoni, Sohum>Correct, it will go. It said zero. We already have something inside 0, so it wouldn't be wise to just overwrite that because we already have another space in set zero, right? So let me just mark off the ones that are done so we're 110 will put 110 here without having to replace the 010. OK, it's still a miss right? 'cause the tank is not going to match. So now we're going to match the top 2 bits for the tag and the.</v>
+
+0:32:10.500 --> 0:32:40.750
+<v Sohoni, Sohum>Tag was 01 where we're looking for one one, so it's still a miss, but we found a place for it. OK, now we could even start marking these as Mrs right? This is a mysticism miss next 1111. Also, a miss maps to set 1 because the last bit is one. We do have space here, so we'll put 111 over here. OK, this one is done. Next we go to 101. OK, what's going on here?</v>
+
+0:32:41.50 --> 0:32:43.20
+<v Sohoni, Sohum>Which set is it going to map?</v>
+
+0:32:49.940 --> 0:32:50.700
+<v Schilling, Atreyu>Set 1.</v>
+
+0:32:51.140 --> 0:32:51.990
+<v Sohoni, Sohum>Set 1.</v>
+
+0:32:53.570 --> 0:33:23.640
+<v Sohoni, Sohum>Now we can think about replacement policy, right? Because we have a choice with direct map, there really isn't a replacement policy 'cause we have only one possible mapping, we have to every quarter is at that position with set associative cache is the idea of a replacement policy comes to mind, so if it was a random replacement policy we could just toss a coin and say heads we get rid of 011 tails. We get rid of 111. OK, now let's fine. We could do that.</v>
+
+0:33:23.920 --> 0:33:30.690
+<v Sohoni, Sohum>But if we were to employ at least recently used right, which is our least recently used block.</v>
+
+0:33:31.490 --> 0:33:33.780
+<v Sohoni, Sohum>Oh is it 011 or is it 111?</v>
+
+0:33:35.230 --> 0:33:36.110
+<v Kreitzman, Colton>011.</v>
+
+0:33:36.680 --> 0:33:46.970
+<v Sohoni, Sohum>Right, so we get rid of 011 and in this position we put 101 and we retain the 111 over here. OK, so again this is a miss.</v>
+
+0:33:48.760 --> 0:33:51.780
+<v Sohoni, Sohum>We're done with that. Next we access 010.</v>
+
+0:33:52.480 --> 0:33:53.560
+<v Sohoni, Sohum>What's going on here?</v>
+
+0:33:57.960 --> 0:33:58.620
+<v Bultman, Joshua>It's a hit.</v>
+
+0:34:0.690 --> 0:34:11.180
+<v Sohoni, Sohum>Excellent, it's a hit. We did not have to Everett 010 when we brought 110 in here because we had room in that set. It's actually going to be a hit.</v>
+
+0:34:12.110 --> 0:34:14.820
+<v Sohoni, Sohum>So we're good with that next one.</v>
+
+0:34:15.590 --> 0:34:19.200
+<v Sohoni, Sohum>Also, maps to set zero. Unfortunately it's going to be a miss.</v>
+
+0:34:21.100 --> 0:34:28.550
+<v Sohoni, Sohum>And again following the least recently used example, which of the blocks are we going to affect in this case?</v>
+
+0:34:34.400 --> 0:34:35.320
+<v Kreitzman, Colton>010</v>
+
+0:34:36.820 --> 0:34:37.560
+<v Sohoni, Sohum>No.</v>
+
+0:34:37.280 --> 0:34:40.540
+<v Kreitzman, Colton>oh wait, actually never mind 110 I forgot we just send it.</v>
+
+0:34:39.420 --> 0:34:52.30
+<v Sohoni, Sohum>Yeah, just access 010 right? So it just got tagged as recently accessed, which means 110 is the not recently accessed. So we get rid of this guy and we put 000 in here.</v>
+
+0:34:53.690 --> 0:35:3.560
+<v Sohoni, Sohum>OK, great next we have 110 which is unfortunate right? 'cause we did just evict.</v>
+
+0:35:5.620 --> 0:35:34.830
+<v Sohoni, Sohum>1110 so we get rid of 010 in this case because again, 000 is the is the most recently accessed, which makes 010 the least recently accessed and the important part to note is because this is 0 right? We are only limited to set zero in terms of what we can and cannot evict. So we get rid of 010 and we put 110 there. Next we have an access to 111 which is going to be a hit because 111 is still there.</v>
+
+0:35:35.250 --> 0:35:44.80
+<v Sohoni, Sohum>And then we have an access to 010, which unfortunately is not in the cache, so we get a miss on that one as well. OK, so.</v>
+
+0:35:44.850 --> 0:35:48.930
+<v Sohoni, Sohum>Hopefully it's clear as to how these access patterns came about.</v>
+
+0:35:50.270 --> 0:35:58.320
+<v Sohoni, Sohum>Or rather, how these access patterns were managed by the tool, different types of caches, the direct map, and this set associative cache.</v>
+
+0:35:58.370 --> 0:36:10.960
+<v Sohoni, Sohum>Cash on hand. In both cases we didn't really have stellar performance in terms of hits and misses, and that drives home the point that initially caches take awhile to warm up.</v>
+
+0:36:11.580 --> 0:36:31.150
+<v Sohoni, Sohum>And so there will be initially there will be misses. So when we have 10 accesses only and we've got a four block space in the cache, you can easily expect four Mrs to start with, right? Unless we really see a lot of locality like we're accessing 010 like 10 times to begin with.</v>
+
+0:36:32.560 --> 0:37:1.390
+<v Sohoni, Sohum>And that leads us to two more points. One, this access pattern I purposely created with less locality because I wanted to test whether you could see things mapping and the evictions and all could be illustrated so obviously bit of an artificial pattern which does not have enough temporal locality. But the third thing I want to say related to all this is that this is a really tiny cache. OK, if we had a big cache and we had a lot of locality.</v>
+
+0:37:1.570 --> 0:37:6.520
+<v Sohoni, Sohum>We would be seeing much more hits than misses and tent.</v>
+
+0:37:7.300 --> 0:37:36.390
+<v Sohoni, Sohum>Is the reality in in in real life? Cash is in real life architectures. We tend to see good hit rates in the upper 90s like even 95% ninety 6% hit rates in the cache is mainly again because of locality of temporal locality as well as spatial locality and other intelligent techniques that are applied to make sure that things that the CPU wants are already there in the cache OK?</v>
+
+0:37:37.440 --> 0:37:43.880
+<v Sohoni, Sohum>Any questions on this whole activity as well as the caching stuff that we've looked at so far?</v>
+
+0:37:55.710 --> 0:38:6.850
+<v Sohoni, Sohum>So for practice, if I were to tell you make this a set associative cache and walk through this pattern and tell me what the hit rate is going to be, would you be comfortable in doing that?</v>
+
+0:38:10.600 --> 0:38:11.60
+<v Kreitzman, Colton>Yes.</v>
+
+0:38:12.370 --> 0:38:13.170
+<v Sohoni, Sohum>Very good.</v>
+
+0:38:13.990 --> 0:38:26.970
+<v Sohoni, Sohum>I might give you 5 minutes to do that, but let me before we do that, let me just go to the last slide of our last slide set, which is an example here with.</v>
+
+0:38:27.780 --> 0:38:45.150
+<v Sohoni, Sohum>More realistic addresses, right? So we we looked at really tiny addresses which were just three bids. In reality, you're going to have addresses that are 32 bits OK, and you can do this for home or I'm not going to ask you to do it now. You can do it for homework.</v>
+
+0:38:45.640 --> 0:38:46.450
+<v Sohoni, Sohum>Uhm?</v>
+
+0:38:47.40 --> 0:38:47.950
+<v Sohoni, Sohum>And.</v>
+
+0:38:49.260 --> 0:39:15.410
+<v Sohoni, Sohum>Yeah, I mean this is going to get a little complicated, but we can discuss this in our small groups on Friday or we can talk about it tomorrow. Today is Monday, right? I keep forgetting what day it is. Yeah, so we can talk about it on Wednesday. We can talk about it on Thursday when we discuss the the sample final exam because the first question on the sample final exam is or practice. Final exam is very similar to this activity here.</v>
+
+0:39:16.30 --> 0:39:16.540
+<v Sohoni, Sohum>Uhm?</v>
+
+0:39:17.320 --> 0:39:22.270
+<v Sohoni, Sohum>And as I said, we could do it Wednesday. We could do it Thursday, or we could do it Friday in small groups. Totally up to you.</v>
+
+0:39:22.820 --> 0:39:23.510
+<v Sohoni, Sohum>Uhm?</v>
+
+0:39:24.200 --> 0:39:33.650
+<v Sohoni, Sohum>Part my plan for the next few minutes is to really want you to consider this access pattern with a fully associative cache and.</v>
+
+0:39:34.440 --> 0:39:44.640
+<v Sohoni, Sohum>Whenever your done, raise your hand so that I know how many people are done. I'm actually going to do the activity myself on pen and paper, which is hopefully going to be easier than looking at the screen for me.</v>
+
+0:39:45.320 --> 0:40:3.690
+<v Sohoni, Sohum>Uh, and then we'll just see what what our answers are. OK, and so this is just the last slide set. As I said, there's no more new content that I plan to cover. We can talk about anything we want on Wednesday, including the example on the last slide.</v>
+
+0:40:4.330 --> 0:40:30.430
+<v Sohoni, Sohum>Hum or the logic stuff I know in in your reflections some of you talked about wanting more practice on the the truth tables and things like that come with some questions on Wednesday. OK, my review sessions tend to be more like you. You drive it, you come with questions. We'll talk about those topics and the questions could be as basic as I want to review truth tables, right? Or they could be more specific, more specific is good, but.</v>
+
+0:40:31.110 --> 0:40:59.480
+<v Sohoni, Sohum>General is fine as well, so yeah, so that's that. And on Wednesday we might get done early, so I'll give you time to fill out the course evaluations. They will look like they are in Dr. Rangaswamy his name, but go ahead and fill them like they were mine. I do really value the feedback that you have. So yeah. Yeah, just make sure you fill them out officially, they might not go under my name, but that's fine.</v>
+
+0:41:0.780 --> 0:41:1.690
+<v Sohoni, Sohum>I'm I'm OK with that.</v>
+
+0:41:2.740 --> 0:41:8.290
+<v Sohoni, Sohum>Alright, so let's take 5 minutes. It's 42, so let's meet up at 47.</v>
+
+0:41:8.940 --> 0:41:9.690
+<v Sohoni, Sohum>And.</v>
+
+0:41:10.450 --> 0:41:17.790
+<v Sohoni, Sohum>Figure out for a fully associative cache. What hit miss patterned we get and what is the hit rate that that we get?</v>
+
+0:41:19.520 --> 0:41:24.290
+<v Sohoni, Sohum>As I said, raise your hand whenever you're done. I'll keep an eye out on that screen as well.</v>
+
+0:43:38.350 --> 0:43:39.740
+<v Sohoni, Sohum>K So I just got done.</v>
+
+0:45:2.870 --> 0:45:8.220
+<v Sohoni, Sohum>Please raise your hand whenever you're done. We're about a minute away from the original 5 minutes.</v>
+
+0:46:1.130 --> 0:46:7.530
+<v Sohoni, Sohum>Alright, so we're at 5 minutes and I see a few hands up so we're lower. Your hands is fine.</v>
+
+0:46:8.170 --> 0:46:8.960
+<v Sohoni, Sohum>Uhm?</v>
+
+0:46:10.220 --> 0:46:11.360
+<v Sohoni, Sohum>Where did you find out?</v>
+
+0:46:12.370 --> 0:46:13.510
+<v Sohoni, Sohum>What was the hit rate?</v>
+
+0:46:16.430 --> 0:46:17.940
+<v Kreitzman, Colton>I got a 20% hit rate.</v>
+
+0:46:19.80 --> 0:46:21.360
+<v Sohoni, Sohum>R 20% or right?</v>
+
+0:46:22.130 --> 0:46:24.610
+<v Sohoni, Sohum>Uhm, anyone else?</v>
+
+0:46:25.110 --> 0:46:30.190
+<v Geoffrey, Timothy>I believe I managed to get a 40% hit rate using first in, first out.</v>
+
+0:46:30.870 --> 0:46:41.500
+<v Sohoni, Sohum>Oh, you used a different replacement policy. That's interesting. OK, yeah alright. So if you used least recently used what?</v>
+
+0:46:42.280 --> 0:46:44.230
+<v Sohoni, Sohum>He'll trade, did you guys get?</v>
+
+0:46:45.550 --> 0:46:46.660
+<v Kaja, Nicholas>I got a 10%.</v>
+
+0:46:49.230 --> 0:46:49.700
+<v Furst, Elias>I got.</v>
+
+0:46:48.110 --> 0:46:50.920
+<v Sohoni, Sohum>10% how many got good?</v>
+
+0:46:50.320 --> 0:46:51.130
+<v Furst, Elias>20%.</v>
+
+0:46:51.960 --> 0:47:1.960
+<v Sohoni, Sohum>You got 20. Yeah, I think you said that yeah, uh, I did it rather quickly I got a 10% as well so.</v>
+
+0:47:2.680 --> 0:47:7.10
+<v Sohoni, Sohum>We gotta figure out why it 10 or 20 which one is correct?</v>
+
+0:47:9.400 --> 0:47:18.230
+<v Sohoni, Sohum>So from alliance, you want to check 'cause. I'm hearing two people with 10s and you got 20 going to check your work.</v>
+
+0:47:19.580 --> 0:47:22.500
+<v Sohoni, Sohum>Does anyone else get 10 or 20 or did you get?</v>
+
+0:47:29.100 --> 0:47:33.680
+<v Sohoni, Sohum>People tried different policies. 'cause I saw a bunch of hands going up so I know many of you are done.</v>
+
+0:47:35.660 --> 0:47:37.990
+<v Rosynek, Paige>This afternoon I got 20% too.</v>
+
+0:47:39.280 --> 0:47:43.350
+<v Sohoni, Sohum>Alright, now we're evenly split 2010.</v>
+
+0:47:46.590 --> 0:47:48.400
+<v Sohoni, Sohum>Maybe I should check my work.</v>
+
+0:48:7.610 --> 0:48:11.490
+<v Rosynek, Paige>I have a fix for number section #9.</v>
+
+0:48:12.660 --> 0:48:13.570
+<v Kreitzman, Colton>Yeah, I did too.</v>
+
+0:48:13.990 --> 0:48:15.510
+<v Sohoni, Sohum>Sorry, what was that?</v>
+
+0:48:17.380 --> 0:48:21.800
+<v Rosynek, Paige>I had the hit for number 6 and #9 and those are the that's how I got 20.</v>
+
+0:48:22.740 --> 0:48:26.580
+<v Sohoni, Sohum>Number six, Oh yeah, that's useful to C010.</v>
+
+0:48:27.840 --> 0:48:30.720
+<v Sohoni, Sohum>I thought I had just a vector 010.</v>
+
+0:48:35.650 --> 0:48:38.240
+<v Sohoni, Sohum>Maybe not, it's still in my cache, see it.</v>
+
+0:48:40.100 --> 0:48:46.930
+<v Furst, Elias>There's definitely enough room for it's. It's only two things. Get assigned to set zero before before 6.</v>
+
+0:48:49.480 --> 0:48:54.570
+<v Sohoni, Sohum>Set zero, I'm sorry. We were doing a fully associative cache so there shouldn't be a set in.</v>
+
+0:48:54.100 --> 0:48:54.650
+<v Furst, Elias>Oh</v>
+
+0:48:56.230 --> 0:48:58.680
+<v Furst, Elias>uhm, the picture is of a set.</v>
+
+0:48:59.360 --> 0:49:3.610
+<v Sohoni, Sohum>Oh yeah, I didn't. Sorry I didn't have a picture of a fully associative cache.</v>
+
+0:49:4.400 --> 0:49:8.680
+<v Sohoni, Sohum>Hum, that's why I just I kept this up so that you could see the patterns.</v>
+
+0:49:9.10 --> 0:49:9.610
+<v Furst, Elias>Ah.</v>
+
+0:49:12.560 --> 0:49:13.10
+<v Furst, Elias>OK.</v>
+
+0:49:9.890 --> 0:49:15.650
+<v Sohoni, Sohum>I wanted you to do this for fully associate 'cause we stepped through the set associative right in the previous example, right?</v>
+
+0:49:16.560 --> 0:49:17.70
+<v Furst, Elias>OK.</v>
+
+0:49:16.240 --> 0:49:25.410
+<v Sohoni, Sohum>So here we did get a hit here and here. So that's right. Yeah, if you were looking at a set associative cache, then yeah, you should have gotten 20%.</v>
+
+0:49:26.60 --> 0:49:32.670
+<v Sohoni, Sohum>Port for a fully associative. Ironically, you would expect more of a hit rate, but I got 10% for a fully associative.</v>
+
+0:49:33.660 --> 0:49:36.900
+<v Sohoni, Sohum>Two page where you looking or did you do a set associative as well?</v>
+
+0:49:39.820 --> 0:49:40.480
+<v Rosynek, Paige>Yeah, I was using.</v>
+
+0:49:41.700 --> 0:49:58.770
+<v Sohoni, Sohum>OK OK alright yeah so maybe just a miscommunication. So yeah let these slides are up as far as I remember so take a look at this pattern and do a fully associative cache and see what happened. I mean I've already told you what I got.</v>
+
+0:50:1.10 --> 0:50:2.900
+<v Sohoni, Sohum>We're trying out anyway, just for practice.</v>
+
+0:50:2.950 --> 0:50:3.330
+<v Sohoni, Sohum>Yes.</v>
+
+0:50:5.620 --> 0:50:7.390
+<v Sohoni, Sohum>And I'll see you Wednesday, OK?</v>

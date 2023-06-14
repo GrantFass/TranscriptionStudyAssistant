@@ -1,0 +1,1024 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:30.090
+<v Sohoni, Sohum>One thing I want to make sure is that everyone has been receiving announcements from canvas. I noticed the message from someone saying they didn't realize that class was cancelled on Friday for example. And yeah, it was a last minute announcement so I understand you may have missed it, but in general for things that are coming up, I do every now and then send an announcement so make sure you check well. Make sure the announcements are coming to your email.</v>
+
+00:00:30.380 --> 00:00:40.930
+<v Sohoni, Sohum>And then also make sure that you're checking your email on a regular basis came up so the plan for this week let me share my screen here.</v>
+
+00:00:47.150 --> 00:00:54.570
+<v Sohoni, Sohum>Right, so this is week five. You've got a couple of things in terms of the reading assignments that you're supposed to do.</v>
+
+00:00:55.240 --> 00:01:02.930
+<v Sohoni, Sohum>Uh, and then we really going to spend a bunch of time on this one video that I'm going to play today.</v>
+
+00:01:03.640 --> 00:01:04.620
+<v Sohoni, Sohum>And.</v>
+
+00:01:05.390 --> 00:01:09.190
+<v Sohoni, Sohum>We want to revisit that next week as well.</v>
+
+00:01:09.850 --> 00:01:24.670
+<v Sohoni, Sohum>Or maybe the week after, most likely so. In general this video here is essentially sums up what everyone tries to teach in a computer organization course. OK, so it's about an 18 minute or so video and.</v>
+
+00:01:25.780 --> 00:01:55.950
+<v Sohoni, Sohum>It it talks you through or it takes you through what's called the data path of the computer, which in your reading assignment you're going to see. I think in week seven, but the reason why I want to bring it up now is that even if you don't understand from the hardware perspective, what is really going on, it still gives you an anchor for the different things that we are learning in terms of how the instructions are encoded. And you know what is the program counter and why do we have a register called the program counter.</v>
+
+00:01:56.350 --> 00:02:26.600
+<v Sohoni, Sohum>And so on and so forth. Like you know just to me, at least as I was learning these things just conceptually trying to figure out like what the load word does, or water branch instruction does, and so on. And how is it constructed in those in those 32 bits that seemed a little more difficult until I was able to put it concretely in terms of the hardware itself, so I hope that it works for you as well, that we have sort of an introduction to the hardware, and again.</v>
+
+00:02:26.920 --> 00:02:46.670
+<v Sohoni, Sohum>Some of you may have wondered what the home, oh actually in your section I don't even have it. Nevermind, I have in my other section, let me bring that up for a second here because it is sort of relevant to what I'm talking about. So in my other section, the homepage image that I have.</v>
+
+00:02:47.300 --> 00:03:11.860
+<v Sohoni, Sohum>Is this guy here, which is called the data path of the computer? OK, so it's the data path and control, so this is the control logic and this is the data path. These are the registers. This is the ALU where things are getting constructed and then this is memory from which you are reading or writing two. So load word would fetch from here or store word were bright into here and so on and so forth.</v>
+
+00:03:12.380 --> 00:03:22.460
+<v Sohoni, Sohum>Uhm, so you don't have to understand this data path today. You don't have to understand it by the end of this week. It's not on the midterm first of all.</v>
+
+00:03:23.400 --> 00:03:29.630
+<v Sohoni, Sohum>And you might understand it a little bit towards next week. But really in week 7.</v>
+
+00:03:30.380 --> 00:03:34.680
+<v Sohoni, Sohum>You you should have a pretty clear understanding of everything that's going on here.</v>
+
+00:03:35.480 --> 00:04:01.610
+<v Sohoni, Sohum>As I was saying before, I'm not presenting this today, you know, so that you may get everything here, but I want you to use this as some reference to what is going on with these instructions and what you know. Why are the instructions constructed a certain way? And so on. So I'll pause for questions I've minimized you or windows, so if there's hands up I'm not aware of those. So if there are questions just on mute and asked me if you have a question.</v>
+
+00:04:03.810 --> 00:04:10.620
+<v Toohill, Teresa>Is there any chance you could make and this is related to the exam, but could you make a topic list of all the things we need to?</v>
+
+00:04:11.390 --> 00:04:11.930
+<v Toohill, Teresa>No.</v>
+
+00:04:13.420 --> 00:04:14.150
+<v Sohoni, Sohum>Uhm?</v>
+
+00:04:28.930 --> 00:04:29.560
+<v Sohoni, Sohum>Uhm?</v>
+
+00:04:31.150 --> 00:04:32.900
+<v Sohoni, Sohum>In terms of.</v>
+
+00:04:34.750 --> 00:04:49.230
+<v Sohoni, Sohum>Reading material that you're looking at, I would say Chapter 2 would be the end of whatever is part of the midterm, so there are not questions from Chapter 3 as far as I remember.</v>
+
+00:04:50.780 --> 00:04:51.470
+<v Toohill, Teresa>OK, thank you.</v>
+
+00:04:52.020 --> 00:05:14.590
+<v Sohoni, Sohum>I will since we brought up the the topic of the midterm, let me also say there's going to be one programming question up top, which is worth 20 points or so. Like it's like a big chunk of your test. Then there is another essay type question which I would like you to answer in about 6/2 to 10 sentences or so, which makes you think about.</v>
+
+00:05:15.230 --> 00:05:35.570
+<v Sohoni, Sohum>The architecture and things that we've talked about in general with how the instructions are encoded and what impact that has things like that. Like you know, for example when we talked about 5 bits for register encoding, what does that mean? You know things like that. So there's a essay question that's question two, and then the rest of it is all really.</v>
+
+00:05:35.630 --> 00:05:57.050
+<v Sohoni, Sohum>The multiple choice questions and some of those are going to cover some of the equations, stuff. The Boolean algebra and all of that stuff, and then some of them will be related to the instructions that you've been using and the assembly programs that you've been writing for practice. So that's really the the intent for this mid term in terms of topics to be covered.</v>
+
+00:05:58.080 --> 00:06:02.280
+<v Sohoni, Sohum>Did you have a follow up question to that anymore specifics that you're looking for?</v>
+
+00:06:05.220 --> 00:06:09.350
+<v Toohill, Teresa>Can you tell us if it's out of 100 points? I mean, that's the only other question, I think.</v>
+
+00:06:09.050 --> 00:06:11.310
+<v Sohoni, Sohum>Yeah, it's going to be out of 100 points, yes?</v>
+
+00:06:12.640 --> 00:06:22.240
+<v Sohoni, Sohum>So yeah, 120 point question one. I think 10 point essay question. And then the rest of the 70 points are pretty much multiple choice or.</v>
+
+00:06:23.640 --> 00:06:26.770
+<v Sohoni, Sohum>I guess mainly multiple choice or maybe some multiple answer.</v>
+
+00:06:27.850 --> 00:06:30.270
+<v Sohoni, Sohum>Or maybe a fill in the blank question, something like that.</v>
+
+00:06:31.490 --> 00:06:31.870
+<v Toohill, Teresa>Thanks.</v>
+
+00:06:31.460 --> 00:06:32.660
+<v Bultman, Joshua>And this is online, right?</v>
+
+00:06:33.090 --> 00:06:40.590
+<v Sohoni, Sohum>This will be on canvas, it will be on the 13th during class time, and so in fact related to that.</v>
+
+00:06:41.500 --> 00:07:10.000
+<v Sohoni, Sohum>Yeah, the Wednesday class period. I'm not going to cover any new material, so between today and Wednesday if you want to just go over the things that you have studied Wednesday review session is really. This is how I run all my review sessions all my life. I've done at 16 years. I come in and this case it will be coming in online and I'm there so I won't have any prepared. Let's go over this or anything like that, but all answer any question that that you ask during that session.</v>
+
+00:07:10.880 --> 00:07:42.290
+<v Sohoni, Sohum>OK, so the onus is really on you to look at the content they write down. Any questions that you might have, bring those two Wednesdays session which is entirely dedicated to answering any questions that you bring in. So Wednesday class period review session. Thursday Whole class period is going to be the midterm minutes. 50 minutes will start at three. It will end at 3:50. I don't think there's anyone in this section that has requested additional time, but I may have missed that because, you know you had a different instructor in the first few weeks.</v>
+
+00:07:42.610 --> 00:07:53.400
+<v Sohoni, Sohum>So if you are, if you have requested additional time, please send me an email and we'll figure out whether you want to start early or you want to have time after the test.</v>
+
+00:07:57.630 --> 00:07:59.140
+<v Sohoni, Sohum>Alright, so.</v>
+
+00:08:00.110 --> 00:08:07.660
+<v Sohoni, Sohum>Back to what I was talking about with so yeah, so the rest of this week essentially is.</v>
+
+00:08:08.340 --> 00:08:33.750
+<v Sohoni, Sohum>Is what you see here. You've got a couple of reading assignments. We're going to go through this video, I'll I'll play the video and then after the video is done I will ask or I will answer questions that you might have and you can note down parts of you know where you had questions on the video and I can go back and forth. I don't want to do too much on the screen 'cause I'm still suffering from the Vertigo.</v>
+
+00:08:34.220 --> 00:09:00.230
+<v Sohoni, Sohum>Uhm, but it's inevitable. I'm teaching online so I gotta look at a screen and then I'll just open this up towards the end of class time. It says it's due on the 11th LO. Yeah, on the 11th. That makes sense. Yeah, so you can work on it today or tomorrow by the end of the day tomorrow. Just go ahead and submit this program. And then on the 13th we have the exam, so that's really the main.</v>
+
+00:09:01.370 --> 00:09:08.280
+<v Sohoni, Sohum>Things that we're going to do this week based on how I'm feeling will have class on Friday where I might cover new content.</v>
+
+00:09:09.050 --> 00:09:14.990
+<v Sohoni, Sohum>OK, so that's essentially the week. Any questions before I actually play that video?</v>
+
+00:09:22.680 --> 00:09:25.610
+<v Sohoni, Sohum>OK then let me get on mute.</v>
+
+00:09:43.140 --> 00:09:48.420
+<v Sohoni, Sohum>Or have paused to ask you whether the sound is coming through on this, or whether I need to change some settings.</v>
+
+00:09:48.900 --> 00:09:49.270
+<v Toohill, Teresa>No.</v>
+
+00:09:47.900 --> 00:09:49.490
+<v Bultman, Joshua>No, it's not coming through.</v>
+
+00:09:49.970 --> 00:09:54.000
+<v Sohoni, Sohum>OK, good to know all right, let's go let's go back to share.</v>
+
+00:09:56.380 --> 00:10:00.170
+<v Sohoni, Sohum>Include computer sound right there.</v>
+
+00:10:05.690 --> 00:10:10.180
+<v Sohoni, Sohum>Welcome to the Progressive Learning platform instruction breakdown and data path tutorial.</v>
+
+00:10:11.220 --> 00:10:16.210
+<v Sohoni, Sohum>In this tutorial we will show you a different types of instructions and break them down to see why they're different.</v>
+
+00:10:16.850 --> 00:10:20.300
+<v Sohoni, Sohum>We will discuss the 32 bit size at all instruction chair.</v>
+
+00:10:20.970 --> 00:10:23.400
+<v Sohoni, Sohum>We will look at what a pseudo operation is.</v>
+
+00:10:24.080 --> 00:10:28.610
+<v Sohoni, Sohum>And lastly, we will follow a handful of instructions through the processors data path.</v>
+
+00:10:30.310 --> 00:10:41.450
+<v Sohoni, Sohum>As you can see in how we write our instructions in assembly, there are some similarities in the syntax for different instructions. If we look in an add instruction, for example, we know that there are four parts of its syntax.</v>
+
+00:10:42.050 --> 00:10:48.830
+<v Sohoni, Sohum>The first part being the instruction name, the second being the destination register, and the 3rd and 4th being the source register.</v>
+
+00:10:49.470 --> 00:10:58.390
+<v Sohoni, Sohum>When the instruction is read by the assembler, these four fields defined values in the instruction that determine the path that the instruction takes through the processor.</v>
+
+00:10:59.400 --> 00:11:08.090
+<v Sohoni, Sohum>Here is another way to write the same instruction using the register numbers rather than the name. This will help demonstrate where they fit into the instruction breakdown.</v>
+
+00:11:09.100 --> 00:11:17.120
+<v Sohoni, Sohum>In the case of an R type instruction, the 32 bit word that the assembler turns our code into contains 6 parts or fields.</v>
+
+00:11:18.610 --> 00:11:22.520
+<v Sohoni, Sohum>Each necessary at different stages of instruction execution.</v>
+
+00:11:23.190 --> 00:11:24.360
+<v Sohoni, Sohum>The first field.</v>
+
+00:11:24.950 --> 00:11:26.690
+<v Sohoni, Sohum>R6 bits for the opcode.</v>
+
+00:11:27.730 --> 00:11:34.440
+<v Sohoni, Sohum>The app code is part of what determines which processor components will be utilized while performing the add operation.</v>
+
+00:11:35.480 --> 00:11:48.950
+<v Sohoni, Sohum>The assembler knows which opcodes to use for which instructions, and the APO controller in the processor knows how to handle each opcode generated, so we never have to manually manage what value is stored here.</v>
+
+00:11:50.180 --> 00:11:57.430
+<v Sohoni, Sohum>After the opcode, the two source registers follow each 5 bits. Then there are 5 bits for the destination register.</v>
+
+00:11:58.190 --> 00:12:09.700
+<v Sohoni, Sohum>5 bits is used for all parts of an instruction that stores a register number. Because the possible values in a 5 bit number R0 through 31, which is exactly the number of registers in our register file.</v>
+
+00:12:10.660 --> 00:12:16.220
+<v Sohoni, Sohum>Next we have 5 bits for the shift amount, which is not used by add and therefore would just be 0.</v>
+
+00:12:17.180 --> 00:12:23.110
+<v Sohoni, Sohum>The last field function is used to define which function will be performed on the register.</v>
+
+00:12:23.990 --> 00:12:31.750
+<v Sohoni, Sohum>This layout is in our type being at the bit pattern used by an instruction is based solely on how the instruction needs to be processed.</v>
+
+00:12:32.300 --> 00:12:37.680
+<v Sohoni, Sohum>We see that whether any other instruction is in our type is not because of his logical functionality.</v>
+
+00:12:38.410 --> 00:12:41.470
+<v Sohoni, Sohum>But rather, which components in the processor it utilizes?</v>
+
+00:12:43.730 --> 00:12:48.590
+<v Sohoni, Sohum>There are three total types of instructions, the others being I type and J type.</v>
+
+00:12:49.500 --> 00:12:54.710
+<v Sohoni, Sohum>While some similar operations are of the same type at the track, for example.</v>
+
+00:12:55.750 --> 00:13:07.330
+<v Sohoni, Sohum>We have to keep in mind that their logical operation is not what places them in the category and add immediate. For example, is an I type and so even though an ad in an ad immediate both add 2 numbers.</v>
+
+00:13:07.980 --> 00:13:11.140
+<v Sohoni, Sohum>It is the source of those two numbers that gives them a different type.</v>
+
+00:13:11.930 --> 00:13:27.140
+<v Sohoni, Sohum>In determining factor, for what places them in the category is solely based on their encoding. Add and subtract or of the same instruction type, simply because the bit segments of their corresponding 32 bits needs to go to the same locations in the processor.</v>
+
+00:13:28.200 --> 00:13:37.420
+<v Sohoni, Sohum>All of PLP's instructions or 32 bits in length. This provides us with the information to handle a very large amount of operations, but there are limitations.</v>
+
+00:13:38.160 --> 00:13:46.270
+<v Sohoni, Sohum>If we look at the layout of the immediate instruction, we can clearly see that it only has enough room for 16 bits in the immediate field.</v>
+
+00:13:46.940 --> 00:13:54.770
+<v Sohoni, Sohum>We have used loaded media, it quite a bit without addressing exactly why it's still works to load all 32 bits of an argument that we passed to it.</v>
+
+00:13:55.700 --> 00:14:06.030
+<v Sohoni, Sohum>Loading Media is actually a pseudo op that performs 2 instructions because of the fact that the immediate field can only hold half of the argument that we passed too low to me.</v>
+
+00:14:07.290 --> 00:14:11.510
+<v Sohoni, Sohum>It first uses the actual hardware instruction load upper immediate.</v>
+
+00:14:12.450 --> 00:14:19.060
+<v Sohoni, Sohum>Then performs and or immediate on the second half of the initial argument to finish the load immediate instruction.</v>
+
+00:14:20.880 --> 00:14:27.610
+<v Sohoni, Sohum>There are many pseudo OPS that perform similarly and that they utilized the hardwares instructions to accomplish a more complex task.</v>
+
+00:14:28.480 --> 00:14:41.470
+<v Sohoni, Sohum>If the instruction set architecture wasn't risk, there would likely be an instruction that handles this directly, but the risk paradigm and its name aims at reducing the number of instructions in the instruction set.</v>
+
+00:14:42.040 --> 00:14:44.330
+<v Sohoni, Sohum>This is the reason that pseudo OPS exist.</v>
+
+00:14:46.220 --> 00:14:49.090
+<v Sohoni, Sohum>Another pseudo op that we've used frequently as a no op.</v>
+
+00:14:49.750 --> 00:14:59.450
+<v Sohoni, Sohum>There really is no hardware instruction to perform nothing, so they know outperforms the instruction shift left logical 20 register contents of the zero register zero times.</v>
+
+00:15:00.200 --> 00:15:02.690
+<v Sohoni, Sohum>This is what we used to fill branch delay slots.</v>
+
+00:15:03.410 --> 00:15:15.530
+<v Sohoni, Sohum>The signal app doesn't combine instructions to perform its intended behavior, but it serves as a way to make the programming a little easier and more intuitive, while still being assembled and what the simulator and hardware need.</v>
+
+00:15:16.550 --> 00:15:22.810
+<v Sohoni, Sohum>While there are limitations to using registers that only contain 32 bits, they can be overcome by the use of pseudo OPS.</v>
+
+00:15:24.960 --> 00:15:35.820
+<v Sohoni, Sohum>The first instruction type that we will examine through the data path will be the R type. As we step through how each part of the instruction is utilized by various components, it is important to note that.</v>
+
+00:15:37.650 --> 00:15:42.610
+<v Sohoni, Sohum>So I just paused this to see if you were still there and.</v>
+
+00:15:43.420 --> 00:15:46.750
+<v Sohoni, Sohum>You know, if you have any questions at this point before we.</v>
+
+00:15:47.440 --> 00:15:49.380
+<v Sohoni, Sohum>Really get into the data path.</v>
+
+00:15:50.770 --> 00:15:52.580
+<v Sohoni, Sohum>Yes, your thumbs up from Teresa.</v>
+
+00:15:53.460 --> 00:15:54.250
+<v Sohoni, Sohum>She's still there.</v>
+
+00:15:53.710 --> 00:15:55.710
+<v Rolando, Jackson>Yeah, I think I think. I think things are going good.</v>
+
+00:15:56.490 --> 00:15:59.470
+<v Sohoni, Sohum>OK, good and then I won't interrupt. Oh go ahead.</v>
+
+00:16:00.470 --> 00:16:06.610
+<v Sohoni, Sohum>At the hardware does not execute the instruction in the step by step fashion that we we will be examining them.</v>
+
+00:16:08.100 --> 00:16:16.090
+<v Sohoni, Sohum>These steps will be happening concurrently and inherent delays in the hardware will ensure that data is where it needs to be when it is needed.</v>
+
+00:16:16.870 --> 00:16:20.100
+<v Sohoni, Sohum>For this R type step through we will use an add instruction.</v>
+
+00:16:22.190 --> 00:16:31.920
+<v Sohoni, Sohum>The first thing that the processor must do with this and all instructions is to load the instruction from memory from the address stored in the program counter.</v>
+
+00:16:32.820 --> 00:16:38.690
+<v Sohoni, Sohum>This address is also used to calculate the address of the next instruction, which we will discuss later.</v>
+
+00:16:41.160 --> 00:16:45.810
+<v Sohoni, Sohum>From here, let's break this instruction down and see how each part is utilized.</v>
+
+00:16:46.500 --> 00:16:57.550
+<v Sohoni, Sohum>Let's first look at the opcode bits 31 through 26. As you can see, this is what goes to the control unit which decode the bits and essentially set up which path will be used.</v>
+
+00:16:59.810 --> 00:17:08.880
+<v Sohoni, Sohum>The Reds destination needs to be sent a high signal because this is what tells the multiplexer that feeds the register file that three registers are being used.</v>
+
+00:17:09.560 --> 00:17:21.870
+<v Sohoni, Sohum>Since we have an ALU operation to perform addition in this case the Alu OP must also be set to high to signify to the ALU control unit what data needs to be passed to the ALU.</v>
+
+00:17:23.930 --> 00:17:33.280
+<v Sohoni, Sohum>The control unit will also have to send a high signal on the Ridge right to notify the register file that there will be resulting data that needs to be written to a register.</v>
+
+00:17:34.440 --> 00:17:40.870
+<v Sohoni, Sohum>The jump and the branch must both be low signals, since neither of these functionalities are being used.</v>
+
+00:17:42.100 --> 00:17:50.670
+<v Sohoni, Sohum>MEM read, Mentor Edge and MEM right will all be set to low since there is no memory manipulation in this instruction.</v>
+
+00:17:51.880 --> 00:18:02.170
+<v Sohoni, Sohum>Lastly, Alu source will be a low signal. This is what tells the MUX that feeds the second argument to the ALU. Which piece of data will be utilized.</v>
+
+00:18:04.310 --> 00:18:14.500
+<v Sohoni, Sohum>The next part of the instruction bits 25 through 21 indicate which registers data will be read and used as the first argument passed to the ALU.</v>
+
+00:18:15.230 --> 00:18:19.380
+<v Sohoni, Sohum>For this walkthrough, we will say that there is a five stored in this register.</v>
+
+00:18:21.440 --> 00:18:31.620
+<v Sohoni, Sohum>Bits 20 through 16 indicate which registers data will be read and uses the second argument passed to the ALU. We will say that there is a three stored in this register.</v>
+
+00:18:33.130 --> 00:18:44.720
+<v Sohoni, Sohum>4 bits 15 through 11. Since the control unit sent a high signal to this, mugs will indicate which register will have the results of the operation written to when calculated.</v>
+
+00:18:47.590 --> 00:19:10.210
+<v Sohoni, Sohum>Bits 5 through 0 R passed through the ALU control unit to signal to the ALU. Then, in addition operation is needed. This is the function part of the instruction subtraction. For example, use the exact components as addition and therefore has the same opcode. The function gives us a way to keep everything the same and only change what the ALU needs to do.</v>
+
+00:19:11.520 --> 00:19:18.690
+<v Sohoni, Sohum>Now that we can see how the data path is set up by decoding the instruction, we can look at what happens to the result of the operation.</v>
+
+00:19:19.980 --> 00:19:39.370
+<v Sohoni, Sohum>We already saw that a low signal is sent to the data memory, so that will not be utilized and also that a low signal was sent to this mocks. So we now have the data that needs to be written and the register that that data needs to be written to. Since the bridge right was enabled, the data will be written to that register.</v>
+
+00:19:40.800 --> 00:19:46.230
+<v Sohoni, Sohum>We have now seen all of the components used to execute in addition or R type instruction.</v>
+
+00:19:46.890 --> 00:20:01.660
+<v Sohoni, Sohum>Though there is still one more thing that needs to be discussed which is getting the next instruction in the program we previously saw that when the address of the next instruction is read, the address is also sent to the input of an adder that adds 4 to it.</v>
+
+00:20:02.530 --> 00:20:11.800
+<v Sohoni, Sohum>Since the system is byte addressable, adding forward to the current address gives us the address that is 32 bits away, or the next instruction.</v>
+
+00:20:12.950 --> 00:20:24.810
+<v Sohoni, Sohum>Since neither of the two monks along this path were sent a high signal, the address plus four is what gets loaded into the program counter as the address of the next instruction.</v>
+
+00:20:33.640 --> 00:20:36.990
+<v Sohoni, Sohum>Alright, I've paused the video because.</v>
+
+00:20:37.690 --> 00:20:40.500
+<v Sohoni, Sohum>I'm sure there's questions that you might have at this point.</v>
+
+00:20:59.770 --> 00:21:03.180
+<v Sohoni, Sohum>Or if there's no questions you got, everything that was explained in the video.</v>
+
+00:21:03.450 --> 00:21:07.780
+<v Furst, Elias>It's kind of it's kind of a lot. I'm not even sure what question to ask.</v>
+
+00:21:08.310 --> 00:21:21.930
+<v Sohoni, Sohum>Yeah, start anywhere. I know there's a lot I completely understand. There's a lot, and there's in fact a lot that you haven't even read in the book yet. So for example, all the control signals that maybe doesn't make any sense at this point.</v>
+
+00:21:22.690 --> 00:21:41.560
+<v Sohoni, Sohum>Again, my my hope for showing this video was that you understand that the you know the 32 bit instruction. Is there a certain way because parts of that instruction get used in in parts of the hardware? Really, that's where I was going with this, but looks like alliance. You have a question.</v>
+
+00:21:43.090 --> 00:21:43.700
+<v Furst, Elias>Uhm?</v>
+
+00:21:45.900 --> 00:21:47.460
+<v Furst, Elias>Well, I'm I'm, I'm thinking.</v>
+
+00:21:49.570 --> 00:21:50.180
+<v Furst, Elias>Uh.</v>
+
+00:21:50.840 --> 00:21:53.080
+<v Furst, Elias>So what exactly?</v>
+
+00:21:53.800 --> 00:21:54.900
+<v Furst, Elias>Is the opcode.</v>
+
+00:21:57.390 --> 00:21:58.290
+<v Furst, Elias>Like what does it do?</v>
+
+00:21:59.030 --> 00:22:04.260
+<v Sohoni, Sohum>So the off court is just a bit pattern and that bit pattern of 6 bits.</v>
+
+00:22:05.080 --> 00:22:17.910
+<v Sohoni, Sohum>Goes here into what's called the control unit, and you can just to simplify things. You can think of the control unit almost like a look up table where if it gets you know these this pattern.</v>
+
+00:22:18.650 --> 00:22:27.040
+<v Sohoni, Sohum>It creates an output which is do these you know, make these signals lower and make these signals high. Essentially it works like that.</v>
+
+00:22:28.760 --> 00:22:29.090
+<v Furst, Elias>K.</v>
+
+00:22:30.080 --> 00:22:40.040
+<v Sohoni, Sohum>So the awkward is really like a map. It's like an index into a look up table to say OK if the opcode is this. Take these actions. If the opcode is that, take these other actions and so on.</v>
+
+00:22:40.660 --> 00:22:48.010
+<v Bultman, Joshua>So the bits don't actually like correspond to. If like if the app code is 1111, it's not all high signals.</v>
+
+00:22:48.720 --> 00:22:49.510
+<v Sohoni, Sohum>That is correct.</v>
+
+00:22:48.910 --> 00:22:50.330
+<v Bultman, Joshua>It's it's OK.</v>
+
+00:22:50.090 --> 00:22:57.340
+<v Sohoni, Sohum>Yeah, because First off, you'll observe there's more signals here than six, so it doesn't match up like that at all, yeah?</v>
+
+00:22:58.790 --> 00:23:00.340
+<v Sohoni, Sohum>It's an indexing mechanism.</v>
+
+00:23:08.840 --> 00:23:10.450
+<v Sohoni, Sohum>I'm sure there's more questions.</v>
+
+00:23:13.180 --> 00:23:15.150
+<v Sohoni, Sohum>We've got time, yeah, go ahead and call them.</v>
+
+00:23:16.790 --> 00:23:23.240
+<v Kreitzman, Colton>I guess I'm kind of confused about how it knows what decisions to make based on just the bit patterns.</v>
+
+00:23:25.360 --> 00:23:26.470
+<v Sohoni, Sohum>Like the control unit.</v>
+
+00:23:25.510 --> 00:23:31.300
+<v Kreitzman, Colton>Like doesn't there have to be? Yeah, like doesn't there have to be like an even lower level programming behind that then?</v>
+
+00:23:33.290 --> 00:23:49.480
+<v Sohoni, Sohum>So the book does get into it a little bit in terms of like in chapter four. I think I forget exactly where it's covered, but in week seven essentially or week seven reading surely will get you through all of this, but.</v>
+
+00:23:50.770 --> 00:23:53.320
+<v Sohoni, Sohum>I mean Simply put it is.</v>
+
+00:23:54.900 --> 00:23:59.910
+<v Sohoni, Sohum>It really is like a look up table if you think about it. This value comes in.</v>
+
+00:24:00.630 --> 00:24:02.520
+<v Sohoni, Sohum>And this pattern comes out.</v>
+
+00:24:05.250 --> 00:24:08.920
+<v Sohoni, Sohum>How words actually built is beyond the scope of this course.</v>
+
+00:24:12.450 --> 00:24:14.280
+<v Sohoni, Sohum>Are you OK? With that answer you need more.</v>
+
+00:24:14.910 --> 00:24:15.710
+<v Kreitzman, Colton>Yeah, that's fine.</v>
+
+00:24:18.090 --> 00:24:37.240
+<v Sohoni, Sohum>OK yeah. Well part of the reason why I might be hiding things at this point is because as I was saying I I don't want to scare everyone away with the complexity that because this is a whole computer, right? This this is a fully functioning CPU. It's doing everything that a CPU does. It still a little simplified, but.</v>
+
+00:24:38.060 --> 00:24:45.730
+<v Sohoni, Sohum>I don't want to throw it all at you. At one one, you know just one go, so I do want to keep some of the mystery in in it still.</v>
+
+00:24:53.340 --> 00:24:58.060
+<v Bultman, Joshua>So amoks the Max components they just take like a a signal.</v>
+
+00:24:58.880 --> 00:25:03.420
+<v Bultman, Joshua>And then is it kind of like a branch like it goes one way, if it's high in one way it slow.</v>
+
+00:25:03.870 --> 00:25:27.760
+<v Sohoni, Sohum>Yeah, exactly so. I was hoping someone would ask 'cause that's definitely something we've not talked about so far. Sohum marks is short for multiplexer and there's just a hardware component which is essentially if we look at it. Let's look at the one right in the center. So this is the ALU source marks, which has two inputs, zero and one right? Or input zero and input one.</v>
+
+00:25:28.340 --> 00:25:58.090
+<v Sohoni, Sohum>Input zero is whatever it's reading here from read data to input one is whatever is coming over here from the sign extension. OK, and I'm glad I picked this one, 'cause it's a really important one. All of them are, but it's one that you should be able to understand based on the difference between an ad immediate andanar type add. So what we just saw was an example of an art type add, which means you've got two source operands.</v>
+
+00:25:58.150 --> 00:25:59.540
+<v Sohoni, Sohum>From the register file.</v>
+
+00:26:00.150 --> 00:26:08.100
+<v Sohoni, Sohum>Right, and that's why I read it. Uh, one is going to be your one of your source operands. Read data. Two is going to be the 2nd.</v>
+
+00:26:08.790 --> 00:26:12.410
+<v Sohoni, Sohum>Uh R type source operand in an R type instruction.</v>
+
+00:26:13.470 --> 00:26:41.500
+<v Sohoni, Sohum>As opposed to that, if you had an ad immediate instruction, then the second operand is your zero through 15. That 16 you know lower 16 bits that get sign extended to become a 32 bit number, and that's coming in, and the input of this multiplexer here as well. So the thing that's going to blow your mind OK, and it blew my mind when I first really understood and realized what was going on the computer it does.</v>
+
+00:26:42.490 --> 00:26:43.800
+<v Sohoni, Sohum>A number of things.</v>
+
+00:26:44.870 --> 00:26:45.690
+<v Sohoni, Sohum>Always.</v>
+
+00:26:46.790 --> 00:27:18.520
+<v Sohoni, Sohum>And it's only going to use some of those. OK, let me explain what I mean by that. So irrespective of the fact that we had, we just saw an an R type add instruction right where you know these bits were being used to figure out which register would reading then the value of what was read from the register went here and so on and so forth. Irrespective of that, it still took the lower 16 bits off this R type instruction instruction data sign extension of those.</v>
+
+00:27:18.780 --> 00:27:35.830
+<v Sohoni, Sohum>Brought that input all the way into this multiplexer and then it was the control logic, which in this case because this was an R type instruction it said hey for the Alu source, don't use that sign. Extended immediate stuff that was given to you, but use instead.</v>
+
+00:27:36.650 --> 00:27:45.520
+<v Sohoni, Sohum>This guy, the read data two that's coming in and that's how we get the correct operands sent to the arithmetic arithmetic logic unit.</v>
+
+00:27:46.260 --> 00:27:47.250
+<v Sohoni, Sohum>Does that make sense?</v>
+
+00:27:51.240 --> 00:27:51.510
+<v Sohoni, Sohum>Yeah.</v>
+
+00:27:50.640 --> 00:27:51.730
+<v Bultman, Joshua>Yeah, that's interesting.</v>
+
+00:27:53.150 --> 00:27:53.680
+<v Bultman, Joshua>It's weird.</v>
+
+00:27:55.420 --> 00:28:02.540
+<v Sohoni, Sohum>Yeah, and it's just faster for the hardware to compute both of those things and then just discard one of them and let the other one through.</v>
+
+00:28:03.680 --> 00:28:08.350
+<v Sohoni, Sohum>Just quicker, faster, more efficient. That's why it does it that way.</v>
+
+00:28:09.080 --> 00:28:29.230
+<v Sohoni, Sohum>'cause we don't want to wait to figure out which of the inputs we need and then do the sign extension for example. Or then do the reading from the register file to get the actual value. We just do them in parallel. 'cause hardware affords all this parity parallelism and then one of them goes through.</v>
+
+00:28:31.250 --> 00:29:01.840
+<v Sohoni, Sohum>So yeah, the long answer to this. The multiplexer is a device that based on what the value is on the control side of it, it takes one of these values and passes it through multiplexers can be more complicated. They can have four inputs, 20 inputs. How many ever we've built this diagram for you with just two input multiplexers there we had an opportunity here to actually build a three input multiplexer, but just to keep it simple we did two layers instead of.</v>
+
+00:29:01.900 --> 00:29:05.880
+<v Sohoni, Sohum>OK, we'll do one to input and then we'll do another one to input.</v>
+
+00:29:11.520 --> 00:29:15.670
+<v Bultman, Joshua>So is this diagram just showing the type and R type?</v>
+
+00:29:16.310 --> 00:29:22.310
+<v Bultman, Joshua>Or is is just as the jump? Or is it J type is that included in this one as well?</v>
+
+00:29:22.280 --> 00:29:49.090
+<v Sohoni, Sohum>Yeah, that's a good question. So yes, it focused this more on the R and I type the J type stuff is also shown here. The you know the stuff I was talking about where you take the lower 26 bits and you shift them a couple bits to the the left and you get the 28 bits and then you use the PC so it does show that I think the video also covers that. I haven't seen the video in a year, so obviously I've forgotten.</v>
+
+00:29:49.510 --> 00:29:50.440
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:29:51.870 --> 00:29:58.890
+<v Sohoni, Sohum>Yeah, if we played the video to the end we will see it and I may or may not depending on how many questions we have, how much discussion we have.</v>
+
+00:29:59.650 --> 00:30:10.620
+<v Sohoni, Sohum>And you can always watch the the rest of the video on your own. But yeah, if we run out of questions, I'll just end up playing the the rest of the. So we've got about halfway through the video at this point.</v>
+
+00:30:12.190 --> 00:30:42.400
+<v Sohoni, Sohum>Uhm, another thing this hasn't come up as a question yet, but I'll just go ahead and answer it anyway. So the video refers to this thing called PLP and doesn't really talk about MIPS. That's because my students and I, we created our own architecture, which was a further simplified version of PLP of MIPS, which we thought let's keep it simple. For teaching purposes. MIPS was actually a commercial design, although it's used very extensively.</v>
+
+00:30:42.450 --> 00:31:09.300
+<v Sohoni, Sohum>In in education. So we just created something that was simpler than MIPS and we built our IDE and everything like we actually built this whole hardware as well. That was synthesizeable on on on what's called an efga and in in this class at Oklahoma State when I was teaching this we used to hand out these boards which had the PLP processor synthesized on it and we use those to drive a robot or something like that.</v>
+
+00:31:10.500 --> 00:31:22.250
+<v Sohoni, Sohum>So because we use pure MIPS at MSOE, I'm not using the PLP platform here, but this video in particular. It really matches whether you're in whether you're doing maps or PLP.</v>
+
+00:31:23.280 --> 00:31:27.430
+<v Sohoni, Sohum>So that's that's why that phrase PLP gets used in this video.</v>
+
+00:31:30.530 --> 00:31:33.630
+<v Sohoni, Sohum>Alright, I'll keep quiet. I'll let you and ask me questions.</v>
+
+00:31:54.130 --> 00:31:59.380
+<v Sohoni, Sohum>No more questions you want me to play the rest of the video and then meet back for questions.</v>
+
+00:32:02.400 --> 00:32:03.800
+<v Furst, Elias>Yeah, I think I think so.</v>
+
+00:32:04.470 --> 00:32:13.240
+<v Sohoni, Sohum>OK, alright let's play. Saw that when the address of the next instruction is read, the address is also centripetal input.</v>
+
+00:32:13.300 --> 00:32:14.910
+<v Sohoni, Sohum>Of an adder that adds 4 to it.</v>
+
+00:32:15.790 --> 00:32:25.040
+<v Sohoni, Sohum>Since the system is byte addressable, adding four to the current address gives us the address that is 32 bits away, or the next instruction.</v>
+
+00:32:26.190 --> 00:32:38.050
+<v Sohoni, Sohum>Since neither of the two monks along this path were sent a high signal, the address plus four is what gets loaded into the program counter as the address of the next instruction.</v>
+
+00:32:41.690 --> 00:32:49.060
+<v Sohoni, Sohum>We will now look at a different type of instruction to see how the hardware handles it differently. Let's look at a jump or jump to label.</v>
+
+00:32:50.330 --> 00:32:57.660
+<v Sohoni, Sohum>The R type is seen in the previous step through uses the most registers of any instruction, while the jumped uses none.</v>
+
+00:32:58.540 --> 00:33:11.490
+<v Sohoni, Sohum>Also, jump uses a label which the hardware does not understand. So when the program is assembled, a jump label must be converted to a memory address so that the hardware is able to perform the operation.</v>
+
+00:33:13.010 --> 00:33:24.560
+<v Sohoni, Sohum>A jump instruction. As with all instructions, is fetched into instruction memory by reading the address currently in the program counter, as well as a + 4 increment occurs on that address.</v>
+
+00:33:26.480 --> 00:33:31.630
+<v Sohoni, Sohum>The opcode bits 31 through 26 is decoded by the control unit.</v>
+
+00:33:32.360 --> 00:33:34.430
+<v Sohoni, Sohum>And the jump is sent a high signal.</v>
+
+00:33:36.070 --> 00:33:53.870
+<v Sohoni, Sohum>This toggles the monks, that is to be utilized by the jump instruction. Since the jump uses no registers, no memory, and performs no ALU calculations, no other components need to be utilized, and therefore jump is the only high signal set by the control unit.</v>
+
+00:33:55.250 --> 00:34:03.300
+<v Sohoni, Sohum>Now we look at bits 25 through 0 which contain the address at the assembler had converted our label too. When the program was assembled.</v>
+
+00:34:04.810 --> 00:34:10.160
+<v Sohoni, Sohum>We will look at this in Hex since that is the format that we have been viewing addresses in for clarity.</v>
+
+00:34:11.410 --> 00:34:19.880
+<v Sohoni, Sohum>The problem here is that a red address needs to be 32 bits in length, and at this point there are only 26 remaining in the instruction.</v>
+
+00:34:20.660 --> 00:34:32.600
+<v Sohoni, Sohum>What happens is that when the assembler converts the label to an address that the four most significant bits are truncated and the hardware will then reuse those bits from the previous instruction.</v>
+
+00:34:33.860 --> 00:34:42.800
+<v Sohoni, Sohum>This can happen because the amount of addresses available dictates that no jump can extend into those four most significant bids.</v>
+
+00:34:44.060 --> 00:34:58.630
+<v Sohoni, Sohum>Now we have 30 bits of the address and the other two bits can be truncated on the least significant side, meaning that any jump address allocated by the assembler will have a 00 as the two least significant bits.</v>
+
+00:34:59.480 --> 00:35:09.870
+<v Sohoni, Sohum>Indicating that is a multiple of four, which ensures that the byte addressable memory remains organized in four byte pieces, which is the size of an instruction.</v>
+
+00:35:11.970 --> 00:35:28.840
+<v Sohoni, Sohum>The rest of the path is straightforward. The monks that has sent a high signal from the control unit allows the reconstructed address to then be loaded into the program counter. As you can see, a jump instruction uses significantly less hardware than an add instruction does.</v>
+
+00:35:32.560 --> 00:35:37.010
+<v Sohoni, Sohum>Now we will look at an instruction branch that is similar in functionality to a jump.</v>
+
+00:35:37.850 --> 00:35:49.680
+<v Sohoni, Sohum>The functional difference between the two is that it branch will only jump to a label if a condition is met and PLP. The condition that we can use is equality. We can branch on equal, or we can branch on naughty.</v>
+
+00:35:51.440 --> 00:35:58.510
+<v Sohoni, Sohum>Like all instructions, the address and the PC is red for the next instruction and the control unit decodes the opcodes.</v>
+
+00:36:00.250 --> 00:36:06.740
+<v Sohoni, Sohum>The control unit sends a high signal on branch which goes to this and gate, which we will look at further in a moment.</v>
+
+00:36:07.890 --> 00:36:17.080
+<v Sohoni, Sohum>The Alu OP is also set to high since there needs to be a conditional check. Specifically, if the data in the two registers is equal.</v>
+
+00:36:18.280 --> 00:36:25.880
+<v Sohoni, Sohum>That is, all the components that the control unit needs to activate and the rest of the signals from the control unit are set to low.</v>
+
+00:36:28.140 --> 00:36:30.060
+<v Sohoni, Sohum>The data in the two registers.</v>
+
+00:36:30.650 --> 00:36:41.260
+<v Sohoni, Sohum>In the 25 to 21 and 20 to 16 bits of the instruction need to be compared. Therefore the data is read and used as two inputs to the ALU.</v>
+
+00:36:42.700 --> 00:36:55.820
+<v Sohoni, Sohum>If the condition did not pass the address and the program counter would just be incremented by 4 and the rest of the instruction would not be utilized, let's continue on as if we know the condition will pass.</v>
+
+00:36:56.700 --> 00:37:03.240
+<v Sohoni, Sohum>The L you would then send a signal to the and gate that allows the monks that the branch instruction uses at a toggle.</v>
+
+00:37:04.650 --> 00:37:06.840
+<v Sohoni, Sohum>To signify that the condition passed.</v>
+
+00:37:07.520 --> 00:37:16.160
+<v Sohoni, Sohum>Since the condition passed, the PC needs to be loaded with the address that the assembler assigned to the label specified in the code.</v>
+
+00:37:17.190 --> 00:37:18.780
+<v Sohoni, Sohum>Just like the jump instruction.</v>
+
+00:37:19.840 --> 00:37:30.890
+<v Sohoni, Sohum>The difference here is that we only have the 16 bit immediate field, which I will convert to hex for better readability as this is and I type instruction remaining in the instruction.</v>
+
+00:37:32.220 --> 00:37:40.430
+<v Sohoni, Sohum>We cannot reuse parts of the previous address like in a jump because it would not give us nearly Nov range in what addresses we could use.</v>
+
+00:37:41.660 --> 00:38:03.260
+<v Sohoni, Sohum>In the case of a branch, the assembler just calculates how far instruction wise the branch needs to jump to get to the labels address. The value is then sign extended to make it 32 bids and then shifted left twice to convert our distance to bytes. Since our addresses are all byte addressable.</v>
+
+00:38:04.490 --> 00:38:15.200
+<v Sohoni, Sohum>This number is then added to the incremented address of the current instruction, thereby loading the PC with the address that is associated with the label in the code.</v>
+
+00:38:25.330 --> 00:38:29.830
+<v Sohoni, Sohum>The final instruction that we will look at is another I type store word.</v>
+
+00:38:30.400 --> 00:38:39.230
+<v Sohoni, Sohum>Even though we have just seen branch which is also and I type, STARWARD utilizes the only component that none of the others have thus far memory.</v>
+
+00:38:40.460 --> 00:38:48.390
+<v Sohoni, Sohum>Again, the opcode bits 31 through 26 is decoded by the control unit in order to activate the components required by store word.</v>
+
+00:38:49.360 --> 00:38:58.900
+<v Sohoni, Sohum>Since part of the instruction is adding an offset 12 in this example to a memory address stored in the register, we know that the ALU will be utilized.</v>
+
+00:39:00.210 --> 00:39:14.340
+<v Sohoni, Sohum>Since we are storing something, we know that the processor will be writing to memory and therefore is sent a high signal. Store. Word also sends a high signal to the monks to acts as a toggle for the second ALU input. We will examine this further in a moment.</v>
+
+00:39:15.840 --> 00:39:21.700
+<v Sohoni, Sohum>The control unit sends low signals on the remaining lines out since no other components are necessary.</v>
+
+00:39:23.220 --> 00:39:33.570
+<v Sohoni, Sohum>That's 25 through 21 is the register that contains the address where the data will be stored. This register gets read and passed as an input to the ALU.</v>
+
+00:39:34.490 --> 00:39:42.540
+<v Sohoni, Sohum>It's 20 through 16. Indicate the register that contains the data that needs to be written to memory. This registry gets red.</v>
+
+00:39:43.650 --> 00:39:47.530
+<v Sohoni, Sohum>And the data is used as the right data input of the memory unit.</v>
+
+00:39:49.240 --> 00:39:57.150
+<v Sohoni, Sohum>The immediate field, which is the offset specified in the code, is extended to 32 bits since it is going to the ALU.</v>
+
+00:39:58.590 --> 00:40:01.120
+<v Sohoni, Sohum>Let's display this in hex form for simplicity.</v>
+
+00:40:01.930 --> 00:40:27.600
+<v Sohoni, Sohum>Since the control unit activated this monks, the offset is the other input to the ALU. The ALU adds the destination address with the offset and the result is used as the address that specifies to the memory unit. The location to store the desired data. Now that we have the data to be written to memory, the memory location that the data is to be stored.</v>
+
+00:40:28.530 --> 00:40:34.920
+<v Sohoni, Sohum>And that the control unit sent a high signal to the memory unit that data is to be stored to memory.</v>
+
+00:40:35.800 --> 00:40:45.800
+<v Sohoni, Sohum>The path for this instruction is complete. Now we just need to show that the program counter was also updated with the plus four increment needed for the next instruction.</v>
+
+00:40:47.910 --> 00:40:50.690
+<v Sohoni, Sohum>And that concludes this tutorial. Thank you for watching.</v>
+
+00:40:55.340 --> 00:40:57.780
+<v Sohoni, Sohum>Alright, so more questions.</v>
+
+00:41:02.740 --> 00:41:04.610
+<v Sohoni, Sohum>Sorry, just started playing and add.</v>
+
+00:41:04.980 --> 00:41:05.550
+<v Furst, Elias>Are there?</v>
+
+00:41:06.400 --> 00:41:11.960
+<v Furst, Elias>Are there actually like multiple alu's, or is it just one that's doing three things?</v>
+
+00:41:14.020 --> 00:41:14.560
+<v Sohoni, Sohum>Oh</v>
+
+00:41:14.680 --> 00:41:17.090
+<v Sohoni, Sohum>in their diagram, yeah, let me get back to that.</v>
+
+00:41:18.440 --> 00:41:20.530
+<v Sohoni, Sohum>How do I do it without playing the ad?</v>
+
+00:41:21.410 --> 00:41:22.920
+<v Sohoni, Sohum>I don't think there's a way to do that.</v>
+
+00:41:24.720 --> 00:41:37.920
+<v Sohoni, Sohum>There are two. Well, I'll just answer a question first. Yes, there are multiple law arithmetic logic units within any processor there is the main one that does most of the actual addition subtraction stuff.</v>
+
+00:41:38.620 --> 00:41:41.320
+<v Sohoni, Sohum>And then wherever we need some additional.</v>
+
+00:41:41.940 --> 00:41:46.800
+<v Sohoni, Sohum>Uhm, calculation to be done. We we have other hardware that looks like yeah.</v>
+
+00:41:47.640 --> 00:41:48.070
+<v Furst, Elias>OK.</v>
+
+00:41:50.430 --> 00:41:52.270
+<v Bultman, Joshua>So I don't quite get how come.</v>
+
+00:41:53.710 --> 00:41:56.930
+<v Bultman, Joshua>He gets converted 232 bits for the a jump of media.</v>
+
+00:41:57.950 --> 00:42:00.900
+<v Bultman, Joshua>Like I, I get how you can multiply by 4 because of the.</v>
+
+00:42:01.660 --> 00:42:04.830
+<v Bultman, Joshua>Like no instruction is gonna be.</v>
+
+00:42:05.440 --> 00:42:07.240
+<v Bultman, Joshua>Like an odd number or whatever.</v>
+
+00:42:08.720 --> 00:42:12.140
+<v Bultman, Joshua>Like it's always gonna be a multiple of four, but I don't quite get how you get the other way.</v>
+
+00:42:14.060 --> 00:42:26.530
+<v Sohoni, Sohum>Yeah, I'm sorry, let me come play through this ad essentially and then we'll get to the diagram. Or I guess there is a better way if we just need the diagram, let me bring up the other.</v>
+
+00:42:28.480 --> 00:42:31.260
+<v Sohoni, Sohum>OK yeah sorry, what was your question again?</v>
+
+00:42:32.810 --> 00:42:37.510
+<v Bultman, Joshua>So for the jump immediate are the jump you have, like the 26 bits, right?</v>
+
+00:42:37.850 --> 00:42:38.280
+<v Sohoni, Sohum>Yeah.</v>
+
+00:42:39.010 --> 00:42:41.390
+<v Bultman, Joshua>So I understand how you can get the extra.</v>
+
+00:42:45.930 --> 00:42:46.320
+<v Sohoni, Sohum>Yeah.</v>
+
+00:42:42.710 --> 00:42:49.530
+<v Bultman, Joshua>2 bits by shifting left by two 'cause the the instructions always or the the labels or whatever.</v>
+
+00:42:50.330 --> 00:42:53.640
+<v Bultman, Joshua>It's always gonna be multiple or four, but how do you get the other way exactly?</v>
+
+00:42:54.800 --> 00:42:55.190
+<v Bultman, Joshua>Uh.</v>
+
+00:42:54.440 --> 00:42:55.980
+<v Sohoni, Sohum>How do you get the remaining bits?</v>
+
+00:42:56.120 --> 00:42:57.220
+<v Bultman, Joshua>Yeah, the remaining bits.</v>
+
+00:42:57.130 --> 00:43:03.700
+<v Sohoni, Sohum>Yeah, so the remaining birds are the top 4 bits of the program counter the current program counter.</v>
+
+00:43:07.480 --> 00:43:10.280
+<v Bultman, Joshua>And that just works like.</v>
+
+00:43:13.450 --> 00:43:14.450
+<v Bultman, Joshua>I have to think about.</v>
+
+00:43:18.020 --> 00:43:18.510
+<v Bultman, Joshua>Yeah.</v>
+
+00:43:13.790 --> 00:43:20.500
+<v Sohoni, Sohum>Yeah, yeah, I know it. You have to take it on faith. Yeah, it just works up and that's.</v>
+
+00:43:21.420 --> 00:43:26.590
+<v Sohoni, Sohum>Because we have essentially a 28 bit worth of range from.</v>
+
+00:43:27.170 --> 00:43:28.480
+<v Sohoni, Sohum>Uh, where we can go?</v>
+
+00:43:29.190 --> 00:43:37.540
+<v Sohoni, Sohum>Uh, just based on the fact that we have 32 bit addressing those top 4 bits will be will be the same, yeah?</v>
+
+00:43:38.110 --> 00:43:39.060
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:43:39.250 --> 00:43:45.960
+<v Sohoni, Sohum>Yeah, UM, let me maybe give you a little bit more explanation 'cause that sounded like not very convincing, maybe.</v>
+
+00:44:00.010 --> 00:44:00.380
+<v Bultman, Joshua>Yep.</v>
+
+00:43:46.790 --> 00:44:02.470
+<v Sohoni, Sohum>So the whenever we do a jump, it's usually only going to well. Usually it's only supposed to jump into the text segment. Does that make sense where we have the text segment, the data segment and a few other segments of memory so?</v>
+
+00:44:03.240 --> 00:44:04.630
+<v Sohoni, Sohum>We make we.</v>
+
+00:44:05.320 --> 00:44:29.150
+<v Sohoni, Sohum>Basically you have limited range in terms of how far we can go with the jump because it has to reside within the text segment and because of that we can be guaranteed that wherever the text segment started, like wherever the PC was and how much ever we have traveled within the text segment, those top 4 bits are likely going to be the same, so the text segment isn't really going to.</v>
+
+00:44:30.030 --> 00:44:33.320
+<v Sohoni, Sohum>Be outside of the range of the lower 28 bits.</v>
+
+00:44:35.100 --> 00:44:36.510
+<v Bultman, Joshua>Oh OK, that makes sense, thank you.</v>
+
+00:44:36.360 --> 00:44:41.430
+<v Sohoni, Sohum>Yeah, 'cause we're not really addressing the full 32 bit and address space, that's why.</v>
+
+00:44:47.990 --> 00:44:50.380
+<v Sohoni, Sohum>Good other questions. We've got 5 minutes left.</v>
+
+00:44:55.110 --> 00:45:03.740
+<v Furst, Elias>So what if you tried to address and address that you could like? If you had a ridiculously large program?</v>
+
+00:45:04.730 --> 00:45:05.340
+<v Furst, Elias>Uhm?</v>
+
+00:45:06.600 --> 00:45:07.040
+<v Furst, Elias>Well with.</v>
+
+00:45:06.350 --> 00:45:10.180
+<v Sohoni, Sohum>There could still fit within 28 bit address Ng.</v>
+
+00:45:10.660 --> 00:45:11.120
+<v Furst, Elias>OK.</v>
+
+00:45:11.640 --> 00:45:12.080
+<v Sohoni, Sohum>Yeah.</v>
+
+00:45:13.740 --> 00:45:19.030
+<v Sohoni, Sohum>Yeah, I mean you can do the calculation. It's 2 to the power 28 instructions essentially.</v>
+
+00:45:21.270 --> 00:45:29.060
+<v Furst, Elias>Yeah OK, that makes you. You'd have to literally fill the entire computer with a single program for that to be a problem, right?</v>
+
+00:45:28.650 --> 00:45:52.510
+<v Sohoni, Sohum>Yeah, for it to fail. Yeah, exactly yeah and again this is more of a simplified version of a processor when we actually have an operating system, for example, this is ignoring anything to do with like virtual memory and operating system calls and whatnot, so this is bare bones. This is the hardware we're writing directly. Instructions for this hardware. So in these cases we don't need to worry about any of that.</v>
+
+00:46:00.400 --> 00:46:15.590
+<v Sohoni, Sohum>I'll say one other thing. Essentially, we're not actually encoding or writing the actual address. When we write the assembly program right, all we do is we put a label and we say jump to that label and the hardware does the calculation for us.</v>
+
+00:46:16.220 --> 00:46:28.490
+<v Sohoni, Sohum>And if ever we end up in a situation where the label is so far away when we do the assembly, the hardware is going to complain it it will just say, well, I can't really assemble this jump target, it's too far.</v>
+
+00:46:38.980 --> 00:47:09.450
+<v Sohoni, Sohum>So I know I've said this before. I'll say it again. This video you're likely to watch it three times I, or at least I definitely recommend that you watch it three times you watch it once this week, you watch it once next week and you watch it once in week seven. And I say that because there are parts of this video that should really help you understand the stuff that we've done so far and that's watching it this week when you watch it next week, there will be a few more parts that you've looked at in in the book, and we've talked about in class.</v>
+
+00:47:09.960 --> 00:47:23.480
+<v Sohoni, Sohum>Although this being the midterm we don't know, we're covering a whole lot more. But when in when you go to week seven, there will be a whole lot more that will start to make sense, especially with the control logic and all of that stuff.</v>
+
+00:47:31.010 --> 00:47:35.350
+<v Sohoni, Sohum>Join in. Do you have any questions on the branch or anything else?</v>
+
+00:47:44.070 --> 00:47:44.740
+<v Furst, Elias>I assume.</v>
+
+00:47:44.180 --> 00:47:58.170
+<v Sohoni, Sohum>And yeah, sorry, I'll just just one more quick thing. Be assured that if you don't ask questions today, I am not going to assume that you understood everything that was in the video. OK, I don't expect you to get everything at this point, just watching it once so.</v>
+
+00:47:58.880 --> 00:48:00.550
+<v Sohoni, Sohum>Yeah, good advice.</v>
+
+00:48:02.270 --> 00:48:06.520
+<v Furst, Elias>I was I was just gonna say that like I, I assume there's no.</v>
+
+00:48:07.220 --> 00:48:19.800
+<v Furst, Elias>There's just no opcode for like a 'cause there's more. There's more things than opcodes, so like there's just no opcode for doing both the jump and a branch, or like.</v>
+
+00:48:20.410 --> 00:48:20.910
+<v Furst, Elias>Uhm?</v>
+
+00:48:21.640 --> 00:48:22.580
+<v Furst, Elias>Add, uh?</v>
+
+00:48:23.730 --> 00:48:26.050
+<v Furst, Elias>Like that sort of thing, right?</v>
+
+00:48:26.950 --> 00:48:27.190
+<v Furst, Elias>It.</v>
+
+00:48:29.330 --> 00:48:30.370
+<v Furst, Elias>Is there anything you can do?</v>
+
+00:48:26.480 --> 00:48:36.490
+<v Sohoni, Sohum>No, no that so we can't. So hardware is deterministic, right? You you can only tell it to do one thing. You can't really tell it to do two things.</v>
+
+00:48:39.450 --> 00:48:42.140
+<v Sohoni, Sohum>Is that answer makes sense? Or maybe I misunderstood?</v>
+
+00:48:41.600 --> 00:48:44.890
+<v Furst, Elias>Yeah, that's that's that's right. Like UM, they're just dumb.</v>
+
+00:48:46.220 --> 00:48:50.800
+<v Furst, Elias>There's some things where you can't do two of them at once, which is.</v>
+
+00:48:51.720 --> 00:48:53.960
+<v Furst, Elias>Why there can be fewer opcodes?</v>
+
+00:48:54.960 --> 00:48:57.600
+<v Furst, Elias>Then like the the total combination.</v>
+
+00:48:58.590 --> 00:49:00.950
+<v Furst, Elias>'cause the opcode is smaller than how many?</v>
+
+00:49:03.060 --> 00:49:04.880
+<v Furst, Elias>What are the like control signals?</v>
+
+00:49:06.830 --> 00:49:08.920
+<v Sohoni, Sohum>Oh yeah, these signals here.</v>
+
+00:49:09.740 --> 00:49:10.680
+<v Furst, Elias>Yeah, those.</v>
+
+00:49:12.780 --> 00:49:30.600
+<v Sohoni, Sohum>So again, I wouldn't worry too much about these guys right now. There's actually equations and whatnot that determine like based on what the control, what the six bits of awkward were, what these numbers are actually going to be. So each of these is actually independently controlled.</v>
+
+00:49:31.090 --> 00:49:33.920
+<v Sohoni, Sohum>Uh, in terms of whether it goes high or low.</v>
+
+00:49:34.750 --> 00:49:36.220
+<v Sohoni, Sohum>And you will see that in Week 7.</v>
+
+00:49:40.080 --> 00:49:44.730
+<v Sohoni, Sohum>So that's the part you can take on faith at this point that this machine works.</v>
+
+00:49:46.380 --> 00:49:46.770
+<v Furst, Elias>OK.</v>
+
+00:49:51.040 --> 00:50:15.990
+<v Sohoni, Sohum>But I'm I'm more concerned about you guys understanding like these are the numbers that you see here, right? These are the actual parts of the instruction 'cause we are more interested in the instruction itself at this point than so much the hardware. But what do these actually mean? How are they actually used in the hardware? So for example, bits 16 through 20, they are one of the registers that we want to read.</v>
+
+00:50:16.040 --> 00:50:22.360
+<v Sohoni, Sohum>Weird, squinty one through 25. Also specify one of the registers and we saw that in the slides last last week.</v>
+
+00:50:22.770 --> 00:50:52.920
+<v Sohoni, Sohum>Uhm, similarly if it's an R type instruction right then these lower 16 bits here are used as that immediate operand, and because we deal with 32 bit numbers, it just needs to be sign extended from 16 to 32 and then the multiplexer determines whether that's what we're going to use or not. And similarly for an R type instruction, there are three registers that are specified. That's why we've got 21 through 2516 through 20 and then 11 through 15.</v>
+
+00:50:53.070 --> 00:50:55.700
+<v Sohoni, Sohum>As a third register option and again.</v>
+
+00:50:56.870 --> 00:51:04.720
+<v Sohoni, Sohum>This marks I don't want to get into the details of that, but this determines which of these two values is going to be used for our destination register.</v>
+
+00:51:05.950 --> 00:51:07.700
+<v Sohoni, Sohum>But when we're writing to register.</v>
+
+00:51:09.650 --> 00:51:26.100
+<v Sohoni, Sohum>So stuff like that hopefully is clear or getting there. I understand we're at 351, so I'll stop one last quick comment. I finish grading through half of the quiz tools for this section I believe, and then I wasn't feeling so well, so I stopped.</v>
+
+00:51:27.000 --> 00:51:41.270
+<v Sohoni, Sohum>Today if I'm feeling well in the afternoon or in the evening, I will try to get through the rest of grading of quiz two. So if you have any questions on the answers you've turned in for quiz two, we can address those things on Wednesday as well when we meet.</v>
+
+00:51:42.440 --> 00:51:44.370
+<v Sohoni, Sohum>Alright, take care bye bye.</v>
+
+00:51:44.900 --> 00:51:45.350
+<v Bultman, Joshua>Thank you.</v>
+
+00:51:46.780 --> 00:51:47.190
+<v Leonard, Benjamin>Thank you.</v>

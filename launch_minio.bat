@@ -1,0 +1,2 @@
+minio server minio_data
+pause

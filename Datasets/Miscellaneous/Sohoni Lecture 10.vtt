@@ -1,0 +1,937 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:30.490
+<v Sohoni, Sohum>It has to leave for India. She's going back tomorrow and so I'll be taking over teaching this class. You must have seen this in the announcement I sent out. So luckily, I mean I've been sitting in on the class so I know where you are, what all she's done, and a bunch of things she was using were already from my canvas shell, so I don't think it's going to be, you know, a big effort for me to figure out where you are and what you need in terms of, you know, the instruction for this class. But if there's.</v>
+
+00:00:30.770 --> 00:01:00.480
+<v Sohoni, Sohum>You know at any point if you have questions or you feel that there's a disconnect between what you were doing and what I'm doing, don't hesitate to point out OK. And another thing I will say about the the online. This is not ideal, especially with the switch and instructors. I would have preferred to be there in person, but unfortunately on the night of the 29th I had a health issue which at first seemed like a stroke which would have been really terrible, so I was very scared.</v>
+
+00:01:00.780 --> 00:01:01.280
+<v Sohoni, Sohum>911</v>
+
+00:01:01.340 --> 00:01:13.500
+<v Sohoni, Sohum>uh, but it wasn't a stroke. Thankfully it was an attack of ports called positional Vertigo, which was making me really dizzy and that brought on like a high heart rate and whatnot so.</v>
+
+00:01:13.560 --> 00:01:43.140
+<v Sohoni, Sohum>So I'm I'm still suffering from the Vertigo, and so even looking at the screen sometimes can be a problem. It's not there the whole time, it's it comes and goes. It's supposed to get better on its own in about 8 to 10 days, so I'm hoping that it won't be a long term issue. So I just wanted to let you know that's that's where I am. So obviously I can't drive and come to campus and be there in person 'cause it's dangerous when you've got Vertigo to to drive a vehicle.</v>
+
+00:01:43.730 --> 00:01:49.120
+<v Sohoni, Sohum>Hum, so yeah, I'll I'll be teaching from class and, uh, well, thank you, Joshua.</v>
+
+00:01:49.850 --> 00:01:51.360
+<v Sohoni, Sohum>I'm I'm I'm glad I'm OK.</v>
+
+00:01:52.600 --> 00:01:58.780
+<v Sohoni, Sohum>Uh, and yeah, it's nothing, nothing serious. Nothing life threatening at all. So happy about that.</v>
+
+00:01:59.320 --> 00:02:32.980
+<v Sohoni, Sohum>Uhm, so let's begin, I'm going to start sharing my screen here. I do have some slides for today and then I'm assuming we will have maybe about 10 minutes or so leftover for some in class activity. I will say that in terms of programming in Mars, your section is a little bit ahead of mine because Kanniga Devi had you do a lot more in class activities and in the week before the break. So you're a little bit ahead. I'll just make sure that I'm catching up on any instruction that I felt might have been.</v>
+
+00:02:33.700 --> 00:02:37.780
+<v Sohoni, Sohum>Lacking or would be in just a list behind and in.</v>
+
+00:02:38.890 --> 00:02:56.060
+<v Sohoni, Sohum>Terms of what you're reading and what was explained in class, and once again, to me, you know teaching is not so much about me imparting knowledge to you. It's really about the interaction, so there's things that are not clear. If you're not following something, even if it was from 2 weeks ago.</v>
+
+00:02:56.110 --> 00:03:08.420
+<v Sohoni, Sohum>So, uh, don't hesitate to bring it up. OK, I'm I'm happy to be interrupted. I'm happy to break the flow of just me talking. Also, one last thing before I start really talking on the slides.</v>
+
+00:03:09.180 --> 00:03:40.050
+<v Sohoni, Sohum>Feel free to turn your cameras on. I've I've done a lot of online instructions and even before coming to MSOE and I can guarantee that you tend to focus a lot more when your camera is on and if you have, you know the feeling that I'm watching you. So it's not only better for me to see you and feel like I'm in a classroom, but it's also better for you if it's possible for you to turn on your camera and show me your face. That generally helps both both sides. OK, not going to force it.</v>
+
+00:03:40.110 --> 00:03:42.290
+<v Sohoni, Sohum>Required, but I highly recommend it.</v>
+
+00:03:43.430 --> 00:03:46.770
+<v Sohoni, Sohum>Alright, so one other thing in terms of announcements.</v>
+
+00:03:46.880 --> 00:03:47.390
+<v Sohoni, Sohum>Uhm?</v>
+
+00:03:48.570 --> 00:03:55.370
+<v Sohoni, Sohum>So I've put this link in the UM, so let me actually go to canvas real quick if I can.</v>
+
+00:03:56.600 --> 00:03:57.230
+<v Sohoni, Sohum>Let's see.</v>
+
+00:03:58.270 --> 00:04:18.670
+<v Sohoni, Sohum>Uh, yeah. So if we go all the way to the top, the course overview and syllabus module, I updated that with my email address, and here's that link that is the same as this link over here in the slides and these lectures have also been so. The slides have also been updated or uploaded to the canvas module.</v>
+
+00:04:19.100 --> 00:04:49.370
+<v Sohoni, Sohum>Uhm, this clicking on that link will allow you to schedule a 15 minute slot with me for office hours and it requires like a 24 hour notice so that it you know things don't suddenly show up on my calendar with two minutes to go. But if you need help more urgently at any point, feel free to send out a teams message to me. I'm generally around two good 10:00 PM I should say. And again, this bookings app is going to limit it from.</v>
+
+00:04:49.660 --> 00:05:13.410
+<v Sohoni, Sohum>Came to 6:00 PM in terms of when you can, you know, book an appointment with me and it also takes care of anything else I might have on my calendar. So don't don't worry about scheduling something with a conflict, it automatically takes care of that. But if you need to see me after 6:00 PM or if you need to see me within 24 hours, just send me a teams message directly. I'm usually quick to respond, right?</v>
+
+00:05:13.930 --> 00:05:38.670
+<v Sohoni, Sohum>Uhm, quiz two will be this Friday and it's essentially simply going to ask you to write an assembly program which you've been doing for awhile now, so it's not going to be something that you haven't done before, but I just want to make sure that you can do it in, you know, set amount of time like I'm going to give you 20 minutes to write an assembly program and you should be able to do it from start to end.</v>
+
+00:05:40.120 --> 00:06:09.730
+<v Sohoni, Sohum>You can refer to previous programs that you've written. You can look things up online. I'm not a big believer in having you memorize stuff. So in fact this this is true for all things that we do. All future quizzes in this class. The midterm, the final everything is going to be on canvas even when we are in person and everything is going to be open. Book open notes with the use of Internet and other resources allowed. OK, so well this is from an order.</v>
+
+00:06:09.790 --> 00:06:39.000
+<v Sohoni, Sohum>Older version of this slide we're not going to be able to discuss the quiz on Friday. We'll discuss it on Monday when we meet next week, but then we have a mid term exam on Thursday the 13th and the same rules it will be in this case. It'll be the whole class period, not 20 minutes, but the full 50 minutes and it will also be administered through canvas. Again. Open Book, open notes, use of Internet allowed. Any questions on any of this before I get into the lecture content?</v>
+
+00:06:45.790 --> 00:06:48.460
+<v Sohoni, Sohum>Alright, no questions. Let's keep going.</v>
+
+00:06:49.370 --> 00:07:10.140
+<v Sohoni, Sohum>Uh, so yeah, before we go to the next set of slides, I do want to pull up Mars. I know you've been working on with Mars quite a bit and you probably have it open right now on your laptops. If you don't, I would highly recommend that you do open it up and I I just wanted to go over a few things that.</v>
+
+00:07:10.810 --> 00:07:29.410
+<v Sohoni, Sohum>You may have notice, but I just want to make sure everyone in class is aware of those things. OK, so obviously this is the editor window where we write our programs and when we're ready to assemble, we click on the symbol icon and once we do that in new view shows up OK, so.</v>
+
+00:07:30.630 --> 00:07:38.680
+<v Sohoni, Sohum>A few things that I wanted to talk about in this view, and hopefully this screen is is visible enough. You can. You can see what's what's on the screen.</v>
+
+00:07:39.330 --> 00:07:53.570
+<v Sohoni, Sohum>Uhm, and you can read what's on the screen. I don't really have a great way of fixing that problem. If you can't see it, but so try to get closer to your monitor. If if you can't read it all that clearly.</v>
+
+00:07:54.730 --> 00:07:56.470
+<v Sohoni, Sohum>So first thing.</v>
+
+00:07:57.530 --> 00:08:28.790
+<v Sohoni, Sohum>This view that you see this pain on their top left that has a number of columns. OK, it's got an address column. It's got a code column. Then God has something called basic and then it has this whole thing called the source code, right? So let's go backwards. So the source code is the instructions that you write in your program, right? So if I went back to the edit mode, the very first instruction besides declaring the data and the text segment the very first instruction that I have.</v>
+
+00:08:29.000 --> 00:08:50.150
+<v Sohoni, Sohum>Is the instruction to do the load address dollar a zero prompt one right? And that's why when I go to this other mode of or the other view on the execute, it shows the first instruction Ella dollar a zero prompt one? OK, so that's my source instruction. What happens when you assemble this instruction? Is it becomes 2 instructions?</v>
+
+00:08:51.010 --> 00:08:51.420
+<v Sohoni, Sohum>Right?</v>
+
+00:08:52.200 --> 00:09:12.820
+<v Sohoni, Sohum>Does anyone know why that one instruction has now become two instructions? So I I see here a load upper, immediate UI, dollar 10X, something something and then I have an or I dollar for dollar 10X something else. What's up with all that? What do you think is going on? Why do we have two instructions now Teresa?</v>
+
+00:09:14.600 --> 00:09:23.590
+<v Toohill, Teresa>Well, I could be wrong about this, but the prompt one seems to be like linked linking to another part of the code, so that's why it's like 2 instructions.</v>
+
+00:09:25.020 --> 00:09:27.520
+<v Sohoni, Sohum>We're getting there maybe.</v>
+
+00:09:29.520 --> 00:09:30.030
+<v Furst, Elias>Com.</v>
+
+00:09:28.190 --> 00:09:30.990
+<v Sohoni, Sohum>Warm would say anyone want to add to that?</v>
+
+00:09:31.320 --> 00:09:31.830
+<v Furst, Elias>I.</v>
+
+00:09:32.780 --> 00:09:33.270
+<v Furst, Elias>Hum.</v>
+
+00:09:34.080 --> 00:09:40.510
+<v Furst, Elias>So the OR instruction, since it sorry in with just a bunch of zeros is just copying over the value, yeah?</v>
+
+00:09:43.100 --> 00:09:48.670
+<v Sohoni, Sohum>So yeah, in this case it's not affecting what's already there, yes?</v>
+
+00:09:48.780 --> 00:09:49.910
+<v Furst, Elias>Yeah so.</v>
+
+00:09:50.940 --> 00:09:51.490
+<v Furst, Elias>Uhm?</v>
+
+00:09:53.150 --> 00:09:57.590
+<v Furst, Elias>I don't know why it's doing that, I don't. I don't know if anyone else knows that, but.</v>
+
+00:10:00.080 --> 00:10:00.510
+<v Furst, Elias>OK.</v>
+
+00:09:57.210 --> 00:10:09.650
+<v Sohoni, Sohum>We will get to the. I know that I'll tell you that in a minute. What about the first instruction though they lowered upward immediate like why are there 2? So I'm telling you that this one instruction is become true and I'm trying to ask you why that might be the case.</v>
+
+00:10:13.990 --> 00:10:21.570
+<v Sohoni, Sohum>Maybe let's step back once and just see what. What does LA the instruction do? What is it supposed to do?</v>
+
+00:10:23.650 --> 00:10:27.020
+<v Bultman, Joshua>Loading address into the in a 0.</v>
+
+00:10:28.130 --> 00:10:38.720
+<v Sohoni, Sohum>Exactly, so it's going to load an address into a zero. That's a perfect answer, and it's the address of this label prompt one.</v>
+
+00:10:39.330 --> 00:10:42.800
+<v Sohoni, Sohum>Right? Because if we go back to our source code, that's.</v>
+
+00:10:43.800 --> 00:10:44.580
+<v Sohoni, Sohum>Mean.</v>
+
+00:10:45.220 --> 00:10:51.300
+<v Sohoni, Sohum>Colon is or I'm sorry not main call. Uh in the data segment we have prompt 1 colon.</v>
+
+00:10:51.950 --> 00:11:03.730
+<v Sohoni, Sohum>That's our label, right and right after that label we've got a string enter a number slash, right? That's our string. So essentially prompt one.</v>
+
+00:11:04.500 --> 00:11:09.610
+<v Sohoni, Sohum>Is the label for the address of where that string is stored.</v>
+
+00:11:10.430 --> 00:11:11.590
+<v Sohoni, Sohum>So everyone with me on that.</v>
+
+00:11:13.460 --> 00:11:43.850
+<v Sohoni, Sohum>And it's the address of that string is what we're trying to load into that register. When we do the LAOK. So let's look at this view again and let me actually point you to this second pain that we have here, which is called the data segment, right? Or which currently is showing us the data segment? And this has a bunch of addresses as well, and you'll notice that the data segments address itself is zero X 1001.</v>
+
+00:11:44.120 --> 00:12:14.410
+<v Sohoni, Sohum>Followed by these three zeros, and if in fact if I were to drop this down, we can look at the text segment, which is where our program is. If I go back and actually bring up the data segment again, and if I were to check on the ASCII box here, which I don't know if you've ever tried doing, but can be very useful. Very interesting what we end up seeing is the actual data segment where we've put these strings. So our first string was enter a number, right? So?</v>
+
+00:12:14.470 --> 00:12:36.830
+<v Sohoni, Sohum>ENTER space space, A space space and Umm, be here. So essentially we're seeing the actual address space with the contents at that address, right? So this address zero X 10010 is a special address. Where are string?</v>
+
+00:12:37.470 --> 00:12:50.110
+<v Sohoni, Sohum>Begins, so it's the beginning address of our string, and that's the address that we actually want to load into dollar A. 0 because we're then going to ask our program to print that string to the screen.</v>
+
+00:12:50.850 --> 00:12:51.550
+<v Sohoni, Sohum>So it makes sense.</v>
+
+00:12:54.940 --> 00:12:57.380
+<v Sohoni, Sohum>Someone is bound to have a question at this point.</v>
+
+00:12:58.110 --> 00:13:00.040
+<v Furst, Elias>I I'm so high.</v>
+
+00:13:00.380 --> 00:13:00.730
+<v Sohoni, Sohum>Yes.</v>
+
+00:13:02.240 --> 00:13:04.120
+<v Furst, Elias>So I looked up what the?</v>
+
+00:13:05.280 --> 00:13:07.850
+<v Furst, Elias>A dollar sign one register is.</v>
+
+00:13:08.510 --> 00:13:08.880
+<v Furst, Elias>Uh.</v>
+
+00:13:08.510 --> 00:13:08.900
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:13:09.850 --> 00:13:14.280
+<v Furst, Elias>Because because a zero is like is registered for.</v>
+
+00:13:14.600 --> 00:13:15.100
+<v Sohoni, Sohum>correct?</v>
+
+00:13:15.300 --> 00:13:15.930
+<v Furst, Elias>So.</v>
+
+00:13:16.880 --> 00:13:17.480
+<v Furst, Elias>Uhm?</v>
+
+00:13:19.020 --> 00:13:29.540
+<v Furst, Elias>The second instruction is basically loading they address into a zero, and so the first instruction is loading it into register one. And uh, what is register one? What like why?</v>
+
+00:13:32.130 --> 00:13:32.430
+<v Sohoni, Sohum>Yeah.</v>
+
+00:13:31.190 --> 00:13:34.440
+<v Furst, Elias>Why does it load it in? Why does it load the address into that register?</v>
+
+00:13:34.790 --> 00:14:05.840
+<v Sohoni, Sohum>Correct, good questions, that's exactly where I was headed, so I'm glad you asked that question. And I like this interaction, so please, please don't feel shy to interrupt and ask questions. So yeah, so dollar one if we look at this pain on the right here, dollar one is nothing but dollar 80 right $1.80 is the name of the register dollar. One is the number of the register. So again here we have three columns, name, number and what it contains. So eight stands for assembler temporary. So that's the register. That are assembler.</v>
+
+00:14:05.900 --> 00:14:16.350
+<v Sohoni, Sohum>He's going to temporarily use for its own calculations, and that's exactly what's going on in this case, and what's happening is that in fact, let's step through.</v>
+
+00:14:17.140 --> 00:14:27.910
+<v Sohoni, Sohum>And see after executing this first instruction, dollar eighty contains zero X 1001 followed by 4 zeros.</v>
+
+00:14:28.950 --> 00:14:29.360
+<v Sohoni, Sohum>OK.</v>
+
+00:14:30.070 --> 00:14:49.640
+<v Sohoni, Sohum>So what's happened is this instruction which stands for load upper immediate has taken a 16 bit value, which is this string of characters here, and it's put those 16 bits in the upper 16 bits of dollar 80 and the next instruction.</v>
+
+00:14:50.330 --> 00:15:08.470
+<v Sohoni, Sohum>He's going to go over that with all zeros and put the result in dollar a zero, effectively loading that address that we're so interested in write the address of the data segment zero X 10010000 in $2.00 a 0 now.</v>
+
+00:15:09.280 --> 00:15:13.270
+<v Sohoni, Sohum>Obviously you might have a question like why is it doing so in 2 steps?</v>
+
+00:15:14.410 --> 00:15:21.690
+<v Sohoni, Sohum>Right, any anyone wanna guess why it's doing it in two steps and why it cannot do it in one step?</v>
+
+00:15:35.070 --> 00:15:36.210
+<v Sohoni, Sohum>Yep, Parker.</v>
+
+00:15:44.220 --> 00:15:45.460
+<v Sohoni, Sohum>We can't hear you buerger.</v>
+
+00:15:47.730 --> 00:15:48.530
+<v Speaker 1>Can you hear me now?</v>
+
+00:15:48.810 --> 00:15:49.330
+<v Sohoni, Sohum>Yes.</v>
+
+00:15:49.940 --> 00:15:54.850
+<v Speaker 1>OK, is there an instance where you only need to do half of that process? Is that why?</v>
+
+00:15:56.350 --> 00:15:57.180
+<v Sohoni, Sohum>Ah.</v>
+
+00:15:58.500 --> 00:16:29.670
+<v Sohoni, Sohum>There are some instances where you need to do just have the process. In fact, I would say the next instruction, the one that's currently highlighted, is actually an example of where, say we're doing a load. Immediate the value 4 into V0, and that's being accomplished in just one instruction. It's an ad I you instruction, so it's not a UI or the override button add I, you and we'll get to that in a second, but what other reason might there be for us to require 2 steps?</v>
+
+00:16:30.050 --> 00:16:31.320
+<v Sohoni, Sohum>To load an address.</v>
+
+00:16:31.970 --> 00:16:33.830
+<v Sohoni, Sohum>They're not be able to do it in one step.</v>
+
+00:16:39.450 --> 00:16:41.480
+<v Sohoni, Sohum>If I don't hear anything, I'll give you some hints.</v>
+
+00:16:42.340 --> 00:16:43.760
+<v Sohoni, Sohum>Well wait 10 seconds.</v>
+
+00:16:49.990 --> 00:16:55.800
+<v Sohoni, Sohum>Alright, let me ask you two questions. How big is an instruction in MIPS? How many bits?</v>
+
+00:17:00.940 --> 00:17:01.830
+<v Bultman, Joshua>32 bits</v>
+
+00:17:02.630 --> 00:17:09.460
+<v Sohoni, Sohum>That is correct. So each instruction is 32 bits. How big is an address typically in MIPS?</v>
+
+00:17:10.330 --> 00:17:14.360
+<v Bultman, Joshua>16 bits. See if the you have to make it bigger. You have to pad it right, kinda?</v>
+
+00:17:15.140 --> 00:17:26.250
+<v Sohoni, Sohum>Oh is it 16 bits? Look at this look at all these addresses. These are all addresses here. Write zero X 1001000, so that's eight hexadecimal digits which represent.</v>
+
+00:17:28.870 --> 00:17:29.620
+<v Sohoni, Sohum>32</v>
+
+00:17:27.110 --> 00:17:30.140
+<v Bultman, Joshua>A two 5655.</v>
+
+00:17:33.080 --> 00:17:33.340
+<v Bultman, Joshua>Yeah.</v>
+
+00:17:37.720 --> 00:17:38.040
+<v Bultman, Joshua>Got it.</v>
+
+00:17:31.580 --> 00:17:38.260
+<v Sohoni, Sohum>32 bits right each hexadecimal digits is 4 bits. We've got eight hexadecimal digits, so 8 * 4 is 32.</v>
+
+00:17:38.880 --> 00:17:48.720
+<v Sohoni, Sohum>So both further text segment the addresses that we see here zero X 00400000 as well as the data segment. All of these addresses are 32 bit addresses.</v>
+
+00:17:49.450 --> 00:17:57.510
+<v Sohoni, Sohum>No. Are you able to see what water issue is our? Our instruction is 32 bits. Our address is 32 bits.</v>
+
+00:17:59.740 --> 00:18:02.830
+<v Sohoni, Sohum>Can we fit a 32 bit address as?</v>
+
+00:18:04.170 --> 00:18:06.400
+<v Sohoni, Sohum>Part of a 32 bit instruction.</v>
+
+00:18:08.350 --> 00:18:08.860
+<v Sohoni, Sohum>Without</v>
+
+00:18:08.280 --> 00:18:10.250
+<v Schilling, Atreyu>So it needs to find the address first.</v>
+
+00:18:11.180 --> 00:18:16.910
+<v Sohoni, Sohum>well, it's not finding it, so essentially what's happening is we've got a total of 32 bits.</v>
+
+00:18:17.700 --> 00:18:48.020
+<v Sohoni, Sohum>And we need some of those bids to tell our computer what the instruction is, right? So things like and what's called an opcode, which tells the the hardware. This is what I want you to do, so each of these instructions, the UI, the OR is going to have an opcode. In addition, we see here we have some operands like. Here we've got the operand dollar one, which is one of the registers in the next instruction we have two operands right at dollar four and a dollar one here. So because these.</v>
+
+00:18:47.360 --> 00:18:48.190
+<v Furst, Elias>So it's.</v>
+
+00:18:48.900 --> 00:18:49.560
+<v Sohoni, Sohum>Yeah, go ahead.</v>
+
+00:18:54.280 --> 00:18:55.630
+<v Sohoni, Sohum>Yeah, it's loading, yeah.</v>
+
+00:18:49.120 --> 00:18:57.030
+<v Furst, Elias>I I sorry I just I it's loading half of the address each time. Yeah, and it just happens that half of it is zeros.</v>
+
+00:18:57.990 --> 00:19:10.860
+<v Sohoni, Sohum>Exactly, it's loading half of it in the upper half, and then it's loading the other half by doing the OR with the 1st 16 bits being zero, and in this particular instance, the next 16 bits also being 0.</v>
+
+00:19:12.570 --> 00:19:42.860
+<v Sohoni, Sohum>So because we don't have enough space to fit a 32 bit immediate operand in our 32 bit instruction, we only have 16 bit immediate operands in MIPS, right? And the other 16 bits are used for things like specifying an operation code or opcode, and then maybe specifying another like a register operand or something else and towards the end of this class period. I'll show you on one of my slides what these encodings actually look like, but essentially that is the issue that.</v>
+
+00:19:42.910 --> 00:20:13.020
+<v Sohoni, Sohum>We run into a with either I load immediate instruction or a load address instruction because we're trying to load a 32 bit number into a register, but we can't really specify the full 32 bits in one go, so we do 16 bits 1st and then we do the other 16 OK. So that's one way the assembler handles our LDA instruction and converts it into two operations in the very next instruction, though, we have and again. By the way, these are called pseudo OPS or pseudo instructions like the LA.</v>
+
+00:20:13.160 --> 00:20:35.050
+<v Sohoni, Sohum>Is not an actual MIPS native instruction. It's a pseudo op which is there for our convenience so that we don't have to do the load upper immediate and over. I will let the assembler do it for us. Similarly, we've gotten an instruction that is of convenience, which is the load. Immediate same issue. A load. Immediate is going to load a 32 bit number and.</v>
+
+00:20:35.870 --> 00:21:06.380
+<v Sohoni, Sohum>So we we can't really have a native instruction that can fit those 32 bits in it, right? So in this case they are similar. Did something really smart, smart? It could have done the same thing with the load upper immediate and or immediate, but it's saw what the number was and it said, oh, that's just a four that fits in 16 bits, so I don't need to instructions to accomplish this. I'm just going to take the lower immediate and instead do an ad.</v>
+
+00:21:06.570 --> 00:21:11.720
+<v Sohoni, Sohum>Immediate unsigned dollar $2.00 zero Zero X 0004.</v>
+
+00:21:12.500 --> 00:21:12.930
+<v Sohoni, Sohum>OK.</v>
+
+00:21:13.730 --> 00:21:31.250
+<v Sohoni, Sohum>How does that work? Well, it accomplishes exactly the same thing. We add immediate unsigned you. What it's doing is it's taking the zero register right Dollar Zero, which always contains a 0. Taking an immediate field of the number 4.</v>
+
+00:21:32.010 --> 00:21:43.970
+<v Sohoni, Sohum>And saying, I'm going to add the four to zero and I'm going to put the result in whatever register I wanted, so dollar V zero which if we look down here, if I can find it.</v>
+
+00:21:44.630 --> 00:21:52.350
+<v Sohoni, Sohum>Oh, it's right here is registered to right, which is why it's got dollar $2.00 zero zero X 00004.</v>
+
+00:21:53.890 --> 00:22:15.680
+<v Sohoni, Sohum>And these 32 bit numbers here are actually a little bit confusing, and that's I think, a big drawback of Mars. It really should be showing only 16 bit numbers here for the immediate, because really they are 16 bit numbers. It's just padding those zeros there, causing unnecessary confusion in my opinion.</v>
+
+00:22:16.260 --> 00:22:25.150
+<v Sohoni, Sohum>But hopefully the concept is clear that we have these pseudo OPS and then we have actual Native assembly code and then.</v>
+
+00:22:25.940 --> 00:22:53.610
+<v Sohoni, Sohum>Tomorrow we're going to look at this column here, which is the actual encoding of the instruction itself, so I'm not going to go into that column today, but I just want you to understand that each of these instructions essentially is a 32 bit number, and that's what this column for code is is showing us OK, and this is something you might have seen in your reading as well. So the other thing I wanted to show with this view of Mars was this whole string here, right?</v>
+
+00:22:55.110 --> 00:23:04.000
+<v Sohoni, Sohum>Does anyone have any questions about what we are seeing here? So at this address zero X 10001 we see these 4 bytes.</v>
+
+00:23:04.860 --> 00:23:16.420
+<v Sohoni, Sohum>Each ASCII character is 1 byte, and so we've got these 4 bytes here at address plus zero and address plus four. We've got two more, I mean four more bytes.</v>
+
+00:23:18.160 --> 00:23:19.510
+<v Sohoni, Sohum>And so on and so forth.</v>
+
+00:23:20.540 --> 00:23:22.690
+<v Sohoni, Sohum>I bet someone has a question about this.</v>
+
+00:23:23.530 --> 00:23:24.470
+<v Bultman, Joshua>Are these in order?</v>
+
+00:23:25.450 --> 00:23:28.080
+<v Sohoni, Sohum>Yeah, why? Why do they look like there?</v>
+
+00:23:29.110 --> 00:23:32.040
+<v Sohoni, Sohum>Like ET and E rather than ENTE.</v>
+
+00:23:33.450 --> 00:23:34.920
+<v Sohoni, Sohum>Does anyone have an answer for me?</v>
+
+00:23:40.100 --> 00:23:41.090
+<v Schilling, Atreyu>Ended this.</v>
+
+00:23:41.830 --> 00:23:43.460
+<v Sohoni, Sohum>Exactly, you got it.</v>
+
+00:23:44.190 --> 00:24:02.110
+<v Sohoni, Sohum>It's all about the endianness here, right? So essentially, this address has four bytes. Now they could be in the capital ENTE order, but they happen to be in the opposite order because our machine is big endian.</v>
+
+00:24:03.560 --> 00:24:23.150
+<v Sohoni, Sohum>OK, so it's just a matter of seeing this and becoming comfortable with it, but essentially it's got 4/4 bytes here the next 4 after that. The next 4 after that and so on and so forth. And the reason why I see we see two spaces here is because in the other section I was just illustrating.</v>
+
+00:24:23.830 --> 00:24:34.710
+<v Sohoni, Sohum>This whole thing and I said, let's change the spacing just so you see that that's actually affecting what's going on in the data segment. So if we do that again this time, you see.</v>
+
+00:24:35.680 --> 00:24:38.980
+<v Sohoni, Sohum>The instead of two spaces there we've got.</v>
+
+00:24:39.650 --> 00:24:43.850
+<v Sohoni, Sohum>Well, let me actually be more extreme and just remove the spaces then.</v>
+
+00:24:45.000 --> 00:24:47.790
+<v Sohoni, Sohum>Then you'll see all the characters 1 by 1.</v>
+
+00:24:49.550 --> 00:24:50.980
+<v Sohoni, Sohum>Alright listen, whoops.</v>
+
+00:24:54.290 --> 00:24:55.900
+<v Sohoni, Sohum>Ah, it's a symbol.</v>
+
+00:24:56.740 --> 00:25:27.060
+<v Sohoni, Sohum>There you go. So now we don't see any spaces here, so ENTERA and you murder and so on and so forth. OK, so that's how your characters are actually stored in memory over there and once we end with one and this slash 0 is essentially the end. So because we were saying this is ask easy right that Z part of the ask Easy is saying that this is going to be a null terminated string and essentially the null character.</v>
+
+00:25:27.260 --> 00:25:28.950
+<v Sohoni, Sohum>Is the slash 0.</v>
+
+00:25:29.560 --> 00:25:35.540
+<v Sohoni, Sohum>Max what's going on there? OK, then we have the slash in which we actually put in there and then.</v>
+
+00:25:36.160 --> 00:25:52.970
+<v Sohoni, Sohum>The rest of the the strings that we have, right? So our data segment essentially goes from zero X 1001002 a whole lot more OK, but we are only using up to this point here.</v>
+
+00:25:53.920 --> 00:26:00.280
+<v Sohoni, Sohum>Write this address of 1001002048.</v>
+
+00:26:00.910 --> 00:26:02.650
+<v Sohoni, Sohum>10 So essentially 30.</v>
+
+00:26:03.280 --> 00:26:04.440
+<v Sohoni, Sohum>Is where our.</v>
+
+00:26:05.490 --> 00:26:09.100
+<v Sohoni, Sohum>Addressing ends as far as our usage of the data segment is concerned.</v>
+
+00:26:09.910 --> 00:26:25.670
+<v Sohoni, Sohum>So everyone clear on what's going on in in the data segment and and stuff like that. And let's actually do one other thing. So in this data segment, why don't we add a number? How do we add a number here? So in in in anyone tell me?</v>
+
+00:26:29.350 --> 00:26:30.900
+<v Bultman, Joshua>Is it word got word?</v>
+
+00:26:31.720 --> 00:26:34.490
+<v Sohoni, Sohum>Alright, let's try not word and what?</v>
+
+00:26:37.790 --> 00:26:38.550
+<v Sohoni, Sohum>Just the number.</v>
+
+00:26:36.940 --> 00:26:41.120
+<v Bultman, Joshua>And then just a number. Yeah, you have to add a title to their right?</v>
+
+00:26:42.530 --> 00:26:43.380
+<v Sohoni, Sohum>Sorry, I'm bored.</v>
+
+00:26:43.970 --> 00:26:47.160
+<v Bultman, Joshua>Did you have to add a title to the word so that you can like label it?</v>
+
+00:26:49.640 --> 00:26:50.990
+<v Sohoni, Sohum>I think that'll be a good idea.</v>
+
+00:26:51.910 --> 00:26:55.480
+<v Sohoni, Sohum>So let's call it my number. Something like that.</v>
+
+00:26:57.350 --> 00:27:01.310
+<v Sohoni, Sohum>I think this will work or I need something better. I need a colon I'm assuming.</v>
+
+00:27:03.060 --> 00:27:05.210
+<v Bultman, Joshua>And then the word has to come after the colon, right?</v>
+
+00:27:07.530 --> 00:27:08.680
+<v Sohoni, Sohum>Let's see ordered.</v>
+
+00:27:08.910 --> 00:27:09.330
+<v Sohoni, Sohum>Yes.</v>
+
+00:27:10.140 --> 00:27:12.020
+<v Sohoni, Sohum>No, it doesn't seem to mind.</v>
+
+00:27:13.110 --> 00:27:26.720
+<v Sohoni, Sohum>But then it doesn't. It's God like, oh, 'cause we've said ASCII here. Let's get rid of. In this case, we've got 22 over here. Let's go back here. I'm sorry. What were you saying? You needed something else here?</v>
+
+00:27:27.860 --> 00:27:28.490
+<v Bultman, Joshua>Oh, never mind.</v>
+
+00:27:29.380 --> 00:27:30.230
+<v Sohoni, Sohum>We don't need any.</v>
+
+00:27:30.810 --> 00:27:33.750
+<v Sohoni, Sohum>I don't remember. Frankly I I don't use models every day, so.</v>
+
+00:27:34.550 --> 00:27:37.130
+<v Sohoni, Sohum>I don't remember how to do these things.</v>
+
+00:27:37.440 --> 00:27:37.790
+<v Toohill, Teresa>I'm.</v>
+
+00:27:37.320 --> 00:27:40.550
+<v Bultman, Joshua>I was just looking at the prompt and kind of copying the format.</v>
+
+00:27:41.950 --> 00:27:46.190
+<v Bultman, Joshua>Whereas has the the label and then it's the dot dot word.</v>
+
+00:27:47.770 --> 00:27:49.470
+<v Bultman, Joshua>And then the number comes after that.</v>
+
+00:27:50.770 --> 00:27:54.360
+<v Sohoni, Sohum>Oh, we should have had dot word after.</v>
+
+00:27:54.820 --> 00:27:55.670
+<v Bultman, Joshua>My number yeah.</v>
+
+00:27:55.270 --> 00:27:55.760
+<v Sohoni, Sohum>Label</v>
+
+00:27:56.390 --> 00:27:58.420
+<v Bultman, Joshua>I think I don't, I don't know. I'm not quite sure.</v>
+
+00:27:58.640 --> 00:27:59.940
+<v Toohill, Teresa>No, I'm pretty sure that's right.</v>
+
+00:28:03.700 --> 00:28:05.810
+<v Sohoni, Sohum>he doesn't mind this either.</v>
+
+00:28:06.930 --> 00:28:10.270
+<v Sohoni, Sohum>So we've got the four like we expected with that.</v>
+
+00:28:10.760 --> 00:28:16.510
+<v Bultman, Joshua>OK, so it works differently than I thought. It like set when you do doubt word it kind of just like changes the mode that you're.</v>
+
+00:28:18.220 --> 00:28:19.550
+<v Bultman, Joshua>That you're labeling, right?</v>
+
+00:28:20.730 --> 00:28:38.010
+<v Sohoni, Sohum>Well, OK, so let's get into a little bit of the weeds here. So what's happening is my number. Colon is again just specifying an address and what we are now saying with the word is add this address. I have a word and the value of that word is 4.</v>
+
+00:28:39.950 --> 00:28:40.380
+<v Sohoni, Sohum>OK.</v>
+
+00:28:41.510 --> 00:28:41.860
+<v Bultman, Joshua>Yep.</v>
+
+00:28:42.050 --> 00:28:46.300
+<v Sohoni, Sohum>Did the other way round. Let's remove this. Let's put that here.</v>
+
+00:28:47.220 --> 00:28:48.170
+<v Sohoni, Sohum>Let's assemble.</v>
+
+00:28:49.220 --> 00:28:56.610
+<v Sohoni, Sohum>We still get the four in the right place here. It's not a problem, and it's not a problem because what's happened is again.</v>
+
+00:28:57.420 --> 00:29:08.360
+<v Sohoni, Sohum>We're just saying dot word. This is just a label, so they assembler just treats that as oh this pointing to an address and add that address. We've got the value 4.</v>
+
+00:29:12.120 --> 00:29:12.740
+<v Sohoni, Sohum>Makes sense.</v>
+
+00:29:16.130 --> 00:29:26.080
+<v Sohoni, Sohum>I would highly recommend following whatever order was specified in in the slides, which I think was was this over here, right? This is how we want it.</v>
+
+00:29:30.680 --> 00:29:45.890
+<v Sohoni, Sohum>But as we saw in either case, we're good and we're able to see that ad and that address, right? We've got a 32 bit number, which is, which has the value 4 and then we have our strings. So then if we do the dot ASCII.</v>
+
+00:29:46.750 --> 00:30:01.980
+<v Sohoni, Sohum>Obviously in the ASCII the number 4 doesn't make any sense, so this isn't really readable from that perspective. But then the rest of the stream part of it does make sense in ASCII, so it does make sense to see it in ASCII here.</v>
+
+00:30:05.170 --> 00:30:10.640
+<v Sohoni, Sohum>Alright, so those were the main things, so pseudo OPS versus actual assembly instructions.</v>
+
+00:30:11.110 --> 00:30:19.520
+<v Sohoni, Sohum>Uhm, and again, even the distinction between some pseudo OPS. They've become multiple instructions, other pseudo apps that may or may not become multiple instructions.</v>
+
+00:30:19.970 --> 00:30:40.370
+<v Sohoni, Sohum>Uh, and then making sure you can you understand what the data segment is and how it it works and also the the fact that each instruction is 32 bits and each instruction has its address and each instruction has its encoding. So those are the main things I wanted to hit. I also just want to quickly show there's a settings.</v>
+
+00:30:40.890 --> 00:30:41.610
+<v Sohoni, Sohum>Ah.</v>
+
+00:30:42.430 --> 00:31:05.910
+<v Sohoni, Sohum>Option there and in the settings you can change like editor options. So if for example the green color for the comments was a little too much for me, and so I didn't like that color. So I just picked a different color for for comments. So you can I think just click here. It brings up a menu for you and you can pick any other.</v>
+
+00:31:07.000 --> 00:31:08.180
+<v Sohoni, Sohum>Color of that you want.</v>
+
+00:31:09.750 --> 00:31:12.670
+<v Sohoni, Sohum>And then the comments become that color.</v>
+
+00:31:14.800 --> 00:31:27.130
+<v Sohoni, Sohum>So some dangerous color that I picked. I think there is. My instructions are also the same color, so I'll I'll fix that at some point. But yeah, you could play around with the settings, don't.</v>
+
+00:31:27.850 --> 00:31:50.150
+<v Sohoni, Sohum>Check or uncheck anything about the editor stuff, because that might break how Mars works for you until you have a better understanding of what they mean. Uh oh, there's a question. Is there a dark mode? I think Mars was written before the concept of dark mode existed, so I don't think there is a dark mode, but you could, I suppose.</v>
+
+00:31:50.920 --> 00:31:51.830
+<v Sohoni, Sohum>Uhm?</v>
+
+00:31:53.200 --> 00:31:57.290
+<v Sohoni, Sohum>I don't know if you can actually set the color of the background to be.</v>
+
+00:31:58.250 --> 00:31:59.070
+<v Sohoni, Sohum>Not quite.</v>
+
+00:32:00.090 --> 00:32:02.210
+<v Sohoni, Sohum>Is anyone tried that I I have never tried it.</v>
+
+00:32:06.080 --> 00:32:08.900
+<v Sohoni, Sohum>Yeah, I don't. I don't actually see an option for the.</v>
+
+00:32:10.010 --> 00:32:11.710
+<v Sohoni, Sohum>The editor background.</v>
+
+00:32:12.820 --> 00:32:14.650
+<v Sohoni, Sohum>Over here so.</v>
+
+00:32:16.210 --> 00:32:16.660
+<v Sohoni, Sohum>Yeah.</v>
+
+00:32:18.270 --> 00:32:20.160
+<v Sohoni, Sohum>I guess not is what I'm going to say.</v>
+
+00:32:22.870 --> 00:32:24.280
+<v Sohoni, Sohum>Probably isn't it darling?</v>
+
+00:32:25.920 --> 00:32:38.120
+<v Sohoni, Sohum>Alright, I've changed my comment color again, so yeah, those were the main things I wanted to hit with my bringing up of Mars. If there's any questions on Mars itself, just please let me know.</v>
+
+00:32:38.630 --> 00:32:39.960
+<v Sohoni, Sohum>Uhm, no.</v>
+
+00:32:40.580 --> 00:33:11.240
+<v Sohoni, Sohum>Move ahead with the the slides for now. So as I was saying earlier, right? What? What really is an instruction? It's just a collection of bits, right? It's just a sequence of zeros and ones. In our case, with the 32 bit MIPS that we're looking at, our instructions are each going to be 32 bits long, right? So there's that's what an instruction is. Let's take a look at load word dollar eight, $0.00 nine, which I have to ask someone, tell me what? What does this do?</v>
+
+00:33:11.560 --> 00:33:13.010
+<v Sohoni, Sohum>What does this instruction do?</v>
+
+00:33:20.160 --> 00:33:24.380
+<v Sohoni, Sohum>Teresa, if you're answering your, you're muted, so unless you're talking to yourself.</v>
+
+00:33:24.560 --> 00:33:25.970
+<v Toohill, Teresa>I'm talking to myself, sorry.</v>
+
+00:33:26.380 --> 00:33:26.820
+<v Sohoni, Sohum>OK.</v>
+
+00:33:27.830 --> 00:33:34.590
+<v Schilling, Atreyu>It loads the address that's specified in register 9 into register 8 as a word.</v>
+
+00:33:36.870 --> 00:33:46.980
+<v Sohoni, Sohum>Close, I think you've used good words there, but there's something that I didn't like about your answers. Then you want to give a slightly different answer.</v>
+
+00:33:49.790 --> 00:33:50.980
+<v Bultman, Joshua>It like loads.</v>
+
+00:33:52.040 --> 00:33:52.650
+<v Bultman, Joshua>Uh.</v>
+
+00:33:54.890 --> 00:33:56.440
+<v Bultman, Joshua>From the memory, I think.</v>
+
+00:33:56.980 --> 00:33:57.350
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:33:57.330 --> 00:34:00.500
+<v Bultman, Joshua>Offset by Edward from the address that's in.</v>
+
+00:34:02.240 --> 00:34:03.780
+<v Bultman, Joshua>$9 sign.</v>
+
+00:34:04.780 --> 00:34:29.600
+<v Sohoni, Sohum>excellent, Yep. So it's always think of load as a two step three step process in a way. OK so the most common misconception is that it takes what is in dollar line inputs that in dollar rates. That's not true at all. That's a move instruction that not not load a load is a three step process. First we can use this offset here and we look at what the value of.</v>
+
+00:34:30.270 --> 00:34:46.820
+<v Sohoni, Sohum>This register is OK. So what does this register contain? What is its value? So dollar nine, whatever the value is in dollar nine, we add the offset to it and we get a new address based on that. OK, so that's step one. Step 2 is to go to that address.</v>
+
+00:34:47.260 --> 00:34:58.320
+<v Sohoni, Sohum>OK, and step three is to take whatever was add that address in memory and load that into our destination register, which is dollar rate.</v>
+
+00:34:59.100 --> 00:35:15.830
+<v Sohoni, Sohum>OK, so load instruction is is this three step process and in this case this is 0, so obviously there offset addition is not going to change anything, so dollar nine in this case contains some 32 bit value which is going to be assumed to be an address.</v>
+
+00:35:16.780 --> 00:35:31.000
+<v Sohoni, Sohum>Right, and our hardware is going to go look at that address in memory. Take whatever is there, take the 32 bit value that is at that address and load it into our register eight. OK, so the encoding of that instruction.</v>
+
+00:35:31.950 --> 00:35:44.720
+<v Sohoni, Sohum>Essentially translates to an opcode, which in this case happens to be 100011, which I'm never going to ask you to memorize any of the OP codes for any of the instructions. That's just a waste of time.</v>
+
+00:35:45.650 --> 00:36:15.300
+<v Sohoni, Sohum>But I do want you to understand that the topmost 6 bits of all MIPS instructions are always going to be an opcode. OK, or the operation code, or essentially what tells the machine what this instruction is supposed to do, or what kind of instruction it is? So in this case it sees this pattern here of these 6 bits and the six bit pattern tells it that this is a load word instruction. The next two fields are a 5 bit field for Rs, which is the source register.</v>
+
+00:36:15.360 --> 00:36:41.920
+<v Sohoni, Sohum>And RT, which is the target register OK, and as you can see this value is 01001 which is a 9 so R source register right from where we're getting the address where we want to go to memory is the number nine or dollar nine and then RT or the target register where we actually want to load the stuff from memory is 01000 which is the number 8. So that's register 8.</v>
+
+00:36:42.740 --> 00:36:47.280
+<v Sohoni, Sohum>Everyone with me so far on the 1st, like their upper 16 bits of what we have here.</v>
+
+00:36:49.290 --> 00:37:03.980
+<v Sohoni, Sohum>So inop court in two registers that are being specified the last half of this instruction, or the lower 16 bits is nothing but our offset. OK, so because this is zero over here, that's why all these 16 bits are zero.</v>
+
+00:37:06.360 --> 00:37:09.500
+<v Sohoni, Sohum>If that officer was four, then this would be.</v>
+
+00:37:10.170 --> 00:37:14.360
+<v Sohoni, Sohum>And all these zeros followed by 100.</v>
+
+00:37:15.920 --> 00:37:16.640
+<v Sohoni, Sohum>Which is 4.</v>
+
+00:37:17.970 --> 00:37:29.640
+<v Sohoni, Sohum>So that's how this load instruction gets encoded. So we have 6 bits of opcode, 5 bits for register for another, fibers for register, and then what's known as an immediate or an offset field.</v>
+
+00:37:30.340 --> 00:37:55.570
+<v Sohoni, Sohum>OK, and all I type instructions or all immediate instructions in MIPS follow this encoding pattern. Whether it's load word, whether it's a branch instruction, whether it's an ad, immediate instruction, all the immediate or I type instructions, and this is something you I'm sure you've read as part of reading Chapter 2. But I'm just reinforcing that. Or maybe in chapter 3.</v>
+
+00:37:56.010 --> 00:38:03.950
+<v Sohoni, Sohum>Uhm, but this is how the types are encoded in MIPS. OK, any questions before I move ahead.</v>
+
+00:38:11.270 --> 00:38:13.720
+<v Sohoni, Sohum>OK, no questions. Let's keep going.</v>
+
+00:38:14.270 --> 00:38:44.600
+<v Sohoni, Sohum>Uhm, the jump instruction is what's called a J type instruction, and it's encoded a slightly different way. Once again, the top 6 bits are always going to be the opcode, so the jump instruction is going to have some opcodes, which is 6 bits. And then, because our jump is essentially telling it to go to some address right, we want to sort of maximize how many bits we can have four that address so that we can jump far whether it's back or forward. We we can have a big.</v>
+
+00:38:44.860 --> 00:38:53.440
+<v Sohoni, Sohum>Signed the number that we can have their which actually not assigned number. It's an unsigned number because it's giving.</v>
+
+00:38:54.440 --> 00:38:59.060
+<v Sohoni, Sohum>Uhm, be the address of where we want to go to.</v>
+
+00:38:59.900 --> 00:39:04.430
+<v Sohoni, Sohum>OK, when we jump and it's kind of tricky to talk about it.</v>
+
+00:39:06.330 --> 00:39:16.210
+<v Sohoni, Sohum>Because the actual the way it's done is is tricky, so it's using those 26 bids essentially right. But these bits are.</v>
+
+00:39:17.610 --> 00:39:20.540
+<v Sohoni, Sohum>I'm always going to be on a boundary of four.</v>
+
+00:39:21.340 --> 00:39:26.260
+<v Sohoni, Sohum>What do you think that's the case? Why would they be on a boundary of four or be a multiple of 4?</v>
+
+00:39:37.560 --> 00:39:39.580
+<v Kreitzman, Colton>Isn't that how many is taken up by a register?</v>
+
+00:39:40.760 --> 00:40:02.070
+<v Sohoni, Sohum>Uh, by ear registered, that is true, but not exactly related. If you look here, right? We've got all these addresses. 00 then we've got 48C, which is 12, one zero which is 16, one four which is 20 and so on. So all of these are multiples of four. What do you think that's the case?</v>
+
+00:40:07.160 --> 00:40:07.950
+<v Furst, Elias>32 bit</v>
+
+00:40:06.960 --> 00:40:08.470
+<v Stepp, Kameron>For taxi decimals, 4 bits.</v>
+
+00:40:11.550 --> 00:40:13.490
+<v Sohoni, Sohum>Sorry, two people speaking at the same time.</v>
+
+00:40:29.630 --> 00:40:30.360
+<v Furst, Elias>Uh, hi.</v>
+
+00:40:30.990 --> 00:40:31.410
+<v Furst, Elias>Hum.</v>
+
+00:40:28.220 --> 00:40:31.610
+<v Sohoni, Sohum>No ones talking now. The last I think you've unmuted.</v>
+
+00:40:33.800 --> 00:40:34.170
+<v Furst, Elias>Alright.</v>
+
+00:40:35.080 --> 00:40:37.840
+<v Furst, Elias>32 bits is 4 bytes.</v>
+
+00:40:38.470 --> 00:40:45.340
+<v Sohoni, Sohum>Oh I, I think I heard I think I heard you. It was very soft but I think you said each instruction is 4 bytes.</v>
+
+00:40:45.520 --> 00:40:46.000
+<v Furst, Elias>Yeah.</v>
+
+00:40:47.180 --> 00:41:17.970
+<v Sohoni, Sohum>And that's exactly the answer, right? So as we said MIPS, all instructions or 32 bits, right? Which is 4 bytes. So because each instruction is 4 bytes, we can't really have an address that's pointing into the middle of an instruction, right? It's always going to be a full instruction. Because of that, all our address is here as far as jumping to a particular address is concerned. It's always going to be on a boundary of four. Because of that, our jump instruction.</v>
+
+00:41:18.770 --> 00:41:49.030
+<v Sohoni, Sohum>Has it 26 bit number which actually shifts around, so we shift it twice to the left to multiply it by 4:00 to get it on a four bit boundary, and then we use the top so that that gives us 28 bits. Now if you think about, we've got 26 bits, we shift them left twice. We now have a 28 bit number and that still leaves 4 bits or us that we are unaccounted for because each address is 32 bits, right? So what we do then?</v>
+
+00:41:49.080 --> 00:42:08.230
+<v Sohoni, Sohum>Is we use the the top 4 bits of the current program counter value and use that plus the 28 bits are not plus but appended to create a 32 bit number. OK so this is a little more complicated than maybe you need to know, but it's how it is done so.</v>
+
+00:42:09.040 --> 00:42:38.600
+<v Sohoni, Sohum>I mean I, I don't have a different way of telling you what it is because that's how it is. OK, we will see a video next week which really walks you through the entire what's called the data path of the computer. It shows you how a 32 bit instruction gets divvied up into the bits that control this, and the bits that access this and and so on and so forth would see that next week. And at that point the jump. In that video we also explained the jump instruction, which should make it.</v>
+
+00:42:39.300 --> 00:42:42.440
+<v Sohoni, Sohum>Make it clear as far as you are concerned though.</v>
+
+00:42:43.140 --> 00:43:02.830
+<v Sohoni, Sohum>How do jumps take place, right? You just give a label and you say jump to that label, so thankfully you're not calculating all of these things. The assembler is doing them for you. I just thought you should know what's what's going on with this. OK, so there's a question. Is this why 64 bit 4 bit OS makes it so you can have more memory?</v>
+
+00:43:03.850 --> 00:43:23.510
+<v Sohoni, Sohum>Yeah, so that's exactly why because 64 bit operating systems have a larger address space is what it's called because they can address more memory with 64 bits than one can address with 32 bits as the bids go smaller. Obviously you have less and less of a space that you can index into.</v>
+
+00:43:24.500 --> 00:43:34.250
+<v Sohoni, Sohum>So yeah, let me switch back to Mars and I don't know if our code had any jumps. It didn't. So let me actually pull up another.</v>
+
+00:43:34.850 --> 00:44:06.190
+<v Sohoni, Sohum>Piece of code that I have. You don't need to look at everything that's in there. Oh actually, never mind. I changed it in class at 1:00 PM so it doesn't have what we need. Let's just put a jump instruction in there. OK, let me go down here to the end of my code and let me put a jump instruction. So let's say J and then we just give it a target. So we had main as a as a label, right? So if we did Jay Maine?</v>
+
+00:44:06.330 --> 00:44:08.550
+<v Sohoni, Sohum>What do you think is going to happen to this program now?</v>
+
+00:44:15.310 --> 00:44:16.080
+<v Schilling, Atreyu>It's gonna loop.</v>
+
+00:44:17.230 --> 00:44:19.770
+<v Sohoni, Sohum>Yeah, it's going to loop infinitely.</v>
+
+00:44:21.410 --> 00:44:26.410
+<v Sohoni, Sohum>Right we we just created an infinitely looping program 'cause it's always going to come down to this.</v>
+
+00:44:27.260 --> 00:44:50.740
+<v Sohoni, Sohum>Line of code here, which is going to just tell it to go back up to the top so it will keep just running through the code endlessly, so that wasn't the point. What I wanted to show you really was how the encoding of the jump instruction looks. So here we've got the jamagne right and it's encoding looks a little bit like this. Zero X 00400000.</v>
+
+00:44:51.350 --> 00:44:54.750
+<v Sohoni, Sohum>Or does that address that address is actually nothing but?</v>
+
+00:44:55.850 --> 00:44:57.070
+<v Sohoni, Sohum>The start of our.</v>
+
+00:44:58.260 --> 00:45:09.660
+<v Sohoni, Sohum>Text segment right where our code is, so it's essentially the address of the first instruction. So is the jump instruction is just encoded that way to, say, take this and just go to that address there?</v>
+
+00:45:11.390 --> 00:45:16.970
+<v Sohoni, Sohum>And the shifting and all of that actually takes place, sort of behind the scenes. You don't need to worry about it too much.</v>
+
+00:45:18.340 --> 00:45:22.700
+<v Sohoni, Sohum>Any questions at this point? We've got 5 minutes left a little Under 5 actually.</v>
+
+00:45:28.260 --> 00:45:57.970
+<v Sohoni, Sohum>So yeah, I'm not not hearing any questions, so and R type instruction has three register operands, which is why it's called R type. The R stands for registered, and so again the top 6 bits always the opcodes. And then we've got 5 bits each for three registers. We've got another 5 bits for what's called the shift amount, and then we've got 6 bits for what's called the function field. Now I might not get through all of this today, and I'm happy to go over there.</v>
+
+00:45:58.260 --> 00:46:19.190
+<v Sohoni, Sohum>Being parts or tomorrow and we made, but I do want to ask you a question about these 5 bits that specify register. So we saw even in the I type there were five bits to specify. Register here again in the R type we've got 5 bits to specify. Register why the number 5? What's magical about that?</v>
+
+00:46:24.740 --> 00:46:26.740
+<v Kreitzman, Colton>Is that all you need to reach all the registers?</v>
+
+00:46:27.830 --> 00:46:28.800
+<v Sohoni, Sohum>Yes, but why?</v>
+
+00:46:30.590 --> 00:46:32.180
+<v Kreitzman, Colton>'cause there's only 32 registers.</v>
+
+00:46:33.000 --> 00:46:41.060
+<v Sohoni, Sohum>Yes, and two to the power five is 32, right? So just wanted to make sure that you understand that when we design hardware.</v>
+
+00:46:41.680 --> 00:46:55.820
+<v Sohoni, Sohum>It's a pretty complex process where the number of registers determines what the instruction encoding is going to look like, and vice versa. So if we had fewer bits, for example, we would have to figure out well if we have just a 16 bit.</v>
+
+00:46:56.930 --> 00:47:26.740
+<v Sohoni, Sohum>Architecture for example. Then we might not have the luxury of having 32 registers because 5 bits for encoding these. That's 15 in an R type instruction, which leaves one bit to do anything else, and that's going to be a problem, right? So in 16 bit architecture is likely not going to have 32 general purpose or addressable registers, it's going to have fewer, more likely it's going to have eight registers right? Which means we can spare 3 bits.</v>
+
+00:47:27.260 --> 00:47:39.350
+<v Sohoni, Sohum>Uh, for specifying which registered waxes. So these things are interrelated, and so the encoding isn't, you know, just something that arbitrarily gets decided, but it depends on a bunch of things.</v>
+
+00:47:39.800 --> 00:48:09.430
+<v Sohoni, Sohum>OK, so it looks like I have a couple of minutes. Maybe I'll continue with the R type, So what happens within R type instruction is that these opcode bits tend to be 0 for all our arithmetic and logic instructions, and instead we use the last 6 bits here called the funct or the function field to specify what we want the ALU to actually do. And again, the reasons for that are sort of hardware oriented.</v>
+
+00:48:09.710 --> 00:48:40.540
+<v Sohoni, Sohum>And when we see the actual data path, some of that reasoning will become more evident, because the funk field drives is sort of selector that actually drives the ALU itself. But one of the more logical things behind it is, you know, with six bits of opcode, we only have 64 possible instructions, and this combination of saying OK, we're going to make all of these bits 0 for a certain kind of instruction, and then use these other 6 bits.</v>
+
+00:48:40.700 --> 00:48:42.830
+<v Sohoni, Sohum>Actually gives us more possibilities.</v>
+
+00:48:43.460 --> 00:48:45.720
+<v Sohoni, Sohum>To have different functionality.</v>
+
+00:48:46.410 --> 00:48:55.450
+<v Sohoni, Sohum>Right? 'cause now we have like almost a two level indexing where we say oh if this is all zeros then we have 64 more possible functions that we can have.</v>
+
+00:48:56.510 --> 00:49:04.190
+<v Sohoni, Sohum>And so that gives us 63 where these are not all zeros plus 64 where they're all zeros.</v>
+
+00:49:04.950 --> 00:49:22.550
+<v Sohoni, Sohum>So we've almost doubled the the different types of operations or machine can do by doing this little cheat over here. And that was only possible because we had some bits leftover. Obviously if we didn't have bits leftover, we would have a problem in that case, so.</v>
+
+00:49:23.570 --> 00:49:53.100
+<v Sohoni, Sohum>I'll I'll stop here because again, you're not going to be designing these machines. You're not computer engineers, but we want you to just have a taste of what it takes to think about designing an instruction set architecture and the hardware behind the machine. And these are some of the the the thoughts that go into all of that. OK, so my last slides are essentially just showing you the three types the R type I type J type the encoding here.</v>
+
+00:49:53.710 --> 00:50:00.840
+<v Sohoni, Sohum>Come and just the fact that these are specifying registers over here? OK, so it's 350.</v>
+
+00:50:01.570 --> 00:50:25.700
+<v Sohoni, Sohum>Uh, I guess I'll let you go. And we'll, we'll do some in class sort of coding assembly programming exercises tomorrow. But as I said, I'm comfortable with where this section is in terms of doing that, so I might actually talked for more tomorrow and give you even less time for the in class. So that way you have to do it outside of class though.</v>
+
+00:50:27.830 --> 00:50:29.150
+<v Sohoni, Sohum>Alright, see you tomorrow.</v>
+
+00:50:31.720 --> 00:50:32.150
+<v Bultman, Joshua>Bye.</v>
+
+00:50:32.190 --> 00:50:32.480
+<v Sohoni, Sohum>Right?</v>
+
+00:50:33.260 --> 00:50:33.940
+<v Rolando, Jackson>Thanks so much.</v>
+
+00:50:33.630 --> 00:50:34.110
+<v Sohoni, Sohum>Thanks so much.</v>
+
+00:50:35.710 --> 00:50:36.240
+<v Sohoni, Sohum>Welcome.</v>

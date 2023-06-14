@@ -1,0 +1,340 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:08.160
+<v Sohoni, Sohum>So I sent an announcement earlier today with your team information for the small group sessions for tomorrow.</v>
+
+00:00:08.990 --> 00:00:15.560
+<v Sohoni, Sohum>And I think it's pretty self explanatory, but if there's any questions anyone has so I'm happy to answer those right now.</v>
+
+00:00:18.980 --> 00:00:21.970
+<v Bultman, Joshua>Uh, do you want us to meet in person or do? Or is it gonna be on teams?</v>
+
+00:00:22.400 --> 00:00:50.980
+<v Sohoni, Sohum>It's on teams. Yeah, so that's a good question, so I'll log in and start their teams meeting just like normal like tomorrow. At 3:00 o'clock. I'll start the meeting and then Group One essentially joins at at 3:00 o'clock and we'll meet for 10 minutes and then Group 1 leaves the meeting and then Group 2 joins. So each of you only has to attend for 10 minutes tomorrow and be part of the group discussion for whatever topics we talk about.</v>
+
+00:00:53.210 --> 00:00:57.630
+<v Sohoni, Sohum>That's that's why I have the times like 310, three, 2330 and so on.</v>
+
+00:00:58.860 --> 00:00:59.780
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:01:00.380 --> 00:01:00.660
+<v Sohoni, Sohum>Yeah.</v>
+
+00:01:02.140 --> 00:01:03.800
+<v Sohoni, Sohum>Alright good good.</v>
+
+00:01:05.130 --> 00:01:07.660
+<v Sohoni, Sohum>Alright, so let me start sharing the screen.</v>
+
+00:01:09.830 --> 00:01:17.380
+<v Sohoni, Sohum>So what I wanted to talk today was something you're reading in the book right now, which is multiplication OK?</v>
+
+00:01:18.110 --> 00:01:19.090
+<v Sohoni, Sohum>And.</v>
+
+00:01:20.200 --> 00:01:48.640
+<v Sohoni, Sohum>We're just going to do just one example with two different ways of doing the multiplication, and then the rest of the class period. You guys are going to do an activity where you do exactly what I'm just showing you now. OK, at any point if you have a question, just feel free to interrupt and just ask the question because I'm not monitoring the other window. Still having some trouble with the computer screen, so just unmute and talk OK.</v>
+
+00:01:49.870 --> 00:02:07.550
+<v Sohoni, Sohum>So we're going to multiply 2 numbers were picking 4 bit numbers, 'cause they're easy for us to work with rather than 32 bit numbers. 'cause that's a lot of ones and zeros. So 1101 and 0110, right? So what is 1101 in in decimal?</v>
+
+00:02:14.270 --> 00:02:14.910
+<v Bultman, Joshua>13</v>
+
+00:02:15.390 --> 00:02:17.180
+<v Sohoni, Sohum>Yep 1 plus.</v>
+
+00:02:17.590 --> 00:02:29.200
+<v Sohoni, Sohum>Uh, where is it? 1 + 4 + 8 right 13? And then we've got 2 + 4, which is 6, so we've got 13 * 6, which would be how much?</v>
+
+00:02:36.110 --> 00:03:05.700
+<v Sohoni, Sohum>78 You got it. OK alright, so at the end when we're done with walking through our algorithm here with the hardware we expect to get the binary #478. OK, so this is the more basic version of multiplication which follows sort of the logic that you would if you were hand multiplying these two numbers right? If you were hand multiplying them, and by that I mean just write down on a piece of paper and then say.</v>
+
+00:03:06.100 --> 00:03:36.250
+<v Sohoni, Sohum>Well, 1101 times zero is 01101 times one is one I mean 1101 and then you sort of, you know slant that out and then add them up. So that's exactly what we're going to do here using this hardware. So we've got the multiplicand register in which we've got the multiplicand. We've got the multiplier register where we have our multiplier and then we have a product register which is going to obviously have the result of our multiplication. OK, so notice that these.</v>
+
+00:03:36.750 --> 00:03:38.090
+<v Sohoni, Sohum>4032 bit</v>
+
+00:03:38.770 --> 00:03:42.380
+<v Sohoni, Sohum>architecture. We're going to have 64 bit.</v>
+
+00:03:43.100 --> 00:04:00.920
+<v Sohoni, Sohum>Product Lu and multiplicand registers. And that's because we're shifting things around and we need those additional bits. OK, so in our case we just 4 bits we're going to look at 8 bit numbers for these two guys. Any questions before we start? This is the initial condition of the hardware.</v>
+
+00:04:02.520 --> 00:04:03.970
+<v Sohoni, Sohum>Pause for 10 seconds.</v>
+
+00:04:11.960 --> 00:04:19.030
+<v Sohoni, Sohum>OK, looks like no questions all right. So what will be the first step here since?</v>
+
+00:04:19.730 --> 00:04:23.770
+<v Sohoni, Sohum>Our multipliers least significant bit is a 0.</v>
+
+00:04:24.720 --> 00:04:26.170
+<v Sohoni, Sohum>What do you think should happen here?</v>
+
+00:04:31.220 --> 00:04:33.320
+<v Sohoni, Sohum>I'm assuming you've looked at this in the book.</v>
+
+00:04:44.430 --> 00:04:46.490
+<v Sohoni, Sohum>Not too many answers coming up.</v>
+
+00:04:50.460 --> 00:04:53.500
+<v Sohoni, Sohum>So if the least significant bit.</v>
+
+00:04:54.230 --> 00:05:01.410
+<v Sohoni, Sohum>Which is the one which which we're trying to multiply everything right? If that is a 00 times anything is going to be a 0, correct?</v>
+
+00:05:06.080 --> 00:05:08.900
+<v Schilling, Atreyu>Oh nothing, it's just nothing happens.</v>
+
+00:05:09.400 --> 00:05:11.330
+<v Sohoni, Sohum>Well, that's not exactly true.</v>
+
+00:05:10.350 --> 00:05:12.660
+<v Schilling, Atreyu>It shifts by one, I guess.</v>
+
+00:05:12.200 --> 00:05:43.480
+<v Sohoni, Sohum>Redshift exactly now you're right, so we're not doing any multiplication, but we're just going to say, well, this is just going to result in zero, so we don't need to do any additions or anything like that, but we'll just do the shifting, so we'll shift this guy left one bid and we'll shift this guy right one bit. OK, so the multiplier gets shifted, right? So you get 0011 instead of. Previously we had 0110, and then up here in the multiplicand. We're shifting this whole number one bit to the left, so we've got.</v>
+
+00:05:43.780 --> 00:05:59.090
+<v Sohoni, Sohum>In sort of 1101, we now have 11010 OK, so that's what happened with the last bit being 0. Now here we've got a one now, so this is where things get interesting. So what's going to happen now?</v>
+
+00:06:12.470 --> 00:06:14.280
+<v Sohoni, Sohum>Someone seemed to know what was going on.</v>
+
+00:06:21.900 --> 00:06:50.810
+<v Sohoni, Sohum>OK, I'll walk you through this one. Maybe you can tell me the next time so we have all this hardware so that we can do the addition and shifting and all of that right? So what's going to happen now? Because we have a one we're going to say I'm going to multiply all of this by 1 right? Which means just that very number itself. And then I'm going to add it to my product so far. So my product so far is all zeros, so I'm going to take this guy right? And this will be.</v>
+
+00:06:50.870 --> 00:07:21.530
+<v Sohoni, Sohum>One of the inputs to the ALU or the adder and then the other input to the adder is this number 00011010 right? And I'm going to add these two numbers and, which obviously if you're adding anything to zero, it's just the order number itself, so you get 00011010 as the product at this point in time. OK, and since we use this guy, we're now going to do a shift at this point, right? So when you have a one.</v>
+
+00:07:21.580 --> 00:07:35.340
+<v Sohoni, Sohum>In the least significant bit, it's a two step process. The first step is the addition side of things on the left here, and then we do the two shifts that we normally would do, which is shifting this guy out and shifting this this guy in or to the left.</v>
+
+00:07:35.790 --> 00:07:57.820
+<v Sohoni, Sohum>OK, so that results in 0001 in our multiplier, right? 'cause we shifted that number out and here we're adding in a zero to the left and moving everything to the left. So we've got 00110100 as the multiplicand at this point. Product stays the same, nothing changes there.</v>
+
+00:07:59.000 --> 00:08:02.460
+<v Sohoni, Sohum>Everyone with me so far. Do you have questions at this point?</v>
+
+00:08:10.890 --> 00:08:11.700
+<v Toohill, Teresa>I think so.</v>
+
+00:08:12.670 --> 00:08:20.110
+<v Sohoni, Sohum>OK, well good. So if there's no questions then now someone tell me what's going to happen next. We've got a one in the least significant bit.</v>
+
+00:08:21.390 --> 00:08:22.450
+<v Sohoni, Sohum>Of the multiplier.</v>
+
+00:08:24.780 --> 00:08:29.500
+<v Bultman, Joshua>So the since it's a one, it'll be the multiplication plus the product registered.</v>
+
+00:08:30.640 --> 00:08:42.840
+<v Sohoni, Sohum>Yep, so next step will be essentially add these two numbers. So 011 I mean 00011010 and 0110100. OK, so we add those two.</v>
+
+00:08:43.650 --> 00:08:57.140
+<v Sohoni, Sohum>And we get this result 01001110. OK and next second step for that is to shift things to the right and then to the left here.</v>
+
+00:08:57.920 --> 00:09:16.380
+<v Sohoni, Sohum>No, there is this control logic here, which is essentially checking how many times have we done this so far, right? So for a 32 bit number we would have to do it 32 times for a four bit number we would do it four Times Now we've done it only three times. OK, so.</v>
+
+00:09:17.350 --> 00:09:47.910
+<v Sohoni, Sohum>In the next step, all we need to do is shift this out once. Shift this once, but then it's kind of meaningless at that point 'cause we're totally done with all the multiplication at that time or at that point. So if we were to look at this, we've got what is this 2 + 4 + 8 is 14 + 64, which is 78, right? So we've got the correct result in our product by doing all these steps. Any questions about.</v>
+
+00:09:47.970 --> 00:09:48.650
+<v Sohoni, Sohum>This method.</v>
+
+00:09:53.300 --> 00:09:54.210
+<v Rolando, Jackson>I think I've got it now.</v>
+
+00:09:56.190 --> 00:09:56.920
+<v Sohoni, Sohum>Excellent.</v>
+
+00:10:28.200 --> 00:10:39.230
+<v Sohoni, Sohum>And this is the MIPS hardware that is sort of closer to the real hardware than what we were looking at in the previous set of slides. So we still have a multiplicand.</v>
+
+00:10:39.960 --> 00:10:52.170
+<v Sohoni, Sohum>Uhm, but then we have a product register which is also going to host our multiplier in the bottom half of it OK, and this is the part that confuses students quite a bit.</v>
+
+00:10:52.800 --> 00:10:53.390
+<v Sohoni, Sohum>Uhm?</v>
+
+00:10:54.130 --> 00:11:08.020
+<v Sohoni, Sohum>And then we've got the similar control and similar adder, which in this case happens to be a 32 bit adder. So that's an advantage as compared to having a 64 bit adder in the previous example.</v>
+
+00:11:08.690 --> 00:11:17.500
+<v Sohoni, Sohum>Uhm, and so this. This is the initial set up. The initial condition is that the product register already contains in the bottom half.</v>
+
+00:11:18.350 --> 00:11:19.860
+<v Sohoni, Sohum>Our multiplier.</v>
+
+00:11:20.960 --> 00:11:30.180
+<v Sohoni, Sohum>OK, so it's strange, but bear with me. This is, this is how it's going to be OK, but any questions before we start with the process.</v>
+
+00:11:37.060 --> 00:12:06.910
+<v Sohoni, Sohum>Alright, so let's begin. So essentially this guy, these 4 bits are eventually going to get shifted out completely right? That's why I add whenever we are done with this whole thing, which in this case this being 4 bit number in four cycles were going to get rid of that number completely, and so it won't really mess with the product anymore, and that's why we're kind of re using that space there. So in the first step, because this is a zero, all we do is a shift.</v>
+
+00:12:07.220 --> 00:12:24.940
+<v Sohoni, Sohum>OK, multiplier was zero. Uh or multiplier, bit zero was zero, so we just shift. So initially we had the number in the product register which was like top 4 zeros and then 0110. Now it's become 00000011.</v>
+
+00:12:25.680 --> 00:12:29.690
+<v Sohoni, Sohum>OK, so just shifted this by 1. Nothing complicated so far.</v>
+
+00:12:30.910 --> 00:12:31.630
+<v Sohoni, Sohum>Next</v>
+
+00:12:32.960 --> 00:12:47.700
+<v Sohoni, Sohum>we see that this bit is a one. OK, so this time we actually do the addition. So what we end up doing is we take the multiplicand and we add it to just the top half of the product register.</v>
+
+00:12:48.410 --> 00:13:16.650
+<v Sohoni, Sohum>OK, that's why we can get away with a 32 bit edition instead of 64 bits. OK, 'cause this is a 32 bit number and this top half we see if you see this arrow here is the 2nd or the 1st operand. That top half is also just 32 bits. In our case 4 bits each. So we take these 4 bits 1101 and we add it to all zeros and we end up getting 11010011.</v>
+
+00:13:18.220 --> 00:13:20.780
+<v Sohoni, Sohum>Does that makes sense? 'cause this is the tricky part.</v>
+
+00:13:21.740 --> 00:13:24.440
+<v Sohoni, Sohum>If this made sense, then the rest of it will be easy.</v>
+
+00:13:26.520 --> 00:13:26.870
+<v Bultman, Joshua>Yeah.</v>
+
+00:13:28.900 --> 00:13:31.170
+<v Sohoni, Sohum>OK, we've got one. Yeah, do we have a second?</v>
+
+00:13:34.730 --> 00:13:35.190
+<v Furst, Elias>Yeah.</v>
+
+00:13:35.960 --> 00:13:36.500
+<v Sohoni, Sohum>OK.</v>
+
+00:13:37.140 --> 00:14:07.920
+<v Sohoni, Sohum>Approved all right good so then next step would be to shift the product register ride right 'cause again this was a two. Whenever you have a one in the least significant bit, it's a two step process. You do the addition and then you do the shifting. So we did the additional in this slide. Next slide we're doing the shifting so we take this whole number whatever it was and we shift it 1 bit to the right. OK, so now we get 01101001. If you remember this.</v>
+
+00:14:07.970 --> 00:14:39.280
+<v Sohoni, Sohum>01 or the last two bits remaining from our original multiplier. So again, we've got a one here, so we're going to do the same thing. We're going to take the 1101 which was our multiplicand, and we're going to add it to the top half of this over here. So 0 + 1 is one. 1 + 0 is 1/1, plus one is zero carry, 11 plus one is zero. Carry one. When we do that, we realize we're going to need an additional bit over here.</v>
+
+00:14:39.430 --> 00:14:57.050
+<v Sohoni, Sohum>OK, so just assume by magic we've ordered through hardware, we've got space to put that one bit there because we are done with the addition. But then we need to do the shifting and when we do that shifting that one bit actually makes it into our product.</v>
+
+00:14:57.850 --> 00:15:09.970
+<v Sohoni, Sohum>Register over here like this. OK, so we end up with 10011100 now at this point, right? We need to shift the product, right?</v>
+
+00:15:11.370 --> 00:15:12.240
+<v Sohoni, Sohum>So we get.</v>
+
+00:15:13.000 --> 00:15:16.320
+<v Sohoni, Sohum>01001110.</v>
+
+00:15:17.120 --> 00:15:19.340
+<v Sohoni, Sohum>Uhm, at this point.</v>
+
+00:15:20.100 --> 00:15:48.240
+<v Sohoni, Sohum>This is the last or this bit. Here is the last bit of the original multiplier, which was 0110, right? So this is that leading zero, which has now made it to the least significant bit position. So because it is a zero, we do a final shift. Whoops shift to the. This is where our so make a final shift to the right and then we get the number 01001110. That's right that.</v>
+
+00:15:49.010 --> 00:15:49.890
+<v Sohoni, Sohum>Plus the previous one.</v>
+
+00:15:50.740 --> 00:16:05.850
+<v Sohoni, Sohum>Uhm, which again if we do the calculation, that's going to be 2 + 4 + 8, which is 14 plus not 16, not 32 bit 64. So 64 + 14 is 78. So we got the correct answer.</v>
+
+00:16:07.170 --> 00:16:10.050
+<v Sohoni, Sohum>Questions about multiplication method 2.</v>
+
+00:16:14.830 --> 00:16:20.320
+<v Rolando, Jackson>So we're shifting the product register instead of the multiplicand.</v>
+
+00:16:21.650 --> 00:16:22.180
+<v Sohoni, Sohum>Correct?</v>
+
+00:16:23.140 --> 00:16:27.280
+<v Sohoni, Sohum>Yeah method wise there to look like they're totally opposite.</v>
+
+00:16:28.420 --> 00:16:30.700
+<v Sohoni, Sohum>Or they work out to be the same thing?</v>
+
+00:16:32.140 --> 00:16:41.400
+<v Sohoni, Sohum>So if you remember, multiplicand was getting shifted to the left instead the product is getting shifted to the right, so relatively it's kind of exactly the same thing.</v>
+
+00:16:47.360 --> 00:16:53.470
+<v Rolando, Jackson>Oh, I see. And in the product register is 64 bits instead of the multiplicand being 64 bits.</v>
+
+00:16:53.880 --> 00:16:54.330
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:16:54.870 --> 00:16:55.270
+<v Rolando, Jackson>OK.</v>
+
+00:16:55.080 --> 00:16:55.380
+<v Sohoni, Sohum>yeah.</v>
+
+00:16:57.030 --> 00:17:11.370
+<v Sohoni, Sohum>Yeah, and that way we're using the product register to keep both the multiplier and the product because eventually the product. I mean, yeah, the product is going to take over and whatever is left of the multiplier will get shifted out.</v>
+
+00:17:12.470 --> 00:17:14.870
+<v Sohoni, Sohum>Ruth really saving space there as well.</v>
+
+00:17:18.020 --> 00:17:18.870
+<v Rolando, Jackson>Gotcha, thank you.</v>
+
+00:17:22.620 --> 00:17:50.370
+<v Sohoni, Sohum>Right, so again, these are things that we want you to be aware of in terms of like. This is how the hardware works. You know, have a general overview of these things in. In my opinion, it's not something that's worth really memorizing, but certainly worth understanding, at least enough to say, OK, I I get what's going on like this is how the hardware does things. So same with the addition subtraction.</v>
+
+00:17:50.970 --> 00:17:52.260
+<v Sohoni, Sohum>Multiplication division</v>
+
+00:17:52.940 --> 00:17:55.770
+<v Sohoni, Sohum>uhm, I'm not really planning to go over division.</v>
+
+00:17:56.690 --> 00:18:16.820
+<v Sohoni, Sohum>Because it's just really cumbersome thing to talk about it, I said look at the book, get a decent understanding, and really that's what you need to do with with division. We will spend some time on floating point because that's a really important topic. So next week we will spend a little bit of time in in the class.</v>
+
+00:18:17.150 --> 00:18:20.300
+<v Sohoni, Sohum>Uh, periods on floating point.</v>
+
+00:18:21.030 --> 00:18:22.210
+<v Sohoni, Sohum>But for now.</v>
+
+00:18:24.040 --> 00:18:46.210
+<v Sohoni, Sohum>This is all I have and what I would like you to do is just to solidify your understanding of this. Pick any other two numbers, right? We picked 6 and 13. Pick any other two numbers. Go look at the slides on canvas so that you can use those as a reference and you can write down like stuff on a piece of paper.</v>
+
+00:18:46.260 --> 00:19:02.230
+<v Sohoni, Sohum>Her up and walk through any two other 4 bit numbers and see if your multiplication comes out right. OK, so it does take some time, so you probably have about 1/2 hour to do this so.</v>
+
+00:19:02.900 --> 00:19:05.260
+<v Sohoni, Sohum>Spend that half hour trying to get.</v>
+
+00:19:06.120 --> 00:19:23.480
+<v Sohoni, Sohum>Familiar with how this is done? OK, and I would say do it both ways. Do it this way. This is the easier, more intuitive way and then do it the 2nd way as well and I'll hang around here if there's any questions for me, but essentially I want you to spend the rest of the class period doing that.</v>
+
+00:19:24.910 --> 00:19:27.620
+<v Sohoni, Sohum>Any questions before I go on on mute?</v>
+
+00:19:32.780 --> 00:19:34.170
+<v Toohill, Teresa>I don't think so, thank you.</v>
+
+00:19:35.080 --> 00:19:41.970
+<v Sohoni, Sohum>OK, well so I'll be around as I said and if I don't talk to you again today then I'll see you tomorrow in the small groups.</v>
+
+00:19:47.370 --> 00:19:48.390
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:19:48.870 --> 00:19:49.210
+<v Sohoni, Sohum>Here.</v>
+
+00:19:52.810 --> 00:19:54.640
+<v Bultman, Joshua>Do you want us to sit in the sun canvas? Sorry.</v>
+
+00:19:55.740 --> 00:20:04.470
+<v Sohoni, Sohum>No, this is good question. This is just for your practice, so just give it a shot and see if you understand it. And as you're doing it, if you have, you know if any questions come up.</v>
+
+00:20:04.520 --> 00:20:12.790
+<v Sohoni, Sohum>Up up, and ask those questions and if not then that's it. So feel free to leave whenever you you feel like you're done OK.</v>
+
+00:20:13.350 --> 00:20:14.300
+<v Bultman, Joshua>OK, awesome, thank you.</v>
+
+00:20:14.620 --> 00:20:14.940
+<v Sohoni, Sohum>Yep.</v>

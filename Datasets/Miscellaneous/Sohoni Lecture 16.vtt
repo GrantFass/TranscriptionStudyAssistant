@@ -1,0 +1,589 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:22.210
+<v Sohoni, Sohum>Most of you had the documentation of top, which is great and then some of you had excellent documentation in the code as well, and I think in assembly language programming it does make sense to explain a little bit what the next few lines of code are trying to accomplish, 'cause it's a little cryptic compared to say Java or C++ where you know the.</v>
+
+00:00:22.930 --> 00:00:29.030
+<v Sohoni, Sohum>The court is a little more self explanatory than than in assembly, so do try to get in the habit of.</v>
+
+00:00:29.770 --> 00:00:34.310
+<v Sohoni, Sohum>Doing your documentation in, in these assembly programs that you've right.</v>
+
+00:00:35.090 --> 00:00:49.620
+<v Sohoni, Sohum>Uh, and then some of you countered the newline character as well, but that really should not have been considered part of this string, so I didn't take off any points 'cause I was really just trying to see if you got the logic right for the loop and everything.</v>
+
+00:00:50.260 --> 00:00:56.950
+<v Sohoni, Sohum>And that was really my main focus, but but yeah, that newline character should not.</v>
+
+00:00:57.960 --> 00:01:00.000
+<v Sohoni, Sohum>Be counted as part of the string.</v>
+
+00:01:01.350 --> 00:01:30.920
+<v Sohoni, Sohum>So also on the plus side, many of you had a good user interaction in terms of, you know, asking them for the string and giving them like a good place to put this the string in and then similarly with the answer instead of just outputting a number at least maybe out putting the number on a new line or having a nice message saying the length of the string was and then actually put the the number. So try again, always tried.</v>
+
+00:01:30.970 --> 00:01:35.910
+<v Sohoni, Sohum>To have good user interaction with your programs, whether you're writing in Java.</v>
+
+00:01:37.180 --> 00:01:48.220
+<v Sohoni, Sohum>Python, C++ or even assembly. Many of you had the graceful exit for the Cisco instead of the programs is dropping off at the end.</v>
+
+00:01:48.540 --> 00:02:10.660
+<v Sohoni, Sohum>Uhm again, I didn't take off any points for any of that, but I try to just make sure if you have a clear end condition for your program, have the exit for Mars with. This is called. The last thing is an interesting one. Many of you reserved just 10 bytes for the input string.</v>
+
+00:02:11.880 --> 00:02:19.530
+<v Sohoni, Sohum>And I think that was a little too short. I mean, personally I would have given more I didn't specify.</v>
+
+00:02:20.580 --> 00:02:29.370
+<v Sohoni, Sohum>Like how many bytes or how many like how long a string could be accepted, but I think at least 30 characters.</v>
+
+00:02:30.180 --> 00:02:38.120
+<v Sohoni, Sohum>Would have been what I would have reserved and then I might have even told the user in my prompt the enter a string that's.</v>
+
+00:02:38.800 --> 00:02:46.480
+<v Sohoni, Sohum>30 characters or less or or something like that, or 100, whatever it was, right, but ten just seemed a little too little.</v>
+
+00:02:47.240 --> 00:02:50.670
+<v Sohoni, Sohum>OK, so that's the main feedback. I have four quiz 2.</v>
+
+00:02:51.750 --> 00:02:58.820
+<v Sohoni, Sohum>Already graded everyone quiz to whoever who take who had taken the quiz by yesterday. I think at least.</v>
+
+00:02:58.870 --> 00:03:00.840
+<v Sohoni, Sohum>Yeah, I had the grades in.</v>
+
+00:03:01.760 --> 00:03:17.710
+<v Sohoni, Sohum>So I'm gonna stop sharing my screen and see if there are questions about this or anything as as I mentioned yesterday, this is the review session for quiz two. I mean not for quiz 2 for the midterm.</v>
+
+00:03:18.280 --> 00:03:21.130
+<v Sohoni, Sohum>Uhm, any questions you have. I'm happy to answer those.</v>
+
+00:03:21.890 --> 00:03:24.340
+<v Sohoni, Sohum>And that's what today's class is all about.</v>
+
+00:03:27.920 --> 00:03:44.520
+<v Toohill, Teresa>Could you go more in depth about what you mean by like the graceful exits? I'm a little confused on that and then also Karnaugh maps could be like covered. That again, if that's OK, I don't have any specific problem, I just I wanted to review it a little bit.</v>
+
+00:03:46.970 --> 00:03:54.220
+<v Sohoni, Sohum>OK, UM so the exit part, let's see. I'll just pull up an example.</v>
+
+00:03:58.230 --> 00:03:59.880
+<v Sohoni, Sohum>OK, here, uh.</v>
+
+00:04:13.870 --> 00:04:25.180
+<v Sohoni, Sohum>Right, so I know it's a little small on the screen, but this this last part here Liv Zero Ten and Cisco that is. This is called to exit the program.</v>
+
+00:04:25.870 --> 00:04:28.990
+<v Sohoni, Sohum>So the program will exit if you don't have any of this.</v>
+
+00:04:29.630 --> 00:04:36.970
+<v Sohoni, Sohum>Anyway, but it will exit saying that it dropped off the end because what's happening essentially is if you look at the.</v>
+
+00:04:37.690 --> 00:04:41.530
+<v Sohoni, Sohum>Uhm, the text segment. Let's go back here.</v>
+
+00:04:43.550 --> 00:04:56.280
+<v Sohoni, Sohum>So you've got instructions up to a point over here, right? This is the last instruction and then when it starts seeing the zeros, Mars essentially says well. Looks like there is no more code here, so I'm going to exit.</v>
+
+00:04:56.900 --> 00:05:01.780
+<v Sohoni, Sohum>So how much better, more graceful exit is just using the Cisco?</v>
+
+00:05:04.190 --> 00:05:05.090
+<v Toohill, Teresa>OK, thank you.</v>
+
+00:05:05.490 --> 00:05:08.490
+<v Sohoni, Sohum>Yep, uh, any follow up questions on that.</v>
+
+00:05:14.980 --> 00:05:19.410
+<v Sohoni, Sohum>Or anything else before we try to do any Karnaugh maps or anything.</v>
+
+00:05:22.000 --> 00:05:24.270
+<v Speaker 1>Uh my, I just had a question about the format.</v>
+
+00:05:25.040 --> 00:05:25.550
+<v Sohoni, Sohum>Yeah.</v>
+
+00:05:26.470 --> 00:05:36.790
+<v Speaker 1>Uh, I don't know if you talked about this already, but what is so ICS? 20 questions are those going to be mostly like creating programs or multiple choice? Or what is that going to look like?</v>
+
+00:05:37.330 --> 00:05:57.130
+<v Sohoni, Sohum>Yeah, so I think I mentioned this yesterday, but I'm happy to just talk about it again today. Hum. So the first question is, is assembly programming question and then the next question is A is an essay question worth? I think 10 points and then the rest of it is multiple choice.</v>
+
+00:05:57.910 --> 00:05:58.620
+<v Sohoni, Sohum>And.</v>
+
+00:05:59.580 --> 00:06:18.010
+<v Sohoni, Sohum>I if I were taking this quiz, I would definitely do the multiple choice questions 1st and do them quickly without really trying to look up the answer. Just do my best guess and just get through those pretty quickly. Then I would do the essay question and then finally I would do the Assembly because I mean for me.</v>
+
+00:06:18.060 --> 00:06:31.330
+<v Sohoni, Sohum>Hey, uhm, I think I might get stuck on the assembly program and maybe spend way too much time and then might run out of time for maybe the easier questions. Which are the the multiple choice so that that is my recommendation.</v>
+
+00:06:32.780 --> 00:06:33.530
+<v Speaker 1>OK, thank you.</v>
+
+00:06:39.920 --> 00:06:42.210
+<v Sohoni, Sohum>Other questions, anything else?</v>
+
+00:06:50.790 --> 00:06:57.700
+<v Sohoni, Sohum>So K maps, I don't. I don't know if I should or can explain all of K maps again.</v>
+
+00:06:59.460 --> 00:07:02.260
+<v Sohoni, Sohum>I'm just trying to see what would be.</v>
+
+00:07:04.090 --> 00:07:06.750
+<v Sohoni, Sohum>I think this slide here might be useful.</v>
+
+00:07:14.210 --> 00:07:20.960
+<v Sohoni, Sohum>Right, so once again the the point of K maps really is circuit simplification. We're trying to group together.</v>
+
+00:07:21.570 --> 00:07:26.920
+<v Sohoni, Sohum>Uh, more walls of 1248 and so on. So powers of two.</v>
+
+00:07:27.640 --> 00:07:28.440
+<v Sohoni, Sohum>And.</v>
+
+00:07:29.630 --> 00:07:31.710
+<v Sohoni, Sohum>What we're essentially saying is.</v>
+
+00:07:32.540 --> 00:07:34.320
+<v Sohoni, Sohum>If something changed.</v>
+
+00:07:35.030 --> 00:07:37.830
+<v Sohoni, Sohum>Right in this first example, here, for example we have.</v>
+
+00:07:38.600 --> 00:07:46.330
+<v Sohoni, Sohum>UMKC is 11000 and then over here X is still one.</v>
+
+00:07:47.240 --> 00:07:48.540
+<v Sohoni, Sohum>Why is 1?</v>
+
+00:07:49.340 --> 00:07:58.720
+<v Sohoni, Sohum>And Z is 0. So essentially why change from zero to 1? And that change did not impact the output.</v>
+
+00:07:59.570 --> 00:08:17.590
+<v Sohoni, Sohum>Which is why we end up eliminating Y and then we simply use the values of those remaining variables. So X was one. And why was or? Sorry, 00, so we end up doing XZ Prime and that's why this term is XY prime.</v>
+
+00:08:19.760 --> 00:08:23.240
+<v Sohoni, Sohum>If if there was one, then it would be XZ.</v>
+
+00:08:25.930 --> 00:08:32.320
+<v Sohoni, Sohum>I think that kind of really gets to the heart of K maps. There are questions around that I think.</v>
+
+00:08:33.020 --> 00:08:35.710
+<v Sohoni, Sohum>I'm happy to get into more details.</v>
+
+00:08:38.400 --> 00:08:39.850
+<v Toohill, Teresa>That makes sense, thank you.</v>
+
+00:08:40.360 --> 00:08:41.320
+<v Sohoni, Sohum>OK, cool.</v>
+
+00:08:55.060 --> 00:08:58.010
+<v Sohoni, Sohum>OK, well I'm still open for questions so.</v>
+
+00:09:16.630 --> 00:09:19.180
+<v Sohoni, Sohum>Well, this might end up being a really short class.</v>
+
+00:09:21.270 --> 00:09:25.620
+<v Bultman, Joshua>Uh, what sections again, were for the book? Are we covering up too?</v>
+
+00:09:26.960 --> 00:09:30.140
+<v Sohoni, Sohum>So from the book I would say mainly it's Section 2.</v>
+
+00:09:31.330 --> 00:09:35.260
+<v Sohoni, Sohum>And you know, knowing the instructions essentially.</v>
+
+00:09:39.440 --> 00:09:41.770
+<v Sohoni, Sohum>And then rest of it is, yeah, they.</v>
+
+00:09:42.660 --> 00:09:47.800
+<v Sohoni, Sohum>Digital logic stuff that that we did. So Gates and truth tables equations.</v>
+
+00:09:48.810 --> 00:09:49.770
+<v Sohoni, Sohum>And all that stuff.</v>
+
+00:09:51.680 --> 00:09:52.560
+<v Bultman, Joshua>Alright cool, thank you.</v>
+
+00:09:57.920 --> 00:10:07.930
+<v Sohoni, Sohum>So the video that we watched that was really mainly to help you understand the instruction stuff. There won't be anything directly from the video on this midterm.</v>
+
+00:10:18.160 --> 00:10:25.210
+<v Geoffrey, Timothy>Is there a chance that you could go over? Maybe a Boolean expression simplification example?</v>
+
+00:10:27.570 --> 00:10:27.980
+<v Sohoni, Sohum>Hi.</v>
+
+00:10:28.030 --> 00:10:33.050
+<v Sohoni, Sohum>I don't have anything ready made so it would have to be from the slides that you've already seen.</v>
+
+00:10:33.100 --> 00:10:33.400
+<v Sohoni, Sohum>In</v>
+
+00:10:36.030 --> 00:10:37.130
+<v Sohoni, Sohum>I'm happy to pull that up.</v>
+
+00:11:05.910 --> 00:11:09.170
+<v Sohoni, Sohum>Let me check there was a message in the chat as well.</v>
+
+00:11:17.860 --> 00:11:21.690
+<v Sohoni, Sohum>POS or AESOPI so product of sum and sum of products.</v>
+
+00:11:23.420 --> 00:11:29.210
+<v Sohoni, Sohum>Yeah, let's talk about that, sure, so here's a simple simplification.</v>
+
+00:11:30.490 --> 00:11:38.450
+<v Sohoni, Sohum>So we've got C prime HP or C prime HP prime or C prime H prime P, and we're combining.</v>
+
+00:11:39.140 --> 00:11:42.700
+<v Sohoni, Sohum>These two terms here to get rid of P or P prime.</v>
+
+00:11:43.780 --> 00:11:58.880
+<v Sohoni, Sohum>Because anything or its complement is always going to be one right? 'cause one of them zero and one of them is 1 and then you or anything with the one you get a one and you get C prime H. By the way, there's.</v>
+
+00:11:59.970 --> 00:12:00.560
+<v Sohoni, Sohum>Uhm?</v>
+
+00:12:01.680 --> 00:12:13.640
+<v Sohoni, Sohum>No, so I I've never going to ask you to give me the name of the property that you're using or anything like that. Obviously if it's multiple choice and may if the question is.</v>
+
+00:12:15.540 --> 00:12:34.260
+<v Sohoni, Sohum>Are these one of the options? Is simplified circuit for the non simplified in the question you really don't have to write anything, you're just picking which one is a simplified one. So yeah, you don't have to memorize any of these properties, or for that matter de Morgans either.</v>
+
+00:12:35.300 --> 00:12:40.540
+<v Sohoni, Sohum>But you might have to use it obviously to do a simplification.</v>
+
+00:12:41.690 --> 00:12:44.440
+<v Sohoni, Sohum>Let's see, there's more examples.</v>
+
+00:12:45.970 --> 00:13:04.610
+<v Sohoni, Sohum>And we're using usually de Morgans, mainly is used to look at compliments, so if we wanted to get the compliment of this guy, we're doing all of that primed and that then we're applying De Morgan's usually applied in Morgans twice in a row and that's getting you into.</v>
+
+00:13:05.320 --> 00:13:05.920
+<v Sohoni, Sohum>Uhm?</v>
+
+00:13:07.520 --> 00:13:08.190
+<v Sohoni, Sohum>Here.</v>
+
+00:13:08.870 --> 00:13:13.420
+<v Sohoni, Sohum>Form that can then be distributed out to get your sum of products form.</v>
+
+00:13:15.660 --> 00:13:19.630
+<v Sohoni, Sohum>Speaking of which, let's see if I have.</v>
+
+00:13:21.030 --> 00:13:28.190
+<v Sohoni, Sohum>So I think some of products is actually a pretty simple concept. It's it's not really.</v>
+
+00:13:30.630 --> 00:13:52.560
+<v Sohoni, Sohum>Difficulty in in terms of like what is sum of products. So this here is an example of a sum of products, typically from a truth table. When would it converting from it? Ruth able to any equation we just look at what are the values that have ones in the output and then we take those combinations. Like here it's a prime B prime C.</v>
+
+00:13:53.070 --> 00:14:01.100
+<v Sohoni, Sohum>Uh, it prime BC prime and so on and so forth, and we just so these are all product terms and we just.</v>
+
+00:14:01.760 --> 00:14:12.960
+<v Sohoni, Sohum>See output is going to be one if this product term exists or this product term exists or this or this. OK, so that's how we typically get a sum of products.</v>
+
+00:14:15.170 --> 00:14:15.860
+<v Sohoni, Sohum>Equation.</v>
+
+00:14:16.750 --> 00:14:18.710
+<v Sohoni, Sohum>It's some of products is.</v>
+
+00:14:19.510 --> 00:14:25.230
+<v Sohoni, Sohum>Not going to have any parentheses. That's that's one way of thinking about it. So going back to.</v>
+
+00:14:26.010 --> 00:14:31.100
+<v Sohoni, Sohum>It previous examples somewhere, or let's see we this one note.</v>
+
+00:14:32.610 --> 00:14:35.250
+<v Sohoni, Sohum>I think with the Morgans I had any question.</v>
+
+00:14:38.540 --> 00:14:49.520
+<v Sohoni, Sohum>Right here, so this guy here is not yet in sum of products, right? 'cause you've got all of these terms and all of these terms, so it's got.</v>
+
+00:14:50.300 --> 00:14:53.410
+<v Sohoni, Sohum>In fact, this one is exactly.</v>
+
+00:14:54.540 --> 00:14:55.140
+<v Sohoni, Sohum>All.</v>
+
+00:14:56.470 --> 00:15:02.860
+<v Sohoni, Sohum>So this is a product of some, so these are some terms. These are also some terms and then we have a product of those.</v>
+
+00:15:09.150 --> 00:15:09.900
+<v Sohoni, Sohum>Questions here.</v>
+
+00:15:16.170 --> 00:15:19.390
+<v Bultman, Joshua>Uh, do you want us to do some product of sums to?</v>
+
+00:15:21.250 --> 00:15:28.890
+<v Sohoni, Sohum>No, I I don't focus on product of sums. Just sum of products is what's commonly used and that's that's what I need you to know.</v>
+
+00:15:29.200 --> 00:15:30.150
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:15:38.980 --> 00:15:40.160
+<v Geoffrey, Timothy>Well, here's a question.</v>
+
+00:15:40.580 --> 00:15:40.950
+<v Sohoni, Sohum>Yep.</v>
+
+00:15:41.890 --> 00:15:44.680
+<v Geoffrey, Timothy>Or these slides available on canvas.</v>
+
+00:15:46.390 --> 00:15:51.200
+<v Sohoni, Sohum>Oh, that's a good question. So they are not for your section 'cause.</v>
+
+00:15:52.490 --> 00:15:54.080
+<v Sohoni, Sohum>I haven't put them up there.</v>
+
+00:15:55.440 --> 00:15:56.000
+<v Sohoni, Sohum>Uhm?</v>
+
+00:15:57.430 --> 00:16:00.040
+<v Sohoni, Sohum>I tried to have them uploaded in.</v>
+
+00:16:01.780 --> 00:16:04.220
+<v Sohoni, Sohum>You know separate more. Do you like, I suppose?</v>
+
+00:16:07.740 --> 00:16:08.910
+<v Sohoni, Sohum>You know I'll put them up.</v>
+
+00:16:10.120 --> 00:16:13.630
+<v Sohoni, Sohum>Totally forgot that I hadn't thought this stuff to you guys, yeah.</v>
+
+00:16:15.840 --> 00:16:16.420
+<v Toohill, Teresa>Thank you.</v>
+
+00:16:17.350 --> 00:16:19.840
+<v Sohoni, Sohum>Yep, Yep, and thanks for the suggestion team.</v>
+
+00:16:21.520 --> 00:16:21.960
+<v Geoffrey, Timothy>Yep.</v>
+
+00:16:30.960 --> 00:16:33.000
+<v Sohoni, Sohum>OK, what other questions can I answer?</v>
+
+00:16:52.770 --> 00:16:54.350
+<v Toohill, Teresa>Some people ask this in the chat.</v>
+
+00:16:54.400 --> 00:16:54.910
+<v Toohill, Teresa>Uhm?</v>
+
+00:16:55.900 --> 00:17:00.330
+<v Toohill, Teresa>But they were asking about like if it's open, no. And we can use like the green sheet and stuff and.</v>
+
+00:17:01.270 --> 00:17:04.760
+<v Toohill, Teresa>I I thought you said yes, it's open note, but I I guess it's good to check.</v>
+
+00:17:05.220 --> 00:17:12.780
+<v Sohoni, Sohum>Oh yeah, so it's yeah, it's open notes. You can refer to my slides when I put them up. You can refer to anything on the Internet.</v>
+
+00:17:13.970 --> 00:17:26.020
+<v Sohoni, Sohum>Short of asking each other what the answer is, I would say you reuse the resources that you have. You can look at programs that you've already written in Mars. You can copy and paste from there for for all I care.</v>
+
+00:17:26.750 --> 00:17:27.430
+<v Sohoni, Sohum>But yeah.</v>
+
+00:17:28.360 --> 00:17:29.420
+<v Sohoni, Sohum>You can use the book.</v>
+
+00:17:32.860 --> 00:17:33.310
+<v Toohill, Teresa>Thank you.</v>
+
+00:17:33.810 --> 00:17:34.670
+<v Sohoni, Sohum>Yeah, yeah.</v>
+
+00:17:37.600 --> 00:17:38.240
+<v Sohoni, Sohum>OK, yeah.</v>
+
+00:17:49.210 --> 00:17:49.570
+<v Sohoni, Sohum>Here.</v>
+
+00:17:51.370 --> 00:17:54.010
+<v Sohoni, Sohum>OK, what else can I answer at this point?</v>
+
+00:18:07.950 --> 00:18:09.640
+<v Sohoni, Sohum>Sounds like nothing.</v>
+
+00:18:10.560 --> 00:18:11.840
+<v Geoffrey, Timothy>But I have another question.</v>
+
+00:18:12.240 --> 00:18:12.560
+<v Sohoni, Sohum>Yeah.</v>
+
+00:18:13.290 --> 00:18:13.940
+<v Geoffrey, Timothy>So.</v>
+
+00:18:15.730 --> 00:18:25.450
+<v Geoffrey, Timothy>Going through the readings and the lectures and everything, I still don't quite understand what the store byte instruction is doing.</v>
+
+00:18:27.000 --> 00:18:30.250
+<v Geoffrey, Timothy>And how it works and what the syntax specifically is.</v>
+
+00:18:32.240 --> 00:18:32.580
+<v Sohoni, Sohum>Store.</v>
+
+00:18:32.630 --> 00:18:33.900
+<v Sohoni, Sohum>Word or store byte.</v>
+
+00:18:34.120 --> 00:18:35.040
+<v Geoffrey, Timothy>Store byte.</v>
+
+00:18:37.750 --> 00:18:42.780
+<v Sohoni, Sohum>OK, so the store byte is going to store a bite at a particular location.</v>
+
+00:18:44.080 --> 00:18:45.260
+<v Sohoni, Sohum>Register one bite.</v>
+
+00:18:47.700 --> 00:18:56.980
+<v Sohoni, Sohum>In that location is specified by just like store word register that has a base address and an offset.</v>
+
+00:18:59.710 --> 00:19:02.870
+<v Sohoni, Sohum>In the bite that you want to store is going to be in.</v>
+
+00:19:03.900 --> 00:19:06.490
+<v Sohoni, Sohum>Your source register.</v>
+
+00:19:12.040 --> 00:19:16.520
+<v Sohoni, Sohum>Someone have additional information? I actually haven't used the store byte in a long time.</v>
+
+00:19:34.680 --> 00:19:38.910
+<v Sohoni, Sohum>Here's the tooltip. Am I still sharing my screen I? I guess I am right.</v>
+
+00:19:40.650 --> 00:19:41.050
+<v Geoffrey, Timothy>Yeah.</v>
+
+00:19:41.920 --> 00:19:42.430
+<v Toohill, Teresa>Sure.</v>
+
+00:19:41.640 --> 00:19:47.460
+<v Sohoni, Sohum>Yeah, so here's here's the tooltip on what's going on with SB or the store byte.</v>
+
+00:19:51.200 --> 00:19:56.000
+<v Sohoni, Sohum>Yeah, but it always takes the low order 8 bits of what's in that register.</v>
+
+00:19:56.710 --> 00:19:56.930
+<v Sohoni, Sohum>Yeah.</v>
+
+00:19:59.310 --> 00:20:07.550
+<v Sohoni, Sohum>So they register, may contain more than 8 bits worth of stuff in there, it's just going to take whatever is the lowest.</v>
+
+00:20:08.720 --> 00:20:12.290
+<v Sohoni, Sohum>8 bits and put that in that memory location.</v>
+
+00:20:24.460 --> 00:20:25.330
+<v Sohoni, Sohum>You OK with that?</v>
+
+00:20:27.700 --> 00:20:36.890
+<v Geoffrey, Timothy>I think so. I'm just looking at. I'm looking at your screen right now and I don't know what I was doing, but I was trying to.</v>
+
+00:20:39.220 --> 00:20:50.050
+<v Geoffrey, Timothy>Plus I was trying to. I think I was doing the storing a string incorrectly and I was trying to have the offset be a register and didn't like that.</v>
+
+00:20:50.340 --> 00:20:53.550
+<v Sohoni, Sohum>Oh yeah, you don't. You don't want the offset to be register.</v>
+
+00:20:54.490 --> 00:20:55.340
+<v Geoffrey, Timothy>OK, good.</v>
+
+00:20:54.770 --> 00:21:01.970
+<v Sohoni, Sohum>Yeah, generally speaking I would say almost for now most of the times your officer is going to be 0.</v>
+
+00:21:03.090 --> 00:21:12.930
+<v Sohoni, Sohum>And you're going to be if you're working through memory, for example, you know bite by bite, you're going to increment the value in your register inside of a loop.</v>
+
+00:21:13.770 --> 00:21:14.910
+<v Sohoni, Sohum>To walk through.</v>
+
+00:21:15.930 --> 00:21:20.870
+<v Sohoni, Sohum>Yeah, you know, immediate look or not immediate contiguous locations in memory.</v>
+
+00:21:24.050 --> 00:21:26.500
+<v Sohoni, Sohum>That's how you're going to traverse that, yeah.</v>
+
+00:21:27.750 --> 00:21:28.900
+<v Geoffrey, Timothy>Cool thanks.</v>
+
+00:21:42.470 --> 00:21:44.160
+<v Sohoni, Sohum>Right, I guess.</v>
+
+00:21:45.530 --> 00:21:47.260
+<v Sohoni, Sohum>Last call for questions.</v>
+
+00:21:53.630 --> 00:22:06.460
+<v Kreitzman, Colton>Too much to ask about, like what the nature of the the short answer question would be. 'cause like I guess I'm not sure what I'm expecting for that like if it's going to be like something about minutes or more about like.</v>
+
+00:22:07.820 --> 00:22:09.210
+<v Kreitzman, Colton>The Boolean expressions.</v>
+
+00:22:09.750 --> 00:22:15.070
+<v Sohoni, Sohum>Yeah, no, it's going to be about MIPS. It's going to make you think about, let's say, the instruction.</v>
+
+00:22:16.030 --> 00:22:20.760
+<v Sohoni, Sohum>How these instructions get encoded and how that relates to the hardware?</v>
+
+00:22:22.030 --> 00:22:22.380
+<v Kreitzman, Colton>OK.</v>
+
+00:22:21.770 --> 00:22:23.050
+<v Sohoni, Sohum>Stuff like that, yeah?</v>
+
+00:22:23.600 --> 00:22:24.020
+<v Kreitzman, Colton>Thank you.</v>
+
+00:22:35.010 --> 00:22:38.040
+<v Sohoni, Sohum>Alright, so I think I've answered.</v>
+
+00:22:38.780 --> 00:22:44.490
+<v Sohoni, Sohum>Sufficient number of questions. If you do have a question between now and tomorrow.</v>
+
+00:22:44.640 --> 00:22:48.410
+<v Sohoni, Sohum>Uh, send me a message on teams.</v>
+
+00:22:49.500 --> 00:22:53.910
+<v Sohoni, Sohum>I'll do my best to reply. I'm still not feeling 100% so.</v>
+
+00:22:55.870 --> 00:23:03.220
+<v Sohoni, Sohum>Depending on my health I I may have my laptop or you know open and be able to respond.</v>
+
+00:23:03.950 --> 00:23:11.100
+<v Sohoni, Sohum>And if not, I'm I'm sorry. I apologize in advance, but the midterm is locked and loaded. Oh, there's one other thing I wanted to say.</v>
+
+00:23:12.630 --> 00:23:19.610
+<v Sohoni, Sohum>In the other section we had a discussion on whether you should join a teams call during the test.</v>
+
+00:23:20.230 --> 00:23:47.940
+<v Sohoni, Sohum>And I founded that it can be a little disruptive if I'm talking or, you know, people ask questions while you were taking the test, so I would recommend not joining it. Teams called during the test time. I will instead be available on teams during the test. For sure. I'll try to make sure that I'm available. So if you have any questions during the test you are confused about something or need clarification on any other questions.</v>
+
+00:23:48.970 --> 00:24:02.880
+<v Sohoni, Sohum>Shoot me a message on teams and if there is a general announcement that I need to make. Like you know, question three is wrong or something like that. Then our post that in our teams channel.</v>
+
+00:24:05.760 --> 00:24:08.730
+<v Sohoni, Sohum>You get the general channel in in this course is team.</v>
+
+00:24:11.030 --> 00:24:11.790
+<v Sohoni, Sohum>That makes sense.</v>
+
+00:24:17.320 --> 00:24:17.670
+<v Geoffrey, Timothy>Yep.</v>
+
+00:24:18.000 --> 00:24:18.320
+<v Bultman, Joshua>Yep.</v>
+
+00:24:18.640 --> 00:24:19.030
+<v Sohoni, Sohum>OK.</v>
+
+00:24:20.960 --> 00:24:27.770
+<v Sohoni, Sohum>Alright, well then I wish you good luck for the test and I'll be around tomorrow. If you have questions.</v>
+
+00:24:31.210 --> 00:24:32.360
+<v Toohill, Teresa>Thank you for today.</v>
+
+00:24:33.370 --> 00:24:33.810
+<v Bultman, Joshua>Thank you.</v>
+
+00:24:32.550 --> 00:24:33.880
+<v Sohoni, Sohum>Take care bye.</v>
+
+00:24:35.390 --> 00:24:35.850
+<v Leonard, Benjamin>Thank you.</v>

@@ -1,0 +1,1075 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.810
+<v Sohoni, Sohum>Hey good afternoon class, how are you doing?</v>
+
+00:00:03.860 --> 00:00:04.740
+<v Leonard, Benjamin>I'm good, how are you?</v>
+
+00:00:05.690 --> 00:00:06.430
+<v Sohoni, Sohum>Doing well.</v>
+
+00:00:10.960 --> 00:00:15.550
+<v Sohoni, Sohum>Right, we still have just a few seconds before start time.</v>
+
+00:00:33.810 --> 00:00:37.790
+<v Sohoni, Sohum>OK, well so it is 3:00 o'clock.</v>
+
+00:00:38.710 --> 00:01:01.640
+<v Sohoni, Sohum>Your time hum. So let's start. So the plan today is to do three things. One I want to walk through quiz three which you took last week. Then I'm going to spend a few minutes talking about Two's complement 'cause that came up in the small group meetings, and at least a few students were not clear on what twos complement numbers look like. And then we'll spend the rest of the time.</v>
+
+00:01:01.700 --> 00:01:04.280
+<v Sohoni, Sohum>Come on pipelining OK?</v>
+
+00:01:05.040 --> 00:01:06.180
+<v Sohoni, Sohum>So quiz 3.</v>
+
+00:01:06.230 --> 00:01:23.640
+<v Sohoni, Sohum>He was all about the data path, so you were given some information. So for the data diagram shown below, instruction is, I'm going to write these things down so I don't have to keep scrolling up and down. So load word dollar S 0.</v>
+
+00:01:24.500 --> 00:01:26.930
+<v Sohoni, Sohum>$4 as one.</v>
+
+00:01:28.520 --> 00:01:32.780
+<v Sohoni, Sohum>Alright, so you want before we start works going on here. What is this instruction going to do?</v>
+
+00:01:47.750 --> 00:01:52.000
+<v Sohoni, Sohum>Come on, someone has to be able to tell me what load word does.</v>
+
+00:01:55.730 --> 00:01:56.680
+<v Bultman, Joshua>It just grabs.</v>
+
+00:01:58.530 --> 00:02:01.440
+<v Bultman, Joshua>Like a word from memory at the location.</v>
+
+00:02:02.510 --> 00:02:04.990
+<v Bultman, Joshua>In register as one and then stores it to S 0.</v>
+
+00:02:06.350 --> 00:02:07.550
+<v Bultman, Joshua>With the offset of four.</v>
+
+00:02:25.500 --> 00:02:26.420
+<v Bultman, Joshua>Yep, Yep.</v>
+
+00:02:08.870 --> 00:02:34.500
+<v Sohoni, Sohum>Yeah, so correct, but I'll change just a couple of words. I wouldn't use the word store because it's the load word instruction, so it loads that value from memory into registers zero and then the offset of four gets added to whatever is in South one right? So that when we're calculating the address, that's one we're going to need it. So just to be sure that it's not adding four to the value that was found at that memory location.</v>
+
+00:02:35.400 --> 00:02:48.550
+<v Sohoni, Sohum>Alright good, So what other information do we have? So we've been told as zero has the value zero X 1001000 CS one as the value.</v>
+
+00:02:49.310 --> 00:02:52.210
+<v Sohoni, Sohum>Zero X 1001.</v>
+
+00:02:53.170 --> 00:02:55.830
+<v Sohoni, Sohum>0000 OK.</v>
+
+00:02:57.590 --> 00:03:01.130
+<v Sohoni, Sohum>We will also being told that the value at.</v>
+
+00:03:02.580 --> 00:03:08.160
+<v Sohoni, Sohum>Address zero X 10010000.</v>
+
+00:03:09.260 --> 00:03:10.200
+<v Sohoni, Sohum>Yes.</v>
+
+00:03:11.140 --> 00:03:16.830
+<v Sohoni, Sohum>0X0050 and the value at address.</v>
+
+00:03:18.670 --> 00:03:20.710
+<v Sohoni, Sohum>Zero X 1001.</v>
+
+00:03:22.320 --> 00:03:26.630
+<v Sohoni, Sohum>0004, which is 4 away from the previous address.</v>
+
+00:03:27.280 --> 00:03:28.060
+<v Sohoni, Sohum>Yes.</v>
+
+00:03:37.700 --> 00:03:43.340
+<v Sohoni, Sohum>Uhm locations. There's a location for from that point which is.</v>
+
+00:03:44.310 --> 00:03:45.770
+<v Sohoni, Sohum>And 008.</v>
+
+00:03:47.500 --> 00:03:49.360
+<v Sohoni, Sohum>He is 44.</v>
+
+00:03:50.790 --> 00:03:59.270
+<v Sohoni, Sohum>We've been given a lot of information and then four from that point is it 4 from that point, yes, see would be 12. So zero X 1001.</v>
+
+00:04:00.300 --> 00:04:02.210
+<v Sohoni, Sohum>000C</v>
+
+00:04:03.090 --> 00:04:13.560
+<v Sohoni, Sohum>IS0B10 questions from anyone so far about the information that we've been given is anything here, not clear.</v>
+
+00:04:22.060 --> 00:04:23.270
+<v Sohoni, Sohum>Anything from.</v>
+
+00:04:24.430 --> 00:04:28.320
+<v Sohoni, Sohum>The whatever I have noted down so far, anything unclear.</v>
+
+00:04:35.770 --> 00:04:48.700
+<v Sohoni, Sohum>He's not getting any questions. OK, so the first question is the value at the bus leading to read register one will be what so read register one is instructions 25 through 21.</v>
+
+00:04:49.480 --> 00:04:57.810
+<v Sohoni, Sohum>Which is going to hold our source operand right? Which which register is the source operand in this instruction?</v>
+
+00:05:06.440 --> 00:05:07.190
+<v Rolando, Jackson>S1.</v>
+
+00:05:07.620 --> 00:05:11.210
+<v Sohoni, Sohum>Excellent, so it's South one. What is the number for South one?</v>
+
+00:05:12.330 --> 00:05:13.050
+<v Schilling, Atreyu>17</v>
+
+00:05:13.680 --> 00:05:15.270
+<v Sohoni, Sohum>Great, and how would you know that?</v>
+
+00:05:22.870 --> 00:05:24.600
+<v Sohoni, Sohum>So you can go look at Mars, right?</v>
+
+00:05:25.790 --> 00:05:40.440
+<v Sohoni, Sohum>This one is registered 17 so you can look at look at it there. The textbook likely has a place where it tells you that and I haven't looked at the green sheet in a long time, but I think that should also.</v>
+
+00:05:41.600 --> 00:05:54.390
+<v Sohoni, Sohum>Have that information. In any case, we know how to get the number for the register, so that's what's going to be on that bus, right? So 17 is the value that's on the bus.</v>
+
+00:05:55.180 --> 00:05:58.830
+<v Sohoni, Sohum>Leading to read register one. Anyone have questions about this?</v>
+
+00:06:06.240 --> 00:06:10.350
+<v Sohoni, Sohum>K What will be the value at the bus leading to read Register 2?</v>
+
+00:06:14.870 --> 00:06:17.000
+<v Sohoni, Sohum>It's bits 16 through 20.</v>
+
+00:06:26.470 --> 00:06:26.900
+<v Kreitzman, Colton>Still.</v>
+
+00:06:27.660 --> 00:06:44.740
+<v Sohoni, Sohum>Yeah 16, it is because those bids are our destination for the load word right which is the register at zero. Same logic. So because it's register as zero, it's number is 16. So that answer is going to be 16, right?</v>
+
+00:06:45.840 --> 00:06:48.910
+<v Sohoni, Sohum>Alright value at the bus leading to write register.</v>
+
+00:06:49.860 --> 00:06:55.040
+<v Sohoni, Sohum>Think we kind of just answered this question, but I'll still put it out there. What will that value be?</v>
+
+00:07:02.850 --> 00:07:03.750
+<v Rolando, Jackson>Also 16.</v>
+
+00:07:04.110 --> 00:07:20.560
+<v Sohoni, Sohum>Also 16 because this multiplexer is going to push through this value into the right register, right? 'cause that as we said, that's our destination register. That's the register we want to write 2 or load into, right? So that's why it's also 16.</v>
+
+00:07:21.300 --> 00:07:22.750
+<v Sohoni, Sohum>And that's what this says.</v>
+
+00:07:24.390 --> 00:07:26.410
+<v Sohoni, Sohum>Any questions up to this point?</v>
+
+00:07:28.450 --> 00:07:32.830
+<v Rolando, Jackson>Yeah, what does the the the top line out of the control?</v>
+
+00:07:34.160 --> 00:07:35.790
+<v Rolando, Jackson>What is what is that one again?</v>
+
+00:07:37.680 --> 00:07:37.980
+<v Sohoni, Sohum>This.</v>
+
+00:07:37.450 --> 00:07:39.240
+<v Rolando, Jackson>What does that stand for?</v>
+
+00:07:40.390 --> 00:07:42.900
+<v Rolando, Jackson>Uh, up above on the control.</v>
+
+00:07:43.620 --> 00:07:44.060
+<v Rolando, Jackson>Yeah.</v>
+
+00:07:43.050 --> 00:07:45.750
+<v Sohoni, Sohum>Oh those register destination.</v>
+
+00:07:46.140 --> 00:07:47.060
+<v Rolando, Jackson>Oh I gotcha OK?</v>
+
+00:07:47.720 --> 00:07:48.010
+<v Sohoni, Sohum>Yeah.</v>
+
+00:07:49.090 --> 00:07:50.510
+<v Sohoni, Sohum>Or any other questions?</v>
+
+00:07:53.250 --> 00:07:53.460
+<v Geoffrey, Timothy>yeah.</v>
+
+00:07:53.510 --> 00:07:54.100
+<v Geoffrey, Timothy>Yes.</v>
+
+00:07:54.370 --> 00:07:55.290
+<v Sohoni, Sohum>Yes, go ahead.</v>
+
+00:07:55.200 --> 00:07:55.670
+<v Geoffrey, Timothy>Uhm?</v>
+
+00:07:56.490 --> 00:07:57.080
+<v Geoffrey, Timothy>So.</v>
+
+00:07:57.880 --> 00:07:58.330
+<v Geoffrey, Timothy>It's.</v>
+
+00:07:59.070 --> 00:08:05.330
+<v Geoffrey, Timothy>21 through 31 I mean 26 to 31. It goes to the control unit.</v>
+
+00:08:06.170 --> 00:08:06.560
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:08:06.280 --> 00:08:08.750
+<v Geoffrey, Timothy>I mean, how does that get?</v>
+
+00:08:09.950 --> 00:08:11.610
+<v Geoffrey, Timothy>Decoded into.</v>
+
+00:08:12.930 --> 00:08:13.420
+<v Geoffrey, Timothy>Ah.</v>
+
+00:08:14.280 --> 00:08:15.550
+<v Geoffrey, Timothy>This thing with jigs.</v>
+
+00:08:18.810 --> 00:08:27.600
+<v Sohoni, Sohum>right, so that is just a piece of pure combinational logic. You can think of it as a look up table if you want.</v>
+
+00:08:31.600 --> 00:08:47.120
+<v Sohoni, Sohum>Where the value comes in, right? Some encoding like 010000, right, six, some 6 bit value comes in and this control unit essentially has like a table for this opcode. I'm going to make these values so and so.</v>
+
+00:08:48.400 --> 00:09:22.380
+<v Sohoni, Sohum>Right, so far a load word eat knows that rich destination needs to be 0 because it's going to use these top 16 through 20 bits, not the 11 through 15. It knows it's not a jump instruction, so this will be 0. It knows it's not a branch instruction, so this will be 0. It knows that we're reading memory so memory it will be one. What is meant to bridge? Yeah, this will be one as well because we want to take the data that was read from the memory and put it into the register. So that's why I'm am to Reggie is going to be 1.</v>
+
+00:09:22.680 --> 00:09:26.080
+<v Sohoni, Sohum>Otherwise, it's zero. When we weren't the ALU value to pass through.</v>
+
+00:09:26.580 --> 00:09:30.940
+<v Sohoni, Sohum>Uhm, early Op is going to be.</v>
+
+00:09:32.360 --> 00:09:34.630
+<v Sohoni, Sohum>That's something we don't really need to know.</v>
+
+00:09:35.660 --> 00:09:42.290
+<v Sohoni, Sohum>Ah, so that's not something I'll be asking you. 'cause that that involves a little more detailed knowledge of how the hardware is being controlled.</v>
+
+00:09:43.860 --> 00:10:04.670
+<v Sohoni, Sohum>And then MEM right is going to be 0 alias source is going to be one because we know that it's the bottom value. The sign extension that needs to go through and read write is going to be one because we are writing to a register. So it's it's just essentially every opcode that comes in has a corresponding.</v>
+
+00:10:05.590 --> 00:10:07.650
+<v Sohoni, Sohum>Output for those nine lines.</v>
+
+00:10:08.410 --> 00:10:10.880
+<v Sohoni, Sohum>And that's how it's actually controlled.</v>
+
+00:10:12.940 --> 00:10:14.030
+<v Geoffrey, Timothy>We hope boy OK.</v>
+
+00:10:16.350 --> 00:10:21.360
+<v Sohoni, Sohum>Yeah and well, I look generally don't like to gloss over things, so I'll say one quick word about.</v>
+
+00:10:21.410 --> 00:10:38.680
+<v Sohoni, Sohum>Uhm, ADL you pop, so Alu op is the one line out here. That is not a single bit value, so it's actually going to go ahead and control the ALU for things like all the R type instructions or.</v>
+
+00:10:40.400 --> 00:10:58.850
+<v Sohoni, Sohum>So in the R type instructions, it's going to take the zero through 5 to figure out what needs to be done for the branch instruction. As an example, the ALIADE needs to do a subtraction, so the Alu op is going to control that kinda stuff, and maybe I'll still leave it a little vague, but I'll leave it at that.</v>
+
+00:10:59.530 --> 00:11:03.550
+<v Sohoni, Sohum>So it's used to essentially drive what the Lu is doing.</v>
+
+00:11:04.140 --> 00:11:10.870
+<v Sohoni, Sohum>Where every all the other or one bit values that should be pretty clear on what they do and what they don't do.</v>
+
+00:11:13.030 --> 00:11:14.700
+<v Sohoni, Sohum>Any follow up question on that?</v>
+
+00:11:25.310 --> 00:11:35.290
+<v Sohoni, Sohum>So yeah, you can think of it as like just one big table. So for all possible opcodes, it's already going to have predetermined outputs for OK. If this is the opcode, then this is the output.</v>
+
+00:11:42.040 --> 00:11:51.260
+<v Sohoni, Sohum>Yes, that's the simple way of looking at it. I mean, when you build an actual circuit, you tend to optimize the circuit and it doesn't really look exactly like a look up table.</v>
+
+00:11:54.250 --> 00:12:25.650
+<v Sohoni, Sohum>So anyway, so let's see where were we we were looking at the right register, which was also 16. All right now things start to get interesting, so the value at the output of read data one is going to be what? So read data one was our source register, which was South one which according to my notes and obviously you can see the answer here as well contains zero X 10010, right? So this is what S1 contains, which is why we.</v>
+
+00:12:25.710 --> 00:12:44.680
+<v Sohoni, Sohum>Output on read data one right once we've read what's in register one or the first source Register here. That's going to be the value that's given to us right South one contains this value, and that's why that's going to be on Reid register. I mean, read data one.</v>
+
+00:12:45.750 --> 00:12:49.720
+<v Sohoni, Sohum>Value and read data two, so this is the tricky 1 right?</v>
+
+00:12:52.150 --> 00:12:52.810
+<v Sohoni, Sohum>Because.</v>
+
+00:12:54.960 --> 00:12:55.810
+<v Sohoni, Sohum>This is the.</v>
+
+00:12:55.860 --> 00:13:00.730
+<v Sohoni, Sohum>We let's go back top here so Reid date or two.</v>
+
+00:13:01.840 --> 00:13:16.570
+<v Sohoni, Sohum>He's going to be this the same register that we read here. Reid registered two, which in our case is 0. So whatever is in South Zero, which is this value? Here is what should be out on the read read data.</v>
+
+00:13:16.630 --> 00:13:23.430
+<v Sohoni, Sohum>New line, right? So that's where it's zero X 10010003.</v>
+
+00:13:25.230 --> 00:13:26.330
+<v Sohoni, Sohum>Questions on this?</v>
+
+00:13:32.600 --> 00:13:37.200
+<v Sohoni, Sohum>Did this confuse anybody? Said likely must have.</v>
+
+00:13:38.400 --> 00:13:39.630
+<v Sohoni, Sohum>Or did you just ignore it?</v>
+
+00:13:47.950 --> 00:13:51.460
+<v Kreitzman, Colton>I guess I'm kind of confused about why we care what the value of F0 is.</v>
+
+00:13:52.510 --> 00:13:54.630
+<v Sohoni, Sohum>We don't care about that.</v>
+
+00:13:56.080 --> 00:14:01.920
+<v Sohoni, Sohum>But I care about you knowing that we do read this register.</v>
+
+00:14:02.960 --> 00:14:20.120
+<v Sohoni, Sohum>Which is pointless to read right? Because this value is going to get rejected by this multiplexer here, and it's going to actually take the offset and add the offset of four to whatever was read from Reid data one. But then this value also propagates into right data here.</v>
+
+00:14:20.730 --> 00:14:44.480
+<v Sohoni, Sohum>And understanding these mechanisms that these are the same values, they're just either ignored through the multiplexers, or they are ignored through lines like this one here, which is the mem right line is going to essentially ignore any data that comes in here to be written today to memory, right? I want you to know that's how the hardware works, so that's why.</v>
+
+00:14:45.620 --> 00:14:56.470
+<v Sohoni, Sohum>I want you to know what what was on this line, but you're absolutely right, it doesn't matter because that value is neither red by the ALU, nor is it used by the data memory.</v>
+
+00:14:57.330 --> 00:14:58.490
+<v Sohoni, Sohum>Right everyone good on that.</v>
+
+00:15:00.960 --> 00:15:01.290
+<v Kreitzman, Colton>Yep.</v>
+
+00:15:03.450 --> 00:15:04.320
+<v Sohoni, Sohum>It's pretty good.</v>
+
+00:15:05.100 --> 00:15:27.350
+<v Sohoni, Sohum>So let's keep going. So that was that question. And then what the value of the output of the ALU, right? So the Lu is going to take in what it read from the first register, the source register, which is this one I believe, and it's going to add the offset of four to it. So the output on that one should be zero X 10010004.</v>
+
+00:15:27.980 --> 00:15:59.220
+<v Sohoni, Sohum>Right, that's that's the address that we want to look up in order to find what is at that location in memory. And that's what we want to put into our register. OK, so the value at the bus leading out of read data from the data memory block will be what. So that requires us to remember that this is the location we're looking up, right? And then, based on my notes, that location has the value zero X 10000. All zeros after that. So that's why.</v>
+
+00:15:59.290 --> 00:16:20.620
+<v Sohoni, Sohum>That's the right answer, so right you I want you to picture the memory and that's why I've given you a number of memory locations starting with zero X 1001000, right? This has a 32 bit value this as a 32 bit value. The next one has some 32 bit value and then the next one after that. So I've given you 4 memory locations.</v>
+
+00:16:21.840 --> 00:16:31.960
+<v Sohoni, Sohum>And given the contents of those memory locations, and you had to sort of pick which one is it that you're really reading? And then what is at that location so that that was at that location?</v>
+
+00:16:32.640 --> 00:16:48.090
+<v Sohoni, Sohum>Alright, and because that's the value that we read, right? That's the value that should at the end get written to register as zero, which is our destination register. So that answer is that next question, so there's that for you. And then.</v>
+
+00:16:48.920 --> 00:16:49.760
+<v Sohoni, Sohum>A few.</v>
+
+00:16:50.490 --> 00:17:03.100
+<v Sohoni, Sohum>Uhm, source our control line questions were essentially the ALU source control signal for the instruction will be one, and again, there's feedback given here. So it's true because.</v>
+
+00:17:03.710 --> 00:17:30.280
+<v Sohoni, Sohum>Uh, one for the signal selects the immediate value as opposed to what is read from the second register, right? So Alu source is this guy here right alias or selects between read data two and the immediate value? As I said, we don't care about what we read from this register, so that is not passed through and for that to happen the the number or the value on alias source has to be one.</v>
+
+00:17:31.010 --> 00:17:32.260
+<v Sohoni, Sohum>Is that part clear?</v>
+
+00:17:39.240 --> 00:17:40.230
+<v Sohoni, Sohum>Questions.</v>
+
+00:17:40.980 --> 00:17:41.910
+<v Sohoni, Sohum>That part.</v>
+
+00:17:44.970 --> 00:17:53.060
+<v Sohoni, Sohum>And then finally the register destination again. We discussed this in some amount of detail, but that value has to be one.</v>
+
+00:17:54.620 --> 00:17:58.250
+<v Sohoni, Sohum>In this case, because free scroll back up.</v>
+
+00:18:02.640 --> 00:18:03.280
+<v Sohoni, Sohum>So.</v>
+
+00:18:04.550 --> 00:18:07.220
+<v Sohoni, Sohum>Oh wait, a second register destination.</v>
+
+00:18:08.640 --> 00:18:11.500
+<v Sohoni, Sohum>That answer is wrong. Is there should be 0 actually?</v>
+
+00:18:12.120 --> 00:18:15.220
+<v Sohoni, Sohum>Oh yeah, it says false. That answer is correct.</v>
+
+00:18:16.290 --> 00:18:23.280
+<v Sohoni, Sohum>So that that needs to be a 0 because we're picking bits 2016 through 20 and not.</v>
+
+00:18:24.190 --> 00:18:25.410
+<v Sohoni, Sohum>11 to 15.</v>
+
+00:18:27.330 --> 00:18:27.840
+<v Sohoni, Sohum>OK.</v>
+
+00:18:28.860 --> 00:18:30.710
+<v Sohoni, Sohum>Any questions on quiz 3?</v>
+
+00:18:33.490 --> 00:18:36.770
+<v Sohoni, Sohum>Probably the last chance to ask a more about their data path.</v>
+
+00:18:40.110 --> 00:18:43.960
+<v Sohoni, Sohum>Until maybe the review lecture we do at the end of next week.</v>
+
+00:18:46.960 --> 00:18:47.490
+<v Geoffrey, Timothy>So.</v>
+
+00:18:47.720 --> 00:18:48.330
+<v Geoffrey, Timothy>Russia.</v>
+
+00:18:49.940 --> 00:18:50.590
+<v Geoffrey, Timothy>No.</v>
+
+00:18:52.050 --> 00:18:57.440
+<v Geoffrey, Timothy>Uh, yeah, question 6 tax lot. The output of the ALU.</v>
+
+00:18:59.860 --> 00:19:01.150
+<v Geoffrey, Timothy>And is that?</v>
+
+00:19:03.160 --> 00:19:07.970
+<v Geoffrey, Timothy>That is the thing labeled ale you and not add, right?</v>
+
+00:19:10.160 --> 00:19:13.700
+<v Sohoni, Sohum>The yeah correct? It's this value.</v>
+
+00:19:14.770 --> 00:19:15.350
+<v Geoffrey, Timothy>OK.</v>
+
+00:19:17.140 --> 00:19:19.630
+<v Sohoni, Sohum>So Alu result is what we are looking for.</v>
+
+00:19:27.960 --> 00:19:29.150
+<v Sohoni, Sohum>Any other questions?</v>
+
+00:19:40.920 --> 00:19:47.530
+<v Sohoni, Sohum>So yeah, I said this is the last chance to ask about the data path, but that's not really true. You can ask about the data path anytime you want.</v>
+
+00:19:48.280 --> 00:19:55.650
+<v Sohoni, Sohum>OK, alright, so let's look at twos compliment for a little bit. This is quite a jump. We're going back into Chapter 2.</v>
+
+00:19:55.700 --> 00:20:06.610
+<v Sohoni, Sohum>True, 'cause if you students were not really clear about what's going on with twos complement, OK so Two's complement is a way for us to.</v>
+
+00:20:07.320 --> 00:20:24.650
+<v Sohoni, Sohum>Are now cut through all the other information and get right to the point which is. It's a way for us to have a mathematical bias or basis. Sorry not bias, so mathematical basis for representing signed numbers OK, and it's super important that you understand that this.</v>
+
+00:20:25.460 --> 00:20:34.350
+<v Sohoni, Sohum>Mathematical basis it's important because we can build hardware around that. Whenever we have, uh, you know, stuff that's like special.</v>
+
+00:20:34.810 --> 00:20:53.470
+<v Sohoni, Sohum>Uhm, cases and things like that, but need to be looked up and so on that always results in bad hardware or inefficient hardware, whereas with twos complement because we can say for signed numbers this basis becomes negative 2 to the power 31 OK.</v>
+
+00:20:54.120 --> 00:21:05.080
+<v Sohoni, Sohum>That makes all the difference in terms of implementing hardware that can work for both signed and unsigned numbers with just one bit.</v>
+
+00:21:06.170 --> 00:21:17.750
+<v Sohoni, Sohum>Essentially, one wire is saying what the number is going to be a or one wire determining what the signed versus unsigned number is going to be right? So that representation.</v>
+
+00:21:19.080 --> 00:21:28.710
+<v Sohoni, Sohum>So what does this really mean? OK, so we can do it with like a really large 32 bit number. Or we could take a much simpler example, which I.</v>
+
+00:21:29.720 --> 00:21:32.650
+<v Sohoni, Sohum>Had written up last week.</v>
+
+00:21:33.950 --> 00:21:46.560
+<v Sohoni, Sohum>I'll just drag it into this screen. So last week we were looking at some branch instruction that had the number 7 on there right? And what I was showing there was.</v>
+
+00:21:47.550 --> 00:21:53.390
+<v Sohoni, Sohum>If we have the number 7, which is 111 right? And if it's a 16 bit number?</v>
+
+00:21:54.360 --> 00:21:58.700
+<v Sohoni, Sohum>K right, let's do it even fewer bits if it's a.</v>
+
+00:21:59.810 --> 00:22:00.370
+<v Sohoni, Sohum>Uhm?</v>
+
+00:22:02.710 --> 00:22:10.890
+<v Sohoni, Sohum>Yeah, this is not going to make sense, but OK, let's see 1234567. We need one more so if it's an 8 bit number, right?</v>
+
+00:22:11.230 --> 00:22:22.900
+<v Sohoni, Sohum>And we know that this is 2 to the power 02 to the power, 1/2 to the power of two, and so on and so forth, right? So what we end up doing is we.</v>
+
+00:22:24.460 --> 00:22:26.130
+<v Sohoni, Sohum>Oh, I understand what's going on so.</v>
+
+00:22:27.580 --> 00:22:40.490
+<v Sohoni, Sohum>To get the twos complement of any number right, if it's this number here and let's just pick a few bits. So I'm sorry I started with a 16 bit. That's why it looks like that so 345678.</v>
+
+00:22:41.720 --> 00:22:42.340
+<v Sohoni, Sohum>So.</v>
+
+00:22:43.980 --> 00:22:45.590
+<v Sohoni, Sohum>Let's take an 8 bit number.</v>
+
+00:22:49.700 --> 00:22:50.830
+<v Sohoni, Sohum>What we do?</v>
+
+00:22:54.090 --> 00:23:00.510
+<v Sohoni, Sohum>You go from this number two. It's Two's complement. OK, so I'm going to ignore this as well.</v>
+
+00:23:01.080 --> 00:23:15.230
+<v Sohoni, Sohum>I'm sorry I'm playing around with all this too much, but I'll remind you of what we're trying to do, so we're trying to take this 8 bits seven OK, and getting its Two's complement so the easy, non mathematical way of doing it.</v>
+
+00:23:16.090 --> 00:23:30.360
+<v Sohoni, Sohum>Uh, we used to take all the bits and invert them. OK, so we've got 5 zeros and three ones. So instead of that we'll get 12345 ones and three zeros. That's the one's complement.</v>
+
+00:23:31.680 --> 00:23:32.150
+<v Sohoni, Sohum>OK.</v>
+
+00:23:34.000 --> 00:23:39.360
+<v Sohoni, Sohum>We don't need to give it a name, but that's essentially just flipping all the bits then.</v>
+
+00:23:39.990 --> 00:23:42.490
+<v Sohoni, Sohum>We actually add a one to that.</v>
+
+00:23:44.140 --> 00:23:48.380
+<v Sohoni, Sohum>Which gives us the twos complement, which is the number that I have down here.</v>
+
+00:23:51.130 --> 00:23:55.420
+<v Sohoni, Sohum>Everyone with me so far, you understand what's happening. How did I get this number?</v>
+
+00:24:01.880 --> 00:24:03.010
+<v Sohoni, Sohum>Someone say yes.</v>
+
+00:24:05.290 --> 00:24:05.900
+<v Sohoni, Sohum>Or no.</v>
+
+00:24:06.730 --> 00:24:07.850
+<v Sohoni, Sohum>If you're not with me.</v>
+
+00:24:10.220 --> 00:24:11.010
+<v Stepp, Kameron>I understand.</v>
+
+00:24:12.340 --> 00:24:12.680
+<v Sohoni, Sohum>OK.</v>
+
+00:24:12.650 --> 00:24:13.600
+<v Schilling, Atreyu>Oh yeah, I see.</v>
+
+00:24:14.160 --> 00:24:29.440
+<v Sohoni, Sohum>Yeah right, it's just, you know, flipping all the bits and adding a one. So the result that we get here is these five ones. A couple of zeros and then a one. Now if we take this bit pattern and we use the scale.</v>
+
+00:24:30.190 --> 00:24:30.820
+<v Sohoni, Sohum>Off this.</v>
+
+00:24:31.280 --> 00:24:42.200
+<v Sohoni, Sohum>Uh, you know most significant bit times two to the I mean negative two to the whatever the the bit value is, right? So in this case it's going to be 8.</v>
+
+00:24:42.830 --> 00:24:47.380
+<v Sohoni, Sohum>Uhm, or seven? Sorry, because we're going with 01 so.</v>
+
+00:24:48.110 --> 00:24:51.810
+<v Sohoni, Sohum>Let me just put that down there so the powers that we're using.</v>
+
+00:24:52.650 --> 00:24:57.950
+<v Sohoni, Sohum>It's kind of hard to do it the other way, so I'll just do it this way 76.</v>
+
+00:24:58.540 --> 00:25:00.610
+<v Sohoni, Sohum>54</v>
+
+00:25:03.960 --> 00:25:10.500
+<v Sohoni, Sohum>So these are the powers corresponding to each of these bits, right? So let me space those out as well.</v>
+
+00:25:11.890 --> 00:25:27.910
+<v Sohoni, Sohum>Just realized this is much easier to write with the stylus then type in, but these are the corresponding powers of two right that we do for each of the binary bits right? To get from a binary to decimal number.</v>
+
+00:25:29.790 --> 00:25:38.970
+<v Sohoni, Sohum>Except what we are going to do is for the top one, we're going to give it in negative sign in terms of what is getting multiplied.</v>
+
+00:25:39.700 --> 00:25:40.350
+<v Sohoni, Sohum>Part 2</v>
+
+00:25:42.000 --> 00:25:42.410
+<v Sohoni, Sohum>OK.</v>
+
+00:25:43.340 --> 00:26:12.320
+<v Sohoni, Sohum>So that's how we end up with and let's work backwards with this number. So zero. So 2 to the power Zero is 1, so we do 1 * 1. We get the one over here. Then we do whatever we get here at times 0. So that's going to be a 00 again. Then we do 2 to the power three, which is 8 * 1 is 8, then sixteen 3264 and so on. Except for this one, we're going to do negative 2.</v>
+
+00:26:13.030 --> 00:26:18.990
+<v Sohoni, Sohum>Through the power 7. So I think the really good way of representing all this.</v>
+
+00:26:20.320 --> 00:26:34.190
+<v Sohoni, Sohum>Takes a lot of effort in Word when I'm typing it in, but that's essentially what we're doing when we when we do the Two's complement right. All these others are positive.</v>
+
+00:26:35.510 --> 00:26:38.400
+<v Sohoni, Sohum>2 to the power that particular thing.</v>
+
+00:26:41.690 --> 00:27:09.060
+<v Sohoni, Sohum>OK, and so on and so forth. I'm not gonna waste everyones time trying to superscript all of these, but essentially it's negative. 2 to the power 7 + 2 to the power 6 + 2 to the power of five, obviously multiplied by each of these. That's how we get negative 128 + 64 + 32 + 16 and so on and so forth until we if we Add all of this up we get the negative seven over here.</v>
+
+00:27:10.320 --> 00:27:16.570
+<v Sohoni, Sohum>Let's start making sense is that you know something you already understood it. You still have questions about this.</v>
+
+00:27:17.770 --> 00:27:20.950
+<v Sohoni, Sohum>Please feel free, this is your twos complement lecture.</v>
+
+00:27:23.340 --> 00:27:26.690
+<v Rolando, Jackson>That's very interesting. I had never.</v>
+
+00:27:27.530 --> 00:27:40.630
+<v Rolando, Jackson>Seeing it that way, I've always just flipped them all and then added one, so that's that's very good to see so that you don't necessarily have to convert it. You can just do it that way and add the negative 128.</v>
+
+00:27:41.070 --> 00:27:53.230
+<v Sohoni, Sohum>Yeah, I mean for human beings it is. I would still say it's easier to flip the bits and add one, but for the computer when you're building the hardware, this is the better way to do it because you're going to do that.</v>
+
+00:27:53.960 --> 00:27:54.340
+<v Sohoni, Sohum>Well.</v>
+
+00:27:55.280 --> 00:28:16.100
+<v Sohoni, Sohum>Yeah, it is the the mathematical basis for twos complement. That's that's important. And actually I went through all of grant school without even realizing that it's only when I started teaching that I finally understood what they meant by the that mathematical basis. So yeah, if you if you get this in in your sophomore year, and that's good.</v>
+
+00:28:21.410 --> 00:28:22.780
+<v Geoffrey, Timothy>So I have a question.</v>
+
+00:28:23.140 --> 00:28:23.500
+<v Sohoni, Sohum>Yeah.</v>
+
+00:28:23.990 --> 00:28:27.580
+<v Geoffrey, Timothy>So this is regarding the negative 128.</v>
+
+00:28:28.040 --> 00:28:28.420
+<v Sohoni, Sohum>Yep.</v>
+
+00:28:29.270 --> 00:28:35.600
+<v Geoffrey, Timothy>So is it just like automagically the most significant bit that gets the negative sign?</v>
+
+00:28:35.980 --> 00:28:47.320
+<v Sohoni, Sohum>Yeah, so if it's a 32 bit number then we go back to the textbook here and that it's pointing that out it 631 right? Let's bid 31 because the first bit is 0, so we're dealing with.</v>
+
+00:28:48.120 --> 00:28:55.750
+<v Sohoni, Sohum>Starting with zero right into negative 2 to the power 31. So in a 32 bit number, that's the bit that's going to get the negative sign.</v>
+
+00:28:58.530 --> 00:28:59.080
+<v Geoffrey, Timothy>Cool.</v>
+
+00:28:59.620 --> 00:29:06.630
+<v Sohoni, Sohum>Yeah, and that's why. I mean, that's how it works. Like you, you Add all of these up and here you're going to get like the.</v>
+
+00:29:08.810 --> 00:29:14.560
+<v Sohoni, Sohum>Yeah, we were. What are they using? So they're using some some example, there's not any special number.</v>
+
+00:29:16.080 --> 00:29:19.640
+<v Sohoni, Sohum>But if it was all ones, you would get a certain number there.</v>
+
+00:29:24.840 --> 00:29:33.650
+<v Sohoni, Sohum>And if you lose one followed by all zeros, you would get a certain different number. What would that number be? Does anyone know?</v>
+
+00:29:40.470 --> 00:29:41.750
+<v Geoffrey, Timothy>Negative a lot.</v>
+
+00:29:43.080 --> 00:29:59.490
+<v Sohoni, Sohum>He's going to be this number here at groups. It's not letting me select, so this number right here is what it's going to be, but the significance is, it's the largest negative number that we can represent in twos complement because we are essentially adding nothing to the largest negative value that we can get.</v>
+
+00:30:02.230 --> 00:30:03.190
+<v Sohoni, Sohum>Is that making sense?</v>
+
+00:30:06.220 --> 00:30:14.890
+<v Sohoni, Sohum>If this was 8 bits, right? If all of these guys were zero, the biggest number that we could possibly get on the negative side would be negative 128.</v>
+
+00:30:23.680 --> 00:30:28.970
+<v Sohoni, Sohum>And well, one last detail that I should probably mention is if you have a 0 here.</v>
+
+00:30:29.700 --> 00:30:31.180
+<v Sohoni, Sohum>Right on the sign bit.</v>
+
+00:30:32.150 --> 00:30:39.910
+<v Sohoni, Sohum>Then this becomes 0 and that's how everything stays positive, so we're not subtracting this big negative value from anything.</v>
+
+00:30:40.530 --> 00:30:44.630
+<v Sohoni, Sohum>Right, so whatever is leftover is just the positive number that's that's there.</v>
+
+00:30:47.280 --> 00:30:48.460
+<v Sohoni, Sohum>Start making sense.</v>
+
+00:30:57.690 --> 00:30:58.340
+<v Geoffrey, Timothy>Think so.</v>
+
+00:31:02.490 --> 00:31:07.060
+<v Sohoni, Sohum>Good, maybe next year I'll make a nice slide for all of this.</v>
+
+00:31:09.410 --> 00:31:10.600
+<v Sohoni, Sohum>This is a little hard.</v>
+
+00:31:18.380 --> 00:31:22.060
+<v Sohoni, Sohum>Muted me, how is that even possible? You guys can mute me.</v>
+
+00:31:29.050 --> 00:31:31.410
+<v Bultman, Joshua>Yeah, I think it's for when like somebody has their Mike.</v>
+
+00:31:32.260 --> 00:31:35.820
+<v Bultman, Joshua>Unmuted and they don't realize it. Everybody else can get them if they need to.</v>
+
+00:31:36.970 --> 00:31:37.680
+<v Sohoni, Sohum>Oh wow.</v>
+
+00:31:37.730 --> 00:31:37.920
+<v Sohoni, Sohum>No.</v>
+
+00:31:39.400 --> 00:31:42.470
+<v Sohoni, Sohum>OK, 'cause I thought I'd accidentally hit the mute button.</v>
+
+00:31:43.200 --> 00:31:43.660
+<v Sohoni, Sohum>OK.</v>
+
+00:31:44.690 --> 00:32:10.900
+<v Sohoni, Sohum>Alright, so that's that with both the additional things like the quiz as well as Two's complement. I don't know if we really we can either go back to pipelining or there's one more topic which I thought some of you struggled with a little bit, which was bit masking. Do you want to spend a few more minutes on bit masking today? Since we're just kind of catching up on other things anyway.</v>
+
+00:32:13.230 --> 00:32:13.950
+<v Geoffrey, Timothy>Sure.</v>
+
+00:32:15.210 --> 00:32:17.260
+<v Sohoni, Sohum>OK, let spend.</v>
+
+00:32:18.010 --> 00:32:20.410
+<v Sohoni, Sohum>Maybe 4 minutes on bit masking.</v>
+
+00:32:22.450 --> 00:32:23.200
+<v Sohoni, Sohum>Though.</v>
+
+00:32:23.960 --> 00:32:27.430
+<v Sohoni, Sohum>Let me see if I have it. Yeah, so I think here.</v>
+
+00:32:29.550 --> 00:32:30.880
+<v Sohoni, Sohum>OK, so.</v>
+
+00:32:33.260 --> 00:32:36.390
+<v Sohoni, Sohum>Yes, still see it right? Just disappeared for a minute.</v>
+
+00:32:37.610 --> 00:33:07.790
+<v Sohoni, Sohum>So yeah, bit manipulation allows us to operate at the bit level, right? We can isolate certain bits out of a large collection of bits. In our case, we're going to have for MIPS. It's going to be 32 bits, right? And it's kind of clunky to deal with 32 bits, so I'm going to show you examples where just 8 bits. OK, so the question really is, why do we care about this, right? So we don't really have a direct way to check specific bits, and that will become clear as I showed just.</v>
+
+00:33:07.900 --> 00:33:25.020
+<v Sohoni, Sohum>A few examples here, so with with quite a few input outputs things we end up building some sort of protocol that makes it meaningful for one bit or the other bid to be checked, or maybe sometimes a group of bids to be checked or to be set or reset.</v>
+
+00:33:26.130 --> 00:33:49.330
+<v Sohoni, Sohum>Uhm, so typically there are three things we we either create a mask. Uh, well, we can always create a mask and then we we are either clearing or setting, clearing means making zero setting means making one OK, so here's the first simple example, so we're going to use the and operation, right? The property that ending anything with a 0 gives us a 0.</v>
+
+00:33:49.900 --> 00:34:21.530
+<v Sohoni, Sohum>Uhm, to mask the most significant 7 bits. OK, So what are we doing here? We're essentially taking the number zero X 01 because we want all of these other bids to be forced to become zeros, right? So it's a zero through a 7 in our register or whatever it might be are being ended with the value zero X 01, which leaves because ending with a one gives you whatever was that previous value.</v>
+
+00:34:21.610 --> 00:34:38.460
+<v Sohoni, Sohum>Right, it leaves this as is and forces everything else to be zeros. And why could this be useful? This could be useful if you wanted to know whether only bit a zero was one in this particular register.</v>
+
+00:34:39.350 --> 00:34:49.750
+<v Sohoni, Sohum>OK, tell me if the the problem we're trying to solve is not clear, because I think most students understand the actual mechanics of bit masking, but this really don't understand why we do bit masking.</v>
+
+00:34:54.070 --> 00:34:58.540
+<v Sohoni, Sohum>So let me know if you are still not clear as to what we're trying to accomplish or why.</v>
+
+00:35:12.510 --> 00:35:42.370
+<v Sohoni, Sohum>And like a real world example could be, I don't know if I've talked about it in this section or not, so I'll just repeat myself if I have. So maybe this register has each of these bits means something special, right? If a zero is set, let's say it means that then an overflow occurred. If a one is set, may be the result was zero for whatever the ALU was doing right? If a two is set, then maybe there was a keyboard interrupt that that came through. A three is set. Maybe someone clicked on a mouse.</v>
+
+00:35:42.430 --> 00:35:45.930
+<v Sohoni, Sohum>That's weird, yeah, indicates what that's what happens when.</v>
+
+00:35:47.180 --> 00:36:16.920
+<v Sohoni, Sohum>Or equally becomes 1 means that someone clicked on the mouse or or something like that. So right? So you can have a register that has all these special values for each of the places, right? These are typically called flags, so we want to see if the overflow flag was set or the zero flag was set and so on. So we don't really at this point when we're trying to check for this guy, we don't really care about what the other values were and if we wanted to see only a 0.</v>
+
+00:36:17.240 --> 00:36:41.930
+<v Sohoni, Sohum>That would be a really large number of numbers that would match with a 0 being one right when you look at all the other combinations here. Or the other possibilities here. So it's really we want to isolate just that one bit to see in a subsequent instruction to do a comparison with this new number that we have here with the zero register.</v>
+
+00:36:43.040 --> 00:36:55.330
+<v Sohoni, Sohum>Right, and if that comparison is true, then we we can say that oh, a zero was zero and the comparison is false. We can say a 0 is a one. Is that making sense?</v>
+
+00:37:06.040 --> 00:37:07.240
+<v Sohoni, Sohum>Why are you so quiet?</v>
+
+00:37:11.980 --> 00:37:13.610
+<v Sohoni, Sohum>It's not making sense, asked me.</v>
+
+00:37:19.190 --> 00:37:19.780
+<v Bultman, Joshua>That makes sense.</v>
+
+00:37:21.820 --> 00:37:22.170
+<v Sohoni, Sohum>K.</v>
+
+00:37:23.240 --> 00:37:23.610
+<v Sohoni, Sohum>Good.</v>
+
+00:37:24.210 --> 00:37:27.600
+<v Sohoni, Sohum>Alright, so let's look at another thing that we can do.</v>
+
+00:37:28.430 --> 00:38:00.340
+<v Sohoni, Sohum>Uh, which is specifically clearing just one bit. OK, so here we're given bits be zero through B7 and we want to change the status. Let's say this is again the B register so as to say we want to change the status of the B register by clearing out just bit 3 without affecting the values of all the other bits, right? So we gotta figure out what the mask is going to be because we want to leave all of these guys as ones right again.</v>
+
+00:38:00.390 --> 00:38:31.700
+<v Sohoni, Sohum>Clearing involves doing an end with with zero, so bit 3 being cleared means we gotta have bid three as zero. All these other bits should be one, so our mask ends up being F, which is you know, and 1111 and then 0111 is 7. So zero X F7 is the mask we come up with and then when we end register be with the value zero X F7, right again assuming everything is just 8 bits.</v>
+
+00:38:32.020 --> 00:38:37.710
+<v Sohoni, Sohum>We retain all the other bids as they are and we end up forcing bid three to be a 0.</v>
+
+00:38:38.650 --> 00:38:41.600
+<v Sohoni, Sohum>OK, so the opposite can be done.</v>
+
+00:38:42.250 --> 00:39:13.570
+<v Sohoni, Sohum>By when we want to force something to be a one, right? So in this case we've got register, see which is C0 through C7 and we want to make sure that C4 and C5 are both one OK and we're going to. Obviously, if we wanted to force everything to one, we could just write the value into this register, right? That's not what we want to do. We want to keep all the other bits as they were, and that's why we're doing and or same thing if we wanted to.</v>
+
+00:39:13.650 --> 00:39:44.000
+<v Sohoni, Sohum>Words these bits to be zeros and 4C4 and C5 to be one. Then we can simply write the value 0X30 into registers C, But that's not what we're trying to accomplish. We're trying to make sure that these other bits remain unchanged to C0 through C3 and C67. Say stay as they are and only C4 and C5 become ones. So that's why we, or with the value 0X30, which again ordering anything with the zeros.</v>
+
+00:39:44.100 --> 00:39:54.970
+<v Sohoni, Sohum>Keeps it as it is in ordering anything with one forces it to be a one. OK, so the same concept as the end for clearing or setting. We do overs with with ones.</v>
+
+00:39:56.040 --> 00:39:59.190
+<v Sohoni, Sohum>Any questions, that's all I really had with with bit masking.</v>
+
+00:40:00.130 --> 00:40:04.870
+<v Sohoni, Sohum>So now is the time to ask any any questions on bit bit masking.</v>
+
+00:40:11.640 --> 00:40:12.820
+<v Geoffrey, Timothy>Here is a question.</v>
+
+00:40:13.410 --> 00:40:13.790
+<v Sohoni, Sohum>Yeah.</v>
+
+00:40:14.760 --> 00:40:19.710
+<v Geoffrey, Timothy>What's stopping you from just looking at the original things?</v>
+
+00:40:21.010 --> 00:40:23.200
+<v Geoffrey, Timothy>To determine whether or not if it is set.</v>
+
+00:40:24.760 --> 00:40:25.370
+<v Sohoni, Sohum>Uhm?</v>
+
+00:40:26.270 --> 00:40:37.390
+<v Sohoni, Sohum>Yeah, that's that's what I was trying to say a few minutes earlier. It's a it's a good question. It's a valid question. You really gotta think about. How are you going to look at only the individual bits?</v>
+
+00:40:38.960 --> 00:40:59.120
+<v Sohoni, Sohum>What mechanism do you have? So let's say you're writing a program in Mars, and you want to find out if these two bits are ones. I mean, not here. I mean here, you're forcing those bids right? So if we go back to the original mask, if here you wanted to know only whether a zero was one or not, how could you isolate that bit?</v>
+
+00:41:03.280 --> 00:41:04.190
+<v Geoffrey, Timothy>If it's odd.</v>
+
+00:41:05.710 --> 00:41:07.170
+<v Geoffrey, Timothy>If the number is odd.</v>
+
+00:41:06.390 --> 00:41:13.440
+<v Sohoni, Sohum>OK, sure you could do that. What if I wanted to know if bits only bits a three and a four hour 1?</v>
+
+00:41:23.000 --> 00:41:24.100
+<v Sohoni, Sohum>Get where I'm going with this.</v>
+
+00:41:27.270 --> 00:41:27.940
+<v Geoffrey, Timothy>Yes.</v>
+
+00:41:28.170 --> 00:41:58.650
+<v Sohoni, Sohum>Yeah, that is zero was it was a I'm I'm glad you jumped on that. 'cause that's that's one place where you can easily actually determine whether the number is even or odd. Tells us whether that bit is zero or one, but there could be other bit patterns that we care about, right? I want to know if A785 and A3 or ones, and I don't really care about what the other bits are, or if you're in situation like that. You have to isolate those particular bits and then see whether the resulting number is 0.</v>
+
+00:41:58.860 --> 00:41:59.950
+<v Sohoni, Sohum>Or whether it's one.</v>
+
+00:42:07.530 --> 00:42:10.030
+<v Sohoni, Sohum>If you're if you're looking for a specific pattern that is.</v>
+
+00:42:10.690 --> 00:42:11.010
+<v Sohoni, Sohum>K.</v>
+
+00:42:18.310 --> 00:42:30.660
+<v Sohoni, Sohum>And if you want it in there, the other example I just gave. If you're looking specifically for a 785 N E3. First you would figure out what the mask is and then you would compare that with the mask.</v>
+
+00:42:32.170 --> 00:42:35.550
+<v Sohoni, Sohum>If you wanted to check if all three or one or or not.</v>
+
+00:42:39.320 --> 00:42:40.110
+<v Sohoni, Sohum>I'm making sense.</v>
+
+00:42:42.780 --> 00:42:43.510
+<v Geoffrey, Timothy>I think so, yeah.</v>
+
+00:42:46.350 --> 00:42:50.070
+<v Sohoni, Sohum>So maybe it's clearer over here, so if this was our mask, right?</v>
+
+00:42:51.170 --> 00:43:05.970
+<v Sohoni, Sohum>We would compare if we just wanted to find out if C4 and C5 were ones we wouldn't do the OR like that. We would do an end to isolate just C4 and C5, but then we would compare it with 0X30.</v>
+
+00:43:06.730 --> 00:43:10.100
+<v Sohoni, Sohum>To see if these two bits or one or not.</v>
+
+00:43:14.240 --> 00:43:18.090
+<v Sohoni, Sohum>Alright, so let me.</v>
+
+00:43:19.050 --> 00:43:26.760
+<v Sohoni, Sohum>Then get to pipelining. We've got 8 minutes left, so we can still at least see refresh our memories with pipelining and then.</v>
+
+00:43:30.220 --> 00:43:32.390
+<v Sohoni, Sohum>Continue with it on Wednesday if needed.</v>
+
+00:43:34.680 --> 00:43:40.540
+<v Sohoni, Sohum>Alright, so last time we just looked at the interstage buffers in in this section.</v>
+
+00:43:40.910 --> 00:44:12.200
+<v Sohoni, Sohum>Uh, and hopefully that part is clear, like what is in those interstage buffers. Why do we need interstage buffers and so on? And so if it if it's clear, I want to go back to the the hazards that we were talking about. So I had explained the structural hazard with the register file. So let's go ahead and talk about data hazards. Data hazards are kind of the easy ones to understand, and especially when you have a situation like this.</v>
+
+00:44:12.370 --> 00:44:42.070
+<v Sohoni, Sohum>Where you've gotta register as zero, for example, which is the destination registers you're going to add T0T1. Put the resulting value in a 0 right and then the immediate next instruction that you have is a subtract instruction which is actually using SO as the source, right? So this is where I was. I was kind of explaining what the issue is, so by the time we get to read the Register here for the second instruction.</v>
+
+00:44:42.400 --> 00:45:03.310
+<v Sohoni, Sohum>I would first instruction is only here in the ALU stage, right? So it hasn't gone through and written back that new value, so our our subsequent instruction is going to get the stale value of 0 before the T0 plus T1 computation was written back to it, and this the rest of the slide here is.</v>
+
+00:45:04.000 --> 00:45:18.320
+<v Sohoni, Sohum>Showing a slightly different view of what is going on, and maybe I'll spend the rest of the class period on just this one slide. Or maybe on the next one. Let's see. So what do we see here? So this is a timeline and.</v>
+
+00:45:19.120 --> 00:45:25.560
+<v Sohoni, Sohum>This timeline is essentially based on a cycle taking 200.</v>
+
+00:45:26.330 --> 00:45:56.470
+<v Sohoni, Sohum>Picoseconds or whatever. So the numbers actually don't matter. You can think of this simply a cycle one cycle 2 cycle three and so on. And now that I'm looking at it, I don't even know why I have actual times on. There could have just easily kept it at cycle one cycle to and so on. South the add instruction in cycle one is going to do its instruction fetch. In cycle two, it's going to do it's decode right, which is basically reading registers T0 and T1 and doing the control sign control.</v>
+
+00:45:56.550 --> 00:46:22.980
+<v Sohoni, Sohum>Right lines in the third cycle, it's going to execute to do the actual addition and figure out what is the result of the addition in the MEM stage. It's not going to do anything 'cause the only two instructions that actually use the MEM stage, our load word and store word, so it's just going to idle in this time and then in that fifth stage and right back it's actually going to write that result back into S 0.</v>
+
+00:46:23.960 --> 00:46:36.340
+<v Sohoni, Sohum>OK, so it's only here that the result is available and so we can't really do the subtraction until we can read the result from the register file.</v>
+
+00:46:37.930 --> 00:46:43.640
+<v Sohoni, Sohum>Is that making sense? And that's why we put quarter called bubbles in the pipeline?</v>
+
+00:46:47.590 --> 00:46:49.420
+<v Sohoni, Sohum>So if you understand what the problem is.</v>
+
+00:46:50.670 --> 00:46:51.140
+<v Kreitzman, Colton>Yeah.</v>
+
+00:46:51.710 --> 00:46:52.140
+<v Sohoni, Sohum>OK.</v>
+
+00:46:53.450 --> 00:47:01.490
+<v Sohoni, Sohum>You've got to have some follow up question here. There's something I haven't really talked about. That's kinda obvious on the slide.</v>
+
+00:47:05.150 --> 00:47:07.710
+<v Kreitzman, Colton>I mean, I guess I'm little bubbles work exactly.</v>
+
+00:47:08.320 --> 00:47:19.830
+<v Sohoni, Sohum>Ah yeah, I can answer that. That wasn't what I was looking for, but sure, that's that's definitely important for you to know, so the bubbles are essentially the no OP instruction.</v>
+
+00:47:23.930 --> 00:47:44.720
+<v Sohoni, Sohum>So, so the pipeline is there, so there's hardware. So actually yeah, this is a deeper conversation. We need to have so the hardware has checks in place for all possible hazards that can happen. OK, so it checks whether your destination register matches with a source register.</v>
+
+00:47:46.340 --> 00:48:15.720
+<v Sohoni, Sohum>That's in the next few instructions, so here it's going to check this out zero with this instruction as well as a few others that would have gotten the stale value if you didn't do anything about it, right? So it's going to have that sort of hardware in place, and then that hardware not only does the check, but it can actually do a force zeroing out of all the values, and that's where these interstage buffers actually come in. Quite handy as well.</v>
+
+00:48:15.860 --> 00:48:30.330
+<v Sohoni, Sohum>So instead of the instruction that was fetched, OK equal, the hardware will just do the check to see oh this subtraction instruction that we just got actually has zero as a source.</v>
+
+00:48:31.240 --> 00:48:48.410
+<v Sohoni, Sohum>Uh, when S 0 is a destination for the previous register, and so the hardware which is not shown here is going to just put all zeros into this instruction over here so it automatically becomes a no op. OK, so the the actual encoding, the 32 bit encoding of a no op is all zeros.</v>
+
+00:48:49.020 --> 00:49:16.360
+<v Sohoni, Sohum>And that's pretty convenient, so it turns it into a no op, and then the hardware keeps track of what happened, and then it keeps it prevents us from doing PC Plus four, and essentially until the there is the right time to go ahead and fetch the instruction. So it will do no OPS here. It'll do no OPS here, and then it will say OK. Now I can fetch this. I have enough time to fetch and decode and get the right values.</v>
+
+00:49:20.880 --> 00:49:21.970
+<v Sohoni, Sohum>That answer your question.</v>
+
+00:49:23.350 --> 00:49:24.700
+<v Kreitzman, Colton>Yeah it does.</v>
+
+00:49:26.120 --> 00:49:31.820
+<v Sohoni, Sohum>Then you would have another question. There's two possible questions I'm looking for here.</v>
+
+00:49:33.780 --> 00:49:34.830
+<v Sohoni, Sohum>We've got one minute.</v>
+
+00:49:37.990 --> 00:50:08.460
+<v Sohoni, Sohum>So I'll answer the one question that's not being asked, which is what's with the shading over here. Like why is this half Gray and half white? What it's showing really is something very, very important, and the importance of that really comes through in this. You know, clock cycle here, where the right backstage has its shading in the first half, and the ID stage has the shading in the second half. What's going on? Is we're solving a structural hazard, which is access to the register file.</v>
+
+00:50:08.770 --> 00:50:30.640
+<v Sohoni, Sohum>By two different instructions in the same clock cycle, by saying that the right back is going to happen on the rising edge of the clock, and the Reid is going to have happened on the falling edge of the clock, so that chorna ensures that the the data we just wrote in 2 S 0 is the correct data that gets read in the decode stage of that sub instruction.</v>
+
+00:50:32.310 --> 00:50:35.300
+<v Sohoni, Sohum>Does that make sense? Isn't isn't that weird genius?</v>
+
+00:50:42.350 --> 00:51:12.040
+<v Sohoni, Sohum>So that's that's one thing, and I know where at 1:50, but I'll just quickly show you just the next slide. We talk about the next slide on Wednesday, but the next slide essentially is showing us that even though the right back happens here, the actual value that we need actually gets computed right here, right? So, another way of solving this problem again, the hardware has to be designed that way is called forwarding, which is to say we know the value here.</v>
+
+00:51:12.340 --> 00:51:38.570
+<v Sohoni, Sohum>We haven't written it back yet, but we can do some sort of matching to say OK as zero is. What is the source operand here? The value that will be in as zero is already computed here, so let me just pass it through so that we don't have to stall the processor. We don't have to put a bubble and we can just continue as if we've already got the value because we have it right here. OK, so I'll stop there 'cause this merits some more discussion.</v>
+
+00:51:37.360 --> 00:51:40.430
+<v Furst, Elias>Wait, wait. Now I have a I have a question though.</v>
+
+00:51:40.460 --> 00:51:40.740
+<v Sohoni, Sohum>Yeah.</v>
+
+00:51:48.510 --> 00:51:48.840
+<v Sohoni, Sohum>Yeah.</v>
+
+00:51:42.220 --> 00:51:49.210
+<v Furst, Elias>So that's like the same uh, Alu in 'cause it there's just one, right, so?</v>
+
+00:51:54.330 --> 00:51:54.730
+<v Sohoni, Sohum>Yep.</v>
+
+00:51:49.820 --> 00:51:54.940
+<v Furst, Elias>It's like it's output is going back into its input and how does that?</v>
+
+00:51:55.740 --> 00:51:59.430
+<v Furst, Elias>Uh, how does how does that work like?</v>
+
+00:51:58.880 --> 00:52:05.520
+<v Sohoni, Sohum>It's just a multiplexer, right? It either takes a forwarded value or it takes the value that came to it in the first place.</v>
+
+00:52:06.680 --> 00:52:07.080
+<v Furst, Elias>But</v>
+
+00:52:07.660 --> 00:52:11.990
+<v Sohoni, Sohum>And the hardware does the checks and it determines which of the signals to let through.</v>
+
+00:52:12.750 --> 00:52:13.340
+<v Furst, Elias>uhm.</v>
+
+00:52:15.160 --> 00:52:23.510
+<v Furst, Elias>Uh, uh, what I'm saying is that the ALU is a combinatorial so dumb.</v>
+
+00:52:24.390 --> 00:52:29.630
+<v Furst, Elias>Surely as soon as that input changes to be its output.</v>
+
+00:52:30.120 --> 00:52:30.510
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:52:31.650 --> 00:52:34.200
+<v Furst, Elias>I I don't like it will, uh?</v>
+
+00:52:35.590 --> 00:52:37.110
+<v Sohoni, Sohum>yeah, it'll computer.</v>
+
+00:52:36.150 --> 00:52:37.220
+<v Furst, Elias>That doesn't break anything.</v>
+
+00:52:38.040 --> 00:52:45.370
+<v Sohoni, Sohum>No, it will compute a new value. And yeah, I mean you, you store the value. So yeah, we're not showing all that hard work.</v>
+
+00:52:43.850 --> 00:52:47.000
+<v Furst, Elias>Oh, is this the the little the little buffer things?</v>
+
+00:52:47.810 --> 00:52:48.510
+<v Furst, Elias>Is that where the?</v>
+
+00:52:47.630 --> 00:52:51.930
+<v Sohoni, Sohum>Yeah we can. Yeah we store the value in the buffer exactly. Yep, Yep.</v>
+
+00:52:50.410 --> 00:52:52.170
+<v Furst, Elias>OK, OK, that makes sense.</v>
+
+00:52:52.690 --> 00:53:06.950
+<v Sohoni, Sohum>Yeah, and I believe the book actually shows you the data path with the the hazard checking and all of that. So the more complicated version of the data path with all the forwarding paths and all that. And we'll look at it when we meet on Wednesday.</v>
+
+00:53:09.260 --> 00:53:13.380
+<v Sohoni, Sohum>Alright, I'll let you go. I gotta meeting in few minutes.</v>
+
+00:53:14.150 --> 00:53:15.650
+<v Sohoni, Sohum>You probably have class as well.</v>
+
+00:53:16.370 --> 00:53:18.070
+<v Sohoni, Sohum>Take care, see you Wednesday.</v>
+
+00:53:20.390 --> 00:53:21.040
+<v Furst, Elias>Thank you.</v>

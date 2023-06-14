@@ -1,0 +1,829 @@
+WEBVTT
+
+0:0:0.0 --> 0:0:3.730
+<v Sohoni, Sohum>Alright, good afternoon, class. What's up? What's going on?</v>
+
+0:0:7.100 --> 0:0:7.620
+<v Bultman, Joshua>Good afternoon.</v>
+
+0:0:12.460 --> 0:0:15.790
+<v Sohoni, Sohum>Right. So today is our.</v>
+
+0:0:17.500 --> 0:0:18.210
+<v Sohoni, Sohum>Session.</v>
+
+0:0:18.370 --> 0:0:31.820
+<v Sohoni, Sohum>To review stuff and I'm happy to answer any questions. I could spend a few minutes on the last slide from the memory hierarchy set of slides if anyone is interested in that.</v>
+
+0:0:35.250 --> 0:0:37.700
+<v Sohoni, Sohum>Or I could answer any other questions anyone has.</v>
+
+0:0:49.610 --> 0:0:53.640
+<v Geoffrey, Timothy>I wonder if we could go over a Boolean simplification.</v>
+
+0:0:57.830 --> 0:0:58.260
+<v Sohoni, Sohum>OK.</v>
+
+0:1:21.240 --> 0:1:24.890
+<v Sohoni, Sohum>So you mean just the algebraic simplifications?</v>
+
+0:1:33.100 --> 0:1:38.310
+<v Geoffrey, Timothy>Mostly the algebraic stuff, but they wouldn't be upset if we did K maps as well.</v>
+
+0:1:40.390 --> 0:1:43.890
+<v Sohoni, Sohum>OK. Oh, open up the slide set.</v>
+
+0:2:0.100 --> 0:2:1.550
+<v Sohoni, Sohum>Alright so.</v>
+
+0:2:3.420 --> 0:2:11.910
+<v Sohoni, Sohum>There's some properties that are useful when we do algebraic simplifications for a Boolean equations, so we've got.</v>
+
+0:2:13.120 --> 0:2:21.440
+<v Sohoni, Sohum>Let's let me see. Let me go back here. Oh, that's not part of this slide set now anyway, so we can go from here.</v>
+
+0:2:21.770 --> 0:2:32.150
+<v Sohoni, Sohum>Uh, so we we've built, as an example is circuit here that says is like any automatic door if there is a person detected and.</v>
+
+0:2:32.910 --> 0:2:59.10
+<v Sohoni, Sohum>Or if there is a switch forcing the hold open right or if there is a key that's forcing it to be closed, right? So there's a few conditions that we have to take into account. We want the door to be open when H = 1 and C = 0. So this key that's forcing it to be closed should not be there, right? Or if equals 0 and P = 1.</v>
+
+0:2:59.760 --> 0:3:17.460
+<v Sohoni, Sohum>So there isn't the switch forcing the hold open, but we've detected a person and the key that's forcing it closed is is not there, right? So if we take into account these conditions as they are, we get F equals HC prime or H prime PC prime.</v>
+
+0:3:19.340 --> 0:3:19.890
+<v Sohoni, Sohum>So.</v>
+
+0:3:21.230 --> 0:3:24.120
+<v Sohoni, Sohum>And yeah, go ahead and mute yourself please.</v>
+
+0:3:24.910 --> 0:3:55.40
+<v Sohoni, Sohum>You don't need to hear and everyone else. So if we build a circuit like that, we get this particular circuit right? Is there any questions about this circuit that we've got here? We've got the three inputs 8C and P and we're saying that there is an end condition for age and C prime. So H is going straight through, C is getting inverted and there's an end condition for age, prime, PC prime. So there is a P that's going straight through.</v>
+
+0:3:55.490 --> 0:4:16.720
+<v Sohoni, Sohum>And each is getting inverted and see is also getting inverted. So this is a slightly large circuit away and we're trying to see can we simplify this circuit and build a smaller circuit? OK, so any clues? Any suggestions on what we might do here?</v>
+
+0:4:18.990 --> 0:4:20.360
+<v Schilling, Atreyu>C prime can be factored.</v>
+
+0:4:20.930 --> 0:4:25.40
+<v Sohoni, Sohum>C prime can be factored, right? So we can.</v>
+
+0:4:26.380 --> 0:4:47.930
+<v Sohoni, Sohum>Well, first, we're moving things around by the commutative property. And again, if there is a question on this on the exam, I don't really care about anybody mentioning any of the properties or not. I want you to be able to do this stuff, not so much like name which property you're using and so on. So factoring C prime out of this, we get get age or H prime P.</v>
+
+0:4:48.930 --> 0:4:54.460
+<v Sohoni, Sohum>And with C prime, right? What else might we be able to do over here?</v>
+
+0:4:55.580 --> 0:4:57.800
+<v Sohoni, Sohum>What is this search? As far as simplification goes?</v>
+
+0:5:10.140 --> 0:5:10.380
+<v Schilling, Atreyu>Dis.</v>
+
+0:5:10.440 --> 0:5:11.590
+<v Schilling, Atreyu>Tribute to age plus.</v>
+
+0:5:14.990 --> 0:5:26.380
+<v Sohoni, Sohum>So you could do see prime as it is outside of the parentheses and then do age or age prime and or P OK, so this is a little bit tricky.</v>
+
+0:5:27.90 --> 0:5:35.280
+<v Sohoni, Sohum>It's that second distributive property. So this didn't make any sense. Think about it a little bit, let me know if you have.</v>
+
+0:5:36.40 --> 0:5:37.840
+<v Sohoni, Sohum>Questions on how this came about.</v>
+
+0:5:41.30 --> 0:6:4.500
+<v Sohoni, Sohum>And if not, then we can proceed to say anything or its complement. Wright is always going to be one 'cause. One of these is bound bound to be one and or anything with the one you get a one. So we end up with C, prime one and HPF or simplifying that further we get C prime H4P.</v>
+
+0:6:7.310 --> 0:6:10.310
+<v Sohoni, Sohum>Questions on this I have more examples, this is just one of them.</v>
+
+0:6:22.190 --> 0:6:27.750
+<v Geoffrey, Timothy>I mean, I might be considered helpless, but I got completely lost at the 4th step.</v>
+
+0:6:37.230 --> 0:6:41.740
+<v Sohoni, Sohum>Let me see if I can show you the slides that have the properties listed.</v>
+
+0:6:49.510 --> 0:6:52.200
+<v Sohoni, Sohum>Alright, let me present a different slide here.</v>
+
+0:6:55.350 --> 0:7:2.340
+<v Sohoni, Sohum>That is a tough one to to follow. I agree. So there's two distributive properties, right? A prime.</v>
+
+0:7:3.290 --> 0:7:20.980
+<v Sohoni, Sohum>And B or C = A prime B or A prime. See this one. We're familiar with 'cause. We do this in math quite a lot, right? So this one is not that tricky. There's a different one or B prime C = A or B&A or C.</v>
+
+0:7:25.530 --> 0:7:25.980
+<v Sohoni, Sohum>OK.</v>
+
+0:7:27.10 --> 0:7:33.870
+<v Sohoni, Sohum>So if you think of this and you go back to what we had earlier, let's see. Where's that slide?</v>
+
+0:7:35.190 --> 0:7:41.440
+<v Sohoni, Sohum>Umm, let me get Outlook slide show mode and just bring it over.</v>
+
+0:7:44.110 --> 0:7:48.500
+<v Sohoni, Sohum>So we had age or age prime P over here.</v>
+
+0:7:49.130 --> 0:7:49.540
+<v Sohoni, Sohum>Right.</v>
+
+0:7:50.960 --> 0:7:51.920
+<v Sohoni, Sohum>This part.</v>
+
+0:7:53.300 --> 0:7:58.670
+<v Sohoni, Sohum>Is what we're doing A or B prime C = A or B&A or C?</v>
+
+0:8:1.720 --> 0:8:3.0
+<v Sohoni, Sohum>So making more sense now.</v>
+
+0:8:20.320 --> 0:8:26.860
+<v Sohoni, Sohum>It's extra confusing because we have H&H prime as they're two different variables.</v>
+
+0:8:27.540 --> 0:8:36.180
+<v Sohoni, Sohum>Whereas we had a B&C in the example, so our A is the age our be is the age prime and our C is the P.</v>
+
+0:8:44.300 --> 0:8:45.450
+<v Sohoni, Sohum>Questions on that one.</v>
+
+0:8:56.210 --> 0:8:57.550
+<v Sohoni, Sohum>OK, so I think.</v>
+
+0:8:58.570 --> 0:9:8.110
+<v Sohoni, Sohum>That's good. Let's look at maybe another example. Learn. And we should also think there's De Morgan's laws. Let me get rid of.</v>
+
+0:9:8.270 --> 0:9:9.700
+<v Sohoni, Sohum>Is it a Flyers?</v>
+
+0:9:13.60 --> 0:9:15.850
+<v Sohoni, Sohum>So there is a few additional properties that.</v>
+
+0:9:15.900 --> 0:9:19.960
+<v Sohoni, Sohum>We we already looked at, but let me go full screen.</v>
+
+0:9:20.470 --> 0:9:38.40
+<v Sohoni, Sohum>Uhm. A or one, right? Anything I ordered with the one is a one. Anything ended with a 0 is zero Y or A is the same as A and is the same as a. A prime prime is the same as A and then the De Morgans again they can be a little tricky to follow along.</v>
+
+0:9:38.650 --> 0:9:45.610
+<v Sohoni, Sohum>Come here or be whole. Prime is a Prime B prime and then maybe hold prime is a prime or be prime.</v>
+
+0:9:46.170 --> 0:9:51.150
+<v Sohoni, Sohum>OK, so let's continue looking at some examples here.</v>
+
+0:9:52.880 --> 0:10:10.650
+<v Sohoni, Sohum>Which is if we had a circuit which was as equals ABC prime, right? Well, actually there's a different. So this is one way to build this particular circuit and I understand you've not looked at these slides before. So maybe I should go a little slow.</v>
+
+0:10:11.280 --> 0:10:41.330
+<v Sohoni, Sohum>Uhm, unless you studied them for the midterm hum. So we're essentially building a circuit for the laboratory light that goes on or goes off in, in an airplane when the laboratories are in use. OK, so we could say that we have something that says a laboratory is available if, right, any one of the so AB&C are the three lavatories, any of the three is available or not.</v>
+
+0:10:42.370 --> 0:10:52.940
+<v Sohoni, Sohum>Uh clothes bright. So if we do that, we get s = a prime or be prime or C prime and to get the opposite of that, if we wanted to.</v>
+
+0:10:54.410 --> 0:11:2.500
+<v Sohoni, Sohum>Get the opposite of that. We do the whole thing primed. Can you see this? Or do you want me to zoom in or go full screen or presentation mode?</v>
+
+0:11:3.440 --> 0:11:4.280
+<v Bultman, Joshua>That looks OK to me.</v>
+
+0:11:4.660 --> 0:11:14.700
+<v Sohoni, Sohum>Looks OK. All right, right. So when we do that, we're getting a prime prime and we prime prime and C prime prime, which just gives us a.</v>
+
+0:11:15.360 --> 0:11:23.40
+<v Sohoni, Sohum>And BNC solar essentially reducing one gate by going this route instead of the other one.</v>
+
+0:11:23.770 --> 0:11:25.780
+<v Sohoni, Sohum>Let me go more.</v>
+
+0:11:25.930 --> 0:11:29.820
+<v Sohoni, Sohum>Examples of simplification from the slides.</v>
+
+0:11:35.250 --> 0:11:37.20
+<v Sohoni, Sohum>We could actually work one out.</v>
+
+0:11:39.420 --> 0:11:40.850
+<v Sohoni, Sohum>How about here?</v>
+
+0:11:48.900 --> 0:11:51.590
+<v Sohoni, Sohum>Remove this and we can try to work it out.</v>
+
+0:11:52.570 --> 0:11:56.540
+<v Sohoni, Sohum>So why don't you take a minute and just try to do?</v>
+
+0:11:57.220 --> 0:12:1.60
+<v Sohoni, Sohum>The De Morgan's on this and then do the simplification on it.</v>
+
+0:12:5.740 --> 0:12:8.990
+<v Sohoni, Sohum>Just grab a pencil and paper and just work it out.</v>
+
+0:12:55.60 --> 0:12:56.510
+<v Sohoni, Sohum>Sword Answer did you get?</v>
+
+0:13:9.750 --> 0:13:10.370
+<v Sohoni, Sohum>Anyone.</v>
+
+0:13:11.470 --> 0:13:16.410
+<v Sohoni, Sohum>I'm still final answer you got from applying the De Morgan theorem simplifying this.</v>
+
+0:13:28.880 --> 0:13:30.830
+<v Sohoni, Sohum>I gotta be prime or C prime.</v>
+
+0:13:34.190 --> 0:13:38.260
+<v Sohoni, Sohum>I think the steps are worked out in the previous slide. So we let's go take a look.</v>
+
+0:13:39.360 --> 0:13:56.370
+<v Sohoni, Sohum>So we did a. So this is the first application of dim organs. We get ABC whole prime and a prime B whole primed. Then we apply De Morgan's again inside of each of the parentheses. So we get a prime or be prime or C prime and A or B prime right?</v>
+
+0:13:56.920 --> 0:13:59.740
+<v Sohoni, Sohum>Uh oh, actually I made a mistake on my own.</v>
+
+0:14:1.310 --> 0:14:4.180
+<v Sohoni, Sohum>Example here on paper so.</v>
+
+0:14:5.620 --> 0:14:27.810
+<v Sohoni, Sohum>Once we get that, we start distributing these out, right. So we get a the first term here and a prime or be prime or C prime or be prime, which is the second term here and this whole thing a prime or be prime or C prime, right. So as we start opening these up and a prime is 0.</v>
+
+0:14:28.580 --> 0:14:30.290
+<v Sohoni, Sohum>Right. And then?</v>
+
+0:14:30.900 --> 0:14:45.140
+<v Sohoni, Sohum>He be prime is a second run. We get a C prime is a third term we get and then we get be prime. Whoops. Sorry, B prime and a prime B prime and B prime which is just be prime and then be prime and C prime.</v>
+
+0:14:45.840 --> 0:14:47.680
+<v Sohoni, Sohum>Everyone with me so far on this step.</v>
+
+0:14:50.970 --> 0:14:51.960
+<v Sohoni, Sohum>Any questions?</v>
+
+0:14:56.20 --> 0:15:5.690
+<v Sohoni, Sohum>Alright, so we can rearrange these two. We get a be primacie prime, a prime B prime or B prime and B prime C prime. Then we can take.</v>
+
+0:15:6.660 --> 0:15:14.220
+<v Sohoni, Sohum>For the AV prime and a prime B prime term, we can take be prime common and we get a or a prime.</v>
+
+0:15:15.50 --> 0:15:26.820
+<v Sohoni, Sohum>We just saw that anything or its complement is A1, not a zero, right? Quite often students make a mistake by making this zero and getting rid of the V prime terms. That's incorrect.</v>
+
+0:15:27.370 --> 0:15:28.20
+<v Sohoni, Sohum>Uhm.</v>
+
+0:15:28.840 --> 0:15:59.160
+<v Sohoni, Sohum>Or we've already got the B prime and the other terms AC prime and B prime C prime. So now we have be prime or a C prime or B prime C prime. Now one interesting thing to always remember, if I had like 15 other terms which had be prime and do something over here, they would all end up being consumed by the B prime. OK. And the way we see that happening here is we can say V prime.</v>
+
+0:15:59.540 --> 0:16:12.930
+<v Sohoni, Sohum>Is the same as B prime earned one right? So we can take be prime common from out of that and we get one or C prime again one or anything else is just one so we get B prime or A C prime.</v>
+
+0:16:14.540 --> 0:16:16.980
+<v Sohoni, Sohum>Does that help? Do you have questions?</v>
+
+0:16:17.660 --> 0:16:18.280
+<v Sohoni, Sohum>Doing that.</v>
+
+0:16:26.290 --> 0:16:30.130
+<v Geoffrey, Timothy>I mean, I have questions not relating to this specific example.</v>
+
+0:16:31.350 --> 0:16:31.910
+<v Sohoni, Sohum>OK.</v>
+
+0:16:32.740 --> 0:16:53.200
+<v Sohoni, Sohum>Let me just finish up a point I made verbally by just making up some more terms here. So what I was saying was if we had a B, prime C as another term or anything else with B prime in it, because we have be prime by itself, right? We could have a prime.</v>
+
+0:16:54.290 --> 0:17:0.780
+<v Sohoni, Sohum>C prime, like all of these terms, they would all be consumed into one term.</v>
+
+0:17:1.730 --> 0:17:8.460
+<v Sohoni, Sohum>Which would just be to be prime because it would be one or any of these combinations that making sense.</v>
+
+0:17:9.290 --> 0:17:14.190
+<v Sohoni, Sohum>And when you have one or anything, all those, any things don't matter. They can just disappear.</v>
+
+0:17:15.810 --> 0:17:20.270
+<v Sohoni, Sohum>So yeah, that's the one additional point I wanted to make question, Tim.</v>
+
+0:17:23.110 --> 0:17:24.680
+<v Geoffrey, Timothy>So if you were given.</v>
+
+0:17:25.850 --> 0:17:29.10
+<v Geoffrey, Timothy>I make it like wasean to simplify.</v>
+
+0:17:29.750 --> 0:17:30.140
+<v Sohoni, Sohum>Uh-huh.</v>
+
+0:17:30.160 --> 0:17:43.620
+<v Geoffrey, Timothy>One that you don't know the steps for ahead of time. What do you work for? What kind of tips and tricks do you use to figure out what rules and simplification things to use to simplify it?</v>
+
+0:17:44.990 --> 0:17:49.900
+<v Sohoni, Sohum>Yeah. So that's a good question. I would say look for.</v>
+
+0:17:50.950 --> 0:17:51.880
+<v Sohoni, Sohum>Uhm.</v>
+
+0:17:53.650 --> 0:17:59.620
+<v Sohoni, Sohum>Some obvious patterns, which is basically taking out anything that's common, anything that's repeated.</v>
+
+0:18:0.310 --> 0:18:1.0
+<v Sohoni, Sohum>Uhm.</v>
+
+0:18:2.430 --> 0:18:27.80
+<v Sohoni, Sohum>Stuff like bored. I just showed you like you've got one term by itself, right? So you've got a or ABC or ABCD or whatever else, right? Any combination of stuff with with that, a you can drop all the other eight terms because you've got a by itself or with all of those things. So yeah, I mean, it's it's stuff like that. I know what you're asking.</v>
+
+0:18:28.20 --> 0:18:29.810
+<v Sohoni, Sohum>I don't have a great.</v>
+
+0:18:31.400 --> 0:18:40.50
+<v Sohoni, Sohum>You know step by step guide for you. Like you look for this first. Then you look for that. It's really just a matter of practice to some extent.</v>
+
+0:18:43.310 --> 0:18:44.700
+<v Geoffrey, Timothy>OK. Thank you.</v>
+
+0:18:46.730 --> 0:18:49.160
+<v Sohoni, Sohum>If anyone else has any tips, I'm happy to hear.</v>
+
+0:19:2.760 --> 0:19:5.350
+<v Sohoni, Sohum>OK. And your nails have any questions?</v>
+
+0:19:11.320 --> 0:19:14.540
+<v Sohoni, Sohum>Do you wanna go over K maps? Someone mentioned there?</v>
+
+0:19:15.430 --> 0:19:16.290
+<v Sohoni, Sohum>K maps.</v>
+
+0:19:21.570 --> 0:19:26.850
+<v Sohoni, Sohum>We get to the main part. I'm assuming you understand the basics of K maps.</v>
+
+0:19:27.800 --> 0:19:28.390
+<v Sohoni, Sohum>Hum.</v>
+
+0:19:31.320 --> 0:19:37.110
+<v Sohoni, Sohum>So here's the one slide that I think that captures stuff went once you've gone beyond the basics.</v>
+
+0:19:42.700 --> 0:19:44.990
+<v Sohoni, Sohum>There's some dog. There's making wisest. Sorry.</v>
+
+0:19:47.200 --> 0:19:47.920
+<v Sohoni, Sohum>So.</v>
+
+0:19:49.450 --> 0:19:57.290
+<v Sohoni, Sohum>Some things that you want to keep in mind, these ovals that we're trying to create can cross boundaries both on the top and the bottom.</v>
+
+0:19:58.340 --> 0:20:2.900
+<v Sohoni, Sohum>The Olds must have 1/2, four or eight, so it's it's a.</v>
+
+0:20:4.690 --> 0:20:7.600
+<v Sohoni, Sohum>Multiple order multiple, but a power of two.</v>
+
+0:20:8.250 --> 0:20:27.360
+<v Sohoni, Sohum>OK, so 356 is not allowed. Six is divisible by two, but it's not a power of two. OK, they don't correspond to algebraic transformations that combine terms, so this is not OK to have like 3 here you would divide this into two groups of two. OK, you do.</v>
+
+0:20:28.20 --> 0:20:32.430
+<v Sohoni, Sohum>From the XY prime.</v>
+
+0:20:34.960 --> 0:20:42.560
+<v Sohoni, Sohum>Z1 Z so this over here or XY prime. Sorry. And then the second term would be XZ.</v>
+
+0:20:43.420 --> 0:20:46.650
+<v Sohoni, Sohum>Those were the two term that would be obtained from here.</v>
+
+0:20:47.800 --> 0:20:52.300
+<v Sohoni, Sohum>It's not making sense. Do you want a deeper explanation or is this is this OK?</v>
+
+0:21:1.110 --> 0:21:3.440
+<v Rolando, Jackson>I thought you could only do.</v>
+
+0:21:4.890 --> 0:21:8.490
+<v Rolando, Jackson>For some reason, multiples of two in the circles, so I guess I really.</v>
+
+0:21:12.170 --> 0:21:12.370
+<v Sohoni, Sohum>Yeah.</v>
+
+0:21:12.420 --> 0:21:14.250
+<v Sohoni, Sohum>It's powers, powers of two.</v>
+
+0:21:15.700 --> 0:21:16.170
+<v Rolando, Jackson>OK.</v>
+
+0:21:17.40 --> 0:21:29.290
+<v Sohoni, Sohum>Yeah. So the logic behind that is that the powers of two, because of the way we lay it out with only one term changing at a time, they represent the invariable terms.</v>
+
+0:21:30.20 --> 0:21:32.480
+<v Sohoni, Sohum>And what I mean by that is let me.</v>
+
+0:21:33.490 --> 0:21:35.430
+<v Sohoni, Sohum>Pull back up one slide.</v>
+
+0:21:37.520 --> 0:21:46.180
+<v Sohoni, Sohum>This one let me duplicate this and maybe write on it a little bit O2, right? I need to move to a different screen, hold on one SEC.</v>
+
+0:21:51.430 --> 0:22:5.120
+<v Sohoni, Sohum>So the part that often becomes confusing when you're learning K maps is like, how do I figure out which term it is right and what's going on here? The logic behind all of this is let me zoom in.</v>
+
+0:22:6.340 --> 0:22:7.970
+<v Sohoni, Sohum>In particular part here.</v>
+
+0:22:9.460 --> 0:22:9.930
+<v Sohoni, Sohum>Oops.</v>
+
+0:22:10.950 --> 0:22:13.230
+<v Sohoni, Sohum>Oh, it's gone to a different slide.</v>
+
+0:22:15.0 --> 0:22:30.810
+<v Sohoni, Sohum>Right. So what's happening here is to keep in mind the values of XY&Z. OK, so X is zero, and this first row, right? And what we're seeing is that the output stays one.</v>
+
+0:22:31.820 --> 0:22:39.670
+<v Sohoni, Sohum>Even when Y or Z sorry, changes from zero to 1, right? This is the change.</v>
+
+0:22:40.430 --> 0:23:9.120
+<v Sohoni, Sohum>NZ going from zero to one and what that's indicating is that the the value of Z doesn't matter for this particular change that we're seeing and that's why this term becomes X prime, right, because X is zero and Y prime because why is 0 in both of these? So the change of Z going from zero to 1 does not affect the output, which is why we can eliminate that and we get the term as X prime Y prime.</v>
+
+0:23:10.300 --> 0:23:11.220
+<v Sohoni, Sohum>Start making sense.</v>
+
+0:23:19.350 --> 0:23:21.200
+<v Rolando, Jackson>I'm sorry you said the seed doesn't.</v>
+
+0:23:22.680 --> 0:23:23.830
+<v Rolando, Jackson>Change.</v>
+
+0:23:24.200 --> 0:23:27.260
+<v Sohoni, Sohum>No, no change in Z doesn't change the output.</v>
+
+0:23:28.70 --> 0:23:35.470
+<v Sohoni, Sohum>Susie, in this particular example here, does not affect whether we get the output of one or zero.</v>
+
+0:23:42.500 --> 0:23:42.870
+<v Rolando, Jackson>OK.</v>
+
+0:23:43.840 --> 0:23:53.610
+<v Sohoni, Sohum>Right. So these are the changing values of Z and they don't affect the outputs and that's why we dropped from the combination of terms that we are getting here.</v>
+
+0:23:54.220 --> 0:24:8.950
+<v Sohoni, Sohum>I'll give you one more example on the same slide here. So as you can see, X is 1 throughout all of these, right? And both Y&Z are changing. So like if we go across this whole.</v>
+
+0:24:9.640 --> 0:24:11.580
+<v Sohoni, Sohum>Four term Oval.</v>
+
+0:24:13.340 --> 0:24:35.90
+<v Sohoni, Sohum>Both Y&Z change and yet the output doesn't change based on that. So for this term, why or the output? Sorry not why the output is entirely dependent on X if X is 1, the output is going to be one irrespective of whether Y or Z change and that's why this term comes out simply as X.</v>
+
+0:24:40.770 --> 0:24:41.470
+<v Sohoni, Sohum>That makes sense.</v>
+
+0:24:41.70 --> 0:24:42.480
+<v Rolando, Jackson>OK. I gotcha. Yeah.</v>
+
+0:24:42.600 --> 0:25:12.990
+<v Sohoni, Sohum>Yeah. And that's why now if we go to that other slide where we said that you can't. So if you look at this group of three ones, right or whether it was three ones or 6 ones, we don't have that condition because in in this case, yes, X is constant. And why is changing over here, why is the same over here but it's changing from this term to this term. And then Z is changing from this term to this term.</v>
+
+0:25:13.220 --> 0:25:25.110
+<v Sohoni, Sohum>So we don't have a, we're not capturing that condition where only one of the variables is changing or both are changing through all of their permutations.</v>
+
+0:25:30.670 --> 0:25:40.930
+<v Sohoni, Sohum>That's why 3 is not OK or same logic would apply if it was like this, like if it was these six, that would still not capture the change that we're looking for.</v>
+
+0:25:49.100 --> 0:25:52.30
+<v Sohoni, Sohum>Other questions about K maps that I can answer.</v>
+
+0:26:7.850 --> 0:26:11.170
+<v Sohoni, Sohum>Generally speaking, other questions that I might be able to answer.</v>
+
+0:26:19.670 --> 0:26:22.680
+<v Bultman, Joshua>Can we do maybe a brief overview of pipelining at some point?</v>
+
+0:26:23.840 --> 0:26:24.920
+<v Sohoni, Sohum>Oh, OK.</v>
+
+0:26:25.890 --> 0:26:28.150
+<v Bultman, Joshua>Specifically the like the.</v>
+
+0:26:29.710 --> 0:26:32.810
+<v Bultman, Joshua>Data caches or or instruction caches maybe?</v>
+
+0:26:34.990 --> 0:26:35.510
+<v Bultman, Joshua>Figure with.</v>
+
+0:26:35.330 --> 0:26:38.800
+<v Sohoni, Sohum>Or instruction caches or separate from pipelining.</v>
+
+0:26:39.350 --> 0:26:39.830
+<v Bultman, Joshua>Uh.</v>
+
+0:26:39.460 --> 0:26:42.520
+<v Sohoni, Sohum>You want more pipelining, or do you want to talk about caches?</v>
+
+0:26:43.680 --> 0:26:47.460
+<v Bultman, Joshua>Not, not caches, but I'm sorry I'm forgetting the name of them in the.</v>
+
+0:26:48.970 --> 0:26:53.670
+<v Bultman, Joshua>When you're pipelining, there's the like the cash.</v>
+
+0:26:53.270 --> 0:26:54.900
+<v Sohoni, Sohum>The interface buffers.</v>
+
+0:26:54.890 --> 0:26:57.360
+<v Bultman, Joshua>Yeah, the buffer. Sorry, the buffers. That's where I'm I'm talking about.</v>
+
+0:26:57.570 --> 0:27:0.0
+<v Sohoni, Sohum>Sure. Yeah. Let's take a look.</v>
+
+0:27:4.470 --> 0:27:8.500
+<v Sohoni, Sohum>Right now it's a highly marked up slide, alright, so here's.</v>
+
+0:27:9.190 --> 0:27:13.460
+<v Sohoni, Sohum>Here's a slide with the interstage buffers and.</v>
+
+0:27:14.630 --> 0:27:35.890
+<v Sohoni, Sohum>I mean, I I really just want you to understand the concept of the interstage buffers and why we would require them what they actually hold is not something I'm too concerned about you guys memorizing or anything like that. OK, so let me duplicate this slide and let's talk about it a little bit.</v>
+
+0:27:37.10 --> 0:27:45.770
+<v Sohoni, Sohum>So what I was trying to say is basically the need for the interstage buffers comes from the fact that when, let's say we haven't.</v>
+
+0:27:47.780 --> 0:27:51.730
+<v Sohoni, Sohum>A few instructions going on right. OK, let me. I'm trying to see how to best.</v>
+
+0:27:54.220 --> 0:28:8.850
+<v Sohoni, Sohum>Depict these instructions. So let's say there are these five instructions. When this instruction here right, which is in its right backstage, he's trying to write back some value to the register file, right?</v>
+
+0:28:9.640 --> 0:28:18.170
+<v Sohoni, Sohum>At that point, this other instruction here is the one that's being decoded, right? So these values that we get.</v>
+
+0:28:19.280 --> 0:28:21.190
+<v Sohoni, Sohum>Uhm 4.</v>
+
+0:28:22.210 --> 0:28:25.470
+<v Sohoni, Sohum>Which register we want to write to let me zoom in?</v>
+
+0:28:25.830 --> 0:28:28.690
+<v Sohoni, Sohum>Cuz I myself can't see this very well.</v>
+
+0:28:29.740 --> 0:28:50.950
+<v Sohoni, Sohum>So this right register right it's indicated from some combination of bits. Normally that would be coming in from the instruction, right? It's usually what is it instruction 20 through 16 or instruction was it?</v>
+
+0:28:53.40 --> 0:28:56.20
+<v Sohoni, Sohum>21 I mean 25 through 21.</v>
+
+0:28:57.380 --> 0:29:3.110
+<v Sohoni, Sohum>So it's one of those two, right, if we if we go back to our non pipelined implementation.</v>
+
+0:29:4.970 --> 0:29:11.290
+<v Sohoni, Sohum>Let's go back all the way to this date of birth. So we take the bits of the instruction to figure out which.</v>
+
+0:29:12.290 --> 0:29:44.30
+<v Sohoni, Sohum>Here registered we want to write to right. So the problem with when we do pipelining is that that information is for the instruction that's currently in its decode stage. But we are doing a right back for a different instruction, so that kind of information needs to be conveyed to the hardware based on which instruction is where. And so that's why we have Interstate buffers that keep track of that kind of stuff. So maybe a simpler example is when we go from decode.</v>
+
+0:29:44.90 --> 0:30:0.320
+<v Sohoni, Sohum>To execute right, we want to carry over some things like for example what what did or did we just read from the registry, the registers that this current instruction that is in execute needs for its execution.</v>
+
+0:30:1.20 --> 0:30:22.100
+<v Sohoni, Sohum>Right. We also want to keep track of whether this current instruction for which we're doing the execution is that instruction, a load word instruction, for example. Is it going to read from memory later on or is it going to write to memory later on? So that kind of information that we get from the instruction itself when we decode.</v>
+
+0:30:23.330 --> 0:30:27.410
+<v Sohoni, Sohum>Needs to be retained across pipeline stages.</v>
+
+0:30:28.380 --> 0:30:42.210
+<v Sohoni, Sohum>Along with that instruction that needs to flow with the instruction, because if you know prior to pipelining, all that information was with us the whole time, right, because there was only one instruction in play. Sorry.</v>
+
+0:30:42.830 --> 0:31:3.490
+<v Sohoni, Sohum>Uhm, record. Just go back and get that information. All of these signals would come from that one instruction that was in the pipeline. The problem is now there are five instructions in the pipeline and we don't really know which instructions control signal to use where. And to illustrate that issue. Right. So because one instruction is going to be.</v>
+
+0:31:4.280 --> 0:31:15.490
+<v Sohoni, Sohum>In execute while others else in decode and another one is in the in the right backstage, right? Where does the this these where do these control signals really come from?</v>
+
+0:31:17.710 --> 0:31:18.860
+<v Sohoni, Sohum>Is that making sense?</v>
+
+0:31:19.600 --> 0:31:21.240
+<v Bultman, Joshua>Yeah, yeah, that makes a lot more sense. Thank you.</v>
+
+0:31:21.600 --> 0:31:44.950
+<v Sohoni, Sohum>OK. So it's just keeping the relevant information along with the instruction as it passes through, and sometimes it's just information. Sometimes they actually did our values as well, like as I was saying, the values that we read from the registers need to be buffered somewhere. The result of the ALU needs to be buffered somewhere, so that kind of stuff also resides in these interstage buffers.</v>
+
+0:31:48.290 --> 0:31:49.860
+<v Sohoni, Sohum>Good other questions.</v>
+
+0:31:54.350 --> 0:32:6.60
+<v Sohoni, Sohum>As I mentioned the other day, I'm going to leave you with 10 minutes to spare so you can do the course evaluation. So we've got another 8 minutes. Then I can devote to answering any questions you might have.</v>
+
+0:32:8.750 --> 0:32:9.870
+<v Geoffrey, Timothy>I have a question.</v>
+
+0:32:10.310 --> 0:32:10.630
+<v Sohoni, Sohum>Yeah.</v>
+
+0:32:11.540 --> 0:32:14.140
+<v Geoffrey, Timothy>So for the control unit.</v>
+
+0:32:14.680 --> 0:32:15.110
+<v Sohoni, Sohum>Uh-huh.</v>
+
+0:32:15.260 --> 0:32:16.800
+<v Geoffrey, Timothy>I remember you saying that.</v>
+
+0:32:17.410 --> 0:32:21.290
+<v Geoffrey, Timothy>The R code with the app code going into. It's basically a look up table.</v>
+
+0:32:22.330 --> 0:32:24.560
+<v Sohoni, Sohum>You can think of it as a look up table here.</v>
+
+0:32:25.30 --> 0:32:29.360
+<v Geoffrey, Timothy>They remember in the book that they asked a question.</v>
+
+0:32:30.30 --> 0:32:32.290
+<v Geoffrey, Timothy>Whether specific UM.</v>
+
+0:32:33.700 --> 0:32:36.130
+<v Geoffrey, Timothy>Lions were set to one or not.</v>
+
+0:32:36.780 --> 0:32:40.110
+<v Geoffrey, Timothy>And I managed to get all of them wrong based on just in time.</v>
+
+0:32:40.940 --> 0:32:48.920
+<v Geoffrey, Timothy>Wishing based on the nature of the car instructions and wondering if there's a better way is if it or even if I have to worry about that on the exam.</v>
+
+0:32:49.940 --> 0:32:56.290
+<v Sohoni, Sohum>Uh, my well, yeah, I'll answer your second question first. You do have to worry about it for the exam.</v>
+
+0:32:56.870 --> 0:33:13.850
+<v Sohoni, Sohum>Because the exam is going to have a question similar to what you did in in one of the quizzes where I would be asking you, this is a load word instruction right for example. And then what would be the value on say this control line, the MEM to ridgeline?</v>
+
+0:33:14.460 --> 0:33:21.770
+<v Sohoni, Sohum>Right. Or the MEM right line and let me test your intuition for this particular question then.</v>
+
+0:33:22.340 --> 0:33:34.650
+<v Sohoni, Sohum>Uh, if this was a lowered word, would the value on MEM write this signal here or why? I can't really select it, but men right? Would that be a zero or would that be a one?</v>
+
+0:33:36.390 --> 0:33:37.420
+<v Geoffrey, Timothy>For a load word.</v>
+
+0:33:37.810 --> 0:33:38.200
+<v Sohoni, Sohum>Uh-huh.</v>
+
+0:33:38.800 --> 0:33:41.50
+<v Geoffrey, Timothy>I it would be set to zero I believe.</v>
+
+0:33:41.600 --> 0:33:43.940
+<v Sohoni, Sohum>That is correct. And what's the explanation?</v>
+
+0:33:45.770 --> 0:33:48.220
+<v Geoffrey, Timothy>It's reading from memory, not reading from memory.</v>
+
+0:33:48.930 --> 0:33:51.330
+<v Sohoni, Sohum>Perfect. So you've got good intuition. What do you have to worry about?</v>
+
+0:33:54.550 --> 0:34:0.290
+<v Geoffrey, Timothy>The maybe the register destination one and they'll you everything.</v>
+
+0:34:1.940 --> 0:34:19.310
+<v Sohoni, Sohum>OK. Yeah. OK. So register destination, right. So that's again, it's just picking between these two guys here in terms of which one is going to be the right register. So in load word how many registers do we have?</v>
+
+0:34:23.730 --> 0:34:24.560
+<v Geoffrey, Timothy>Uh.</v>
+
+0:34:26.100 --> 0:34:27.0
+<v Geoffrey, Timothy>One, I believe.</v>
+
+0:34:27.640 --> 0:34:30.230
+<v Sohoni, Sohum>No, the your options are between 2:00 and 3:00.</v>
+
+0:34:30.540 --> 0:34:31.40
+<v Geoffrey, Timothy>No.</v>
+
+0:34:32.570 --> 0:34:33.670
+<v Geoffrey, Timothy>I believe it's true.</v>
+
+0:34:34.870 --> 0:35:3.230
+<v Sohoni, Sohum>Yeah. So just look up and load word instruction somewhere. So yeah, it's two instruction. I mean, two registers, right. So again, intuitively, if we have only two registers, you're going to be stuck with these two, right? The first register is always a source register. It goes straight through. There is no multiplexer. There's no choice there. The second register has the option of being a right register. If you have only two registers, then your second register is likely to be the right register.</v>
+
+0:35:4.200 --> 0:35:5.100
+<v Sohoni, Sohum>So it making sense.</v>
+
+0:35:7.740 --> 0:35:11.590
+<v Geoffrey, Timothy>And that would imply that register destination would be set to 0.</v>
+
+0:35:11.980 --> 0:35:12.500
+<v Sohoni, Sohum>Correct.</v>
+
+0:35:13.370 --> 0:35:14.0
+<v Sohoni, Sohum>Exactly.</v>
+
+0:35:13.800 --> 0:35:14.770
+<v Geoffrey, Timothy>Oh boy. OK.</v>
+
+0:35:15.750 --> 0:35:16.50
+<v Sohoni, Sohum>Yeah.</v>
+
+0:35:16.750 --> 0:35:48.730
+<v Sohoni, Sohum>The earliest source is actually even easier, because it's really a question of do I have a 15? I mean R zero through 15 right is 16 bit offset where it's going to be useful for this instruction. If the answer is yes, then this is the the one value needs to go through right? So this alias source is going to be one. If the answer is no, I have two source registers right? So for example. So this is where it gets a little complicated for the branch instruction because you haven't.</v>
+
+0:35:48.790 --> 0:36:15.450
+<v Sohoni, Sohum>An immediate value, but you have two registers, and. In fact, in the branch you want to compare the two registers, right? So even though you have an offset value, that offset is being used elsewhere in the hardware. It's used here and so you are going through with two source registers, so that's. That's the kind of logic that you need to figure out. So if I want two source registers, this value needs to be 0 for all the other I type instructions.</v>
+
+0:36:16.250 --> 0:36:25.670
+<v Sohoni, Sohum>Where you are actually the Lu is using the offset that you provided. At that point you don't need the second register, but you need the offset which means a loose or should be one.</v>
+
+0:36:29.190 --> 0:36:29.990
+<v Sohoni, Sohum>You're OK with that?</v>
+
+0:36:36.150 --> 0:36:39.160
+<v Geoffrey, Timothy>That was, uh, I didn't quite follow that. But uh.</v>
+
+0:36:40.130 --> 0:36:41.0
+<v Geoffrey, Timothy>Sure.</v>
+
+0:36:42.10 --> 0:36:44.520
+<v Sohoni, Sohum>Well, let me say it again, so for.</v>
+
+0:36:45.270 --> 0:37:7.970
+<v Sohoni, Sohum>Just about all I type instructions right, we're going to use the offset that 16 bit offset that we provide as part of the instruction for all of those. We know that these 16 bit values sign extended to 32. This is the one that should pass through. So for all of those that ALU source control line should be a one.</v>
+
+0:37:9.50 --> 0:37:9.450
+<v Sohoni, Sohum>Right.</v>
+
+0:37:10.730 --> 0:37:19.710
+<v Sohoni, Sohum>There's only one exception that comes to my mind right away, which is the branch instruction which is also and I type instruction, but for that one.</v>
+
+0:37:20.450 --> 0:37:23.170
+<v Sohoni, Sohum>Would actually comparing the two registers right?</v>
+
+0:37:24.260 --> 0:37:33.330
+<v Sohoni, Sohum>And the the offset that we have is not used by the ALU, that offset is instead used to to figure out what is the branch target address.</v>
+
+0:37:34.0 --> 0:37:44.580
+<v Sohoni, Sohum>So that's the one exception where we have an offset or or an immediate field, but we're still going to use the two registers, which means alias source needs to be 0.</v>
+
+0:37:48.170 --> 0:37:50.970
+<v Sohoni, Sohum>Little better kind of said the same things so.</v>
+
+0:37:58.880 --> 0:38:14.870
+<v Sohoni, Sohum>For all R type instructions right where you have three registers, you're going to have two source registers. So this for all R type instructions. Alias source is always going to be 0 because both of the values that you read from the registers are being input to the ALU.</v>
+
+0:38:18.430 --> 0:38:21.360
+<v Geoffrey, Timothy>That part makes sense. I got that part.</v>
+
+0:38:21.910 --> 0:38:22.370
+<v Sohoni, Sohum>OK.</v>
+
+0:38:24.380 --> 0:38:24.810
+<v Sohoni, Sohum>OK.</v>
+
+0:38:28.980 --> 0:38:30.430
+<v Sohoni, Sohum>So we've got two minutes left.</v>
+
+0:38:31.110 --> 0:38:32.940
+<v Sohoni, Sohum>Four other questions can I answer?</v>
+
+0:38:52.470 --> 0:38:57.760
+<v Sohoni, Sohum>We might take some of these same concepts tomorrow when we go through the sample final exam.</v>
+
+0:39:2.480 --> 0:39:15.210
+<v Sohoni, Sohum>And if you, if you think of any other questions, please, please bring those up tomorrow. If we don't get to those tomorrow, then on Friday we'll do small group sessions and you can ask your questions there as well.</v>
+
+0:39:15.880 --> 0:39:19.110
+<v Sohoni, Sohum>K your final exam I believe is on Wednesday.</v>
+
+0:39:19.960 --> 0:39:20.760
+<v Sohoni, Sohum>Two to four.</v>
+
+0:39:22.80 --> 0:39:32.300
+<v Sohoni, Sohum>It will be on canvas. It'll be very similar in format to the midterm, but it'll be similar in content to the sample final exam.</v>
+
+0:39:36.200 --> 0:39:37.520
+<v Geoffrey, Timothy>Did you say Wednesday?</v>
+
+0:39:38.960 --> 0:39:40.650
+<v Sohoni, Sohum>I believe it's on Wednesday, yes.</v>
+
+0:39:43.40 --> 0:39:45.720
+<v Geoffrey, Timothy>Not Monday. Monday.</v>
+
+0:39:47.370 --> 0:39:50.280
+<v Sohoni, Sohum>Delete my 1:00 o'clock section has their exam on Monday.</v>
+
+0:39:52.20 --> 0:39:53.600
+<v Sohoni, Sohum>Unless I have it backwards.</v>
+
+0:39:53.760 --> 0:39:56.90
+<v Gaty, William>It's ours is 2 to four Wednesday.</v>
+
+0:39:56.480 --> 0:39:56.950
+<v Sohoni, Sohum>OK.</v>
+
+0:39:57.680 --> 0:39:58.340
+<v Bultman, Joshua>Or is it OK?</v>
+
+0:40:3.920 --> 0:40:6.860
+<v Sohoni, Sohum>OK. Well, I will let you guys go.</v>
+
+0:40:7.790 --> 0:40:13.80
+<v Sohoni, Sohum>And please take the time to fill out the evaluation for this course and.</v>
+
+0:40:14.200 --> 0:40:16.0
+<v Sohoni, Sohum>I will see you tomorrow.</v>
+
+0:40:22.320 --> 0:40:22.750
+<v Sohoni, Sohum>Why?</v>
+
+0:40:23.570 --> 0:40:25.950
+<v Geoffrey, Timothy>Yes, I see Wednesday now looking good.</v>
+
+0:40:26.810 --> 0:40:27.780
+<v Bultman, Joshua>I did.</v>

@@ -1,0 +1,844 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:06.040
+<v Sohoni, Sohum>Hum so yeah, sorry for the last minute notice I I realized that I had not.</v>
+
+00:00:07.230 --> 00:00:09.280
+<v Sohoni, Sohum>Hum extended the.</v>
+
+00:00:10.560 --> 00:00:11.250
+<v Sohoni, Sohum>Uhm?</v>
+
+00:00:12.910 --> 00:00:21.110
+<v Sohoni, Sohum>The meeting request for these two weeks. So let's give everyone a minute see if.</v>
+
+00:00:23.640 --> 00:00:25.330
+<v Sohoni, Sohum>See if everyone here.</v>
+
+00:00:26.640 --> 00:00:27.570
+<v Sohoni, Sohum>Let's see.</v>
+
+00:00:30.150 --> 00:00:32.800
+<v Sohoni, Sohum>We got a bunch of students. OK, alright.</v>
+
+00:00:39.270 --> 00:00:40.150
+<v Sohoni, Sohum>Mars.</v>
+
+00:00:46.520 --> 00:00:48.070
+<v Sohoni, Sohum>Actually, before I get to that.</v>
+
+00:00:49.460 --> 00:00:57.210
+<v Sohoni, Sohum>Uhm real quick. I wanna say some of you have not taken the midterm exam yet because you were not well.</v>
+
+00:00:57.960 --> 00:00:59.460
+<v Sohoni, Sohum>I'm hoping that.</v>
+
+00:01:00.520 --> 00:01:03.450
+<v Sohoni, Sohum>Those of you who are not well but are here today.</v>
+
+00:01:04.310 --> 00:01:08.240
+<v Sohoni, Sohum>Are going to take the test soon. It's going to be open.</v>
+
+00:01:09.230 --> 00:01:12.860
+<v Sohoni, Sohum>Uh, whenever you started, you'll have 50 minutes to take it so.</v>
+
+00:01:13.880 --> 00:01:18.760
+<v Sohoni, Sohum>I'll check and see if there's anyone who's not taken it yet.</v>
+
+00:01:19.570 --> 00:01:20.300
+<v Sohoni, Sohum>Uhm?</v>
+
+00:01:21.370 --> 00:01:32.490
+<v Sohoni, Sohum>I'm hoping everyone takes it by Tuesday or so or by Wednesday, so that then I can go over all the answers in class by Thursday, let's say.</v>
+
+00:01:33.180 --> 00:01:33.540
+<v Sohoni, Sohum>OK.</v>
+
+00:01:34.750 --> 00:01:35.600
+<v Sohoni, Sohum>So yeah, I'm just.</v>
+
+00:01:36.890 --> 00:01:41.940
+<v Sohoni, Sohum>Just waiting for everyone to take the test so that we can go over the answers in class.</v>
+
+00:01:42.000 --> 00:01:42.440
+<v Sohoni, Sohum>Yes.</v>
+
+00:01:44.330 --> 00:01:46.370
+<v Sohoni, Sohum>Does anyone have any questions about that?</v>
+
+00:01:54.530 --> 00:01:59.670
+<v Sohoni, Sohum>OK alright let me try sharing the models window again.</v>
+
+00:02:02.250 --> 00:02:04.760
+<v Sohoni, Sohum>OK, alright so.</v>
+
+00:02:06.790 --> 00:02:13.090
+<v Sohoni, Sohum>I'm just going to go over the program that I had shared with you last week.</v>
+
+00:02:13.930 --> 00:02:21.450
+<v Sohoni, Sohum>Uhm, just walk through it today. This is using procedures in Mars and in assembly in general.</v>
+
+00:02:22.130 --> 00:02:29.310
+<v Sohoni, Sohum>And I want you to ask me questions about this program. OK, so I'll I'll just do a quick once over.</v>
+
+00:02:30.210 --> 00:02:40.810
+<v Sohoni, Sohum>On what's going on here? So we've got the dot data segment. We've got a few prompts I believe the way I shared it. This was actually commented out, so let's uncomment these.</v>
+
+00:02:42.260 --> 00:02:48.420
+<v Sohoni, Sohum>K So what's happening here is where she saving some space 255 bytes.</v>
+
+00:02:49.020 --> 00:02:57.280
+<v Sohoni, Sohum>For each of the two strings, so string two followed by string one. We could easily just change this, and this could be string one and string 2.</v>
+
+00:02:58.060 --> 00:02:59.910
+<v Sohoni, Sohum>And then in the dark text segment.</v>
+
+00:03:00.550 --> 00:03:04.670
+<v Sohoni, Sohum>We as always have got a main program, OK.</v>
+
+00:03:05.500 --> 00:03:06.050
+<v Sohoni, Sohum>Uhm?</v>
+
+00:03:07.190 --> 00:03:10.700
+<v Sohoni, Sohum>Which is essentially using the SYS calls that we're all familiar with.</v>
+
+00:03:11.770 --> 00:03:13.100
+<v Sohoni, Sohum>Prompting the user.</v>
+
+00:03:13.910 --> 00:03:18.760
+<v Sohoni, Sohum>But then we were using this instruction. JAL, print and mail.</v>
+
+00:03:19.670 --> 00:03:23.320
+<v Sohoni, Sohum>What do you think's happening here? What is the JAL instruction? What does it do?</v>
+
+00:03:26.040 --> 00:03:26.340
+<v Schilling, Atreyu>Call</v>
+
+00:03:26.400 --> 00:03:28.540
+<v Schilling, Atreyu>just the print and AL function.</v>
+
+00:03:29.320 --> 00:03:30.060
+<v Schilling, Atreyu>Or procedure.</v>
+
+00:03:31.120 --> 00:03:31.870
+<v Sohoni, Sohum>Right?</v>
+
+00:03:36.660 --> 00:03:36.960
+<v Furst, Elias>Yeah.</v>
+
+00:03:32.530 --> 00:03:37.250
+<v Sohoni, Sohum>Uhm, ward? Specifically, what exactly does it do it like from the.</v>
+
+00:03:38.500 --> 00:03:38.820
+<v Furst, Elias>Come.</v>
+
+00:03:38.370 --> 00:03:39.440
+<v Sohoni, Sohum>Hardware point of view.</v>
+
+00:03:39.710 --> 00:03:53.320
+<v Furst, Elias>The so it it jumps the program counter to that that label and also then sets. I forgot which register, but it sets that registered to the line that it's on.</v>
+
+00:03:54.790 --> 00:04:09.950
+<v Sohoni, Sohum>Right, so almost there almost perfect, so it it. It's a jump and link so it jumps to this label right? But then the alpart the end link essentially sets their dollar or a register.</v>
+
+00:04:10.840 --> 00:04:40.580
+<v Sohoni, Sohum>Which is registered 31 and the RA stands for return address. So it sets the return address to the instruction. After this one. OK, so when we do jail print and L, the address of the Liv 08 this instruction is going to be saved in that register, so that at the end of the the procedure call when we do an instruction called Jr Dollar RA.</v>
+
+00:04:41.200 --> 00:04:49.020
+<v Sohoni, Sohum>It's going to do a jump register, so let's actually go down to print and now. So if you look at the print an L function, it's just printing a new line.</v>
+
+00:04:49.870 --> 00:04:58.500
+<v Sohoni, Sohum>Right, it's loading a zero with the value of the newline character, and then it's just doing a syscall.</v>
+
+00:05:00.270 --> 00:05:06.180
+<v Sohoni, Sohum>And then it's doing this Jr dollar RA soldier dollar. RA is the jump.</v>
+
+00:05:07.340 --> 00:05:31.060
+<v Sohoni, Sohum>Through the value pointed to by the register. OK, so it goes and reads the dollar. I register and it takes whatever is in that register and just loads PC the program counter to be that so that we return our execution to the place from which we had called. OK, let's see this in action real quick.</v>
+
+00:05:32.470 --> 00:05:33.930
+<v Sohoni, Sohum>So if we step through.</v>
+
+00:05:36.820 --> 00:05:39.560
+<v Sohoni, Sohum>So when we get to the JAL instruction.</v>
+
+00:05:40.520 --> 00:05:42.300
+<v Sohoni, Sohum>Partner Dollar RA is 0.</v>
+
+00:05:44.730 --> 00:05:55.810
+<v Sohoni, Sohum>Once we do that, you can see that dollar R as being updated and it's got a value zero X 040014, which is the address of.</v>
+
+00:05:56.650 --> 00:06:00.170
+<v Sohoni, Sohum>The instruction after the jump and link instruction.</v>
+
+00:06:02.040 --> 00:06:09.260
+<v Sohoni, Sohum>If we school, so here we were. The 1/4 this was the JL. This is the instruction after Yale.</v>
+
+00:06:09.920 --> 00:06:11.630
+<v Sohoni, Sohum>Which is address 14.</v>
+
+00:06:12.360 --> 00:06:13.160
+<v Sohoni, Sohum>Questions.</v>
+
+00:06:23.580 --> 00:06:27.440
+<v Bultman, Joshua>Could you use so many register there for Jared Stead of RA?</v>
+
+00:06:28.540 --> 00:06:37.160
+<v Sohoni, Sohum>Ah yeah, technically you could, but the convention is to use the RA because it is the return address register, yes?</v>
+
+00:06:37.830 --> 00:06:38.670
+<v Bultman, Joshua>OK, cool, thank you.</v>
+
+00:06:40.300 --> 00:06:41.130
+<v Sohoni, Sohum>Good question.</v>
+
+00:06:45.890 --> 00:06:55.800
+<v Sohoni, Sohum>OK, so we notice two things. One, the RA was updated but then also the program counter was updated to down here.</v>
+
+00:06:56.530 --> 00:06:57.930
+<v Sohoni, Sohum>Which is our procedure.</v>
+
+00:06:58.770 --> 00:07:00.290
+<v Sohoni, Sohum>For the print new line.</v>
+
+00:07:02.270 --> 00:07:08.430
+<v Sohoni, Sohum>Which, if we keep executing get there, we do the syscall and then when we do the RA.</v>
+
+00:07:09.850 --> 00:07:13.100
+<v Sohoni, Sohum>Sorry Jr. Dollar or a will notice that it goes back.</v>
+
+00:07:14.900 --> 00:07:23.050
+<v Sohoni, Sohum>Add to that address 14 and executes this instruction over here. OK, which if we go back up here.</v>
+
+00:07:23.720 --> 00:07:26.160
+<v Sohoni, Sohum>That's nothing but this guy right here.</v>
+
+00:07:31.410 --> 00:07:33.240
+<v Sohoni, Sohum>OK, any questions at this point.</v>
+
+00:07:42.660 --> 00:07:43.280
+<v Sohoni, Sohum>Right?</v>
+
+00:07:43.590 --> 00:07:44.560
+<v Sohoni, Sohum>Let's keep going.</v>
+
+00:07:47.330 --> 00:07:53.900
+<v Sohoni, Sohum>So if we keep executing, it's just going to do the other Cisco laughter take in the.</v>
+
+00:07:55.530 --> 00:07:56.930
+<v Sohoni, Sohum>String theory.</v>
+
+00:08:12.700 --> 00:08:14.950
+<v Sohoni, Sohum>Again, goes to the print new line.</v>
+
+00:08:16.540 --> 00:08:17.800
+<v Sohoni, Sohum>Kane goes back.</v>
+
+00:08:19.500 --> 00:08:21.330
+<v Sohoni, Sohum>Execution next this call.</v>
+
+00:08:39.010 --> 00:08:45.260
+<v Sohoni, Sohum>And you can see the strings being updated here as well. I've checked the ASCII box and in the data segment.</v>
+
+00:08:46.470 --> 00:08:47.350
+<v Sohoni, Sohum>You can see.</v>
+
+00:08:48.190 --> 00:08:52.670
+<v Sohoni, Sohum>This sohoni string over here and the sohum string over here.</v>
+
+00:08:53.370 --> 00:08:56.440
+<v Sohoni, Sohum>There are 255 bytes allocated for them.</v>
+
+00:08:57.110 --> 00:08:59.790
+<v Sohoni, Sohum>Wait, if we go back to the program you can see.</v>
+
+00:09:00.670 --> 00:09:01.500
+<v Sohoni, Sohum>Down here.</v>
+
+00:09:02.430 --> 00:09:06.490
+<v Sohoni, Sohum>So this particular syscall takes in three.</v>
+
+00:09:07.980 --> 00:09:10.260
+<v Sohoni, Sohum>Arguments V0 has.</v>
+
+00:09:11.880 --> 00:09:12.440
+<v Sohoni, Sohum>Uhm?</v>
+
+00:09:14.040 --> 00:09:21.650
+<v Sohoni, Sohum>No, that's the syscall idea search, so that's eight and then a zero is the address and a one is the length.</v>
+
+00:09:22.390 --> 00:09:25.890
+<v Sohoni, Sohum>Of the number of characters over here, so that's why.</v>
+
+00:09:26.830 --> 00:09:28.330
+<v Sohoni, Sohum>In here we see.</v>
+
+00:09:29.150 --> 00:09:32.130
+<v Sohoni, Sohum>These as being so far apart, so if you look at this.</v>
+
+00:09:33.350 --> 00:09:44.480
+<v Sohoni, Sohum>Yeah, so it's Umm over here and then you've got all these blank null characters and you've got the SOHONI string over here. Which is right after the last prompt.</v>
+
+00:09:45.930 --> 00:09:48.340
+<v Sohoni, Sohum>So this is how stuff gets stored in memory.</v>
+
+00:09:50.400 --> 00:09:53.800
+<v Sohoni, Sohum>Yeah, and if we keep going through the program.</v>
+
+00:09:54.790 --> 00:09:57.260
+<v Sohoni, Sohum>This is an interesting part as well, so.</v>
+
+00:09:59.030 --> 00:10:01.370
+<v Sohoni, Sohum>What's happening here at this point?</v>
+
+00:10:04.570 --> 00:10:07.000
+<v Sohoni, Sohum>We've called another.</v>
+
+00:10:11.980 --> 00:10:16.100
+<v Sohoni, Sohum>Who's sensually? Let's go back here so we are down here.</v>
+
+00:10:19.670 --> 00:10:23.250
+<v Sohoni, Sohum>Which is doing the store word dollar FP $0.00 SP.</v>
+
+00:10:24.170 --> 00:10:27.650
+<v Sohoni, Sohum>Who do you think's happening in these instructions over here?</v>
+
+00:10:46.930 --> 00:10:50.520
+<v Sohoni, Sohum>This adire dollar SP dollar is P - 40.</v>
+
+00:10:52.820 --> 00:10:59.910
+<v Schilling, Atreyu>So, it's, uh, like allowing it's well, it's decrementing the stack pointer by 4 day, but really, it's.</v>
+
+00:11:00.660 --> 00:11:01.730
+<v Schilling, Atreyu>Allowing the.</v>
+
+00:11:02.360 --> 00:11:06.280
+<v Schilling, Atreyu>Pulling the stack pointer down by 10 words or 40 bytes.</v>
+
+00:11:07.210 --> 00:11:08.140
+<v Schilling, Atreyu>In storage.</v>
+
+00:11:08.880 --> 00:11:10.840
+<v Schilling, Atreyu>So like allowing that storage to.</v>
+
+00:11:11.540 --> 00:11:14.550
+<v Schilling, Atreyu>Uh, take up space on the stack, I guess, sort of.</v>
+
+00:11:14.290 --> 00:11:17.580
+<v Sohoni, Sohum>Right exactly so it's initializing our stack.</v>
+
+00:11:18.560 --> 00:11:21.970
+<v Sohoni, Sohum>So that we can save some registers. So if we go down.</v>
+
+00:11:22.830 --> 00:11:26.750
+<v Sohoni, Sohum>To the just procedure here this is what's going on OK.</v>
+
+00:11:27.470 --> 00:11:29.750
+<v Sohoni, Sohum>So this is the part that we're looking at.</v>
+
+00:11:30.730 --> 00:11:36.850
+<v Sohoni, Sohum>Uhm, solar string length procedure is essentially going to do.</v>
+
+00:11:38.260 --> 00:11:40.210
+<v Sohoni, Sohum>Create space on the stack.</v>
+
+00:11:40.910 --> 00:12:10.880
+<v Sohoni, Sohum>And then it's going to save a bunch of registers, so their dollar are a register S0S1S2 through S 7. So these remember, I kept saying the South registers are the ones that are saved. That's the Convention, so that's why we're saving the values. So store word takes from the register and saves in memory, right? So each of these instructions is essentially saving the values that were in each of these registers as zero through seven OK and then.</v>
+
+00:12:10.990 --> 00:12:15.260
+<v Sohoni, Sohum>It's executing a particular well, the essentially.</v>
+
+00:12:16.060 --> 00:12:21.860
+<v Sohoni, Sohum>The functionality of the function or the procedure and then in the epilogue.</v>
+
+00:12:22.510 --> 00:12:33.320
+<v Sohoni, Sohum>OK, it's loading back those values that were saved for those registers, so in the meantime we could use those registers. Now here we didn't use much.</v>
+
+00:12:33.940 --> 00:12:39.010
+<v Sohoni, Sohum>In terms of overwriting the only thing we reused was 0Y0 and P0.</v>
+
+00:12:39.760 --> 00:12:40.360
+<v Sohoni, Sohum>Uhm?</v>
+
+00:12:41.980 --> 00:12:49.240
+<v Sohoni, Sohum>But then essentially that means we just reused as zero, because A0 and V0 are used to pass and return arguments.</v>
+
+00:12:50.110 --> 00:12:52.290
+<v Sohoni, Sohum>Uhm, where this actually?</v>
+
+00:12:53.680 --> 00:13:02.440
+<v Sohoni, Sohum>We ended up still saving all of these registers and restoring their values before going back using the JAR Dollar RA.</v>
+
+00:13:03.890 --> 00:13:10.350
+<v Sohoni, Sohum>So questions about this, in case you've not already sorted these things out in your mind.</v>
+
+00:13:13.150 --> 00:13:19.700
+<v Kreitzman, Colton>So if you got rid of all of the lines for like S1 through S7, the program wouldn't run any differently, right?</v>
+
+00:13:20.140 --> 00:13:20.390
+<v Sohoni, Sohum>There.</v>
+
+00:13:20.440 --> 00:13:27.130
+<v Sohoni, Sohum>That's correct, in this case, yes, because we didn't really need to save the other register values exactly.</v>
+
+00:13:33.570 --> 00:13:39.360
+<v Bultman, Joshua>Do you usually have like a procedures that do this for you?</v>
+
+00:13:42.140 --> 00:13:44.790
+<v Sohoni, Sohum>Oh yeah, that's a good question so.</v>
+
+00:13:46.120 --> 00:13:48.370
+<v Sohoni, Sohum>It it is a convention.</v>
+
+00:13:49.080 --> 00:13:50.070
+<v Sohoni, Sohum>And so you should.</v>
+
+00:13:51.170 --> 00:14:04.740
+<v Sohoni, Sohum>If you're writing a procedure, you should be following this Convention and there by doing that so that if someone else is using the procedure that you wrote, then your procedure takes care of saving these registers and restoring them.</v>
+
+00:14:06.550 --> 00:14:08.590
+<v Sohoni, Sohum>So it's sort of like an expectation.</v>
+
+00:14:10.310 --> 00:14:10.900
+<v Sohoni, Sohum>And.</v>
+
+00:14:12.220 --> 00:14:32.730
+<v Sohoni, Sohum>In in high level languages and using the operating system and things like that. This all this stuff is taken care of for you, right? It's it's done by the software systems that run on your your hardware. Here we are working directly with the with the hardware, which is why we are doing all of these things manually.</v>
+
+00:14:35.160 --> 00:14:39.570
+<v Sohoni, Sohum>Normally you get to see how it's done by doing that.</v>
+
+00:14:45.810 --> 00:14:49.150
+<v Kreitzman, Colton>So should you never be saving the argument or?</v>
+
+00:14:49.990 --> 00:14:55.670
+<v Kreitzman, Colton>Uh, like the a zeros or veer zeros for any type of procedure.</v>
+
+00:14:58.070 --> 00:15:06.230
+<v Sohoni, Sohum>Yeah, you shouldn't be saving or it's not expected that you save those because the a zero if we go to the green sheet.</v>
+
+00:15:07.560 --> 00:15:08.810
+<v Sohoni, Sohum>I should mention that.</v>
+
+00:15:10.390 --> 00:15:12.870
+<v Sohoni, Sohum>Or I'm not sharing my whole window so.</v>
+
+00:15:14.450 --> 00:15:16.220
+<v Sohoni, Sohum>Let me just check anyway.</v>
+
+00:15:21.310 --> 00:15:40.350
+<v Sohoni, Sohum>Yeah, so in the green sheet. If you were to look it up yourself, it says a zero through a three or arguments, so these are past two hour procedure and then dollar V zero and dollar V1 R registers that are used to return values from a procedure.</v>
+
+00:15:41.320 --> 00:16:03.890
+<v Sohoni, Sohum>So if you wanted to update some number and send it back right when like we have returned one, or if we've initialize some count variable and we say return count in in Java and that's the the variable that's being returned, the updated value that would be put into V0 or V1. So Mars or Maps allows us to return two values, yeah?</v>
+
+00:16:05.080 --> 00:16:05.910
+<v Sohoni, Sohum>Using this.</v>
+
+00:16:10.250 --> 00:16:10.980
+<v Sohoni, Sohum>Makes sense.</v>
+
+00:16:12.860 --> 00:16:13.240
+<v Kreitzman, Colton>Yep.</v>
+
+00:16:15.310 --> 00:16:18.040
+<v Sohoni, Sohum>OK, what other questions do you have?</v>
+
+00:16:35.190 --> 00:16:39.860
+<v Kreitzman, Colton>Could you explain what the FP registers for and why you're wanting to save that?</v>
+
+00:16:41.560 --> 00:16:44.860
+<v Sohoni, Sohum>Yeah, so the FP is the frame pointer.</v>
+
+00:16:46.320 --> 00:16:58.490
+<v Sohoni, Sohum>Just like SP is the stack pointer, and So what happens is we essentially create what's called a whole stack frame, which is like where we were earlier in terms of the stack pointer and then.</v>
+
+00:16:59.270 --> 00:17:00.400
+<v Sohoni, Sohum>Everything in between.</v>
+
+00:17:01.090 --> 00:17:05.580
+<v Sohoni, Sohum>Uh, so that we know how big our stack frame is.</v>
+
+00:17:06.810 --> 00:17:08.000
+<v Sohoni, Sohum>OK, so.</v>
+
+00:17:10.540 --> 00:17:14.670
+<v Sohoni, Sohum>Other than that, I don't think I have a great explanation for what the.</v>
+
+00:17:16.190 --> 00:17:18.150
+<v Sohoni, Sohum>The frame pointer is used for.</v>
+
+00:17:23.370 --> 00:17:26.800
+<v Sohoni, Sohum>Does anyone read in the book and found some better explanation?</v>
+
+00:17:42.860 --> 00:17:46.260
+<v Furst, Elias>I haven't found anything about the frame pointer in the book.</v>
+
+00:17:48.170 --> 00:17:48.600
+<v Sohoni, Sohum>OK.</v>
+
+00:17:50.160 --> 00:17:55.190
+<v Sohoni, Sohum>Yeah, well I can try to dig up more information. Just make a note of that.</v>
+
+00:18:01.580 --> 00:18:03.630
+<v Bultman, Joshua>This is a little bit off topic. First one but.</v>
+
+00:18:05.390 --> 00:18:09.470
+<v Bultman, Joshua>What's the difference between a dot buffer and it got space like data type?</v>
+
+00:18:15.510 --> 00:18:17.260
+<v Sohoni, Sohum>Dot buffer and dot space.</v>
+
+00:18:17.320 --> 00:18:17.720
+<v Sohoni, Sohum>Yes.</v>
+
+00:18:18.450 --> 00:18:19.350
+<v Sohoni, Sohum>K.</v>
+
+00:18:20.400 --> 00:18:21.370
+<v Sohoni, Sohum>Let's see.</v>
+
+00:18:34.650 --> 00:18:37.400
+<v Sohoni, Sohum>I don't see any autocompletion on dot buffer is that?</v>
+
+00:18:38.650 --> 00:18:39.300
+<v Bultman, Joshua>That's weird.</v>
+
+00:18:41.620 --> 00:18:42.660
+<v Bultman, Joshua>Sorry, you said before.</v>
+
+00:18:43.560 --> 00:18:44.030
+<v Bultman, Joshua>One second.</v>
+
+00:18:45.550 --> 00:18:48.470
+<v Bultman, Joshua>Go ahead, I'll I'll look it up and see what what I meant.</v>
+
+00:18:49.550 --> 00:18:49.860
+<v Sohoni, Sohum>OK.</v>
+
+00:18:53.250 --> 00:19:02.710
+<v Sohoni, Sohum>So my plan mainly today was just to go over this program so I I don't have anything else planned, so I'm I'm open for questions that you might have OK.</v>
+
+00:19:40.620 --> 00:19:45.550
+<v Sohoni, Sohum>Hey, I'm not hearing any questions. I thought I was gonna take a little longer to go over all this.</v>
+
+00:19:54.860 --> 00:19:56.650
+<v Rolando, Jackson>Is this program posted somewhere?</v>
+
+00:19:57.840 --> 00:19:59.710
+<v Sohoni, Sohum>Yeah, and this should be in canvas.</v>
+
+00:20:00.510 --> 00:20:00.880
+<v Rolando, Jackson>Great.</v>
+
+00:20:01.300 --> 00:20:03.460
+<v Sohoni, Sohum>In the week five module.</v>
+
+00:20:06.560 --> 00:20:11.180
+<v Bultman, Joshua>I was actually using dot space. I didn't realize that my my name was just buffer. Sorry about that.</v>
+
+00:20:12.160 --> 00:20:12.740
+<v Schilling, Atreyu>Yeah so.</v>
+
+00:20:10.680 --> 00:20:21.780
+<v Sohoni, Sohum>Oh, your name was buffer. Yeah, OK yeah that happens yeah. So in week five it says procedures string example dot ASM. That's the one I'm.</v>
+
+00:20:22.940 --> 00:20:23.640
+<v Sohoni, Sohum>Showing here.</v>
+
+00:20:27.960 --> 00:20:29.770
+<v Kreitzman, Colton>I have a question about a.</v>
+
+00:20:30.950 --> 00:20:40.510
+<v Kreitzman, Colton>The same thing from earlier. I'm kind of confused about the FP register, 'cause it looks like it's being stored in the same spot as where as seven ends up being stored.</v>
+
+00:20:41.610 --> 00:20:42.950
+<v Kreitzman, Colton>So isn't that overwriting that?</v>
+
+00:20:49.080 --> 00:20:53.810
+<v Sohoni, Sohum>It shouldn't be over writing, you're saying it's over writing S7.</v>
+
+00:20:55.690 --> 00:21:00.260
+<v Kreitzman, Colton>Because they're both, it both has zero as the.</v>
+
+00:21:01.350 --> 00:21:02.460
+<v Kreitzman, Colton>What's it called the?</v>
+
+00:21:02.880 --> 00:21:03.530
+<v Sohoni, Sohum>You upset?</v>
+
+00:21:03.160 --> 00:21:04.440
+<v Kreitzman, Colton>Offset, yeah.</v>
+
+00:21:08.300 --> 00:21:09.280
+<v Sohoni, Sohum>So here.</v>
+
+00:21:11.230 --> 00:21:13.110
+<v Sohoni, Sohum>Let's see store word.</v>
+
+00:21:14.290 --> 00:21:22.030
+<v Sohoni, Sohum>But no, what's happened is between this and this. We've actually changed the value of SP itself by 40.</v>
+
+00:21:23.380 --> 00:21:24.490
+<v Kreitzman, Colton>Oh yeah, OK.</v>
+
+00:21:24.150 --> 00:21:25.110
+<v Sohoni, Sohum>Or here yeah.</v>
+
+00:21:27.910 --> 00:21:35.540
+<v Sohoni, Sohum>So FP essentially is just is saving the old stack pointer value. Yeah, I remember now, yeah.</v>
+
+00:21:36.860 --> 00:21:53.180
+<v Sohoni, Sohum>So you're not here, you're saving this frame pointer value. Then you're just moving stack pointer to frame pointers so that the old stack pointer is saved in the frame pointer. Then you're decrementing the stack pointer, and then you're saving all of these.</v>
+
+00:21:53.990 --> 00:21:54.690
+<v Sohoni, Sohum>To memory.</v>
+
+00:21:59.460 --> 00:22:02.160
+<v Sohoni, Sohum>Yeah, so that answers the question regarding FP as well.</v>
+
+00:22:03.680 --> 00:22:10.770
+<v Schilling, Atreyu>What is the purpose of the frame pointer then? Like it doesn't do anything in this program in particular or it does, is it just saved and reloaded?</v>
+
+00:22:11.010 --> 00:22:19.140
+<v Sohoni, Sohum>Yeah, in this program will not using it, but it's just like the convention that we save the frame pointer.</v>
+
+00:22:19.690 --> 00:22:20.300
+<v Sohoni, Sohum>Uhm?</v>
+
+00:22:21.000 --> 00:22:23.580
+<v Sohoni, Sohum>So it's a quick way of.</v>
+
+00:22:24.610 --> 00:22:28.010
+<v Sohoni, Sohum>And just knowing where the stack pointer was before.</v>
+
+00:22:39.720 --> 00:22:42.200
+<v Bultman, Joshua>But doesn't that get saved in the RA?</v>
+
+00:22:43.370 --> 00:22:43.980
+<v Bultman, Joshua>Register</v>
+
+00:22:48.960 --> 00:22:53.200
+<v Sohoni, Sohum>Yeah, there's no. It's not saved in the RA register.</v>
+
+00:22:54.430 --> 00:22:55.310
+<v Sohoni, Sohum>You mean like here?</v>
+
+00:22:56.110 --> 00:22:57.780
+<v Bultman, Joshua>oh, wait, never mind, I'm confused, sorry.</v>
+
+00:23:05.660 --> 00:23:12.220
+<v Sohoni, Sohum>Yeah, procedures are a little tricky, so make sure you study this program and then you write your own.</v>
+
+00:23:13.100 --> 00:23:17.890
+<v Sohoni, Sohum>Programs that use procedures. I think I gave you some time to do that last week.</v>
+
+00:23:18.570 --> 00:23:20.410
+<v Sohoni, Sohum>But I would certainly recommend.</v>
+
+00:23:21.570 --> 00:23:24.800
+<v Sohoni, Sohum>Getting some more practice using procedures.</v>
+
+00:23:30.490 --> 00:23:36.190
+<v Sohoni, Sohum>I have one question for all of you. What happens when a procedure calls another procedure?</v>
+
+00:23:47.940 --> 00:23:49.040
+<v Rolando, Jackson>It asked us.</v>
+
+00:23:48.190 --> 00:23:53.910
+<v Schilling, Atreyu>Then it just saves everything to a this stack further up just does the same stuff.</v>
+
+00:23:55.270 --> 00:23:55.900
+<v Sohoni, Sohum>Right?</v>
+
+00:23:57.960 --> 00:23:59.050
+<v Sohoni, Sohum>In one of the.</v>
+
+00:24:00.430 --> 00:24:02.710
+<v Sohoni, Sohum>The important things that it does is.</v>
+
+00:24:03.450 --> 00:24:05.950
+<v Sohoni, Sohum>Right here, where the line is highlighted.</v>
+
+00:24:07.780 --> 00:24:11.520
+<v Sohoni, Sohum>Is there dollar or a if we if we don't capture that?</v>
+
+00:24:13.430 --> 00:24:18.300
+<v Sohoni, Sohum>OK, would've never going to find out where to return to, and that's going to be a big problem.</v>
+
+00:24:22.690 --> 00:24:23.340
+<v Sohoni, Sohum>Is that?</v>
+
+00:24:24.090 --> 00:24:26.690
+<v Sohoni, Sohum>Make sense to see the importance of saving Dollar RA.</v>
+
+00:24:28.150 --> 00:24:28.520
+<v Bultman, Joshua>Yep.</v>
+
+00:24:31.700 --> 00:24:32.150
+<v Sohoni, Sohum>Super.</v>
+
+00:24:35.840 --> 00:24:46.940
+<v Sohoni, Sohum>So it looks like I'm not getting a whole lot more question, so why don't we take the remaining, say half hour or 35 minutes that we have left in class and maybe write a program?</v>
+
+00:24:47.570 --> 00:24:48.510
+<v Sohoni, Sohum>That has.</v>
+
+00:24:49.150 --> 00:24:51.190
+<v Sohoni, Sohum>Multiple procedures in it so.</v>
+
+00:24:52.210 --> 00:25:00.640
+<v Sohoni, Sohum>I'll, I'll let it be very freeform. Write a program which has a procedure that also calls another procedure from that procedure.</v>
+
+00:25:02.610 --> 00:25:16.450
+<v Sohoni, Sohum>You can make everything up in terms of what the program is doing and so on. So right maybe the simplest program you can imagine that has a procedure that calls a procedure and see how that works out.</v>
+
+00:25:17.660 --> 00:25:21.210
+<v Sohoni, Sohum>Especially with regards to saving the return address and things like that.</v>
+
+00:25:26.280 --> 00:25:30.700
+<v Sohoni, Sohum>So it makes sense to do. You need more instructions, or do you think you're ready to tackle this?</v>
+
+00:25:33.250 --> 00:25:37.460
+<v Toohill, Teresa>I think that's good, but do you want us to submit this and like canvas or anything?</v>
+
+00:25:39.690 --> 00:25:43.640
+<v Sohoni, Sohum>Yeah I think would be a good idea to submit it on canvas so.</v>
+
+00:25:45.440 --> 00:25:48.030
+<v Sohoni, Sohum>I'll just, I'll make up the assignment.</v>
+
+00:25:48.680 --> 00:25:53.330
+<v Sohoni, Sohum>In just a minute? OK, so why don't you get started on it? I'll stop sharing my screen.</v>
+
+00:25:54.660 --> 00:26:00.070
+<v Sohoni, Sohum>And I'll just add is an in class activity to canvas.</v>
+
+00:26:37.250 --> 00:26:40.010
+<v Sohoni, Sohum>It'll take me a couple minutes to get that done.</v>
+
+00:26:42.440 --> 00:26:43.980
+<v Sohoni, Sohum>I'll just call it 6th.</v>
+
+00:26:45.190 --> 00:26:46.240
+<v Sohoni, Sohum>Lips program.</v>
+
+00:27:51.870 --> 00:27:55.680
+<v Sohoni, Sohum>So I'll make your due tomorrow, but see if you can finish it today.</v>
+
+00:28:29.590 --> 00:28:31.070
+<v Sohoni, Sohum>OK, it's up on canvas now.</v>
+
+00:28:35.830 --> 00:28:36.440
+<v Toohill, Teresa>Thank you.</v>
+
+00:28:37.170 --> 00:28:38.270
+<v Sohoni, Sohum>You are welcome.</v>
+
+00:28:39.710 --> 00:28:41.620
+<v Sohoni, Sohum>In the week six module you can see it.</v>
+
+00:29:18.400 --> 00:29:21.380
+<v Kreitzman, Colton>I got a question about calling multiple procedures.</v>
+
+00:29:21.650 --> 00:29:22.050
+<v Sohoni, Sohum>Yeah.</v>
+
+00:29:22.900 --> 00:29:32.500
+<v Kreitzman, Colton>Is it only necessary to save the RA register if your direct like if you're doing a jump and link call or for example like, would you need to do that for like branch instructions as well?</v>
+
+00:29:34.470 --> 00:29:36.200
+<v Sohoni, Sohum>Uh, not for branches.</v>
+
+00:29:38.350 --> 00:29:38.720
+<v Kreitzman, Colton>OK.</v>
+
+00:29:37.870 --> 00:29:43.730
+<v Sohoni, Sohum>Branches aren't linking, so there is no question of returning using NRA register.</v>
+
+00:29:46.230 --> 00:29:46.880
+<v Kreitzman, Colton>Alright, got it.</v>
+
+00:30:48.770 --> 00:30:53.880
+<v Sohoni, Sohum>So I'll be around if anyone has questions, please go ahead and implement the program.</v>
+
+00:33:52.740 --> 00:34:00.130
+<v Sohoni, Sohum>And whenever you're done, if anyone wants to do a demo feel, feel free to share your screen and show us your program.</v>
+
+00:38:41.560 --> 00:38:42.410
+<v Sohoni, Sohum>So anyone done?</v>
+
+00:39:13.690 --> 00:39:16.780
+<v Sohoni, Sohum>OK, no problem. Take your time. We've got 10 more minutes.</v>
+
+00:44:34.840 --> 00:44:37.510
+<v Sohoni, Sohum>So any volunteers for a demo?</v>
+
+00:44:53.580 --> 00:44:54.600
+<v Bultman, Joshua>I'm still working on it.</v>
+
+00:44:53.760 --> 00:44:54.690
+<v Rolando, Jackson>Do you have a question?</v>
+
+00:44:55.690 --> 00:45:05.670
+<v Sohoni, Sohum>OK, all right. Well, we've got just a few minutes left and I'm going to give you this time to complete your program. Make sure you write a program that.</v>
+
+00:45:06.610 --> 00:45:20.960
+<v Sohoni, Sohum>UMP, you know you can test easily to see if the if it's working correctly, right? But you're actually returning from both the procedures and maybe in your main program you're printing a line saying I'm back and main or something like that.</v>
+
+00:45:21.650 --> 00:45:22.950
+<v Sohoni, Sohum>So that would be my hint.</v>
+
+00:45:23.720 --> 00:45:24.370
+<v Sohoni, Sohum>Uhm?</v>
+
+00:45:25.340 --> 00:45:28.050
+<v Sohoni, Sohum>And also I'll say one more thing to the class.</v>
+
+00:45:28.110 --> 00:45:33.390
+<v Sohoni, Sohum>This, uh, maybe if I can have everyone's attention, please for just 30 seconds.</v>
+
+00:45:34.030 --> 00:45:34.520
+<v Sohoni, Sohum>Uhm?</v>
+
+00:45:35.570 --> 00:45:41.340
+<v Sohoni, Sohum>You may have sensed from just how this class period went, that I'm not fully recovered yet.</v>
+
+00:45:41.970 --> 00:45:48.850
+<v Sohoni, Sohum>And I apologize. I think you guys deserve better, but I'm trying my best to to.</v>
+
+00:45:50.560 --> 00:46:04.140
+<v Sohoni, Sohum>You know, manage and do a better job with what we're doing here, so hopefully next time we meet on Wednesday I'll I'll be a little better. I am getting my new glasses soon, so hopefully that will.</v>
+
+00:46:04.800 --> 00:46:07.620
+<v Sohoni, Sohum>Pick out some of the issues I'm having medical issues.</v>
+
+00:46:08.420 --> 00:46:12.390
+<v Sohoni, Sohum>Uhm, but yeah I I just wanted to say I I wish.</v>
+
+00:46:13.050 --> 00:46:16.070
+<v Sohoni, Sohum>We've been in better circumstances at this point.</v>
+
+00:46:17.620 --> 00:46:18.100
+<v Sohoni, Sohum>So.</v>
+
+00:46:18.900 --> 00:46:19.930
+<v Sohoni, Sohum>Hang in there.</v>
+
+00:46:20.980 --> 00:46:22.140
+<v Sohoni, Sohum>Hope things will get better.</v>
+
+00:46:26.660 --> 00:46:29.330
+<v Sohoni, Sohum>Alright, OK, I'll let you guys go.</v>
+
+00:46:30.810 --> 00:46:31.540
+<v Sohoni, Sohum>Take care.</v>
+
+00:46:33.120 --> 00:46:34.260
+<v Rolando, Jackson>Thank you so much you too.</v>
+
+00:46:36.080 --> 00:46:36.600
+<v Bultman, Joshua>Thank you.</v>
+
+00:46:37.460 --> 00:46:37.820
+<v Bultman, Joshua>Bye.</v>

@@ -1,0 +1,1096 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.960
+<v Sohoni, Sohum>I can read things on the screen, it's not bad.</v>
+
+00:00:05.680 --> 00:00:12.210
+<v Sohoni, Sohum>Alright, so it's three o'clock. Let's begin. I have slides today for you, but I had put up.</v>
+
+00:00:13.260 --> 00:00:33.250
+<v Sohoni, Sohum>Let's let's go through the slides. So what we're going to look at today is essentially a repeat of what you should have just gone through the book in terms of reading, and I've noticed over the few years that floating point seems to confuse students a little bit so.</v>
+
+00:00:34.660 --> 00:00:41.610
+<v Sohoni, Sohum>I thought I'd spend some time even though you've just just finished reading this. I'll still spend some time, especially the first five things.</v>
+
+00:00:51.410 --> 00:01:20.780
+<v Sohoni, Sohum>Well OK, so let me begin. And if you have questions at any point as always, just feel free to to start talking. Don't don't raise your hand or anything, just just talk OK. So usually when we talk about fractional numbers, there's a radical point that's like a fancy way of saying, like a decimal point or something. So if we've got decimal numbers, it's a decimal point. If you've got binary numbers, it's a binary point point.</v>
+
+00:01:21.170 --> 00:01:50.940
+<v Sohoni, Sohum>And then just delineates the integer part of the number and the fractional part of the number into scientific notation. This is essentially the idea is that you have only a single digit to the left of the radics point. OK, so it could be 2.3 into 10 raise to minus three or something like that. That would be example of a scientific notation in decimal, and we would have something similar in in binary it would be 1.0110.</v>
+
+00:01:51.190 --> 00:01:54.310
+<v Sohoni, Sohum>01 into 2 to the power.</v>
+
+00:01:55.010 --> 00:02:00.590
+<v Sohoni, Sohum>5 or whatever, right when they're five, could also be expressed as 101, so yeah.</v>
+
+00:02:01.910 --> 00:02:08.520
+<v Sohoni, Sohum>So in normalized number in floating point has something that has no leading zeros which.</v>
+
+00:02:09.280 --> 00:02:39.060
+<v Sohoni, Sohum>We will look at and then the idea that there is a floating point essentially means that instead of having like a fixed demarcation, like if we took an 8 bit number and we said, well, the point is going to be in the middle right? So the 1st 4 bits or the topmost 4 bits are going to represent the integer part and the lower 4 bits are going to represent the fractional part. We could arbitrarily decide something like that. Or we could say that we've got a different mechanism where.</v>
+
+00:02:39.530 --> 00:02:52.370
+<v Sohoni, Sohum>We don't really fix that point to be right in the middle or to this end or that end or anywhere for that matter. OK, so it floats around, hence the name floating point OK and.</v>
+
+00:02:54.040 --> 00:03:23.090
+<v Sohoni, Sohum>Again, the fraction and exponent or a result of expressing something in floating point, which would then require us to say, well, we're going to reserve so many bits to talk about the fractional part. And then we're going to reserve so many bits to talk about the exponent part OK, and we'll get to these things in in. We'll see an example, and we'll actually work through all of these things, so this is just setting up the stage with their definitions. If you still have some confusion on the definitions, I would say just.</v>
+
+00:03:23.710 --> 00:03:26.800
+<v Sohoni, Sohum>Hold on to that for a little bit and we we look at.</v>
+
+00:03:27.480 --> 00:03:30.640
+<v Sohoni, Sohum>We worked through some activities and figure it all out.</v>
+
+00:03:32.380 --> 00:04:02.110
+<v Sohoni, Sohum>Alright, so just on a, you know, just the the mechanical soft things like how do we do these conversions? It's pretty straightforward. We already know how to do the integer part like 1101.101. So essentially the part that's left of the dot. We just use the positive powers of two, so 1 into 2 to the power 0 + 0 into 2 to the power 1 + 1 into 2 to the power of two, and so on as we go.</v>
+
+00:04:02.160 --> 00:04:30.180
+<v Sohoni, Sohum>Left words from their their decimal point as we go right from the decimal point. It's just a matter of negative powers of two, so this is going to be one point. I mean, .101 translates to one in two to the power of negative 1 + 0 * 2 to the power negative 2 + 1 * 2 to the power negative, 3 right? So as we are working our way to the right of the desk binary point.</v>
+
+00:04:30.600 --> 00:04:43.880
+<v Sohoni, Sohum>On the powers of two increase in the negative to two to the negative one negative, two negative, three, negative four, and so on. OK so if we work this out, how much does this come out to?</v>
+
+00:04:45.190 --> 00:04:47.400
+<v Sohoni, Sohum>Then what's what's the value going to be?</v>
+
+00:04:52.440 --> 00:04:53.610
+<v Sohoni, Sohum>Shall we work it out?</v>
+
+00:04:59.980 --> 00:05:03.150
+<v Sohoni, Sohum>We're converting this to demo what? What are these values?</v>
+
+00:05:04.650 --> 00:05:05.170
+<v Sohoni, Sohum>Anyone?</v>
+
+00:05:17.270 --> 00:05:17.700
+<v Sohoni, Sohum>Alright.</v>
+
+00:05:16.950 --> 00:05:22.860
+<v Toohill, Teresa>Uh, my note to the left. It's 13 I I've de finished the calculations for right up there right X but</v>
+
+00:05:23.810 --> 00:05:41.620
+<v Sohoni, Sohum>OK yeah, so this is 13 'cause it's 1 + 4 + 8. So 1 + 12 to 13. Yeah and then on the left we've got 1 / 2 which is .5 + 0 + 1 / 8 which is .125 right?</v>
+
+00:05:43.040 --> 00:05:56.130
+<v Sohoni, Sohum>Point 5.25, point 125, and so on. I don't. I haven't memorized the rest of it, so it be .5 + .125, which is .625. So it'd be 13.625, right?</v>
+
+00:05:59.660 --> 00:06:06.270
+<v Sohoni, Sohum>Let's do one more. Let me. I think I already solved this in the earlier class, so let me delete that.</v>
+
+00:06:12.020 --> 00:06:13.110
+<v Sohoni, Sohum>Presented again.</v>
+
+00:06:16.410 --> 00:06:18.300
+<v Sohoni, Sohum>So we went right to the start.</v>
+
+00:06:21.080 --> 00:06:24.210
+<v Sohoni, Sohum>OK, so this number here, right?</v>
+
+00:06:25.260 --> 00:06:31.060
+<v Sohoni, Sohum>One minute let me delete a little bit more out of fear. That doesn't make any sense.</v>
+
+00:06:35.670 --> 00:06:36.690
+<v Sohoni, Sohum>Give me one moment.</v>
+
+00:06:41.100 --> 00:06:43.490
+<v Sohoni, Sohum>When teams is hiding my.</v>
+
+00:06:44.860 --> 00:06:49.850
+<v Sohoni, Sohum>When I wanna click OK, there we go so 1011.00101.</v>
+
+00:06:50.490 --> 00:07:13.150
+<v Sohoni, Sohum>Let's apply the same algorithm and figure out this one. I'll give you a minute and a half to do it, and whenever you're done, enter the number in the chat, but don't hit enter. So when I do the countdown, everyone will hit enter at the same time. OK, so go ahead and do the fractional and the real or the whole parts.</v>
+
+00:07:14.400 --> 00:07:19.080
+<v Sohoni, Sohum>Figure out where this is going to be in decimal and put that in the chat, but don't hit enter.</v>
+
+00:08:16.340 --> 00:08:18.380
+<v Sohoni, Sohum>Case so we are ready.</v>
+
+00:08:19.600 --> 00:08:24.860
+<v Sohoni, Sohum>Let's start, I'll give her a countdown. 321 hit enter.</v>
+
+00:08:37.500 --> 00:08:41.460
+<v Sohoni, Sohum>I am impressed. So in the 1:00 o'clock section we had all kinds of answers.</v>
+
+00:08:42.770 --> 00:08:52.680
+<v Sohoni, Sohum>We had 11.35 we have yeah we had 11 point so many different combinations but apparently this section is smarter.</v>
+
+00:08:53.220 --> 00:09:01.230
+<v Sohoni, Sohum>Uh, so we've got 11.1625. Let me paste back what I just cut out. Wait, what's going on?</v>
+
+00:09:02.910 --> 00:09:05.860
+<v Sohoni, Sohum>And I will present my slides again.</v>
+
+00:09:11.470 --> 00:09:14.120
+<v Sohoni, Sohum>So ignore the.</v>
+
+00:09:14.850 --> 00:09:44.920
+<v Sohoni, Sohum>These guys here, which is dumb. I didn't superscript these so it's 0 * 2 to the negative. 1 + 0 * 2 to the negative 2 + 1 * 2 to the negative three, and so on and so forth. So comes down 2.125 + .03125 and if you align these up correctly and you write it down, the answer comes out as 11.15625. OK, so clearly some of you at least have understood what is going on here, OK?</v>
+
+00:09:45.440 --> 00:10:16.080
+<v Sohoni, Sohum>Uh, maybe we can also go the reverse direction and converting from floating point I mean from decimal to binary. Again, we do it separately. The 40 we can do by division or any other technique you may have learned for doing conversion from decimal to binary and then the .625. There's an interesting way to do that, which is basically we keep multiplying by two just the fractional part and we end up getting.</v>
+
+00:10:16.120 --> 00:10:16.870
+<v Sohoni, Sohum>To the.</v>
+
+00:10:17.880 --> 00:10:31.410
+<v Sohoni, Sohum>Uhm point where we get a full one where we stop and what I mean by that let me just show it to you 'cause it's easier. So again assuming you know how to do the 40 part of it which is going to be 101000.</v>
+
+00:10:32.040 --> 00:10:33.920
+<v Sohoni, Sohum>We take the .625.</v>
+
+00:10:34.540 --> 00:10:43.240
+<v Sohoni, Sohum>We multiplied by two. We get 1.25 OK. Then we take the .25 part of it, multiply that by 2.5.</v>
+
+00:10:43.860 --> 00:11:13.880
+<v Sohoni, Sohum>Multiplied .5 by two. We get a one. So at this point we have a whole 1 remaining here and nothing on the fractions and there is nothing like we multiply by two and we take 101 in this order from top to bottom and we get our number as .625 is 101 OK and you could do the reverse logic that we just did on the previous slide and and figure that out 'cause this is .5. This is going to be 0 and then this is .125.</v>
+
+00:11:14.140 --> 00:11:20.330
+<v Sohoni, Sohum>So if you add those, you're going to get .625, so it kind of works itself out backwards as well.</v>
+
+00:11:21.090 --> 00:11:23.980
+<v Sohoni, Sohum>Any questions on what we've seen so far?</v>
+
+00:11:34.080 --> 00:11:43.450
+<v Sohoni, Sohum>OK, I'm not hearing anything, so now let's get down to the important parts, OK, which is representing floating point numbers in binary.</v>
+
+00:11:44.550 --> 00:12:07.120
+<v Sohoni, Sohum>Uhm, or more accurately, the IEEE 754 standard for this representation, so as part of the standard, we have two possibilities, a single precision floating point which we call afloat, and it double precision floating point, which we call double, right? So in your Java programming in your first year at MSOE.</v>
+
+00:12:07.940 --> 00:12:13.520
+<v Sohoni, Sohum>Whenever you need or something that was not an integer, right you whenever you thought there's going to be fractional values here.</v>
+
+00:12:13.880 --> 00:12:17.060
+<v Sohoni, Sohum>Uhm, I bet you just assume that it's going to be a double.</v>
+
+00:12:17.780 --> 00:12:20.570
+<v Sohoni, Sohum>OK, you didn't really think about doing a float.</v>
+
+00:12:21.250 --> 00:12:51.830
+<v Sohoni, Sohum>I'm assuming most of you did, and that's because we kind of teach you. That way we we just in Java, we default to just using double rather than a single precision, but the difference is clear. In single precision we're using half of the number of bits, so in a 32 bit machine like MIPS single precision floating point would be 32 bits, and those bits would be divided as the most significant bit for the sign. The next 8 bits for the exponent.</v>
+
+00:12:52.050 --> 00:12:54.720
+<v Sohoni, Sohum>The next 23 bits for the fraction.</v>
+
+00:12:55.690 --> 00:12:59.160
+<v Sohoni, Sohum>Where does it double precision floating point would have one bit for the sign.</v>
+
+00:12:59.910 --> 00:13:20.530
+<v Sohoni, Sohum>You 11 bits for the exponent and then 52 bits for the fraction part, so clearly there's more precision because there is so many more EMS, and diffraction is also called the mantissa, which is why we have M. So a lot of bits available for representing the fractional part and then.</v>
+
+00:13:22.510 --> 00:13:52.840
+<v Sohoni, Sohum>More bits also available for the range so we can have because we've got 11 bits for the exponent. The range blows up quite quite a bit, so you can see from 10 to the negative 44 to 10 to the positive. 38 is the approximate range in decimal for single precision or double precision. Not only do we have more precision but also more rain so we can go from 10 to the negative 323 all the way to tend to the positive 308 which are pretty big numbers. If you think about it.</v>
+
+00:13:53.240 --> 00:13:53.610
+<v Sohoni, Sohum>OK.</v>
+
+00:13:54.670 --> 00:13:55.320
+<v Sohoni, Sohum>Uhm?</v>
+
+00:13:56.170 --> 00:13:58.650
+<v Sohoni, Sohum>Questions on this format.</v>
+
+00:14:07.990 --> 00:14:13.270
+<v Furst, Elias>So it's still the same number of numbers, right?</v>
+
+00:14:14.400 --> 00:14:16.020
+<v Furst, Elias>By which I mean, uhm.</v>
+
+00:14:16.760 --> 00:14:21.420
+<v Furst, Elias>You can only have like 2 to the 32 different floating point numbers.</v>
+
+00:14:32.790 --> 00:14:33.700
+<v Furst, Elias>Yeah, 'cause.</v>
+
+00:14:25.080 --> 00:14:34.750
+<v Sohoni, Sohum>Yeah, so yeah. I mean, you're saying the different combinations that we can have a limited by the 32 bits as opposed to the 64 bits.</v>
+
+00:14:34.990 --> 00:14:39.520
+<v Furst, Elias>'cause the range the range is like a lot bigger than a 32 bit integer.</v>
+
+00:14:40.020 --> 00:14:40.430
+<v Sohoni, Sohum>Uh-huh</v>
+
+00:14:40.810 --> 00:14:41.430
+<v Furst, Elias>Uhm?</v>
+
+00:14:42.690 --> 00:14:43.210
+<v Furst, Elias>But</v>
+
+00:14:44.780 --> 00:14:46.090
+<v Furst, Elias>there's still the same like.</v>
+
+00:14:46.860 --> 00:14:50.160
+<v Furst, Elias>Now the same number of different values that it can have.</v>
+
+00:14:49.460 --> 00:14:52.870
+<v Sohoni, Sohum>yeah, same number of possibilities, right?</v>
+
+00:14:52.530 --> 00:14:54.380
+<v Furst, Elias>So there's just like a bunch of numbers missing.</v>
+
+00:14:55.620 --> 00:15:03.900
+<v Sohoni, Sohum>Yeah, and that's an excellent point. So there there so and the book talks about it as well. Like we've got a huge range, but we've got.</v>
+
+00:15:05.400 --> 00:15:25.260
+<v Sohoni, Sohum>I mean, it's not infinite, so we have things that can be represented in things that cannot come. I think what what we're looking at is a little more nuanced than the way you express this expressed it, I think, because again, with the different options for the exponent and the different options for the fraction.</v>
+
+00:15:25.960 --> 00:15:27.940
+<v Sohoni, Sohum>There are a lot of different.</v>
+
+00:15:28.530 --> 00:15:52.280
+<v Sohoni, Sohum>Things that can be represented if you if you think about like the instruction itself. Where we said we've got 6 bits for the opcode, but then we kind of cheat and we say we've got well, six more for the funk field. And now we've got a number of more possibilities for what can happen, right? So it's a little bit like that because the exponent gives us many different possibilities here. The fraction gives us many possibilities here as well.</v>
+
+00:15:52.810 --> 00:15:53.240
+<v Furst, Elias>OK.</v>
+
+00:16:00.280 --> 00:16:01.430
+<v Sohoni, Sohum>Other questions.</v>
+
+00:16:08.780 --> 00:16:38.990
+<v Sohoni, Sohum>So let me talk about a couple of other things that are related to this which will take up a little bit of time, so one the first one will be relatively quick, which is to talk about overflow and underflow. OK, so if you remember when we talked about integers we were talking about overflow and underflow as OK, what's the smallest number that can be represented? What's the largest number that can be represented? And you know, if we go below the smallest, then we we can't really represent that anymore, so we've got underflow. If we go above the largest we've gotten.</v>
+
+00:16:39.040 --> 00:16:42.710
+<v Sohoni, Sohum>Overflow, so in terms of.</v>
+
+00:16:43.640 --> 00:16:53.750
+<v Sohoni, Sohum>Floating point or or, you know, fractional numbers. We tend to limit that to the exponent part and let me explain why.</v>
+
+00:16:53.800 --> 00:16:55.870
+<v Sohoni, Sohum>Why because?</v>
+
+00:16:56.610 --> 00:17:00.110
+<v Sohoni, Sohum>If we run out of bits over here in the fractional part.</v>
+
+00:17:00.980 --> 00:17:24.110
+<v Sohoni, Sohum>Word that essentially means is that that fraction cannot be accurately or precisely expressed within the bits that we have, right? So we're losing precision essentially, where we're losing out on like a simple thing would be if you had like .11111 repeating infinitely, right? Well, it's an infinite representation, or you know it's an infinite.</v>
+
+00:17:24.520 --> 00:17:42.330
+<v Sohoni, Sohum>Uh, repetition. So obviously, whether you have 23 bits or 52 or 500 bits, you're still going to run out of bits eventually and not be able to represent something exactly right or precisely. So that's not what underflow and overflow is all about. When we talk about.</v>
+
+00:17:42.960 --> 00:17:44.090
+<v Sohoni, Sohum>Floating point numbers.</v>
+
+00:17:44.720 --> 00:18:02.370
+<v Sohoni, Sohum>When regarding floating point numbers, we're talking about can that number fit in right? We're talking about the range part of it, not the precision part of it. And range is determined by the exponent, right? Like this is what determines how small can the smallest number be, because?</v>
+
+00:18:03.430 --> 00:18:16.210
+<v Sohoni, Sohum>We're using the range to talk about like get smaller and smaller. It's going to be 2 to the minus one, 2 - 2 to the minus three. Keep going until we hit a limit on how small the two to the minus can be.</v>
+
+00:18:16.880 --> 00:18:48.560
+<v Sohoni, Sohum>Right, and similarly, on the positive side, with eight bits there, obviously we can say we're going from some combination of 256 right with with eight bits, so zero to 256. Or if we're talking negative to positive minus 126, two plus 127 or something like that. OK, so it's the exponent that determines whether we're going to get an overflow or underflow in there, right? So these are examples for single precision. For double precision, you're going to have.</v>
+
+00:18:49.230 --> 00:19:13.990
+<v Sohoni, Sohum>Uh, 11 bits, and so the corresponding numbers would be with that 2 to the power 11 range that we have. OK, so that's the easy part. The overflow and underflow the bias is something that most students struggle with quite a bit and actually does a pretty decent job of explaining it. But I'm still going to go over it because invariably have found that students really don't get the bias.</v>
+
+00:19:15.350 --> 00:19:20.180
+<v Sohoni, Sohum>So let me start by telling you why we have the bias, OK?</v>
+
+00:19:21.000 --> 00:19:25.740
+<v Sohoni, Sohum>So if you think about it, let's go back a few slides and here's.</v>
+
+00:19:26.510 --> 00:19:40.050
+<v Sohoni, Sohum>2 numbers right? They're not fully there, they were just like beginning digits and the end digits. OK, and what I want to do is I want to just look at the 32 bit.</v>
+
+00:19:40.800 --> 00:19:45.880
+<v Sohoni, Sohum>Pattern here right in both of these cases and quickly determine.</v>
+
+00:19:47.220 --> 00:19:49.470
+<v Sohoni, Sohum>Just by doing like an integer comparison.</v>
+
+00:19:50.420 --> 00:19:52.080
+<v Sohoni, Sohum>Which number is bigger than the other?</v>
+
+00:19:54.180 --> 00:19:55.180
+<v Sohoni, Sohum>Do you get what I'm trying to do?</v>
+
+00:20:00.490 --> 00:20:05.620
+<v Sohoni, Sohum>Just looking at these two numbers, I want to see which one is bigger between those two.</v>
+
+00:20:06.740 --> 00:20:08.820
+<v Sohoni, Sohum>And the way competitors work.</v>
+
+00:20:09.480 --> 00:20:27.600
+<v Sohoni, Sohum>Right where the hardware works is it's going to start looking from this bit onwards. I mean this is the sign bit, so obviously if this number is negative and this number is positive, then this number is bigger, right? So we already know that this number is bigger, so let me go in here actually and change those to make my point.</v>
+
+00:20:33.130 --> 00:20:35.480
+<v Sohoni, Sohum>So if this was the case.</v>
+
+00:20:37.220 --> 00:20:48.920
+<v Sohoni, Sohum>Then we clearly know that this number is bigger. The bottom number is bigger, because oh, actually, sorry the the the top number is bigger because this is a positive number and this is a negative number.</v>
+
+00:20:50.520 --> 00:20:54.530
+<v Sohoni, Sohum>Right are we are you on board with that? Is everyone OK with that?</v>
+
+00:20:54.900 --> 00:20:55.210
+<v Bultman, Joshua>Yep.</v>
+
+00:20:55.760 --> 00:20:56.080
+<v Furst, Elias>Yep.</v>
+
+00:20:56.050 --> 00:21:06.270
+<v Sohoni, Sohum>Alright, good now comes the tricky part now because the exponent is the next 8 bits. If we were to use a twos complement.</v>
+
+00:21:07.300 --> 00:21:21.950
+<v Sohoni, Sohum>Representation for the exponent, right? So that exponent can be positive or negative, right? It doesn't have to be an unsigned number. It definitely have negative exponents. So if we want to use a twos complement.</v>
+
+00:21:23.730 --> 00:21:30.050
+<v Sohoni, Sohum>Way of doing it right then. This string here that we see let me just actually.</v>
+
+00:21:30.820 --> 00:21:32.160
+<v Sohoni, Sohum>Fully fill this out.</v>
+
+00:21:34.900 --> 00:21:35.870
+<v Sohoni, Sohum>The 8.</v>
+
+00:21:38.150 --> 00:21:39.450
+<v Sohoni, Sohum>Exponents.</v>
+
+00:21:41.220 --> 00:21:42.520
+<v Sohoni, Sohum>First part is the sign bit.</v>
+
+00:21:43.280 --> 00:21:53.920
+<v Sohoni, Sohum>The next 8 bits 12345678 space. OK, so now we've got two exponents, right?</v>
+
+00:21:54.540 --> 00:22:15.390
+<v Sohoni, Sohum>And we're going to compare them to see which one is is a bigger number. Now, if we're using Two's complement, then we can again do a comparison of these bits here and look at this bit and see. Well, this speed is 1, so this is a negative exponent, which means this is pretty small number right? Whereas this.</v>
+
+00:22:16.230 --> 00:22:25.520
+<v Sohoni, Sohum>Is a positive followed by 11111, so this must be a really large number. Does that make sense if we're doing unbiased?</v>
+
+00:22:27.970 --> 00:22:28.900
+<v Sohoni, Sohum>Two's complement.</v>
+
+00:22:33.900 --> 00:22:34.700
+<v Sohoni, Sohum>Yes no.</v>
+
+00:22:39.560 --> 00:22:39.910
+<v Bultman, Joshua>Yep.</v>
+
+00:22:40.690 --> 00:22:42.610
+<v Sohoni, Sohum>Yeah, OK, good but.</v>
+
+00:22:43.500 --> 00:22:51.970
+<v Sohoni, Sohum>To make that comparison, we'd have to kinda either do bit masking or something like that to isolate this sign. Bit over here.</v>
+
+00:22:52.770 --> 00:23:10.950
+<v Sohoni, Sohum>Right, we can't just compare the 232 bit numbers as a whole as integers and say, well, you know is this number is this 32 bit pattern representing a larger number? If you're, it would just an integer by itself. A signed integer. Would this number be bigger than this number?</v>
+
+00:23:11.660 --> 00:23:37.540
+<v Sohoni, Sohum>So it's kind of tricky what we're trying to do will trick taking something that has meaning in terms of the various parts of the number, and without doing any bit masking. We want to have a convenient quick way of saying I'm just going to do a an integer comparison like subtract the two and see if I got a positive number or a negative number or something like that to say which one is bigger or smaller and the history behind all this. The reason behind all this is to be able to.</v>
+
+00:23:38.070 --> 00:23:53.350
+<v Sohoni, Sohum>Uh, sort sorting is like a really big deal in in all of computation, right? If we're given a list of a million floating point numbers, and we want to sort them, we don't really want to have a complicated operation where we're going to try to isolate this.</v>
+
+00:23:53.400 --> 00:23:56.190
+<v Sohoni, Sohum>It's a second from the top bid.</v>
+
+00:23:56.840 --> 00:24:27.050
+<v Sohoni, Sohum>And try to seize that negative or positive and then look at the rest of the exponent. And then do that. Whoops, do that comparison and then try to determine with this number greater than this other number. So the whole point of all of this was to say, OK, can we be really clever and create is you know some sort of representation that still has meaning in terms of the 8 bits for the exponent here and the 23 bits for the fraction, but it would still be.</v>
+
+00:24:28.450 --> 00:24:30.280
+<v Sohoni, Sohum>Something that we can just compare.</v>
+
+00:24:31.000 --> 00:25:01.020
+<v Sohoni, Sohum>Real quick as 232 bit numbers as 232 bit integers and still obviously not get the right numbers per say, but still be able to determine which ones bigger and which one smaller. OK, so it's a little bit tricky if you're not fully there with me yet. Just give it maybe another minute or so as I talk about bias. OK, So what happened was they are using now a bias of 127. OK, so that the most positive.</v>
+
+00:25:01.070 --> 00:25:14.480
+<v Sohoni, Sohum>Exponent is all ones OK and the most negative exponent is all zeros and the book does a good job of explaining this. So let's actually go pop into the book for a little bit as well.</v>
+
+00:25:15.400 --> 00:25:19.490
+<v Sohoni, Sohum>And so I'm in the wrong screen.</v>
+
+00:25:29.370 --> 00:25:48.960
+<v Sohoni, Sohum>So right here is the whole explanation that I was just going through with the 754 floating point standard, and So what they've done as I was saying is that all ones here would represent not a negative number, but the biggest possible positive exponent.</v>
+
+00:25:50.260 --> 00:25:57.770
+<v Sohoni, Sohum>Right, so they took the range essentially of 0 through 256 and this sort of pushed everything up so that.</v>
+
+00:25:58.610 --> 00:26:07.230
+<v Sohoni, Sohum>All once means the biggest positive exponent and correspondingly all zeros would be the smallest.</v>
+
+00:26:08.580 --> 00:26:12.480
+<v Sohoni, Sohum>Or the biggest negative or the smallest possible number that you can represent.</v>
+
+00:26:13.180 --> 00:26:16.760
+<v Sohoni, Sohum>And by arranging sign followed by.</v>
+
+00:26:17.480 --> 00:26:28.220
+<v Sohoni, Sohum>Exponent followed by fraction, not the other way around. Not having fraction before exponent but having sign, exponent and fraction in that particular order. A 32 bit integer.</v>
+
+00:26:29.060 --> 00:26:37.260
+<v Sohoni, Sohum>Representation of this would still work out correctly when comparing them in terms of which is bigger and which is smaller.</v>
+
+00:26:39.210 --> 00:26:44.070
+<v Sohoni, Sohum>Is that making sense or is it still? Yeah, it's not really there.</v>
+
+00:26:48.680 --> 00:26:49.240
+<v Rolando, Jackson>So is it?</v>
+
+00:26:50.700 --> 00:26:52.060
+<v Rolando, Jackson>So it's using both the.</v>
+
+00:26:52.820 --> 00:26:57.540
+<v Rolando, Jackson>The exponent and the actual integer value to test or just the.</v>
+
+00:26:58.680 --> 00:26:59.060
+<v Sohoni, Sohum>So.</v>
+
+00:26:58.550 --> 00:27:01.310
+<v Rolando, Jackson>Does it do anything different if one if one expone is bigger than the other?</v>
+
+00:27:01.980 --> 00:27:09.130
+<v Sohoni, Sohum>Right, so good question. So by doing this bias business right, what we end up with is that.</v>
+
+00:27:09.890 --> 00:27:12.570
+<v Sohoni, Sohum>Just looking at this string of numbers here.</v>
+
+00:27:13.200 --> 00:27:25.560
+<v Sohoni, Sohum>Right, we don't really need to isolate it. Any particular part like the exponent or anything like that. So, so this number 0111 blah blah blah blah is going to be sort of the biggest.</v>
+
+00:27:26.410 --> 00:27:31.840
+<v Sohoni, Sohum>Positive not well. If this was all ones. Essentially this would be the biggest positive number you can have.</v>
+
+00:27:32.190 --> 00:27:33.900
+<v Sohoni, Sohum>Have and.</v>
+
+00:27:34.510 --> 00:27:48.650
+<v Sohoni, Sohum>As you drop down like bit 0, because becomes 0, but you know it just keeps going down one bit at a time. That would be the order in which the numbers would be in terms of of how big they are.</v>
+
+00:27:53.470 --> 00:27:54.740
+<v Rolando, Jackson>Gotcha OK cool.</v>
+
+00:27:55.320 --> 00:28:16.510
+<v Sohoni, Sohum>OK, yeah and again I. I'm sorry I don't have a better way of explaining this, but if you did the participation activity and we kinda made sense at that point. But now that I've talked about it, you want to do it again. It might help you understand what is going on with the exponent and how these bids are actually now going to make sense in terms of.</v>
+
+00:28:18.530 --> 00:28:23.750
+<v Sohoni, Sohum>In larger overall 32 bit number versus a smaller number.</v>
+
+00:28:27.520 --> 00:28:28.170
+<v Sohoni, Sohum>Uhm?</v>
+
+00:28:29.760 --> 00:28:30.750
+<v Sohoni, Sohum>Alright, OK.</v>
+
+00:28:32.710 --> 00:28:35.620
+<v Sohoni, Sohum>Any other questions I can answer at this point?</v>
+
+00:28:43.400 --> 00:28:46.330
+<v Sohoni, Sohum>So let's keep going. And then there's questions will come back.</v>
+
+00:28:47.320 --> 00:28:48.390
+<v Sohoni, Sohum>Alright, so.</v>
+
+00:28:50.280 --> 00:29:19.860
+<v Sohoni, Sohum>Let's talk about overall converting numbers to this particular sort of representation. OK, and we'll do an example right after I walked through this, and then I'll give you some homework to do. I haven't really set it up, but maybe sometime this evening or sometime tomorrow I'll just give you some more numbers to work. You know, work out, so here's what what happens. So the first step is something we've already done.</v>
+
+00:29:20.290 --> 00:29:21.750
+<v Sohoni, Sohum>Right, the examples that we did.</v>
+
+00:29:22.440 --> 00:29:28.200
+<v Sohoni, Sohum>Talk about taking your number in decimal and then converting the whole part of the.</v>
+
+00:29:28.450 --> 00:29:59.820
+<v Sohoni, Sohum>The integer part and the fractional part separately into the corresponding binary representation. OK, that's step number one next step is append a into 2 to the power zero to the end of the binary #2 to the power zero is 1, so we're essentially multiplying by one which doesn't change the number, right? So it's it keeps the number of the same in Step 2. The third step is normalization. Now you must have done this in some science course at some point.</v>
+
+00:30:00.110 --> 00:30:30.010
+<v Sohoni, Sohum>Or some math course for that matter, but again, it's just a question, so I've got a simple quick example here. So if the number we had was 11101 into 2 to the power zero, we want to move this binary point to the left as much as we can until we get 1.111. OK, so in this case we just had to move it one place to the left, and when we move it one place to the left, we increase the exponent by one on this two over here.</v>
+
+00:30:30.690 --> 00:30:38.710
+<v Sohoni, Sohum>OK, so if this was something else right, let's go change that up. So if this goes zero, point.</v>
+
+00:30:39.920 --> 00:30:41.570
+<v Sohoni, Sohum>1101 right?</v>
+
+00:30:42.800 --> 00:30:46.510
+<v Sohoni, Sohum>And we were then to change it into 1.1101.</v>
+
+00:30:47.820 --> 00:30:50.030
+<v Sohoni, Sohum>What would this value be over here?</v>
+
+00:30:54.250 --> 00:30:57.030
+<v Sohoni, Sohum>To keep the same number or keep the same value.</v>
+
+00:30:59.580 --> 00:31:00.210
+<v Bultman, Joshua>Negative 4.</v>
+
+00:31:01.040 --> 00:31:02.030
+<v Sohoni, Sohum>That is correct.</v>
+
+00:31:02.460 --> 00:31:06.830
+<v Sohoni, Sohum>It's going to be negative one, right? Well, that looks ugly, but yeah.</v>
+
+00:31:07.820 --> 00:31:11.590
+<v Sohoni, Sohum>If this was 0.01 this would be negative 2.</v>
+
+00:31:14.020 --> 00:31:16.910
+<v Sohoni, Sohum>Well, it looks even worse, let's do it this way.</v>
+
+00:31:23.700 --> 00:31:23.980
+<v Sohoni, Sohum>Well.</v>
+
+00:31:30.770 --> 00:31:34.400
+<v Sohoni, Sohum>It would be like this, right? So that's what we're doing by normalization.</v>
+
+00:31:35.060 --> 00:31:37.200
+<v Sohoni, Sohum>It would, it would have moving this point.</v>
+
+00:31:37.820 --> 00:31:47.120
+<v Sohoni, Sohum>So that we have just one one to the left of the point and then we adjust the exponent here based on whatever.</v>
+
+00:31:47.830 --> 00:32:18.470
+<v Sohoni, Sohum>Moving that we've had to do OK, hopefully that's clear. Now the next thing would be to then take this, which is the mantissa and put it in our format here, right? So this if we go back up to this slide, so we're going to take that and essentially replace like all of these ease or all of these M. Sorry if we're doing single precision, we were going to replace all of the EMS with whatever fractional part we just determined which was. Was it here or somewhere?</v>
+
+00:32:18.880 --> 00:32:29.530
+<v Sohoni, Sohum>This this fractional part here, right? And then we do the bias magic which is in this case it's negative 2 right in our example. So we would do.</v>
+
+00:32:31.310 --> 00:32:44.720
+<v Sohoni, Sohum>128 or sorry. 127 minus negative two, which would make it 129. So we would take the number 129 and we would convert that into our.</v>
+
+00:32:45.250 --> 00:32:45.980
+<v Sohoni, Sohum>Uhm?</v>
+
+00:32:46.880 --> 00:32:51.630
+<v Sohoni, Sohum>Exponent well, we would convert that into binary and that would make up our.</v>
+
+00:32:52.310 --> 00:33:04.150
+<v Sohoni, Sohum>Biased exponent in in this format, right? So eventually we'll get it, and again, we'll use the same sign, so we have the sign exponent, and then the fraction part.</v>
+
+00:33:06.470 --> 00:33:07.270
+<v Sohoni, Sohum>Is that?</v>
+
+00:33:08.460 --> 00:33:09.220
+<v Sohoni, Sohum>Making sense.</v>
+
+00:33:14.550 --> 00:33:17.840
+<v Bultman, Joshua>Is it exponent minus bias or bias minus exponent?</v>
+
+00:33:18.420 --> 00:33:26.110
+<v Sohoni, Sohum>It's a an excellent question. I think its exponent minus bias, which I probably accidentally said incorrectly.</v>
+
+00:33:27.550 --> 00:33:29.570
+<v Sohoni, Sohum>Says exponent minus bias.</v>
+
+00:33:30.360 --> 00:33:35.580
+<v Sohoni, Sohum>So then what I had before was worth negative two, so it'll be negative 2 - 127.</v>
+
+00:33:36.290 --> 00:33:37.670
+<v Sohoni, Sohum>Which would make it.</v>
+
+00:33:38.960 --> 00:33:41.980
+<v Sohoni, Sohum>Well, I would make it my negative 129, right?</v>
+
+00:33:41.920 --> 00:33:42.680
+<v Bultman, Joshua>Yeah, yeah.</v>
+
+00:33:46.500 --> 00:33:46.770
+<v Sohoni, Sohum>OK.</v>
+
+00:33:49.900 --> 00:33:50.690
+<v Sohoni, Sohum>Right?</v>
+
+00:33:53.150 --> 00:33:56.810
+<v Sohoni, Sohum>Yeah, I'm not fully convinced there but OK, let's let's do one example.</v>
+
+00:33:57.620 --> 00:34:00.950
+<v Sohoni, Sohum>And let's see where we get with that. OK so.</v>
+
+00:34:02.300 --> 00:34:16.190
+<v Sohoni, Sohum>Let's take this 9.125 and convert that into single precision floating point. OK, so let's do it live. So our nine is going to be what?</v>
+
+00:34:23.680 --> 00:34:26.330
+<v Sohoni, Sohum>REEN OK with that, mine is 1001.</v>
+
+00:34:29.060 --> 00:34:33.490
+<v Sohoni, Sohum>OK, and again we could use some math to do that, but I just happen to know.</v>
+
+00:34:34.150 --> 00:34:36.120
+<v Sohoni, Sohum>Then we'll do the .125.</v>
+
+00:34:39.310 --> 00:34:43.220
+<v Sohoni, Sohum>.125 into 2 equals point.</v>
+
+00:34:44.620 --> 00:34:45.130
+<v Sohoni, Sohum>5.</v>
+
+00:34:46.510 --> 00:34:46.960
+<v Sohoni, Sohum>0.</v>
+
+00:34:47.570 --> 00:34:48.990
+<v Sohoni, Sohum>Live in two.</v>
+
+00:34:53.170 --> 00:34:54.680
+<v Sohoni, Sohum>05</v>
+
+00:34:55.670 --> 00:34:56.900
+<v Sohoni, Sohum>0.5</v>
+
+00:34:56.960 --> 00:34:57.140
+<v Sohoni, Sohum>Dave.</v>
+
+00:35:02.730 --> 00:35:08.060
+<v Sohoni, Sohum>Right, so we've got this number. Now is 9.</v>
+
+00:35:09.330 --> 00:35:16.720
+<v Sohoni, Sohum>.125 equals 1001001.</v>
+
+00:35:17.980 --> 00:35:20.610
+<v Sohoni, Sohum>Is that OK? Am I you think I'm right so far?</v>
+
+00:35:23.600 --> 00:35:24.050
+<v Furst, Elias>Yeah.</v>
+
+00:35:24.540 --> 00:35:24.860
+<v Rolando, Jackson>Yep.</v>
+
+00:35:25.040 --> 00:35:31.960
+<v Sohoni, Sohum>Yeah, it looks OK, right? OK so now this is where the fun starts so let's.</v>
+
+00:35:32.680 --> 00:35:34.660
+<v Sohoni, Sohum>Go ahead and grab this thing.</v>
+
+00:35:35.760 --> 00:35:39.010
+<v Sohoni, Sohum>And then we'll start replacing stuff from here.</v>
+
+00:35:45.840 --> 00:35:48.280
+<v Sohoni, Sohum>That's necessary, but still, let's see.</v>
+
+00:35:52.610 --> 00:36:01.020
+<v Sohoni, Sohum>Burn the sign is a positive sign, right? So this is not negative 19 point one to five, so we'll keep the sign bit as zero.</v>
+
+00:36:01.080 --> 00:36:10.280
+<v Sohoni, Sohum>And then we'll come back to the exponent in a little bit. So we've got the mantissa here, which is going to be what 23 bits?</v>
+
+00:36:11.250 --> 00:36:16.770
+<v Sohoni, Sohum>Oh wait, are we ready for this? Or do we need to do something more here? Let's go by steps.</v>
+
+00:36:20.010 --> 00:36:35.440
+<v Sohoni, Sohum>Oh, we just finished step one and I was kind of rushing through to some other steps so we gotta do Step 2 and then steps three before we can actually start doing anything useful here. OK, so Step 2 is simply to say times 2 to the power 0.</v>
+
+00:36:37.120 --> 00:36:38.260
+<v Sohoni, Sohum>Super script that.</v>
+
+00:36:42.600 --> 00:36:44.290
+<v Sohoni, Sohum>Right everyone OK with that.</v>
+
+00:36:48.770 --> 00:36:51.740
+<v Sohoni, Sohum>Which is equal. That looks ugly.</v>
+
+00:36:52.510 --> 00:36:54.840
+<v Sohoni, Sohum>No, 'cause it's maybe all in superscript now.</v>
+
+00:36:58.910 --> 00:37:00.160
+<v Sohoni, Sohum>Yeah, OK.</v>
+
+00:37:03.320 --> 00:37:18.370
+<v Sohoni, Sohum>OK, so that's going to be the same as 1.001001, right? What I've done is I've moved this binary .123 places to the left.</v>
+
+00:37:19.710 --> 00:37:23.310
+<v Sohoni, Sohum>Which means what should this be? 2 to the power?</v>
+
+00:37:29.860 --> 00:37:30.370
+<v Bultman, Joshua>Negative.</v>
+
+00:37:31.010 --> 00:37:31.540
+<v Bultman, Joshua>No 3.</v>
+
+00:37:32.930 --> 00:37:34.180
+<v Sohoni, Sohum>Negative or positive 3.</v>
+
+00:37:34.340 --> 00:37:35.370
+<v Bultman, Joshua>Sorry positive 3.</v>
+
+00:37:35.830 --> 00:37:37.890
+<v Sohoni, Sohum>OK, good positive 3 right?</v>
+
+00:37:38.690 --> 00:37:41.720
+<v Sohoni, Sohum>Uhm, alright, let's superscript that.</v>
+
+00:37:43.710 --> 00:37:50.090
+<v Sohoni, Sohum>So now we're ready. We've done the the necessary steps here. Sorry I keep hitting. Left click my mistake.</v>
+
+00:37:50.620 --> 00:38:02.610
+<v Sohoni, Sohum>Uh, so now we've done the necessary steps over there to actually get a fractional part, which is 001001, right? So we take that copy.</v>
+
+00:38:03.500 --> 00:38:06.200
+<v Sohoni, Sohum>And essentially we paste it here.</v>
+
+00:38:06.960 --> 00:38:15.330
+<v Sohoni, Sohum>Obviously we've got a problem. We've got 23 bits over there, and we've only got 6 over here, so we're going to have to do.</v>
+
+00:38:15.950 --> 00:38:19.610
+<v Sohoni, Sohum>Orders is currently 3 right? Let's go back, I can check.</v>
+
+00:38:21.290 --> 00:38:23.690
+<v Sohoni, Sohum>Yeah, so we had 23 bits over here.</v>
+
+00:38:24.590 --> 00:38:33.480
+<v Sohoni, Sohum>We only had six, so we're going to have to put what's 23 - 617 zero so 123456789 ten.</v>
+
+00:38:35.190 --> 00:38:43.590
+<v Sohoni, Sohum>17 zeros right? So that gives us our fractional part for our number. Everyone OK with this. What we've done here.</v>
+
+00:38:51.710 --> 00:38:52.410
+<v Sohoni, Sohum>Not OK.</v>
+
+00:38:56.840 --> 00:38:58.430
+<v Sohoni, Sohum>Questions about what we just did.</v>
+
+00:39:03.820 --> 00:39:04.710
+<v Rolando, Jackson>I'm sorry so the.</v>
+
+00:39:07.150 --> 00:39:08.560
+<v Rolando, Jackson>Are you not missing a one?</v>
+
+00:39:10.810 --> 00:39:21.180
+<v Sohoni, Sohum>Good question. No, I'm not missing a one because all of these numbers are always going to have a one point, something that's the beauty of the normalized notation.</v>
+
+00:39:23.000 --> 00:39:25.020
+<v Sohoni, Sohum>So we only take the fractional part.</v>
+
+00:39:29.180 --> 00:39:29.490
+<v Rolando, Jackson>OK.</v>
+
+00:39:26.340 --> 00:39:31.070
+<v Sohoni, Sohum>Word out is after the point 'cause left of the point. There's always going to be a one.</v>
+
+00:39:31.750 --> 00:39:34.680
+<v Bultman, Joshua>Can you represent zero then with floating point numbers?</v>
+
+00:39:36.130 --> 00:39:38.220
+<v Sohoni, Sohum>Yeah, you should be able to represent 0.</v>
+
+00:39:45.170 --> 00:39:47.280
+<v Sohoni, Sohum>Work would be 0. That's a good question.</v>
+
+00:39:51.670 --> 00:39:53.140
+<v Sohoni, Sohum>How would we represent 0?</v>
+
+00:39:54.140 --> 00:39:56.070
+<v Sohoni, Sohum>Or we could come back to that in a minute.</v>
+
+00:39:57.510 --> 00:40:01.100
+<v Sohoni, Sohum>Where do you want to do? First? You want to look at how to do 0 in floating point.</v>
+
+00:40:04.430 --> 00:40:04.950
+<v Bultman, Joshua>I don't mind.</v>
+
+00:40:07.600 --> 00:40:08.060
+<v Sohoni, Sohum>OK.</v>
+
+00:40:08.810 --> 00:40:09.620
+<v Sohoni, Sohum>Uhm?</v>
+
+00:40:10.900 --> 00:40:14.300
+<v Sohoni, Sohum>OK, well just think about it. What what would we do?</v>
+
+00:40:16.810 --> 00:40:18.880
+<v Sohoni, Sohum>How would we represent zero in floating point?</v>
+
+00:40:19.260 --> 00:40:21.210
+<v Furst, Elias>I think it's just all zeros.</v>
+
+00:40:22.070 --> 00:40:22.940
+<v Furst, Elias>Because.</v>
+
+00:40:23.590 --> 00:40:28.550
+<v Furst, Elias>Like isn't when the exponent is zero. That's when you don't assume the one right?</v>
+
+00:40:31.270 --> 00:40:44.920
+<v Sohoni, Sohum>Uhm, well actually that leads us to the bias as well, so maybe let's do the bias part first and then let's if we have time we can look at how do we do zero? So that's a good question. I actually.</v>
+
+00:40:45.640 --> 00:40:54.950
+<v Sohoni, Sohum>Top of my head don't even remember what's going on with representing zero. I don't know if in the past I've looked at it or not, but anyway so.</v>
+
+00:40:55.860 --> 00:41:10.740
+<v Sohoni, Sohum>Let's deal with the bias first. So what we've got is we've got the sign we've got the fraction part. We still don't have the exponent part worked out because we're not just going to put three over here, right? What we said was it's.</v>
+
+00:41:11.590 --> 00:41:15.430
+<v Sohoni, Sohum>What we are going to put there is exponent minus bias.</v>
+
+00:41:16.520 --> 00:41:21.540
+<v Sohoni, Sohum>OK, so the exponent is 3, so 3 minus.</v>
+
+00:41:22.280 --> 00:41:23.320
+<v Sohoni, Sohum>The bias.</v>
+
+00:41:25.210 --> 00:41:25.930
+<v Sohoni, Sohum>Would be.</v>
+
+00:41:26.910 --> 00:41:34.160
+<v Sohoni, Sohum>Yeah, I think it's all backwards to the way the book is expressing this, because I would think that this should be.</v>
+
+00:41:35.590 --> 00:41:38.030
+<v Sohoni, Sohum>127 - 3.</v>
+
+00:41:39.560 --> 00:41:49.350
+<v Sohoni, Sohum>OK, which would be 124, which is why I had looked up what is 124 in binary? Which is this number here.</v>
+
+00:41:51.510 --> 00:41:51.840
+<v Sohoni, Sohum>K.</v>
+
+00:41:53.300 --> 00:41:54.930
+<v Sohoni, Sohum>Let's go back here or.</v>
+
+00:41:56.000 --> 00:41:57.120
+<v Sohoni, Sohum>No, not to the book.</v>
+
+00:41:57.710 --> 00:41:58.040
+<v Sohoni, Sohum>Thanks.</v>
+
+00:41:58.680 --> 00:41:59.680
+<v Sohoni, Sohum>And.</v>
+
+00:42:00.730 --> 00:42:02.180
+<v Sohoni, Sohum>Put that down here.</v>
+
+00:42:03.020 --> 00:42:08.370
+<v Sohoni, Sohum>And that's not sufficient bits. So what we're going to do is we're going to add a 0 here.</v>
+
+00:42:12.350 --> 00:42:15.970
+<v Sohoni, Sohum>Now I'm thinking it's all going to come out because we've got.</v>
+
+00:42:18.520 --> 00:42:27.670
+<v Sohoni, Sohum>Because we weren't the exponent to be unsigned, right? So actual exponent plus bias is what we're putting in there.</v>
+
+00:42:32.800 --> 00:42:35.450
+<v Sohoni, Sohum>I think this is confusing you confused.</v>
+
+00:42:38.850 --> 00:42:41.170
+<v Sohoni, Sohum>Let's go back and look at what's going on here.</v>
+
+00:42:47.530 --> 00:42:56.880
+<v Sohoni, Sohum>So it's saying exponent bias for double precision ones were biased. Exponent means that the value represented by a floating point number. Easy really.</v>
+
+00:42:56.930 --> 00:43:01.740
+<v Sohoni, Sohum>He this into exponent, minus bias.</v>
+
+00:43:04.620 --> 00:43:05.150
+<v Sohoni, Sohum>OK.</v>
+
+00:43:10.790 --> 00:43:18.240
+<v Sohoni, Sohum>So the value of 1 into 2 to the power one would look like the smaller binary number here.</v>
+
+00:43:24.040 --> 00:43:24.770
+<v Sohoni, Sohum>Right?</v>
+
+00:43:29.810 --> 00:43:31.890
+<v Sohoni, Sohum>OK, let's actually do one of these.</v>
+
+00:43:35.190 --> 00:43:37.600
+<v Sohoni, Sohum>So negative .75.</v>
+
+00:43:39.330 --> 00:43:40.700
+<v Sohoni, Sohum>And we get the.</v>
+
+00:43:41.390 --> 00:43:49.830
+<v Sohoni, Sohum>Real power fractional part and then we do the normalization so it's negative 1.1 into 2 to the power of negative 1, right?</v>
+
+00:43:50.470 --> 00:43:53.490
+<v Sohoni, Sohum>Single precision binary is going to be.</v>
+
+00:43:54.670 --> 00:43:55.640
+<v Sohoni, Sohum>Negative one.</v>
+
+00:43:56.270 --> 00:43:58.790
+<v Sohoni, Sohum>Plus the fraction part which is.</v>
+
+00:43:59.830 --> 00:44:08.100
+<v Sohoni, Sohum>Again, one followed by all those zeros, and then we've got 126 - 127.</v>
+
+00:44:15.750 --> 00:44:19.060
+<v Sohoni, Sohum>Right, So what they're saying, essentially, is that.</v>
+
+00:44:23.460 --> 00:44:25.460
+<v Sohoni, Sohum>Because we had a negative one.</v>
+
+00:44:26.610 --> 00:44:31.810
+<v Sohoni, Sohum>They subtracted that from where 27 right? And got the 126.</v>
+
+00:44:32.930 --> 00:44:35.010
+<v Sohoni, Sohum>So weird way of saying that.</v>
+
+00:44:38.770 --> 00:44:39.270
+<v Sohoni, Sohum>Yeah.</v>
+
+00:44:40.850 --> 00:44:42.230
+<v Sohoni, Sohum>You see what's what's happening?</v>
+
+00:44:44.030 --> 00:44:49.770
+<v Bultman, Joshua>So you would put like 0 in the exponent and then you would get the exponent negative 127.</v>
+
+00:44:50.610 --> 00:44:51.900
+<v Bultman, Joshua>That's what it actually would be.</v>
+
+00:44:56.830 --> 00:45:02.480
+<v Sohoni, Sohum>Yeah, I think what they're trying to say is that this number here is 126.</v>
+
+00:45:04.120 --> 00:45:09.230
+<v Sohoni, Sohum>And they are expressing negative one as 126 - 127.</v>
+
+00:45:10.740 --> 00:45:14.000
+<v Sohoni, Sohum>Right, So what we had? Let's go back to our number.</v>
+
+00:45:14.900 --> 00:45:16.020
+<v Sohoni, Sohum>Because we had a 3.</v>
+
+00:45:17.290 --> 00:45:23.130
+<v Sohoni, Sohum>Right or it could be the corresponding thing here. It would essentially be 130.</v>
+
+00:45:24.270 --> 00:45:24.750
+<v Sohoni, Sohum>Correct?</v>
+
+00:45:25.980 --> 00:45:26.510
+<v Bultman, Joshua>Yeah.</v>
+
+00:45:26.810 --> 00:45:48.650
+<v Sohoni, Sohum>Yeah, 'cause negative one is 126 zero would be 127, one would be 128, two would be 129, three would be 1:30. So I told my 1:00 o'clock class something wrong. I gotta go fix that tomorrow. So 130 in binary is this number here.</v>
+
+00:45:49.480 --> 00:45:54.550
+<v Sohoni, Sohum>And it is indeed as many bytes as we need, so let's go back to our slides.</v>
+
+00:45:57.370 --> 00:45:59.200
+<v Sohoni, Sohum>6 back there, oops.</v>
+
+00:46:03.690 --> 00:46:04.460
+<v Sohoni, Sohum>There we go.</v>
+
+00:46:06.460 --> 00:46:09.450
+<v Sohoni, Sohum>So we've got 012 C.</v>
+
+00:46:10.610 --> 00:46:24.540
+<v Sohoni, Sohum>Yeah got 8 bits over here. Alright, so this is actually the correct representation in IEEE 754 standard of nine point 1 to 5 positive, 9.1 to five OK.</v>
+
+00:46:25.630 --> 00:46:32.660
+<v Sohoni, Sohum>Is everyone clear? I'm actually glad that I got confused 'cause that way we could really work her way through it.</v>
+
+00:46:34.360 --> 00:46:35.690
+<v Sohoni, Sohum>Hopefully that was useful.</v>
+
+00:46:34.440 --> 00:46:37.140
+<v Rolando, Jackson>So I I'm sorry I think I'm I think I'm.</v>
+
+00:46:37.800 --> 00:46:38.820
+<v Rolando, Jackson>Like send.</v>
+
+00:46:39.840 --> 00:46:46.740
+<v Rolando, Jackson>I think I I always feel like I'm asking a question after you just explain it. But why did you add instead of subtract the 127?</v>
+
+00:46:48.910 --> 00:46:53.230
+<v Sohoni, Sohum>Yeah, that's where the confusion was, so our unbiased?</v>
+
+00:46:54.550 --> 00:46:55.620
+<v Sohoni, Sohum>Exponent</v>
+
+00:46:57.310 --> 00:47:01.740
+<v Sohoni, Sohum>three, right? And what we're saying is that.</v>
+
+00:47:03.600 --> 00:47:04.790
+<v Sohoni, Sohum>And unbiased.</v>
+
+00:47:05.390 --> 00:47:06.690
+<v Sohoni, Sohum>Exponent of</v>
+
+00:47:07.690 --> 00:47:08.910
+<v Sohoni, Sohum>let me just put it.</v>
+
+00:47:09.730 --> 00:47:11.200
+<v Sohoni, Sohum>Best exponent?</v>
+
+00:47:12.900 --> 00:47:13.720
+<v Sohoni, Sohum>0.</v>
+
+00:47:14.820 --> 00:47:16.800
+<v Sohoni, Sohum>Is equal to 127.</v>
+
+00:47:18.380 --> 00:47:18.810
+<v Sohoni, Sohum>OK.</v>
+
+00:47:19.570 --> 00:47:30.990
+<v Sohoni, Sohum>So that's like our Shifter 127 is how much we're shifting by, so 0 = 127. And that's again because we want zeros.</v>
+
+00:47:31.880 --> 00:47:39.180
+<v Sohoni, Sohum>All zeros to represent the smallest possible value right? So just building out this logic.</v>
+
+00:47:39.880 --> 00:47:45.650
+<v Sohoni, Sohum>Uh, so if zero is 120 seven 1 = 128.</v>
+
+00:47:47.870 --> 00:47:50.020
+<v Sohoni, Sohum>Equals 129.</v>
+
+00:47:51.350 --> 00:47:52.890
+<v Sohoni, Sohum>3 = 130.</v>
+
+00:47:54.770 --> 00:47:59.860
+<v Sohoni, Sohum>Is that becoming clear? Like that's just the number we're adding essentially as the bias?</v>
+
+00:48:04.990 --> 00:48:09.110
+<v Rolando, Jackson>Why does it say we're subtracting the bias in the formula?</v>
+
+00:48:08.760 --> 00:48:16.100
+<v Sohoni, Sohum>Yeah, and that's the odd part. That's what had me confused for a second there as well. What it's saying really is that.</v>
+
+00:48:16.960 --> 00:48:19.040
+<v Sohoni, Sohum>Because this is 130, right?</v>
+
+00:48:20.090 --> 00:48:27.550
+<v Sohoni, Sohum>What we're saying is the 1:30, so this would be 130 minus bias, so the actual number is.</v>
+
+00:48:28.220 --> 00:48:39.140
+<v Sohoni, Sohum>Whatever the exponent value is over here minus the bias right? So 1/3 - 127, which is 3, which is actually what the real exponent is.</v>
+
+00:48:43.140 --> 00:48:43.690
+<v Rolando, Jackson>OK.</v>
+
+00:48:44.800 --> 00:48:54.100
+<v Sohoni, Sohum>You, the little backward in how it's how it's explained, but it it does make sense, right? Because the the the actual the real number is.</v>
+
+00:48:54.860 --> 00:49:06.210
+<v Sohoni, Sohum>Whatever is in those exponent bits minus the bias minus 127 right, we put 130 over here. But the real number, the actual number isn't.</v>
+
+00:49:07.580 --> 00:49:10.420
+<v Sohoni, Sohum>2 to the Power 130 the actual number is 2 to the power of 3.</v>
+
+00:49:14.120 --> 00:49:17.880
+<v Rolando, Jackson>Alright, make make sense, sorry about that. I just I think I just missed it.</v>
+
+00:49:16.280 --> 00:49:21.520
+<v Sohoni, Sohum>No, no, no it. It is confusing. It is confused. You don't have to apologize.</v>
+
+00:49:22.210 --> 00:49:25.790
+<v Sohoni, Sohum>That's why I'm talking about it in class, even though you've read it in the book.</v>
+
+00:49:26.740 --> 00:49:38.310
+<v Sohoni, Sohum>OK, so we are just a minute away and there was some discussion on how to represent zero in IEEE floating point standard. Let's see if we can Google that.</v>
+
+00:49:40.410 --> 00:49:42.170
+<v Sohoni, Sohum>I'm presenting.</v>
+
+00:49:47.930 --> 00:49:48.780
+<v Sohoni, Sohum>And someone else.</v>
+
+00:49:49.730 --> 00:49:51.540
+<v Sohoni, Sohum>It's been curious about this.</v>
+
+00:49:53.100 --> 00:49:55.410
+<v Sohoni, Sohum>The Wikipedia article.</v>
+
+00:50:03.700 --> 00:50:05.290
+<v Sohoni, Sohum>Yeah, OK.</v>
+
+00:50:08.220 --> 00:50:17.830
+<v Sohoni, Sohum>So we might we have run out of time, so we might will come back and visit this because this is not giving us the answer that we're looking for at the moment.</v>
+
+00:50:18.630 --> 00:50:18.960
+<v Sohoni, Sohum>OK.</v>
+
+00:50:19.790 --> 00:50:27.380
+<v Sohoni, Sohum>Alright, so when we meet tomorrow, we'll look at the very interesting question of what we how do we represent? 0.</v>
+
+00:50:28.310 --> 00:50:33.360
+<v Sohoni, Sohum>OK, and then we look at a few other things related to floating point.</v>
+
+00:50:34.770 --> 00:50:38.290
+<v Sohoni, Sohum>Alright, take care everyone stop recording in.</v>

@@ -1,0 +1,682 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.290
+<v Toohill, Teresa>Good afternoon, how are you?</v>
+
+00:00:01.880 --> 00:00:02.860
+<v Sohoni, Sohum>Doing well, thank you.</v>
+
+00:00:05.900 --> 00:00:16.340
+<v Sohoni, Sohum>Alright, so we begin with memory today we're done with pipelining, UM, but before I start, are there any questions on pipelining anyone?</v>
+
+00:00:31.180 --> 00:00:33.870
+<v Sohoni, Sohum>OK, take that as a no questions.</v>
+
+00:00:35.520 --> 00:00:40.950
+<v Sohoni, Sohum>So let's take a look at memory right so?</v>
+
+00:00:43.950 --> 00:00:47.520
+<v Sohoni, Sohum>This and the next figure is sort of summarize.</v>
+
+00:00:48.750 --> 00:01:01.600
+<v Sohoni, Sohum>Overall, what is what is going on with the what's called the memory hierarchy? OK, what we're seeing here, and this is an old graph. I haven't updated it in a while, but it's still.</v>
+
+00:01:02.730 --> 00:01:29.330
+<v Sohoni, Sohum>Pinch the the picture pretty clearly this notice the Y axis is a log scale of performance, right? And we've got 2 lines. The CPU performance line and then the memory performance line right? And the X axis is time. So from 1980 onwards around 8889 the slopes or changed and CPU performance started increasing.</v>
+
+00:01:30.360 --> 00:01:33.270
+<v Sohoni, Sohum>Pretty rapidly and it and that trend kept going.</v>
+
+00:01:33.960 --> 00:01:34.680
+<v Sohoni, Sohum>Uhm?</v>
+
+00:01:36.180 --> 00:01:49.010
+<v Sohoni, Sohum>For a long time I should say, and then if you look at the memory performance, it's been a steady growth, so it's not like memory performance is getting worse, but it's just not even close in terms of how.</v>
+
+00:01:49.060 --> 00:01:54.180
+<v Sohoni, Sohum>So how fast are improving as compared to the CPU performance?</v>
+
+00:01:55.270 --> 00:02:19.840
+<v Sohoni, Sohum>And I'm not going to get into too many details on why this is happening, but I will say 1 main thing that is driven. All of this is the shrinking size of the transistor, so I'm assuming some of you, or many of you have heard of Moore's law and there's like different versions of what's believed to be exactly what Gordon Moore or the one of the founders of Intel.</v>
+
+00:02:20.870 --> 00:02:27.270
+<v Sohoni, Sohum>Said and like the I think the official version is that he was talking about the cost of packaging.</v>
+
+00:02:27.960 --> 00:02:28.730
+<v Sohoni, Sohum>Uhm?</v>
+
+00:02:29.440 --> 00:02:46.440
+<v Sohoni, Sohum>It it ship essentially is is going to go down 50% every year and a half or something of that sort. And generally speaking it's translated into performance doubling every year and a half or something of that sort, right? So essentially.</v>
+
+00:02:47.540 --> 00:03:18.330
+<v Sohoni, Sohum>An exponential growth in performance and where that comes from really is mainly the shrinking size of the transistors. So as transistors became smaller and smaller due to advances in materials technology and fabrication, rich chip fabrication technology, which is, you know, not a lot of people give a lot of credit to that particular aspect of it, but at the heart of it, that's what was going on, less space and less power taken by.</v>
+
+00:03:18.620 --> 00:03:24.050
+<v Sohoni, Sohum>Individual transistor meant that you could put more transistors on the same.</v>
+
+00:03:24.750 --> 00:03:27.270
+<v Sohoni, Sohum>Square inch of silicon OK?</v>
+
+00:03:28.070 --> 00:03:32.860
+<v Sohoni, Sohum>And I mean I could talk about this all day, but I'm gonna try to keep it short.</v>
+
+00:03:34.770 --> 00:03:41.700
+<v Sohoni, Sohum>Because of that, you could get it essentially more and more transistors on a CPU.</v>
+
+00:03:42.200 --> 00:04:12.040
+<v Sohoni, Sohum>OK, and it went from, you know, a few 100,000 to a few million to a billion transistors in like a billion transistors was reached almost a decade and a half ago. I forget exactly when, but as a lot of transistors and what happens when you have more transistors in the same area of silicon is that you can get more memory, but not necessarily much faster memory.</v>
+
+00:04:12.740 --> 00:04:42.730
+<v Sohoni, Sohum>It becomes a little faster because the transistors are smaller. Smaller transistors operate with lower voltages. Lower voltages means the switching between zero and one states can be a little faster. So yes, and as you can see on the graph this the performance of memory has increased over the over the years, right? There's if you plot this out to say 2022. You could say it's almost like a 10 fold increase from the 1980s, but.</v>
+
+00:04:42.780 --> 00:04:52.850
+<v Sohoni, Sohum>At the same time, we've got 8410 thousand fold. Like if we were to extrapolate this 100,000 fold increase in CPU.</v>
+
+00:04:53.610 --> 00:05:23.320
+<v Sohoni, Sohum>And the reason why there is so distinct with the same technology advancements is because when you have more transistors on the CPU, you can do more, right? It allows you to say for example. However, deeper pipeline and run things faster through the pipeline. It allows you to have much more efficient hardware efficient and not in terms of the power it consumes. But in terms of how quickly it can get stuff done.</v>
+
+00:05:23.760 --> 00:05:54.750
+<v Sohoni, Sohum>And there's countless examples of I would, in fact, say wastefulness, which is the opposite of efficiency but wastefulness in terms of hardware required and power consumed as a trade off for quicker results, right? I'll give a really silly example to make the point across. If you were to guess in number between one and 10, you could have hardware that guesses the number one. Then it guesses the number 2, then it guesses the number 3 sequentially.</v>
+
+00:05:54.820 --> 00:06:20.080
+<v Sohoni, Sohum>Right, or you could replicate this hardware 10 times and it would add the same time guess 123456789. Ten all of the guesses would happen at the same time. If you have 10 times the hardware that is required to generate a number right? So this totally made up silly example, but it is very apt in terms of conveying how computer architects in particular is. My area of specialization.</v>
+
+00:06:21.100 --> 00:06:51.560
+<v Sohoni, Sohum>We're able to take this bigger footprint of transistors and say, well, now that I have a billion transistors, I can employ half a billion transistors to do stuff that is likely never going to be needed. But in case it's needed, it will be there, right? And so these kind of optimizations were done one by one. Hundreds of thousands of optimizations and those led to incredible gains in performance of the CPU as opposed to incredible grain gains in performance.</v>
+
+00:06:51.620 --> 00:06:52.350
+<v Sohoni, Sohum>Or memory.</v>
+
+00:07:01.180 --> 00:07:01.650
+<v Furst, Elias>Hum.</v>
+
+00:06:53.180 --> 00:07:02.830
+<v Sohoni, Sohum>So any questions? I think I wanted to keep it short, but I couldn't help myself so I may have told you more than what you need. But any questions? Yeah, go ahead.</v>
+
+00:07:02.770 --> 00:07:13.200
+<v Furst, Elias>So what is it exactly like? What are for the CPU? What are all these billions of transistors doing? Or they're just like millions of values or?</v>
+
+00:07:15.130 --> 00:07:22.440
+<v Sohoni, Sohum>Ah, that's a complex question. So there are more ale use. Sure there are.</v>
+
+00:07:23.470 --> 00:07:47.640
+<v Sohoni, Sohum>A lot of predictions that go on in terms of like I'll give a simple example we we briefly talked about branches yesterday, right as a as a hazard in pipelining, right? If you have a branch, you can either take it or not take it and not knowing whether you're taking it or not can be a problem, right? If you have like 30 stages in the pipeline, and you're going to figure out and it 20th stage whether the branch is taken or not.</v>
+
+00:07:48.260 --> 00:08:18.990
+<v Sohoni, Sohum>You better be good at predicting weather that branch should be taken or not taken right? So computer architects like myself, we built branch predictors which would have like a history based hardware table that would keep track of all, not all, but like a limited number of previous program counter values where there were branch instructions and they would keep track of four that branch instruction in the past. Was it taken or not taken? If it was taken, why where was the branch?</v>
+
+00:08:19.050 --> 00:08:42.800
+<v Sohoni, Sohum>Target right, so now we with the additional transistors available we can have these kind of blocks of hardware that do these additional things which then allow us with 95% accuracy to say whether a branch will be taken or not and if it is taken it again with 90 plus percent accuracy predicts what the branch target is going to be.</v>
+
+00:08:44.330 --> 00:08:47.950
+<v Sohoni, Sohum>Does that make sense? Like an example of work, sort of?</v>
+
+00:08:48.430 --> 00:08:50.680
+<v Furst, Elias>Yes, I like but now I have another question.</v>
+
+00:08:51.080 --> 00:08:51.530
+<v Sohoni, Sohum>Yeah.</v>
+
+00:08:51.490 --> 00:08:51.920
+<v Furst, Elias>Uhm?</v>
+
+00:08:52.630 --> 00:08:57.120
+<v Furst, Elias>So more transistors means that you can make a longer pipeline.</v>
+
+00:08:58.870 --> 00:09:00.610
+<v Sohoni, Sohum>You sensually yes.</v>
+
+00:09:02.030 --> 00:09:02.600
+<v Furst, Elias>Uhm?</v>
+
+00:09:04.240 --> 00:09:10.430
+<v Furst, Elias>I I I don't under I don't understand what, uh, how?</v>
+
+00:09:11.230 --> 00:09:15.610
+<v Furst, Elias>The pipeline could be much longer, 'cause like it seems like there's only so many things to do.</v>
+
+00:09:16.750 --> 00:09:17.290
+<v Furst, Elias>Right?</v>
+
+00:09:16.910 --> 00:09:24.160
+<v Sohoni, Sohum>Right, yeah, there's only so many things to do. You're absolutely right, but we can subdivide those things in 2 steps.</v>
+
+00:09:24.860 --> 00:09:31.390
+<v Sohoni, Sohum>Right, as a quick example, reading from memory, even cache memory which we're going to look at today and tomorrow.</v>
+
+00:09:32.030 --> 00:09:44.050
+<v Sohoni, Sohum>Uh, uh, not tomorrow, but next week cache memory is pretty fast, but fast is a very relative term, right? It could still take up to five clock cycles to access cache memory.</v>
+
+00:09:44.890 --> 00:10:16.820
+<v Sohoni, Sohum>Right, that are different steps. You gotta figure out the actual address. You gotta, you know, inside the hardware there's like a grid and you gotta index into a row and column and read the right stuff out. You gotta put it on a bus. You gotta get the data from this side of the bus to that side of the bus. So there are all these different steps that are involved in said simply reading the next instruction using PC Plus four right? So that can then be further pipeline like while one instructions address is being supplied to memory, right? The instruction before that could be.</v>
+
+00:10:16.930 --> 00:10:27.040
+<v Sohoni, Sohum>Being read from the memory, the instruction before that could be making its way on the bus from the memory to where it's going to get decoded is that making sense?</v>
+
+00:10:28.040 --> 00:10:28.700
+<v Furst, Elias>Yeah.</v>
+
+00:10:29.190 --> 00:10:41.600
+<v Sohoni, Sohum>Right, so you further pipeline these steps and that's that's how you get a deeper pipeline. Another reason why more transistors can result in a deeper pipeline is again because.</v>
+
+00:10:42.390 --> 00:10:58.950
+<v Sohoni, Sohum>More transistors essentially comes from the fact that they are smaller transistors as well, and smaller transistors, and this is not like a mechanical thing, but essentially smaller transistors need less operating voltage, which means they can be switched faster between zero and one.</v>
+
+00:11:05.310 --> 00:11:07.950
+<v Sohoni, Sohum>So, so that helps us increase the frequency as well.</v>
+
+00:11:09.510 --> 00:11:09.960
+<v Furst, Elias>OK.</v>
+
+00:11:12.000 --> 00:11:14.990
+<v Bultman, Joshua>Are there also more pipelines to like in parallel?</v>
+
+00:11:15.670 --> 00:11:46.360
+<v Sohoni, Sohum>Yeah, so that's also a very good point. So yes, there is. There is a limit to how deep a pipeline can go before it starts becoming useless, right? I mean, we've seen some examples, or at least have talked about it a little bit to say, yeah, even with the branch example or with hazards, right? If you've got load, use hazards or data hazards, then the more instructions in the pipeline, the more complicated the hardware for forwarding becomes, because you've got now 25 or 30 different paths for forwarding.</v>
+
+00:11:46.460 --> 00:11:55.270
+<v Sohoni, Sohum>All of that starts taking up more power, generates more heat, and there was a point where we couldn't cool the the chip fast enough and so.</v>
+
+00:11:56.100 --> 00:12:26.940
+<v Sohoni, Sohum>All of those issues mean that there is really is sensible sort of limit to how deep the pipeline can be. You they built 130 plus stages in a pipeline at one point, but they realize that that's not really making sense. So then around 2005 we started to see the trend towards multicore devices, right? So CPUs went from being really powerful singer single core machines turned to multicore machines and part of it was in.</v>
+
+00:12:27.000 --> 00:12:48.800
+<v Sohoni, Sohum>You relatively easy transition because we're running so many different programs that we could have like 4 cores, and then say, OK, this PowerPoint presentation is going to run on one core. My operating system is going to run on, you know, a couple of other codes and so on. So that was the next step that happens. So not only do you have deeper pipelines, but you have more pipelines.</v>
+
+00:12:49.280 --> 00:12:54.400
+<v Sohoni, Sohum>Uh, and then eventually we also well. So yeah, that parallelism.</v>
+
+00:12:54.910 --> 00:13:11.660
+<v Sohoni, Sohum>Uhm, existed at various levels, so parallelism who was exploited initially for single threaded applications, but then also for multi threaded applications and then independent more number of applications on a single device as well.</v>
+
+00:13:16.500 --> 00:13:17.930
+<v Sohoni, Sohum>Other questions.</v>
+
+00:13:23.100 --> 00:13:33.340
+<v Sohoni, Sohum>So your section, by the way, is like almost like a full lecture ahead of the 1:00 o'clock section, so feel free to ask questions. We can go a little slower, we can afford that.</v>
+
+00:13:34.080 --> 00:13:43.650
+<v Sohoni, Sohum>Or maybe I need to go faster in the other section? But yeah, don't don't hesitate to ask questions any any more questions on this slide before I go forward?</v>
+
+00:13:49.290 --> 00:13:57.130
+<v Bultman, Joshua>Moore's law is starting to break down though, right? Because they they can't. They can't make transistors much more small or smaller.</v>
+
+00:13:56.790 --> 00:14:12.060
+<v Sohoni, Sohum>Correct, there are physical limitations to the size of the transistor in the manufacturing processes as well. And yeah, it's pretty much exploited as much as we could. There are also limits that we hit with power and cooling.</v>
+
+00:14:12.880 --> 00:14:42.480
+<v Sohoni, Sohum>Much before we even started hitting the limits on just how smaller transistor physically can be. But yeah, it's all sort of come to an end in a way, but we've got enough performance and again with trends like multicore and trends in software as well, where now. So let me. I'll take just one more minute to explain this topic. So one of the issues with going broader, like going with more cores.</v>
+
+00:14:42.660 --> 00:15:13.430
+<v Sohoni, Sohum>Was single threaded, performance was not getting any better. And if you had an application like a game for example which was written as a single threaded game, you really just had to run it faster. Like you know a computer that would get the work done faster for that single thread and you could throw like nine other threads on there right? Or nine other cores on there. But if the single threaded application can't use those other cores then there's it's not going to speed up that application.</v>
+
+00:15:13.480 --> 00:15:43.450
+<v Sohoni, Sohum>Right, that was an issue. So over the last 15 years or so we've made some decent progress on our ability as as programmers or software engineers to write better multithreaded code which would use these cores more effectively. And again, that work has been going on for the last 50 years like we had at one point, like computers that would take a whole rooms, right? Even then, people were talking about parallel computing and creating parallel and distributed systems.</v>
+
+00:15:43.780 --> 00:15:56.570
+<v Sohoni, Sohum>But in the everyday use as such, like stuff that runs on your laptop, for example, those kind of programs are now starting to see some good multithreaded speedups.</v>
+
+00:16:03.950 --> 00:16:05.210
+<v Sohoni, Sohum>Alright, so.</v>
+
+00:16:05.950 --> 00:16:37.090
+<v Sohoni, Sohum>We've got a problem here that the memory is not keeping up with the CPU, right? And in fact, that also is another reason why we don't really want like infinitely deep pipelines, because even if the CPU can do work fast, there is a step involved in actually getting our instructions from the instruction memory right? And then if you have load word or store word that those instructions are also going to interact with memory and if memory is slow, then what's the point of speeding up the CPU?</v>
+
+00:16:37.330 --> 00:16:46.110
+<v Sohoni, Sohum>Right, so there's that kind of limits as well besides just the physical heat distribution and size of the atom and those kind of things.</v>
+
+00:16:46.160 --> 00:16:46.370
+<v Sohoni, Sohum>Yes.</v>
+
+00:16:47.430 --> 00:16:51.150
+<v Sohoni, Sohum>That come in the way, so the idea.</v>
+
+00:16:51.870 --> 00:17:08.000
+<v Sohoni, Sohum>Or the goal of a typical memory hierarchy, then used to create this illusion of infinite capacity, 0 latency, infinite bandwidth, and 0 cost per bit. OK, so essentially.</v>
+
+00:17:08.910 --> 00:17:10.090
+<v Sohoni, Sohum>You want to have.</v>
+
+00:17:10.860 --> 00:17:20.430
+<v Sohoni, Sohum>Uhm, I as I just summarized as much capacity as you can, so discuss or solid state devices. Provide that and then.</v>
+
+00:17:21.440 --> 00:17:51.730
+<v Sohoni, Sohum>You have to have some sort of structure. This only shows a Level 2 cache. It's very common now to have a Level 3 cache, and on the on the other end you've got the register file, which is much smaller, right? So on the capacity on the Y axis, one of these things is capacity. It's much less capacity. Provide access is also latency. Latency is how long does it take to access and so register files are fast, so they're down here on the latency thing as well, and then the bandwidth and the cost per bit.</v>
+
+00:17:52.060 --> 00:18:04.950
+<v Sohoni, Sohum>Are increasing on this side, so for each bit of storage that you have, a register file is a lot more expensive than say, a level one cache as compared to the level 2 cache.</v>
+
+00:18:05.010 --> 00:18:15.880
+<v Sohoni, Sohum>Dash UM and so on and so forth. So the the RAM and obviously their disks storage becomes much much cheaper per bit in in terms of cost.</v>
+
+00:18:16.310 --> 00:18:29.480
+<v Sohoni, Sohum>OK, so broadly speaking, that's what is the the goal of the memory hierarchy. And well before I start talking about individual components of the hierarchy. Any questions on this slide?</v>
+
+00:18:40.010 --> 00:19:02.050
+<v Sohoni, Sohum>OK, I'll start going through the individual components, so let's work our way backwards from the the disks down to the register file. So this drives and flash drives or solid state storage right? They serve as our main non volatile storage. So what is non volatile storage? What does that mean someone wanted?</v>
+
+00:19:03.340 --> 00:19:03.820
+<v Sohoni, Sohum>Tell me.</v>
+
+00:19:06.770 --> 00:19:07.300
+<v Schilling, Atreyu>Starts at.</v>
+
+00:19:06.750 --> 00:19:08.390
+<v Bultman, Joshua>Uh, MIT list, so sorry.</v>
+
+00:19:09.000 --> 00:19:09.400
+<v Bultman, Joshua>Go ahead.</v>
+
+00:19:09.770 --> 00:19:10.110
+<v Schilling, Atreyu>You go.</v>
+
+00:19:11.950 --> 00:19:14.460
+<v Bultman, Joshua>It persists when there's no power supply to it.</v>
+
+00:19:14.840 --> 00:19:45.050
+<v Sohoni, Sohum>Correct, so the moment we turn off our laptops right, the register file, the caches, the DRAM, everything gets reset. Essentially it gets all our stuff is gone and hence we need some way. Like if we've written a program or, you know written a Word document that has to be saved. The saving always goes back to some sort of a persistent storage, right? And so that persistent storage is our disk drive or or SSDs right flash?</v>
+
+00:19:45.540 --> 00:19:48.430
+<v Sohoni, Sohum>This is news faster than disk drives, and that's mainly because.</v>
+
+00:19:49.120 --> 00:20:01.400
+<v Sohoni, Sohum>Disk drives have moving parts, mechanical moving parts, so they've got platters. And then there's a head that goes forward and backward and it has to select a particular track. So all of that.</v>
+
+00:20:01.750 --> 00:20:08.230
+<v Sohoni, Sohum>Uh, you know, takes up time, and then there's actual time involved in the transfer of data as well.</v>
+
+00:20:08.770 --> 00:20:09.490
+<v Sohoni, Sohum>Uhm?</v>
+
+00:20:10.400 --> 00:20:11.090
+<v Sohoni, Sohum>So.</v>
+
+00:20:11.780 --> 00:20:42.020
+<v Sohoni, Sohum>Both the SSD as well as hard drives. They use some sort of buffering so they they also within a hard drive. For example, you will also have some RAM that acts as a buffer 'cause you don't want to read everything one by one, and if you're reading something again and again, you want to have somewhere where it's already stored. So if I want to read the same thing again in just two seconds, I don't have to read it again. It's already there in the buffer, right? So there's that kind of buffering. There's also.</v>
+
+00:20:42.400 --> 00:21:12.130
+<v Sohoni, Sohum>The other side of buffering, which is the right buffering or it's called logging. So if I'm updating a file right every time, let's say I'm writing a something in Microsoft Word, every time I type a new letter, I don't really want to go all the way and save that to the hard drive, right? So even if I click on save or I use controllers to save is very likely that it's that saving is going to happen in a much faster or local memory of some sort, some ram somewhere, right?</v>
+
+00:21:12.360 --> 00:21:30.060
+<v Sohoni, Sohum>And only after a predetermined amount of time, let's say every 10 milliseconds or every 100 milliseconds or something like that, it's going to go do a quick right to to the hard drive. OK, and time is very relative. When when I say.</v>
+
+00:21:30.730 --> 00:21:49.870
+<v Sohoni, Sohum>Is very slow and I'm talking about milliseconds as a human being. Obviously milliseconds pretty fast, but in terms of a computer, milliseconds is 10s of thousands of clock cycles, so you don't want to save every clock cycle or every 100 clock cycles you want to save every 10,000 clock cycles. OK, so.</v>
+
+00:21:50.660 --> 00:22:20.610
+<v Sohoni, Sohum>That's all you need to know about this drives from the computer organization perspective. Let's talk about RAM for for a little bit, so our RAM or dynamic random access memory. It's made with technology that needs constant refreshing. OK, and again, I've personally feel that the details of how RAM works is outside the scope of what you need to know. All you really need to know is just frankly it's captured here right that.</v>
+
+00:22:20.660 --> 00:22:35.670
+<v Sohoni, Sohum>This is this is the memory hierarchy. There's the speed and cost and latency and bandwidth tradeoffs, and so we'll have just the slide on each of these things. Or maybe a couple of slides on some. So as I was saying, it's it's got.</v>
+
+00:22:37.110 --> 00:23:07.070
+<v Sohoni, Sohum>So essentially it's made out of it. Transistor and a capacitor, and because of that that capacitor keeps discharging. You may remember capacitors from physics or some other cores that you took, so capacitors tend to discharge. And that's the reason why RAM needs to be constantly refreshed so it reads whether it has a one or a zero in it, and then that one or zero needs to be written back to it so that the charge is maintained in that capacitor. OK, that's the reason for refreshing.</v>
+
+00:23:07.420 --> 00:23:38.860
+<v Sohoni, Sohum>The words organized. It's typically organized into rows and columns, and again rose are buffered. So this concept you'll see repeated that anything that we can save for a little while. We do that so if we're if you just read some row, we want to buffer that row, and so multiple column reads can be serviced with just one row read. And if that doesn't make sense, just ignore it. OK, bottom line is even with hundreds of optimizations.</v>
+
+00:23:39.260 --> 00:24:04.410
+<v Sohoni, Sohum>For the DRAM, the SRAM or the static random access memory is about 100 times faster. OK, so well, then you might be wondering and let me go again back to the slide here. So this is our DRAM or main memory as it is called or RAM for short and then SRAM technologies used to create our caches OK or cache memories.</v>
+
+00:24:04.990 --> 00:24:18.100
+<v Sohoni, Sohum>So as I was saying, the SRAM is about 100 times faster than the DRAM, so one might then ask the question like why don't we just build everything with SRAM. So what do you think the answer might be?</v>
+
+00:24:24.110 --> 00:24:26.980
+<v Furst, Elias>I'm I'm guessing that's wildly expensive.</v>
+
+00:24:28.660 --> 00:24:54.670
+<v Sohoni, Sohum>Correct, so that's one answer which is cost, right? So SRAM is 20 to 50 times more expensive than the other. Answer is a little intuitive, but I'll still go ahead and explain that it's not really captured in this bullet, but I'll just give you a physical example that has nothing to do with memory. Let's say you're looking for your keys, your car keys, or your house keys, whatever.</v>
+
+00:24:55.020 --> 00:24:55.660
+<v Sohoni, Sohum>Uhm?</v>
+
+00:24:56.700 --> 00:25:02.420
+<v Sohoni, Sohum>And you believe they are in a drawer in a desk drawer somewhere, right?</v>
+
+00:25:03.960 --> 00:25:13.120
+<v Sohoni, Sohum>As opposed to you believe that they are in this huge storage cabinet that has 100 different routers.</v>
+
+00:25:14.120 --> 00:25:25.320
+<v Sohoni, Sohum>Do you get the analogy? You've got a desk that has one drawer and you've got a storage cabinet that has $100 and all you know is that the key is in one of the drawers.</v>
+
+00:25:26.240 --> 00:25:33.620
+<v Sohoni, Sohum>So which one do you think is going to be faster to look up their desk with one drawer or the storage cabinet with $100?</v>
+
+00:25:42.830 --> 00:25:43.390
+<v Bultman, Joshua>The desk.</v>
+
+00:25:43.050 --> 00:25:44.510
+<v Furst, Elias>Probably the desk I'm guessing.</v>
+
+00:25:44.480 --> 00:26:14.440
+<v Sohoni, Sohum>Yeah, it shouldn't take that long. Think about it right? You've got to look in a small space, right? Versus a much larger space. And that's what happens with SRAM. Not only is it just made out of a different technology, so it's built out of six transistors per per bit that we store, as opposed to the DRAM which is made out of one transistor and one capacitor for every bit that we have to store, right? So there's there's a tradeoff in the cost of manufacturing.</v>
+
+00:26:14.730 --> 00:26:20.470
+<v Sohoni, Sohum>We're also in some ways the the size because six transistors take up more space than one transistor.</v>
+
+00:26:21.540 --> 00:26:50.270
+<v Sohoni, Sohum>But anyway, so the SRAM is much smaller, which means you have fewer places to look up right to to find something. And of course, even if it's well organized and all that, even then a smaller space is just quicker to look into then a bigger space. And that's one of the reasons why we can't just say, OK, let's build everything from SRAM and it will be 100 times faster, it won't. I mean it will be a little faster, right? For sure, but.</v>
+
+00:26:50.830 --> 00:26:57.260
+<v Sohoni, Sohum>For the cost, then it's going to be. It will not be a good trade off to build stuff out of SRAM.</v>
+
+00:26:58.110 --> 00:27:30.090
+<v Sohoni, Sohum>Because of the size and well again the the cost involved. OK, So what we end up doing is we build a memory hierarchy right within these, which is essentially like a CPU that runs let's say 2.6 gigahertz and then the way it translates into the number of cycles and the size. Wright is basically let's first look at the size real quick so you're level one cache which is made out of SRAM, usually going to be in the order of a few kilobytes.</v>
+
+00:27:30.260 --> 00:28:01.280
+<v Sohoni, Sohum>OK Level 2 cache is usually in the order of just a few megabytes. If you have a Level 3 might again be you know 12 megabytes or 20 years. I don't think I haven't really looked in the last few years, but I don't think it's going to be a whole lot bigger than just a few megabytes. And then when you get to main memory, well you can. You can get 8 gigabytes and 16 gigabytes and so on, so size wise these are becoming bigger and bigger structures.</v>
+
+00:28:01.770 --> 00:28:32.530
+<v Sohoni, Sohum>Access time wise, the level one cache can be accessed in usually one or two clock cycles. OK, so it's it's running pretty fast, so if you do the opposite of 2.66 GHz you will come up with some number in picoseconds, which is whatever like 100 picoseconds or 200 picoseconds or something. I haven't really done that calculation recently, but very very quick access to the level one cache level 2 cache usually involves.</v>
+
+00:28:32.780 --> 00:28:46.050
+<v Sohoni, Sohum>Looking at the level one cache and then looking at the level 2 structure or as an optimization, you could do it in parallel, but there's trade offs there, but essentially something in the order of maybe 10 clock cycles OK.</v>
+
+00:28:47.070 --> 00:29:02.290
+<v Sohoni, Sohum>Depending on the actual architecture, it could be 4 clock cycles. It could be 8 clock cycles, but certainly not 100 clock cycles. OK, so it's going to be like within a dozen or so clock cycles to look up a second level cache then.</v>
+
+00:29:03.100 --> 00:29:32.730
+<v Sohoni, Sohum>You've got the main memory, which usually takes hundreds of clock cycles. OK, so when I was most involved in this kind of research, which was 15 years ago or 10 years ago, it used to take about 400 clock cycles. That was like the reasonable assumption. If you were doing simulations, you would assume that one access to main memory or to or to DRAM is going to take 400 clock cycles. OK, so that's how our memory hierarchy is laid out.</v>
+
+00:29:33.160 --> 00:30:03.360
+<v Sohoni, Sohum>With the idea that as we get closer and closer to the CPU, we're getting smaller and faster, or structures that are being accessed OK and the buses that connect them are also different. OK, these buses tend to be much faster. The connection between level one cache and CPU not only is the bus itself faster, but the bus is wide enough so that we get our infinite bandwidth right. It's not really infinite, but we get a good amount.</v>
+
+00:30:03.420 --> 00:30:07.870
+<v Sohoni, Sohum>For bandwidth, so that things are not bandwidth constraint. Like if I need to have.</v>
+
+00:30:08.370 --> 00:30:23.310
+<v Sohoni, Sohum>Uh, you know 132 bit words transferred in two clock cycles. I should be able to transfer 132 bit words in two clock cycles, so it's it's not, so that's like whatever I need. I will get that sort of bandwidth.</v>
+
+00:30:23.880 --> 00:30:53.260
+<v Sohoni, Sohum>Then when the connection between the level one and level 2 cache tends to be a little bit slower compared to this extremely fast bus, and similarly, the bandwidth might shrink there as well, and so on and so forth. So this boundary here actually is a much more drastic boundary, as you can see. I mean from 2 cycles if it's nine and then from 9 if it's going to go into the hundreds like 400 cycles. Obviously the main memory is going to be a whole lot slower.</v>
+
+00:30:53.770 --> 00:30:58.990
+<v Sohoni, Sohum>The other reason for that and this is something we've talked about before is.</v>
+
+00:31:00.350 --> 00:31:03.010
+<v Sohoni, Sohum>The the CPU chip itself.</v>
+
+00:31:03.610 --> 00:31:17.730
+<v Sohoni, Sohum>Contains all of the data path stuff that we looked at but also like including the registers and all that, but also the cash is OK. So these level one and level 2 caches are in the chip.</v>
+
+00:31:18.640 --> 00:31:24.090
+<v Sohoni, Sohum>In fact, a majority of the real estate Insider chip, right? The actual.</v>
+
+00:31:24.800 --> 00:31:25.390
+<v Sohoni, Sohum>Uhm?</v>
+
+00:31:26.500 --> 00:31:32.000
+<v Sohoni, Sohum>Number of transistors used inside the chip and actually taken up by cache memory.</v>
+
+00:31:33.120 --> 00:31:44.310
+<v Sohoni, Sohum>Burden someone who's asking earlier on today. What are these transistors being used for? Well, a big chunk. I mean, there's other structures like I described with the branch predictor and 100 other things, but.</v>
+
+00:31:44.990 --> 00:31:58.720
+<v Sohoni, Sohum>A good deal of that space is actually taken up by the caches and that's why those buses are so quick that connect the register file or the CPU to the cache is 'cause it's all inside one chip, right? So all on the silicon itself?</v>
+
+00:31:59.410 --> 00:32:13.500
+<v Sohoni, Sohum>As opposed to that, your DRAM, if you've looked at you, know, ever opened up a computer. Your DRAM comes on these sticks, right? These they're called Dimms? Dual inline memory modules so it's worth their dim stands for. So these Dems.</v>
+
+00:32:14.100 --> 00:32:14.770
+<v Sohoni, Sohum>Uhm?</v>
+
+00:32:15.440 --> 00:32:26.240
+<v Sohoni, Sohum>Are going to be on your motherboard so they're physically separate from the CPU and as a result they're connected by wires or traces on the motherboard that.</v>
+
+00:32:26.880 --> 00:32:29.920
+<v Sohoni, Sohum>Are going to be slower in the transfer from.</v>
+
+00:32:30.660 --> 00:32:33.210
+<v Sohoni, Sohum>Uh, memory to CPU or CPU to memory.</v>
+
+00:32:34.100 --> 00:32:36.990
+<v Sohoni, Sohum>So I'll pause here and see if there's questions.</v>
+
+00:32:37.900 --> 00:32:39.000
+<v Sohoni, Sohum>So I've talked a lot.</v>
+
+00:32:53.520 --> 00:32:54.630
+<v Sohoni, Sohum>Work, no questions.</v>
+
+00:33:06.040 --> 00:33:10.450
+<v Bultman, Joshua>So does the the CPU when it's trying to retrieve stuff from that from that.</v>
+
+00:33:12.070 --> 00:33:15.880
+<v Bultman, Joshua>Memory, does it just go through the caches first to make sure that it's not already there?</v>
+
+00:33:16.510 --> 00:33:23.080
+<v Sohoni, Sohum>Yes, it does seem that brings up a really, really important point. Which is why would stuff be there?</v>
+
+00:33:24.230 --> 00:33:40.910
+<v Sohoni, Sohum>Right, it's something not. Many people really first think about, but it's it's a really important aspect of things, right? And, and so that actually brings me to the next slide. So I'll talk a little bit more, but feel free to interrupt if you have questions, or if I haven't answered your question.</v>
+
+00:33:41.640 --> 00:34:05.230
+<v Sohoni, Sohum>Hum, so why do caches work right? First off, yes, they're constructed from the SRAM cells as I described, which are faster to access. There are smaller a smaller structure, takes less time to look up. They're also connected with a faster bus, and so on and so forth. So yes, we've got all these things working in favor of the cache, but right? This is the big question.</v>
+
+00:34:06.230 --> 00:34:29.030
+<v Sohoni, Sohum>They can only work quickly if the data is in the cache, right? So if it's going to miss in the cache, right? So if we look for data here, it's not there, then we could look here. It's not there and we have to go to main memory to get it, but that's going to take a long time anyway, right? And if that keeps happening for everything that we're looking for, these structures become pretty useless. Would you agree?</v>
+
+00:34:31.950 --> 00:34:32.350
+<v Bultman, Joshua>Yeah.</v>
+
+00:34:33.620 --> 00:35:01.020
+<v Sohoni, Sohum>We're clearly we have caches, so they must not be useless, right? So what's the magic there? The magic is temporal locality. The Mighty 10 rule. OK, what does that mean? It means that 90% of the time spent by your programs is in 10% of the code. OK, and that's true for the code part of it, which is again the instruction memory like where we're fetching the instructions from, but also for data.</v>
+
+00:35:01.720 --> 00:35:32.620
+<v Sohoni, Sohum>Usually I mean data shows slightly different behavior, but quite a lot of times we're accessing the same data again and again, even though we might have 100 megabytes worth of data, would usually touching the 100 kilobytes a whole lot more than the rest of the data. OK, so there is temporal locality, and then there is spatial locality. Spatial locality is nothing but the same idea that we're accessing same stuff again and again, but in terms of space, what does it mean? It means that.</v>
+
+00:35:32.780 --> 00:35:45.230
+<v Sohoni, Sohum>If we're accessing the instruction or the data at memory address 4, we're likely to add access the instruction or data at memory address 8 and 12 and 16, and so on.</v>
+
+00:35:46.300 --> 00:36:17.840
+<v Sohoni, Sohum>Right, so that's spatial locality and what it means is we can do something called prefetching, and this is pretty much the core of what my PhD work was on, which was to figure out ways to predict what is it that we're going to get right. So prefetching, so we're fetching the data before we need it so we can say, well, it looks like I access this this this so it might be very likely that I'm also going to access these other things, right? So if I access ijc, I'm going to access XYZ.</v>
+
+00:36:18.010 --> 00:36:25.180
+<v Sohoni, Sohum>So let me get XYZ before the CPU actually asks for XYZ and let me put it in the cache where it can access it quickly.</v>
+
+00:36:26.630 --> 00:36:27.290
+<v Sohoni, Sohum>Makes sense.</v>
+
+00:36:39.950 --> 00:36:40.730
+<v Sohoni, Sohum>Questions.</v>
+
+00:36:45.530 --> 00:36:54.320
+<v Sohoni, Sohum>So you might be wondering where these temporal locality is coming from right? And the one word answer to that would be any guesses.</v>
+
+00:37:09.760 --> 00:37:12.390
+<v Sohoni, Sohum>Have you understood what temporal locality is?</v>
+
+00:37:18.400 --> 00:37:21.060
+<v Rolando, Jackson>Yeah, were you know like something is going to?</v>
+
+00:37:21.850 --> 00:37:25.090
+<v Rolando, Jackson>Going to come up soon, but you're gonna need it soon so it.</v>
+
+00:37:28.740 --> 00:37:29.300
+<v Sohoni, Sohum>There's.</v>
+
+00:37:26.550 --> 00:37:30.450
+<v Rolando, Jackson>Sort of reaches out for it beforehand, 'cause it knows it's gonna. It's gonna need it later.</v>
+
+00:37:30.650 --> 00:37:39.140
+<v Sohoni, Sohum>Universe prefetching, but temporal locality in itself, is the idea that if of access something recently unlikely to access it again.</v>
+
+00:37:43.420 --> 00:37:49.880
+<v Sohoni, Sohum>So given that definition of temporal locality, what do you think? Where do you think this whole temporal locality is coming from?</v>
+
+00:37:52.930 --> 00:37:53.250
+<v Furst, Elias>Is.</v>
+
+00:37:53.270 --> 00:37:53.700
+<v Sohoni, Sohum>Ever.</v>
+
+00:37:54.170 --> 00:37:54.550
+<v Furst, Elias>Wait?</v>
+
+00:37:55.380 --> 00:37:55.840
+<v Sohoni, Sohum>Good.</v>
+
+00:37:56.330 --> 00:37:59.760
+<v Furst, Elias>Oh no. 'cause loops are a spatial locality.</v>
+
+00:38:00.660 --> 00:38:01.060
+<v Furst, Elias>Oh</v>
+
+00:37:59.970 --> 00:38:02.710
+<v Sohoni, Sohum>No, loops are also temporal locality there.</v>
+
+00:38:02.350 --> 00:38:03.520
+<v Furst, Elias>oh, cool loops then.</v>
+
+00:38:04.000 --> 00:38:35.240
+<v Sohoni, Sohum>Right the the one word answer is loops, right? A lot of our programs spend a lot of time looping, and that's where if you look at the small section of code over which it is looping, it is spatial, right? There's one instruction after another, so there's spatial locality. In the instructions there. But then it's also doing it again and again. So if you want to execute a loop a million times, there you go. You've got a clear cut pattern of things that you're using again and again, and that's where we can bring those things in.</v>
+
+00:38:35.390 --> 00:39:05.910
+<v Sohoni, Sohum>The level one, or if it's too much for the level 1 to handle, at least in the level 2, and that way we don't have to go all the way out to main memory for a whole lot of. So if we said it was 9010 right? Then 90% of our access is if our memory hierarchy is designed well, should be served by the caches, right? So only 10% of the time would we really have to go beyond that and get stuff from there, right? And by designed well, these other things come into account, which is.</v>
+
+00:39:05.960 --> 00:39:16.250
+<v Sohoni, Sohum>Spatial locality in prefetching as well, which is this prediction that I was executing this loop for awhile, and then I've moved away to a different part of the program, but.</v>
+
+00:39:17.340 --> 00:39:42.050
+<v Sohoni, Sohum>If we're really smart about predicting what might come next, we could say that I'm going to go back to that loop in about 100 clock cycles, and so I'm going to start getting that stuff into the the level 2 caches and at least have that there so that if we do switch patterns and we go back to that execution again, then we don't have to go all the way to main memory 'cause we've got it loaded into the level 2 cache.</v>
+
+00:39:42.980 --> 00:39:48.160
+<v Sohoni, Sohum>So that's that's the way to make our memory hierarchy work.</v>
+
+00:39:49.780 --> 00:39:52.690
+<v Sohoni, Sohum>Follow up questions on what we just discussed.</v>
+
+00:40:10.510 --> 00:40:13.720
+<v Sohoni, Sohum>OK, I guess I must have explained it really well.</v>
+
+00:40:14.700 --> 00:40:24.910
+<v Sohoni, Sohum>So take a look in the book if you if something is not clear and as always, reach out to me if you have questions either in class or outside of class through teams.</v>
+
+00:40:25.540 --> 00:40:30.710
+<v Sohoni, Sohum>Uhm, so I'll review one thing real quick again, which which is the.</v>
+
+00:40:31.910 --> 00:40:40.000
+<v Sohoni, Sohum>Ideal memory hierarchy. It creates the illusion right of infinite capacity, infinite bandwidth at zero latency.</v>
+
+00:40:40.680 --> 00:40:53.160
+<v Sohoni, Sohum>Also has non volatility and has zero or low implementation cost right? So obviously these are ideals we never reach them, but a good or well designed memory hierarchy.</v>
+
+00:40:54.210 --> 00:41:01.510
+<v Sohoni, Sohum>Tries to meet some of these goals. Obviously you can't really have 0 cost or infinite capacity or any of these things, but.</v>
+
+00:41:02.510 --> 00:41:07.890
+<v Sohoni, Sohum>If this is the multi variable optimization that the memory hierarchy tries to do.</v>
+
+00:41:08.990 --> 00:41:09.310
+<v Sohoni, Sohum>K.</v>
+
+00:41:10.240 --> 00:41:29.190
+<v Sohoni, Sohum>And so we've got about 9 minutes left, so might as well keep going. Although I I I hesitate to throw too many things at you in one class period. So I I really want to pause and see if there is more questions you might have about cash is about the memory hierarchy in general.</v>
+
+00:41:30.020 --> 00:41:31.080
+<v Sohoni, Sohum>Before I move on.</v>
+
+00:41:50.470 --> 00:41:55.200
+<v Sohoni, Sohum>And this could be from your reading, or it could be from what we just talked about.</v>
+
+00:41:58.180 --> 00:42:01.480
+<v Sohoni, Sohum>But any general questions you guys use computers so.</v>
+
+00:42:02.970 --> 00:42:05.050
+<v Sohoni, Sohum>Anything related to memory that.</v>
+
+00:42:05.790 --> 00:42:06.770
+<v Sohoni, Sohum>You want to ask.</v>
+
+00:42:22.580 --> 00:42:22.900
+<v Sohoni, Sohum>Oh yeah.</v>
+
+00:42:23.780 --> 00:42:24.780
+<v Sohoni, Sohum>OK, did you?</v>
+
+00:42:22.320 --> 00:42:27.560
+<v Kaja, Nicholas>So you have one good question. Could you just go over again once? Why non volatility is ideal?</v>
+
+00:42:29.460 --> 00:42:35.640
+<v Sohoni, Sohum>Oh 'cause we would lose all our cord every time we switched off the computer, right? If if it was not?</v>
+
+00:42:35.180 --> 00:42:38.670
+<v Kaja, Nicholas>Oh wait, no, I had it backwards. I was thinking OK, never mind. Yeah, that makes sense.</v>
+
+00:42:38.930 --> 00:42:42.400
+<v Sohoni, Sohum>Yeah, Weiler tile is it evaporates, right? Think of it that way.</v>
+
+00:42:50.040 --> 00:42:51.350
+<v Geoffrey, Timothy>So here's a question.</v>
+
+00:42:52.730 --> 00:42:53.330
+<v Geoffrey, Timothy>So.</v>
+
+00:42:54.820 --> 00:43:12.090
+<v Geoffrey, Timothy>Some SSDs have caches built into them as kind of like a separate part aside from their main storage Thingamajigs Nam. Assuming that's the same idea as like the L1 and L2 cache.</v>
+
+00:43:12.630 --> 00:43:13.000
+<v Sohoni, Sohum>Yeah.</v>
+
+00:43:13.040 --> 00:43:13.430
+<v Geoffrey, Timothy>Darling.</v>
+
+00:43:13.060 --> 00:43:39.780
+<v Sohoni, Sohum>Same basic idea. It's that buffering that I was talking about, so that's the buffer or that's built in. Again, SSDs have it hard drives have it as well because they're so slow. We were literally talking 10,000 clock cycles to access something from at least the hard drive. SSD is a little faster, but if we're talking about 10,000 clock cycles, right? That's a little too much, and so these buffers.</v>
+
+00:43:40.490 --> 00:43:49.770
+<v Sohoni, Sohum>Within the hard drive, end up caching stuff that was recently accessed from the hard drive itself, so there is that level of cache that's over there which.</v>
+
+00:43:51.490 --> 00:43:53.020
+<v Sohoni, Sohum>Sort of the same purpose.</v>
+
+00:43:57.270 --> 00:43:57.720
+<v Geoffrey, Timothy>Cool.</v>
+
+00:43:58.250 --> 00:44:29.330
+<v Sohoni, Sohum>Yeah, and again it's both for reading and writing, so when we're writing stuff we so writing usually gets deprioritized because reading is stuff that is on demand, right? If you're reading something that means the CPU wants that, whereas when you're writing something, it's just saying update this state right? Or like if it's like a Word document, type something in. You don't really care whether the file that's stored on the hard drive has the latest 3 words that you just typed in.</v>
+
+00:44:29.510 --> 00:44:50.870
+<v Sohoni, Sohum>Right, you do care to a certain extent if the power goes off right, but usually it doesn't right, and so it doesn't try to write every keystroke all the way down the memory hierarchy straight to the hard drive every time. So it'll capture some stuff in the cache. It will capture some stuff somewhere else as it goes through, so that kind of logging.</v>
+
+00:44:51.480 --> 00:45:21.750
+<v Sohoni, Sohum>Come and logging essentially just means you collect stuff and then at a predetermined time when the system is relatively free or something like that, you just go ahead and you write that log out to whatever next level of storage there is, and so those memory chunks, whether it's the buffer in the SSD, would serve that purpose as well. So it's not just serving up to the CPU, but taking stuff down and not clogging the upward bandwidth of access.</v>
+
+00:45:22.950 --> 00:45:28.940
+<v Sohoni, Sohum>By D prioritizing the rights. That's one of the functions of those additional memories.</v>
+
+00:45:36.780 --> 00:45:38.060
+<v Sohoni, Sohum>Other questions.</v>
+
+00:45:49.670 --> 00:46:02.800
+<v Sohoni, Sohum>So the next part of the slide set really goes into the details of caches, and I'm not interested in starting something new as a sort of a new topic in the last few minutes of class so.</v>
+
+00:46:04.140 --> 00:46:05.970
+<v Sohoni, Sohum>Ask any questions that you have.</v>
+
+00:46:06.630 --> 00:46:09.530
+<v Sohoni, Sohum>Otherwise we can end early just a few minutes.</v>
+
+00:46:12.150 --> 00:46:14.560
+<v Sohoni, Sohum>One one more call for questions.</v>
+
+00:46:19.690 --> 00:46:31.570
+<v Sohoni, Sohum>Actually, I'll make a couple of quick announcements. I just realized. So this slides that I have not uploaded yet to your section and just remember that, so I'll do that right after class and.</v>
+
+00:46:33.450 --> 00:47:00.160
+<v Sohoni, Sohum>And there is the activity that I wanted to work on as a group, and we'll talk about that tomorrow in our small groups. And then I will try to come up with a practice final exam that I want to put up over the weekend. So I'm hoping that it will be up by Saturday or so so that you get at least one weekend now to go over it and we can talk about that in the final Friday sessions of next week of Week 10.</v>
+
+00:47:01.070 --> 00:47:21.020
+<v Sohoni, Sohum>And the quizzes? There's two quizzes that I thought I would do in these last two weeks, but we've been a little late getting to the memory hierarchy, so I'm going to try to figure out how to do the two quizzes next week. So be prepared to put in that little bit of extra effort next week, OK?</v>
+
+00:47:27.080 --> 00:47:29.470
+<v Sohoni, Sohum>Alright then, so I will.</v>
+
+00:47:30.200 --> 00:47:33.730
+<v Sohoni, Sohum>In class for today a couple minutes early, then take care.</v>
+
+00:47:34.680 --> 00:47:35.100
+<v Sohoni, Sohum>Sorry.</v>
+
+00:47:36.970 --> 00:47:37.370
+<v Rolando, Jackson>Thanks.</v>

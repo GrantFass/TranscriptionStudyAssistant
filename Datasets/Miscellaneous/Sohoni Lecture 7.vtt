@@ -1,0 +1,682 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.940
+<v Sohoni, Sohum>An activity for you to do.</v>
+
+00:00:03.220 --> 00:00:03.950
+<v Sohoni, Sohum>Today</v>
+
+00:00:04.990 --> 00:00:26.050
+<v Sohoni, Sohum>uh, it's the floating point worksheet and I'm just going to pull it up here as essentially asking you to do the same thing we did yesterday in class, but for four different numbers, and there's an additional step where we I want you to align these numbers so that they can be added. So first I want you to be able to express them in the IEEE.</v>
+
+00:00:27.380 --> 00:00:29.510
+<v Sohoni, Sohum>Single precision floating point format.</v>
+
+00:00:30.170 --> 00:00:31.570
+<v Sohoni, Sohum>And then I want you to.</v>
+
+00:00:32.280 --> 00:00:38.480
+<v Sohoni, Sohum>Do this which is in the book here. Oh, it's the wrong part of the book.</v>
+
+00:00:39.740 --> 00:00:44.930
+<v Sohoni, Sohum>Let's go back. Oh here it's in a different tab or kind of confused.</v>
+
+00:00:46.080 --> 00:00:50.230
+<v Sohoni, Sohum>So essentially what I mean by aligning is figuring out.</v>
+
+00:00:51.590 --> 00:01:10.870
+<v Sohoni, Sohum>With like the books example, here is 9.99 into 10 to the power 1 + 1.61 into 10 to the power negative. One right? So you can't just add the 9 to the one and things like that. So first you gotta make sure that they have the same exponent and so.</v>
+
+00:01:11.760 --> 00:01:43.370
+<v Sohoni, Sohum>Aligning the M2, the bigger numbers exponent is what is recommended. So we end up with taking the 1.61 into 10 to the power negative one and moving the decimal point around until it has the 10 to the power one exponent. Now they both have the same exponent so these numbers can then be aligned and added. So essentially I want you to take that additional step for these two numbers here and do the addition and then for the.</v>
+
+00:01:45.050 --> 00:01:51.900
+<v Sohoni, Sohum>Uhm, express the number in that particular format. Any questions about the activity.</v>
+
+00:02:01.970 --> 00:02:02.630
+<v Toohill, Teresa>I don't think so.</v>
+
+00:02:03.440 --> 00:02:17.460
+<v Sohoni, Sohum>OK so it's due tomorrow by midnight so when we do our small groups tomorrow we could go over this. If a group wants to discuss any of this or you could do it, just finish it and submit it totally fine by me.</v>
+
+00:02:17.970 --> 00:02:28.530
+<v Sohoni, Sohum>Uhm, because we could do something else as well. Tomorrow when we meet in small groups. And I'll, I think I've posted that as well. Just go back to course modules.</v>
+
+00:02:29.720 --> 00:02:45.040
+<v Sohoni, Sohum>And oh, I haven't posted it in your section yet, but essentially this is an activity that we can do tomorrow. And you know, if we don't get to it in small groups tomorrow, I'll still talk about this stuff on Monday.</v>
+
+00:02:45.950 --> 00:02:59.420
+<v Sohoni, Sohum>But essentially again, just catching up with the reading that you've been doing that is. That is the plan, and in fact I'm going to pull up this slide. It's on a slide as well and really talk about just.</v>
+
+00:03:00.500 --> 00:03:03.870
+<v Sohoni, Sohum>Their data path for all of today's class.</v>
+
+00:03:05.340 --> 00:03:08.650
+<v Sohoni, Sohum>Former taskbar is hiding it. Wow, OK.</v>
+
+00:03:09.400 --> 00:03:11.390
+<v Sohoni, Sohum>I didn't realize that.</v>
+
+00:03:12.810 --> 00:03:24.380
+<v Sohoni, Sohum>Let's do a different slide here. Alright, so you've been reading about the processor design in Chapter 4. You've been reading about the data path you watched the video on the data path.</v>
+
+00:03:25.310 --> 00:03:47.930
+<v Sohoni, Sohum>What questions do you have? My plan is to to answer your questions for the next 45 minutes. That's what I did in the 1:00 o'clock section. We mainly had this slide up and I toggled between this and Mars and whatnot a little bit, but really this is. This is what we spent our whole class discussion on. So what questions do you have about the data path?</v>
+
+00:03:58.560 --> 00:04:01.750
+<v Schilling, Atreyu>What does a ALU Cirque mean?</v>
+
+00:04:04.470 --> 00:04:12.600
+<v Schilling, Atreyu>SRC, like what does that mean? I know I not necessarily what it does, but like the wording so that it's easier to understand what it's actually doing.</v>
+
+00:04:12.230 --> 00:04:14.570
+<v Sohoni, Sohum>Yeah yeah, you source.</v>
+
+00:04:16.690 --> 00:04:17.490
+<v Schilling, Atreyu>Yes, yes.</v>
+
+00:04:39.620 --> 00:04:39.930
+<v Schilling, Atreyu>OK.</v>
+
+00:04:17.050 --> 00:04:40.060
+<v Sohoni, Sohum>So it's selecting these the second source register, so the first source register is always read data 144. Alu right is the second one where you have a choice between what register value was bred in and the sign extended offset that's coming in, so the second source of the ALU is what Alu SRC is selecting.</v>
+
+00:04:53.230 --> 00:04:57.500
+<v Sohoni, Sohum>You have to ask questions, otherwise this will be a boring class.</v>
+
+00:04:59.730 --> 00:05:02.230
+<v Bultman, Joshua>What's the zero on the Alu do again?</v>
+
+00:05:03.990 --> 00:05:11.680
+<v Sohoni, Sohum>Right, OK, so that's a little bit of a cheat in terms of how we're presenting it, but essentially.</v>
+
+00:05:13.490 --> 00:05:15.510
+<v Sohoni, Sohum>Let's just assume that you have.</v>
+
+00:05:16.230 --> 00:05:19.320
+<v Sohoni, Sohum>Ebranch if equals instruction.</v>
+
+00:05:20.500 --> 00:05:20.900
+<v Sohoni, Sohum>OK.</v>
+
+00:05:21.940 --> 00:05:24.240
+<v Sohoni, Sohum>So the branch if equals instruction.</v>
+
+00:05:25.860 --> 00:05:39.530
+<v Sohoni, Sohum>Obviously you want to branch if the two values in the two registers are equal right? And how do we know that they're equal? So when the ALU does a subtraction, if we end up getting a 0?</v>
+
+00:05:40.590 --> 00:06:04.010
+<v Sohoni, Sohum>When we subtract those two values, this zero line will go high and in an end gate over here right? One of the inputs is high, the other input is just whether this is a branch instruction or not, right? And that will go high as well. And then when we have both of them hi, this multiplexer will actually pick the branch.</v>
+
+00:06:04.820 --> 00:06:09.600
+<v Sohoni, Sohum>Our output from this email you instead of the PC Plus four to pass through.</v>
+
+00:06:12.320 --> 00:06:15.330
+<v Sohoni, Sohum>That part makes sense. 'cause I have a little bit more to say.</v>
+
+00:06:19.460 --> 00:06:20.540
+<v Bultman, Joshua>Yeah, I think so.</v>
+
+00:06:21.500 --> 00:06:51.560
+<v Sohoni, Sohum>OK, and so there there little bit more is essentially what I was saying earlier that we were kind of cheating to simplify this because you can have a branch if not equal as well, and then if that's the case, then this line will still be asserted, but it will be asserted if it's not equal and that part of the circuitry is not shown, so we've shown a simpler version that still captures the concept that only when there is a branch instruction which we would know from this control logic line and.</v>
+
+00:06:51.740 --> 00:07:20.530
+<v Sohoni, Sohum>And when the branch condition is met, would the address used be not PC Plus four, which is what's coming in here, but the PC Plus four added to the branch target offset, which is this 16 bit offset that is sign extended and then shifted left twice and we kind of talked about why it shifted left twice and all that. So that's the that other input that's coming into this ALU.</v>
+
+00:07:22.950 --> 00:07:25.440
+<v Sohoni, Sohum>Is that making sense? There are questions on that.</v>
+
+00:07:39.260 --> 00:08:05.860
+<v Sohoni, Sohum>So some of you might be feeling that this is all way too much to to digest at this point, and that's OK if if some of you get this, like all of this at this point, that's fantastic. And if some of you are not there yet, that's OK as well. We're we're. We're spending two days class, period the whole period. On this. There's the YouTube video that you can watch again. And of course there's the book that you can go through as well.</v>
+
+00:08:06.690 --> 00:08:07.340
+<v Sohoni, Sohum>Uhm?</v>
+
+00:08:07.990 --> 00:08:13.050
+<v Sohoni, Sohum>And if you have questions next week about any of this, I'm happy to answer questions next week as well.</v>
+
+00:08:15.860 --> 00:08:19.600
+<v Sohoni, Sohum>So don't don't be afraid to ask the simplest of questions on this.</v>
+
+00:08:24.310 --> 00:08:34.290
+<v Geoffrey, Timothy>So working through the data path chapter yesterday, one thing that I have yet to wrap my head around is the.</v>
+
+00:08:34.840 --> 00:08:36.990
+<v Geoffrey, Timothy>Well, the clock edge.</v>
+
+00:08:39.070 --> 00:08:50.370
+<v Geoffrey, Timothy>And one 'cause it seems like some things happen at the start of a clock cycle and stuff happens at the end of a clock cycle and it's just I don't know. Wondering if you can maybe clarify that.</v>
+
+00:08:51.840 --> 00:08:52.680
+<v Sohoni, Sohum>Sure.</v>
+
+00:08:53.970 --> 00:09:07.280
+<v Sohoni, Sohum>Yeah, so the month of the clock itself is that it's like a square wave, right? So if you've got the clock tick going up, it stays up for a while, then it goes down. It stays down for awhile and usually the two halves are are equal.</v>
+
+00:09:07.890 --> 00:09:08.480
+<v Sohoni, Sohum>Uhm?</v>
+
+00:09:09.260 --> 00:09:13.510
+<v Sohoni, Sohum>So every clock period things move around.</v>
+
+00:09:14.120 --> 00:09:44.720
+<v Sohoni, Sohum>Right there, there's things that happen, and that discussion can get complicated pretty quickly because we could assume for staff that everything for one instruction happens in one clock period. OK, which would be that? OK? We read the instruction from the instruction memory. Then we divvy up all the bits to say, OK, this part is going to the control. This part is going to read register one and register two, and so on and so forth.</v>
+
+00:09:44.990 --> 00:09:54.290
+<v Sohoni, Sohum>Then we read the registers at some point and that takes a finite amount of time, right? Reading from the instruction memory takes some time reading from the registers. Take some time.</v>
+
+00:09:54.880 --> 00:10:08.780
+<v Sohoni, Sohum>Uh, for the L you to have its inputs ready and then actually do the computation takes some amount of time and like for the result of the ALU to come out, take some time so.</v>
+
+00:10:08.830 --> 00:10:23.660
+<v Sohoni, Sohum>So I would almost say that the idea of getting all of this done in one clock cycle is maybe a little harder to digest than the idea that why don't we separate these things out into separate?</v>
+
+00:10:24.460 --> 00:10:31.950
+<v Sohoni, Sohum>Parts right like, for example, fetching instruction from the instruction memory is going to take one clock cycle.</v>
+
+00:10:32.390 --> 00:10:58.730
+<v Sohoni, Sohum>On this part where we decode the instruction and read from the registers is going to take another clock cycle. Then we'll give the Alu one clock cycle to do its magic. That's what a loser kind of aligned lined up like that. To display that like that sequence of things that's happening, and then we'll give one more clock cycle for data memory to be red, and then we'll do one more clock cycle. Actually, for registers to be written.</v>
+
+00:10:59.400 --> 00:11:04.260
+<v Sohoni, Sohum>Because we can't be reading and writing the registers at the same time, and I think this is where.</v>
+
+00:11:05.010 --> 00:11:08.580
+<v Sohoni, Sohum>Uh, maybe I'm getting to teams. Question about UM.</v>
+
+00:11:09.230 --> 00:11:13.840
+<v Sohoni, Sohum>When are we reading? When are we writing? So the way this is designed?</v>
+
+00:11:14.780 --> 00:11:33.080
+<v Sohoni, Sohum>Is typically so the registers in particular are the one place which in the span of an instruction can get read and written both right. What do we mean by that? Well, let me actually go to a different set of slides and see if they still have them here.</v>
+
+00:11:34.040 --> 00:11:36.330
+<v Sohoni, Sohum>Umm yeah.</v>
+
+00:11:39.320 --> 00:11:40.230
+<v Sohoni, Sohum>Give me one second.</v>
+
+00:11:43.480 --> 00:12:09.750
+<v Sohoni, Sohum>So here's an R type instruction, right? And in that R type instruction, we've got a couple of registers that are being read, and then register that's being written to, right? So this would like this instruction. The top six. It should be the opcode. Then we've got 5 bits for one of the registers, sources, 5 bits for the other register source, and then 5 bits for the destination register.</v>
+
+00:12:10.380 --> 00:12:24.090
+<v Sohoni, Sohum>No, if these two are the same, right? If if instead of T0 I had had an S1 here, right? Then a couple of these registered would be the same. So I'm reading from this register and I'm also writing to the register.</v>
+
+00:12:25.070 --> 00:12:31.390
+<v Sohoni, Sohum>When you have stuff like that, you want to make sure that there is some kind of synchronization mechanism where.</v>
+
+00:12:32.480 --> 00:12:48.030
+<v Sohoni, Sohum>We're making sure that we're reading in the old value of what was already in the register and then doing the computation and then writing in the value that needs to be written in as the result, right? So if we go back to the data path?</v>
+
+00:12:49.380 --> 00:13:15.940
+<v Sohoni, Sohum>So we're reading in the two values from read data, one read Data 2 right? They're coming into this Alu result is getting comp, you know computed and then that result is going through this multiplexer or going through this wire coming all the way back into this right data over here. So this right data is the data that's going to get written the right register select switch register it gets written to and all I'm saying is we want to make sure that.</v>
+
+00:13:16.760 --> 00:13:46.190
+<v Sohoni, Sohum>One of those things happen, say on the on the leading edge of the of the quark and the other thing happens on the other edge of the clock. So let's four simplification. Let's say you read the registers. When the clock goes up, right when the clock signal goes up, and you write the register only when the clock signal goes down. So that way you've got that much time in between to do the computation and send that result back down here so that it can be written to the register.</v>
+
+00:13:47.140 --> 00:13:48.160
+<v Sohoni, Sohum>Start making sense.</v>
+
+00:13:50.280 --> 00:13:50.960
+<v Geoffrey, Timothy>Yes.</v>
+
+00:13:52.330 --> 00:14:22.280
+<v Sohoni, Sohum>OK, yeah, so it's the clock edge is really just a way of synchronizing things. Making sure that this is when things happen. And I mean there's a little bit more to it. So for example, if it takes a while for these guys to be read right for the registers to be read, you don't want the ALU to do the calculation on some other values that were already on these buses, right? Until we actually read this data and it gets gets here. And we read this data and it gets here.</v>
+
+00:14:22.580 --> 00:14:42.170
+<v Sohoni, Sohum>We don't really want to do the ALU step of of computing that right, so we can either time it that way where the hardware is pretty predictable in terms of like how much time is it going to take and we can adjust our clock period so that it's long enough so that we don't really.</v>
+
+00:14:43.100 --> 00:14:56.400
+<v Sohoni, Sohum>You know, use the old values or as I was saying, we can say OK, I'm just going to use one clock cycle to read this. I'm going to use a different clock cycle to do the computation and then maybe on the third clock cycle. I'm going to write that register.</v>
+
+00:15:04.120 --> 00:15:06.980
+<v Sohoni, Sohum>Any follow-ups to that? Any other questions?</v>
+
+00:15:27.330 --> 00:15:33.750
+<v Sohoni, Sohum>Someone in the 1:00 o'clock section I asked a question why do we have these multiplexers? Like why is there?</v>
+
+00:15:35.220 --> 00:15:40.660
+<v Sohoni, Sohum>What's going on here, essentially, is what was being asked, so does someone want to volunteer and answer?</v>
+
+00:15:55.270 --> 00:15:58.210
+<v Rolando, Jackson>I'm not sure the answer, but I I'm interested in it.</v>
+
+00:16:01.190 --> 00:16:06.860
+<v Sohoni, Sohum>OK, anybody else? I'll give you 30 seconds to to start an answer if you want.</v>
+
+00:16:08.000 --> 00:16:08.980
+<v Sohoni, Sohum>Then I'll take over.</v>
+
+00:16:10.000 --> 00:16:13.830
+<v Geoffrey, Timothy>Now I know that it multis the plexers.</v>
+
+00:16:17.010 --> 00:16:24.240
+<v Schilling, Atreyu>It decides which uh thing to actually pass in like pass through it so.</v>
+
+00:16:25.040 --> 00:16:25.440
+<v Sohoni, Sohum>Right?</v>
+
+00:16:27.360 --> 00:16:32.230
+<v Schilling, Atreyu>Like it does in like MEM to French for example, it decides if.</v>
+
+00:16:32.850 --> 00:16:34.420
+<v Schilling, Atreyu>The one from day to day, if the.</v>
+
+00:16:35.310 --> 00:16:42.890
+<v Schilling, Atreyu>Thing is, being read out from the top one or the bottom one the the one that's read data or the one that's just pass straight from the Alu.</v>
+
+00:16:43.770 --> 00:16:56.120
+<v Sohoni, Sohum>Right, so there's that one. Yeah, let's go back to this one. So you're right, the the basic functionality of a multiplexer is to pass through one of the two values. So the question.</v>
+
+00:16:56.770 --> 00:17:02.890
+<v Sohoni, Sohum>Next, it, like the surface level answer right? Like that's that's exactly what a multiplexer does word based on what?</v>
+
+00:17:03.690 --> 00:17:14.820
+<v Sohoni, Sohum>Is it passing one or the other through? And the deeper question related to that is why do we need a multiplexer here, right? We don't have a multiplexer for read register one.</v>
+
+00:17:15.740 --> 00:17:20.240
+<v Sohoni, Sohum>This signal going in. Why do we have a multiplexer for right register?</v>
+
+00:17:29.560 --> 00:17:31.390
+<v Sohoni, Sohum>That's a deep question, so.</v>
+
+00:17:33.280 --> 00:17:34.350
+<v Sohoni, Sohum>You wanna answer that?</v>
+
+00:17:41.640 --> 00:17:47.530
+<v Bultman, Joshua>Is it because they're the de register that you should write? 2 is dependent on like the instruction.</v>
+
+00:17:48.830 --> 00:17:52.960
+<v Sohoni, Sohum>Exactly fantastic, very good answer so.</v>
+
+00:17:55.140 --> 00:18:07.520
+<v Sohoni, Sohum>The the here's the bottom line. OK, and this like blew my mind when I first realized this in Graduate School, and I think I mentioned this two weeks ago when we first looked at the data path video. But I'll say it again.</v>
+
+00:18:08.190 --> 00:18:20.000
+<v Sohoni, Sohum>The hardware does a lot of extra stuff and then just throws it away. OK, and that time wise is the more efficient way of doing it, so let me explain so.</v>
+
+00:18:20.830 --> 00:18:50.850
+<v Sohoni, Sohum>We're using the exact same path, whether it's an R type instruction or or whether it's, for example in load word instruction. OK, so let's go back and look at the two instructions, right? Or actually, let's just look at all three here. So the R type instruction, right? These top, say experts are the opcodes as it is for all three kinds of instruction, then the next 5 bits are the Rs.</v>
+
+00:18:50.900 --> 00:19:14.170
+<v Sohoni, Sohum>Right, and let's go back to the data path and tie this back so its first top 6 bits always go into the control logic here next 5 bits 21 through 25 are always read register one right always as in for these two. Let's not talk about jump yet. So for the I type for example load word and for the our type for example add on sign.</v>
+
+00:19:14.980 --> 00:19:16.620
+<v Sohoni, Sohum>Right, both of these that top.</v>
+
+00:19:17.270 --> 00:19:22.880
+<v Sohoni, Sohum>Come like 21 through 25 bit numbers are always going to be a source register.</v>
+
+00:19:23.790 --> 00:19:27.480
+<v Sohoni, Sohum>The next is in an interesting part because.</v>
+
+00:19:28.880 --> 00:19:56.670
+<v Sohoni, Sohum>For an R type RT, the second set of five bits is also a source operand, right? So that's going to be this instruction 16 through 20, or which is read registered two, so it's going to read one value. It's going to read the other value, and then in May be it's going to add those two values and then it's going to have some result that goes down. This person comes in as the right data and then it's going to use the third register right 11 through 15, which is these bids already over here.</v>
+
+00:19:57.310 --> 00:20:07.170
+<v Sohoni, Sohum>To determine which register is it that I'm trying to write two? OK, so that's that's where we use that third register, however.</v>
+
+00:20:07.870 --> 00:20:14.600
+<v Sohoni, Sohum>If it's a load word instruction right and let me actually go back up. These set of slides for a load word.</v>
+
+00:20:15.290 --> 00:20:28.900
+<v Sohoni, Sohum>What's really going on? We bought an artist and an RP so we still have two registers, but what does the load word do tell me what is? What is this instruction doing this? LW dollar eight $0.00 nine what's really going on here?</v>
+
+00:20:39.250 --> 00:20:40.220
+<v Schilling, Atreyu>It's loading.</v>
+
+00:20:46.900 --> 00:20:48.480
+<v Schilling, Atreyu>Into register Aidan.</v>
+
+00:20:49.260 --> 00:20:49.870
+<v Sohoni, Sohum>Very good.</v>
+
+00:20:49.100 --> 00:20:50.390
+<v Schilling, Atreyu>At an offset of 0.</v>
+
+00:20:50.980 --> 00:21:20.920
+<v Sohoni, Sohum>Yep, very good. So it's going to go to memory and the specific memory location that it's going to look up is the one that's in registered 9 right registered. Mine has some 32 bit value which is going to treat as a memory address is going to add an offset of zero to that and then whatever 32 bit value it reads from that memory location is going to put on the bus and it's going to actually write that value into register 8, right?</v>
+
+00:21:21.020 --> 00:21:33.150
+<v Sohoni, Sohum>When we say it's loading from memory into the register, it's over writing whatever was even register 8, right? So in this case our Register 8 is these 5 bits over here.</v>
+
+00:21:34.090 --> 00:21:57.910
+<v Sohoni, Sohum>Right, So what just happened is let's go back to the data path in an R type instruction, bits 11 through 15 are our register that we want to write to, but in the load word instruction bits 16 through 20 are the ones that specify which register we want to write to write. Because bits zero through 15 are taken up by the offset.</v>
+
+00:21:59.290 --> 00:22:29.110
+<v Sohoni, Sohum>Well, look at the instruction again, right? So these 5 bits here. Now let me go back down to these three different types. So this was a source in an R type, but this is now a destination in the load word instruction, and because those bits can be either a source or a destination, we need the multiplexer here in fact to be more precise, because that right register can either come from bits 16 through 20.</v>
+
+00:22:29.380 --> 00:22:59.210
+<v Sohoni, Sohum>Or it can come from bits 11 through 15 depending on which type of instruction it is. That's why we need a multiplexer, because we have two potential options. One of them is going to be right for the load word, one of them is going to write for going to be correct for the R type instruction, and that is determined by this control signal, which is the destination register control, right or regtest control, which if you follow this line, goes in.</v>
+
+00:22:59.390 --> 00:23:12.060
+<v Sohoni, Sohum>And controls this multiplexer. So with this explanation, let me ask you a question and then you can ask me for more clarification if you need it. What will be the value of?</v>
+
+00:23:12.950 --> 00:23:15.270
+<v Sohoni, Sohum>This Richard DST signal.</v>
+
+00:23:16.820 --> 00:23:21.080
+<v Sohoni, Sohum>For an R type instruction, will it be 0 or will it be 1?</v>
+
+00:23:22.340 --> 00:23:22.810
+<v Sohoni, Sohum>And why?</v>
+
+00:23:31.360 --> 00:23:32.850
+<v Bultman, Joshua>It'll be 0, right?</v>
+
+00:23:33.960 --> 00:23:34.920
+<v Sohoni, Sohum>For an R type.</v>
+
+00:23:35.310 --> 00:23:41.270
+<v Bultman, Joshua>Or in our chip, I think 'cause the art type register is in bits 20 through 16, right?</v>
+
+00:23:43.110 --> 00:23:44.230
+<v Sohoni, Sohum>Let's go back and look.</v>
+
+00:23:46.090 --> 00:23:48.440
+<v Sohoni, Sohum>So in our type destination register.</v>
+
+00:23:50.630 --> 00:23:52.220
+<v Bultman, Joshua>Oh OK, yeah it's 15.</v>
+
+00:23:51.420 --> 00:23:52.220
+<v Sohoni, Sohum>It's not.</v>
+
+00:23:53.300 --> 00:24:00.080
+<v Sohoni, Sohum>It's not those bits, right? If you look at this R type instruction here as well, this doesn't have the bits either, but still.</v>
+
+00:24:01.160 --> 00:24:08.180
+<v Sohoni, Sohum>If if not, it's not 2020 through 16. Is this? It's 11 through 15.</v>
+
+00:24:10.170 --> 00:24:11.010
+<v Sohoni, Sohum>Or the other type?</v>
+
+00:24:13.330 --> 00:24:14.510
+<v Sohoni, Sohum>So will this be?</v>
+
+00:24:15.420 --> 00:24:18.110
+<v Sohoni, Sohum>Will the signal be one or zero for the?</v>
+
+00:24:18.950 --> 00:24:19.930
+<v Sohoni, Sohum>R type instruction.</v>
+
+00:24:20.510 --> 00:24:21.280
+<v Bultman, Joshua>Maybe one day?</v>
+
+00:24:22.310 --> 00:24:49.080
+<v Sohoni, Sohum>It'd be one right because as if you notice the the multiplexer very closely, the zero input is the top one. The one input is the bottom one. So what the multiplexer does is if the control signal is 1, it will pass through this set of data across to the output. If it's zero, it will pass through this data to the output. So really yeah, it's selecting between those two, so for the load word instruction.</v>
+
+00:24:49.740 --> 00:24:59.640
+<v Sohoni, Sohum>Rage DST signal will be 0 because it's going to say use these bits 16 through 20 as our destination register or to which we're going to write a value.</v>
+
+00:25:02.110 --> 00:25:07.020
+<v Sohoni, Sohum>Does that make sense or their follow up questions on that? 'cause that's that's really important concept?</v>
+
+00:25:28.470 --> 00:25:34.140
+<v Sohoni, Sohum>Well you guys are quiet, let me ask you another question that came up in the 1:00 o'clock section then.</v>
+
+00:25:35.960 --> 00:25:37.870
+<v Sohoni, Sohum>Why do you think?</v>
+
+00:25:39.610 --> 00:25:41.830
+<v Sohoni, Sohum>We have this multiplexer here.</v>
+
+00:25:45.230 --> 00:25:47.400
+<v Sohoni, Sohum>In the middle for the Edu source.</v>
+
+00:25:54.530 --> 00:25:58.260
+<v Schilling, Atreyu>It's gonna check if it's caring about the.</v>
+
+00:25:59.110 --> 00:25:59.860
+<v Schilling, Atreyu>Uhm?</v>
+
+00:26:00.480 --> 00:26:03.320
+<v Schilling, Atreyu>The registers or the address.</v>
+
+00:26:04.010 --> 00:26:06.110
+<v Schilling, Atreyu>Depending on which type of instruction it is.</v>
+
+00:26:06.860 --> 00:26:09.190
+<v Sohoni, Sohum>My address, you mean the offset the?</v>
+
+00:26:09.620 --> 00:26:11.420
+<v Schilling, Atreyu>Meet the offset. Yeah, the the.</v>
+
+00:26:11.440 --> 00:26:12.890
+<v Sohoni, Sohum>The immediate field, yeah?</v>
+
+00:26:13.120 --> 00:26:13.440
+<v Schilling, Atreyu>Yeah.</v>
+
+00:26:14.850 --> 00:26:43.900
+<v Sohoni, Sohum>Yep, exactly so it's selecting between what was read from this register, right? Read, read, read data two and this 16 bit value which got sign extended to become a 32 bit value which is the other input of this multiplexer. So once again, if this was an R type instruction, what would be the value of the Elks control line? Would it be 0 or would it be one for an R type instruction?</v>
+
+00:26:52.210 --> 00:26:52.770
+<v Bultman, Joshua>0.</v>
+
+00:26:51.930 --> 00:26:52.880
+<v Schilling, Atreyu>It could be this year.</v>
+
+00:26:54.380 --> 00:27:02.290
+<v Sohoni, Sohum>Alright couple of people saying 0 it'll be zero. That is correct because in an art type we're reading two data registers, right?</v>
+
+00:27:03.000 --> 00:27:11.930
+<v Sohoni, Sohum>And those are the two sources, so we we're not actually using the immediate field there, and in fact the immediate field would be meaningless because.</v>
+
+00:27:13.030 --> 00:27:13.700
+<v Sohoni, Sohum>Uhm?</v>
+
+00:27:14.400 --> 00:27:44.460
+<v Sohoni, Sohum>You know it's actually comprised of five bits of this 5 bits of the shift amount, and then 6 bits of the funk field. That's the lower 16 bits in your R type instruction, right? So the weird thing though, right? And this is something that many students are going to find hard to believe or hard to wrap their head around is even on an R type instruction. It takes those 15 those zero through 50 in those 16 bits. It does sign extension on those.</v>
+
+00:27:44.540 --> 00:28:05.050
+<v Sohoni, Sohum>Again, it's completely meaningless, right? Because I already mentioned that there's not like a cohesive 1516 bits over there that's really made up of the third register. The shift amount and the funk field is going to take that 16 bit value. Still sign extended. Bring it all the way up to the multiplexer and then reject that value.</v>
+
+00:28:06.150 --> 00:28:15.130
+<v Sohoni, Sohum>OK, and it's just going to say yeah, thanks for all the trouble, but I'm just going to use this other register that I read because this is an R type instruction.</v>
+
+00:28:18.730 --> 00:28:20.130
+<v Sohoni, Sohum>Is that making sense to you?</v>
+
+00:28:21.080 --> 00:28:25.160
+<v Sohoni, Sohum>Few understand like why or why that might be happening.</v>
+
+00:28:32.830 --> 00:29:03.440
+<v Sohoni, Sohum>It conversely, for a load word, right? Even though we know that we're not going to use this register value for a source, correct? 'cause we just determined that that second register is where we want to write. It still reads that register. OK, because that line is going straight through right bits 16 through 20. Those are being used to read this register or as the specifying which register to read right? So let me go back.</v>
+
+00:29:03.500 --> 00:29:05.260
+<v Sohoni, Sohum>You are load word instruction here.</v>
+
+00:29:07.310 --> 00:29:15.210
+<v Sohoni, Sohum>So we're going to take this value 01000 right, which is 8 in our case, so it's going to still go and.</v>
+
+00:29:15.880 --> 00:29:45.870
+<v Sohoni, Sohum>Say I want you to read Register 8. Clearly we're going to write to register 8 right at the end of the day. Once we've figured out what memory location to look at and get that 32 bit value, we're going to dump that value into register 8 register. It is not going to be used as a source at all, yet our hardware is going to say go ahead and read register 8. Then it's going to read that value and that value from register 8 is going to go on to this bus here as one of the inputs to the multiplexer.</v>
+
+00:29:46.210 --> 00:30:00.660
+<v Sohoni, Sohum>Yeah, and then because Lul source is going to be one for a load word, it's going to reject that value that it just read and passed through the sign extended offset value to do the offset calculation on the address.</v>
+
+00:30:03.690 --> 00:30:04.590
+<v Sohoni, Sohum>You see what's going on?</v>
+
+00:30:13.710 --> 00:30:14.030
+<v Bultman, Joshua>Yep.</v>
+
+00:30:16.020 --> 00:30:16.870
+<v Sohoni, Sohum>Sorry, what's that?</v>
+
+00:30:18.470 --> 00:30:18.910
+<v Bultman, Joshua>Yep.</v>
+
+00:30:19.720 --> 00:30:20.610
+<v Sohoni, Sohum>You do OK.</v>
+
+00:30:21.820 --> 00:30:52.310
+<v Sohoni, Sohum>And you might again be wondering why, right? Why is it doing all this extra stuff? And again, it's just a matter of efficiency of time in terms of, I mean, one other option would be to read the OP code first right and determine first of all, is this a load word or is this another type right just to do that example between just those two and then based on that it could then say well it's a load word so don't bother reading these this register, it doesn't matter.</v>
+
+00:30:52.900 --> 00:30:56.300
+<v Sohoni, Sohum>However, from a time efficiency perspective.</v>
+
+00:30:57.000 --> 00:31:25.190
+<v Sohoni, Sohum>As well as in fact from a hardware design perspective, it's actually easier for the hardware to just keep doing the same thing again and again, rather than telling the hardware that. Oh yeah, this is a load word, so don't read this register. At this point you'd have to have some additional circuitry. In fact in there to say don't do this as opposed to building the hardware this way where it's just doing it anyway and you're just going to throw away some of the values that are coming in.</v>
+
+00:31:26.300 --> 00:31:34.110
+<v Sohoni, Sohum>And that part might be a little hard to digest, but that's that's how it works, right? Let me take that to the extreme.</v>
+
+00:31:34.940 --> 00:31:48.340
+<v Sohoni, Sohum>Because I mentioned, you know, load word and the branch or load word and and and R type instruction as a comparison. What about the Jay type instruction right? It jump instruction doesn't use any of the registers.</v>
+
+00:31:49.450 --> 00:32:05.150
+<v Sohoni, Sohum>Right, so you know, jump instruction. All you have is 6 bits of opcode and then 26 bits of address, right? So if we go back to the data path, all that it's going to do read the instruction right? And then the top 6 bits are going to go into the control logic.</v>
+
+00:32:06.000 --> 00:32:30.770
+<v Sohoni, Sohum>And then the next 26 bits this instruction zero through 25 part. That's going to go in get left shifted. It's going to take the top 4 bits of the PC and generated 32 bit address and that address is going to pass through here and go back and be updated as the new address of the PC. This is where we want to jump to write everyone good with that. Like how the the jump instruction works. Are there any questions on that?</v>
+
+00:32:36.540 --> 00:32:49.890
+<v Sohoni, Sohum>5432 more questions on the jump. OK, so that's the path of the jump. However, right? And this might sound really silly, but even for the jump instruction it's still going to read.</v>
+
+00:32:50.640 --> 00:33:15.970
+<v Sohoni, Sohum>These 21 through 25 as a first register, it's going to read the contents of that register, put those contents on this bus. It's going to go ahead and do bits 16 through 20. Treat that as a second register, although those bits mean nothing right. They're just part of this big address here, and we're just saying I'm going to take 5 bits from this address. I'm going to take five more bits from this address and treat them as register.</v>
+
+00:33:16.560 --> 00:33:48.650
+<v Sohoni, Sohum>Uhm, source registers right for me to read them. Put those values down here. It's also going to take the zero through 15 sign. Extend that guy, bring it up to the multiplexer. It's going to pick one of those two. I don't even remember what it's going to do, but it's going to pick one of those two. It's going to have the ALU at that point. The ALU control will actually not. It will suppress the Lu from doing any calculations, but you know it goes through all of these motions of reading the registers and calculating these values and doing this and that.</v>
+
+00:33:49.120 --> 00:34:20.680
+<v Sohoni, Sohum>Always for all non branch instructions as well it will always take this. I'm extended 16 bits to 32 bits. It'll do the shifting. Adding it will create a result for some branch target for even all the non branch instructions and then it will throw away that branch target. OK so that's like a really different way. The hardware works from the software. You don't write software to do like the if and the else and the elseif and whatever right there or like if it's a switch case.</v>
+
+00:34:20.890 --> 00:34:50.930
+<v Sohoni, Sohum>You don't have software that does all of those things and then just throw them away. All the other cases and picks one. We do it sequentially in in programming, usually unless you're doing parallel programming and whatnot. But then that is actually very close to what hardware does, so hardware is doing all of these things in parallel, so it's not really adding any time. I'm in fact, it's saving US time by just saying, yeah, go ahead, calculate the branch target, calculate the jump target even if it's not a jump instruction. Just go ahead and calculate that, and then when I get here.</v>
+
+00:34:50.980 --> 00:34:58.390
+<v Sohoni, Sohum>I'm going to just say what throw away the jump address, throw away the branch out and just use PC Plus four to update the PC.</v>
+
+00:35:02.990 --> 00:35:03.920
+<v Sohoni, Sohum>You guys impressed.</v>
+
+00:35:07.290 --> 00:35:08.200
+<v Bultman, Joshua>Yeah, it's bizarre.</v>
+
+00:35:13.780 --> 00:35:13.960
+<v Sohoni, Sohum>Yeah.</v>
+
+00:35:14.170 --> 00:35:25.500
+<v Sohoni, Sohum>But as I said, that's that's the more efficient way of doing it. Now, when you have a lot more complicated architectures like this MIPS example that we see is really bare bones.</v>
+
+00:35:26.350 --> 00:35:51.410
+<v Sohoni, Sohum>Basic, this is how computation happens in in reality, right? That's what this block diagram is pointing out. But like an Intel Pentium for example, it had about 100 times as much complexity as what you see on this diagram. It had all these other units that we're doing this prediction that prediction whatever else and whatnot when you get to that level, right when you have like a billion transistors on your chip.</v>
+
+00:35:52.140 --> 00:36:16.830
+<v Sohoni, Sohum>Then the heat and power consumption and those things start to matter, and at that point you can sort of cleanly separate things out, and we'll be looking at pipelining next week. And when we study that, it will become even clearer as to how and why we may then be able to suppress some of the hardware to say, OK, I'm just going to cut the power to these particular parts that are not used for this instruction.</v>
+
+00:36:17.380 --> 00:36:19.990
+<v Sohoni, Sohum>OK, but for our simple maps layout.</v>
+
+00:36:20.860 --> 00:36:27.360
+<v Sohoni, Sohum>All the hardware is active the whole time and it's doing all these useless things and it still works really well.</v>
+
+00:36:34.630 --> 00:36:37.740
+<v Sohoni, Sohum>More questions any follow up on what what I just said.</v>
+
+00:36:38.810 --> 00:36:40.010
+<v Sohoni, Sohum>Any new questions?</v>
+
+00:36:59.460 --> 00:37:10.950
+<v Sohoni, Sohum>So for the activity have planned for tomorrow, the idea is to think about. OK, this is my MIPS program or my you know, the program that I've written out.</v>
+
+00:37:11.840 --> 00:37:15.010
+<v Sohoni, Sohum>And I'm at the add instruction or here.</v>
+
+00:37:16.410 --> 00:37:21.430
+<v Sohoni, Sohum>If you look at all these question marks here, what what will be the values?</v>
+
+00:37:22.930 --> 00:37:34.930
+<v Sohoni, Sohum>On the buses over here for each. Each of these. OK, I'll bring this up tomorrow when we do our small group meetings and I'll try to do something about the taskbar hiding my.</v>
+
+00:37:35.940 --> 00:37:37.540
+<v Sohoni, Sohum>Can I pull it down? I don't know.</v>
+
+00:37:38.850 --> 00:37:41.150
+<v Sohoni, Sohum>Well, figure something out, but essentially.</v>
+
+00:37:41.990 --> 00:38:13.890
+<v Sohoni, Sohum>You next weeks quiz is going to be something very similar. I'm going to give you some code and I'm going to have questions related to various, maybe these signals, but also some of the control signals like like questions. I was asking earlier today like what would be the ALU source for the add instruction or something like that and this really pulls together all of your understanding of how instructions are encoded and how they actually interact with the underlying hardware so.</v>
+
+00:38:14.350 --> 00:38:28.500
+<v Sohoni, Sohum>I mean this is it like the four CS 2711, this diagram being able to map your instructions down to this level. That's that's the kind of understanding we want you to have in in terms of what's really going on in in the hardware.</v>
+
+00:38:29.300 --> 00:38:46.000
+<v Sohoni, Sohum>So that's the activity we can do tomorrow. Or if you have questions about floating point, we can also cover those in tomorrow. And as I was saying, there will be a quiz next week that goes over something similar. There will be a question on the final exam that is very similar to what we're doing here.</v>
+
+00:38:47.130 --> 00:38:50.520
+<v Sohoni, Sohum>So we've got another 10-11 minutes almost.</v>
+
+00:38:52.610 --> 00:38:53.500
+<v Sohoni, Sohum>Ask away.</v>
+
+00:38:54.540 --> 00:39:03.560
+<v Sohoni, Sohum>I don't mind spending even one or two more whole class periods just looking at this diagram and making sure that everyone gets what's going on on this.</v>
+
+00:39:35.140 --> 00:39:37.450
+<v Schilling, Atreyu>Did we ever talk about the floating .0 thing?</v>
+
+00:39:38.690 --> 00:40:00.770
+<v Sohoni, Sohum>Oh yeah, so I had to look it up actually. So yesterday in class and when asked about. Well, how do we represent zero? If we're, you know, it's always going to be one point something, and that's a great question. I actually had forgotten the answer to that. So the answer is if it's all zeros, that's treated as a special case.</v>
+
+00:40:01.590 --> 00:40:16.710
+<v Sohoni, Sohum>And so in the actual representation, it doesn't really have the right meaning, because that zero in there would actually mean negative 127 or one negative 126 in terms of the buyers and all that right, or in terms of the non biased exponent.</v>
+
+00:40:17.210 --> 00:40:24.880
+<v Sohoni, Sohum>Uh, so all zeros in a floating point number is treated as a special case, as is 0.</v>
+
+00:40:34.680 --> 00:40:35.390
+<v Bultman, Joshua>That makes sense.</v>
+
+00:40:38.320 --> 00:40:41.270
+<v Sohoni, Sohum>Yeah, it's a. It's a hack in some ways.</v>
+
+00:40:44.280 --> 00:40:46.320
+<v Sohoni, Sohum>'cause the math doesn't work out, but yeah.</v>
+
+00:40:46.900 --> 00:40:48.280
+<v Bultman, Joshua>Yeah, 'cause it would be 1, right?</v>
+
+00:40:49.760 --> 00:40:58.320
+<v Sohoni, Sohum>Well, you could be one, but not just one. It would be 1 to the Q, 2 to the power of negative 126.</v>
+
+00:40:58.680 --> 00:40:59.630
+<v Schilling, Atreyu>It's the smallest.</v>
+
+00:41:00.600 --> 00:41:02.870
+<v Schilling, Atreyu>Absolute value number you could represent.</v>
+
+00:41:03.790 --> 00:41:04.360
+<v Sohoni, Sohum>Right?</v>
+
+00:41:03.770 --> 00:41:05.420
+<v Schilling, Atreyu>So they just say it's 0.</v>
+
+00:41:06.200 --> 00:41:09.220
+<v Sohoni, Sohum>Correct, yeah, it's smallest absolute value, correct? Yep.</v>
+
+00:41:22.040 --> 00:41:25.360
+<v Sohoni, Sohum>I got still got 8 more minutes, any questions?</v>
+
+00:41:27.300 --> 00:41:30.130
+<v Sohoni, Sohum>Always saying bad network quality, you guys still hearing me.</v>
+
+00:41:31.500 --> 00:41:32.070
+<v Bultman, Joshua>Yep.</v>
+
+00:41:32.190 --> 00:41:32.580
+<v Gaty, William>Yeah.</v>
+
+00:41:32.820 --> 00:41:33.760
+<v Sohoni, Sohum>OK alright.</v>
+
+00:41:53.190 --> 00:42:16.480
+<v Sohoni, Sohum>Yeah, I mean so if there's no more questions we could end early. I don't mind spending early, but definitely, you know, spend some time on this. Watch that video again. If this is still a little iffy, and even if it's not, you know even if it's clear. Watch that video one more time with this new clarity. With this new understanding that you have about what's going on and that video will really cement your.</v>
+
+00:42:16.680 --> 00:42:24.730
+<v Sohoni, Sohum>Understanding of what's going on. So I highly recommend just spending some you know 18 minutes watching that once again.</v>
+
+00:42:26.240 --> 00:42:29.150
+<v Sohoni, Sohum>And I will see you tomorrow in small groups.</v>

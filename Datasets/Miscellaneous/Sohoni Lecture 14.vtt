@@ -1,0 +1,418 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:03.050
+<v Sohoni, Sohum>So the plan today is to talk about.</v>
+
+00:00:03.520 --> 00:00:15.970
+<v Sohoni, Sohum>A branch instruction. Again, this is part of the reading that you should have done. You should already be familiar with the branch instruction, but I'm going to.</v>
+
+00:00:16.930 --> 00:00:23.230
+<v Sohoni, Sohum>Show you some things that are going on with the branch over here and and essentially.</v>
+
+00:00:23.880 --> 00:00:32.290
+<v Sohoni, Sohum>Tide goes back, First off with the encoding of the instruction, third also in terms of figuring out how the the branch.</v>
+
+00:00:36.910 --> 00:00:53.530
+<v Sohoni, Sohum>And as always, if there's questions, don't hesitate to interrupt and ask me, and in fact, if you raise your hand, I might not notice it. 'cause movement in the screen is not agreeing with me somewhere to minimize the screen where I actually see your videos.</v>
+
+00:00:54.300 --> 00:00:56.070
+<v Sohoni, Sohum>Uh, so.</v>
+
+00:00:57.000 --> 00:01:03.490
+<v Sohoni, Sohum>Yeah, just start talking. If you don't see what I'm trying to show you or you don't, you know, follow what's going on.</v>
+
+00:01:04.380 --> 00:01:10.260
+<v Sohoni, Sohum>I'm so here's some simple code. I have a label called top, then I've gotta.</v>
+
+00:01:10.310 --> 00:01:10.610
+<v Sohoni, Sohum>Yeah.</v>
+
+00:01:11.950 --> 00:01:14.120
+<v Sohoni, Sohum>And instruction shift left logical.</v>
+
+00:01:15.070 --> 00:01:17.040
+<v Sohoni, Sohum>Dollar eight dollar eight one.</v>
+
+00:01:18.210 --> 00:01:31.630
+<v Sohoni, Sohum>Esselte Banijay top, which I think might make more sense if I just showed you the actual code and in Mars, and I don't believe we looked at this particular code snippet yesterday.</v>
+
+00:01:32.480 --> 00:01:38.060
+<v Sohoni, Sohum>Or did we? Now I I don't remember if we did. I think we started looking at this this can someone remind me?</v>
+
+00:01:45.960 --> 00:01:47.040
+<v Sohoni, Sohum>I don't think we did.</v>
+
+00:01:48.310 --> 00:01:48.570
+<v Sohoni, Sohum>Yeah.</v>
+
+00:01:46.640 --> 00:01:48.760
+<v Kreitzman, Colton>I don't think so, but I might be wrong.</v>
+
+00:01:49.780 --> 00:01:50.060
+<v Toohill, Teresa>Yeah.</v>
+
+00:01:50.270 --> 00:01:53.970
+<v Sohoni, Sohum>I'm getting confused between my two sections now, so OK here.</v>
+
+00:01:54.660 --> 00:01:56.590
+<v Sohoni, Sohum>This is what we're looking at.</v>
+
+00:01:58.220 --> 00:02:00.190
+<v Sohoni, Sohum>Let me just make sure I have it right.</v>
+
+00:02:02.850 --> 00:02:05.190
+<v Sohoni, Sohum>Let me actually run this a few times.</v>
+
+00:02:13.000 --> 00:02:14.110
+<v Sohoni, Sohum>OK.</v>
+
+00:02:15.060 --> 00:02:45.560
+<v Sohoni, Sohum>Alright, yeah, it's all good. Let's go back to the code, so let me show you the code a little bit first. So what I'm doing here is I'm initializing a couple of values so in register T2 and register T0 I'm just initializing some values here, so seven is put in to register. T21 is put in register T0. I could have done the same thing with a load immediate instruction which if we just make this change here, it's likely to show exactly.</v>
+
+00:02:45.620 --> 00:02:47.360
+<v Sohoni, Sohum>The same, oh it's not happy with that.</v>
+
+00:02:48.630 --> 00:02:52.240
+<v Sohoni, Sohum>OK, loading me Oh yeah, of course.</v>
+
+00:02:55.520 --> 00:03:12.600
+<v Sohoni, Sohum>So Lord immediate dollar T 01 is actually translating pretty much to the same instruction that I originally had there. So let's go back to that. So we're loading a couple of values in our registers here and then. What I've done is I've intentionally created a loop.</v>
+
+00:03:24.800 --> 00:03:32.870
+<v Sohoni, Sohum>Uhm, shipped. So if we do two, that's comments incorrect. So if we do one shifting ones to the left.</v>
+
+00:03:33.220 --> 00:03:49.330
+<v Sohoni, Sohum>Uhm, essentially multiplies by two OK? Or does an integer multiplication by two? So we've got SL T-01 and then essentially what I'm doing here with these two instructions is that.</v>
+
+00:03:50.000 --> 00:03:55.130
+<v Sohoni, Sohum>I'm going to branch if less than, so if T2 is less than T0.</v>
+
+00:03:56.030 --> 00:04:13.090
+<v Sohoni, Sohum>Alright, T2 is loaded with the 7NT0 is the one we're incrementing or essentially multiplying by two every time we run through the loop. If this is if T2 is less than T0, then we're going to branch out of this loop and go to the code that executes the end.</v>
+
+00:04:13.890 --> 00:04:24.610
+<v Sohoni, Sohum>So hopefully the the cord, at least the logic of the code is is all clear to you. And so if we go to the mode where we execute the code we've got.</v>
+
+00:04:25.370 --> 00:04:29.100
+<v Sohoni, Sohum>The translated code and IU dollar 10.</v>
+
+00:04:30.430 --> 00:04:34.040
+<v Sohoni, Sohum>07 I guess if I can slide this, yeah.</v>
+
+00:04:35.870 --> 00:04:43.080
+<v Sohoni, Sohum>Same thing like putting a one in dollar eight and then my branch less than has been translated to.</v>
+
+00:04:43.950 --> 00:04:45.890
+<v Sohoni, Sohum>A couple of different instructions here.</v>
+
+00:04:46.560 --> 00:05:17.060
+<v Sohoni, Sohum>And those are. Again it's an SLT which is a set if less than and a branch if not equal. OK so in MIPS the philosophy is to not create additional instructions for things that can be accomplished with a smaller set of instructions. And what does that mean? Well, we've got a branch if not equal, and a branch if equal instruction. So then instead of creating actual machine level instructions for.</v>
+
+00:05:17.300 --> 00:05:32.210
+<v Sohoni, Sohum>Branch if less than branch of greater than branch, greater than or equal to all of those sort of different conditions. The assembler behind the scenes is translating my belties here branch. If less than instruction to set less than.</v>
+
+00:05:32.930 --> 00:05:39.160
+<v Sohoni, Sohum>Which is doing the same sort of conditional right which checking whether T2?</v>
+
+00:05:40.780 --> 00:05:50.580
+<v Sohoni, Sohum>Well, T2 and T0 are essentially registered tenant Register 8, so those are the numbers for the registers. T2 is the name, 10 is the number.</v>
+
+00:05:50.910 --> 00:06:21.880
+<v Sohoni, Sohum>Uhm, RT0 is the name. 8 is the number, so it's doing the check on those two registers and what it's going to do is. It's going to use the assembler temporary register which is registered one and set that right. So they the instruction is set if less than so it's going to set that to 1:00 if the condition is true, otherwise it's going to be let it be R0. OK, so I'm going to step through this. So first instruction just put a 7 in T2.</v>
+
+00:06:21.960 --> 00:06:37.030
+<v Sohoni, Sohum>Like we expected second instruction, put a one in T0 again like we expected shift left logical is going to shift that one one bit to the left which essentially multiplies it by two and so it's going to now say T0 has a two in it.</v>
+
+00:06:37.810 --> 00:07:07.990
+<v Sohoni, Sohum>And now to the SLT instructions. So it's comparing T2 and T0 and in this case because T2 is not less than T0, it is not setting the dollar eighty register, which means it's keeping it at the value zero. OK, because it's keeping it at the value 0 and then the next instruction which is a, B and East, which means branch if not equal and that comparison is being done with dollar one and dollars zero.</v>
+
+00:07:08.510 --> 00:07:26.980
+<v Sohoni, Sohum>OK, which again 0 is the dollar zero is the 0 register, which always contains a 0, so it's essentially checking whether register one also contains a zero or not, right? So if it's saying branch if not equal what that translates to really is if.</v>
+
+00:07:27.880 --> 00:07:31.420
+<v Sohoni, Sohum>This guy dollar one contains A1.</v>
+
+00:07:32.730 --> 00:08:03.610
+<v Sohoni, Sohum>Then we're actually going to branch. If not, then we're going to go ahead and execute the next instruction in line, right, which is the jump instruction, which is essentially saying jump to this particular address, which is the address of the SL instruction, right? So again, if we go back to our source here, so top is this label here, and the first instruction at that label, or the instruction, and that label at that address, is the SL instruction. So essentially.</v>
+
+00:08:03.670 --> 00:08:22.110
+<v Sohoni, Sohum>The jump is just saying go back here and that's what we see in this code here, and so the loop continues so we go back to the shift left. Logical this one is now going to multiply our two by two, which gives us a four in dollar T zero and the process continues.</v>
+
+00:08:22.820 --> 00:08:30.830
+<v Sohoni, Sohum>OK, I'm going to pause here and see if there's any questions. So please unmute and start talking if you have questions.</v>
+
+00:08:43.310 --> 00:08:45.580
+<v Sohoni, Sohum>K It looks like no questions.</v>
+
+00:08:46.010 --> 00:08:46.800
+<v Sohoni, Sohum>Oh, good good.</v>
+
+00:08:52.440 --> 00:08:52.790
+<v Sohoni, Sohum>Ah.</v>
+
+00:08:45.880 --> 00:08:52.820
+<v Bultman, Joshua>I had a quick question, sorry like I could hit the unmute button. Uh, what's the third field in the be? Any represent?</v>
+
+00:08:53.500 --> 00:09:01.860
+<v Sohoni, Sohum>Good question. So yes, I'm I was going to get to it and I will in just a minute if there's any other questions before that.</v>
+
+00:09:11.740 --> 00:09:19.260
+<v Sohoni, Sohum>OK, I'm not hearing any questions, but as I said, just interrupt me if you have a question and I will answer the question that was asked so.</v>
+
+00:09:19.920 --> 00:09:34.430
+<v Sohoni, Sohum>Let's continue executing this code until we get to a point which at this point obviously T0 is an 8 and now the set less than is going to be true, so it is going to set.</v>
+
+00:09:35.390 --> 00:10:01.070
+<v Sohoni, Sohum>Which means make a one in register dollar 80 or register one. So register one has a one and that means the be any condition is now also going to be true, right? So we said branch if not equal. Now one of the comparisons is 0 right? Zero Register has a zero, the one register has one so they are not equal now which means we are.</v>
+
+00:10:01.880 --> 00:10:06.910
+<v Sohoni, Sohum>Uhm, going to branch, which means it is and again.</v>
+
+00:10:07.690 --> 00:10:10.710
+<v Sohoni, Sohum>The branch label was to end.</v>
+
+00:10:11.440 --> 00:10:11.830
+<v Sohoni, Sohum>Right?</v>
+
+00:10:12.650 --> 00:10:34.960
+<v Sohoni, Sohum>Or the branch target as it's called, was to end and the end label is nothing but the address of the load. Immediate dollar V Zero ten instruction right? Which looks like this, and so that's what is going on with our branch instruction. So it it skipped over the jump instruction not to go back to the question that was asked, right?</v>
+
+00:10:35.720 --> 00:11:04.680
+<v Sohoni, Sohum>What is this third field, the 0X? All the zeros and ones? So one quick clarification. I want to make Mars is actually misleading us a little bit in terms of like how many bits there are over here, so this is really just a 16 bit immediate number, not a 32 bit number. The based on the number of digits we have here, it looks like a 32 bit number, but this is essentially the 16 bit offset that's telling our assembler or or telling our hardware.</v>
+
+00:11:05.220 --> 00:11:35.440
+<v Sohoni, Sohum>To skip these many instructions after so because we wanted to skip over the jump instruction right if we go back to our source code. This is where our branch instruction was. This is the target of the branch instruction, and in between we just have one instruction, the J top. That's why this immediate field here is essentially a one OK, and on my slide I have some more details on this, but I just want you to do.</v>
+
+00:11:36.050 --> 00:11:41.680
+<v Sohoni, Sohum>Notice that that's really what's happening, so in fact, if we added an instruction here.</v>
+
+00:11:42.310 --> 00:11:49.640
+<v Sohoni, Sohum>Uhm say no app, which is essentially a new operation, but it still counts as an instruction. You will notice that this.</v>
+
+00:11:50.630 --> 00:11:54.530
+<v Sohoni, Sohum>Your immediate field has now instead of 1. It's now showing A2.</v>
+
+00:11:55.600 --> 00:11:56.090
+<v Sohoni, Sohum>OK.</v>
+
+00:11:55.470 --> 00:12:01.350
+<v Furst, Elias>If you if you branch to a point before the branch instruction, will that number be negative?</v>
+
+00:12:03.430 --> 00:12:03.800
+<v Furst, Elias>Cool.</v>
+
+00:12:01.820 --> 00:12:14.400
+<v Sohoni, Sohum>Yes exactly yeah, let me. In fact, since we were talking about it here, let me do a a different way of doing the same loop used to do a branch if greater than.</v>
+
+00:12:15.930 --> 00:12:28.910
+<v Sohoni, Sohum>And then not have to worry about any of this. So what this change in code essentially saying is branch to the top only if the condition is met. So we've reversed the condition and said.</v>
+
+00:12:29.740 --> 00:12:40.900
+<v Sohoni, Sohum>Just go to the top. If the condition is true. If not, by default, it's just going to go down here. So if we do that and we click assemble, you can see that this number has now become zero X.</v>
+
+00:12:41.170 --> 00:12:50.890
+<v Sohoni, Sohum>If FFFD right? So what it's saying is go up 3 instructions now instead of going forward one instruction or going forward to instructions.</v>
+
+00:12:51.680 --> 00:12:52.720
+<v Sohoni, Sohum>Is that making sense?</v>
+
+00:12:55.260 --> 00:12:55.650
+<v Furst, Elias>Yeah.</v>
+
+00:12:57.570 --> 00:13:15.060
+<v Sohoni, Sohum>OK, good, so let's run the code and see if we see the same effect here, so here it's looping until this value became an 8 and now it's exited the loop and switch the end of the program. So, or someone trying to say something as I ran in through the program, is there a question?</v>
+
+00:13:16.410 --> 00:13:19.450
+<v Kreitzman, Colton>I was just gonna say so. Wouldn't this be considered a better way of doing it?</v>
+
+00:13:20.950 --> 00:13:32.630
+<v Sohoni, Sohum>This is a better way, but I didn't really want to show you this big number to start with. It's easier to see that it's skipping one instruction or two instructions rather than trying to see it's going back this much.</v>
+
+00:13:34.980 --> 00:13:38.380
+<v Sohoni, Sohum>So yeah, this I would say this is a better way to do it.</v>
+
+00:13:39.540 --> 00:13:56.600
+<v Sohoni, Sohum>So there's actually a little bit more detail behind all of this. I think the easier way was to just think about the number of instructions that it's skipping, but the details if we look at what's really going on here, right? Where does this one come from?</v>
+
+00:13:57.490 --> 00:14:16.980
+<v Sohoni, Sohum>It's essentially going back to the basics of this is the address of the current instruction, right? So there be any instruction has the address address zero X 00400010, right? And it wants to get all the way to this instruction over here OK?</v>
+
+00:14:17.810 --> 00:14:25.590
+<v Sohoni, Sohum>And what needs to happen is that the program counter or the PC is what needs to get updated.</v>
+
+00:14:26.340 --> 00:14:27.380
+<v Sohoni, Sohum>In order to.</v>
+
+00:14:28.610 --> 00:14:56.220
+<v Sohoni, Sohum>Either branch or not branch right. If it doesn't branch, then the PC should be 14, so I'm going to skip the leading zero X 004 stuff. So from 10 we want to go to 14. If we don't want to branch right because each instruction is 4 bytes, we're incrementing by 4. But if we do want to branch and skip over this jump instruction, then the PC instead of going from 10 to 14 needs to go from 10 to 18.</v>
+
+00:14:57.310 --> 00:14:58.990
+<v Sohoni, Sohum>Does that part makes sense?</v>
+
+00:14:59.730 --> 00:15:00.730
+<v Sohoni, Sohum>Everyone clear on that.</v>
+
+00:15:06.030 --> 00:15:09.320
+<v Sohoni, Sohum>I need a verbal yes from someone 'cause I'm not looking at you.</v>
+
+00:15:10.570 --> 00:15:11.000
+<v Leonard, Benjamin>Yeah.</v>
+
+00:15:11.560 --> 00:15:16.860
+<v Sohoni, Sohum>OK, what I need to know if it's not clear I'm happy to explain it again. Maybe try a different way.</v>
+
+00:15:18.430 --> 00:15:47.640
+<v Sohoni, Sohum>So far we'll go with the yes and then on the slide there are more details. So what's happening? First off, this is that encoding of the branch instruction OK, and the important part for now is just that this whole thing this immediate. The third field with someone is asking about. That's a one right? Because we're skipping one instruction, so that's what's going on in the 16 bit immediate offset.</v>
+
+00:15:47.690 --> 00:16:18.140
+<v Sohoni, Sohum>Filled up the rest of it is just an opcode and the two registers that we are comparing for the be any instruction, right? So one is registered one and the other one is register 0, so that's why you see a one and a zero in these two fields over here. Another interesting thing. An important thing to remember really is that this code that we see here this whole zero X 14200001 this.</v>
+
+00:16:18.500 --> 00:16:48.730
+<v Sohoni, Sohum>Is essentially the 32 bit numbers that we are seeing here. It's just broken down a different way, so if you think about it, this is 1, right? 0001 would be the first hexadecimal digit. The next hexadecimal digit is 0100, which is a four. The one after that is 0010, which is a two and then we have all these zeros, which are these strings of zeros that we see here and the final legs are decimal. Digit is 1, which is the 0001 OK so.</v>
+
+00:16:48.840 --> 00:17:00.350
+<v Sohoni, Sohum>The 32 bit instruction is actually right here in front of you. Again, you'd never will have to memorize what the actual 32 bit pattern for any of the instructions looks like.</v>
+
+00:17:01.740 --> 00:17:15.910
+<v Sohoni, Sohum>But it is important to understand that this is an I type instruction in which you've got six, the top 6 bits for the opcode, then the RS&RT, the two registers you're comparing in the in the branch, and then the offset over there.</v>
+
+00:17:16.250 --> 00:17:45.760
+<v Sohoni, Sohum>OK, now going back to the the earlier point which I was making, which is it's easy to see that it's going to skip over one instruction, but the actual details come back to really the program counter values OK, and so just remember that the value here was ten. The value for J was 14 and the value for where we want to go to, or which is called the branch target address is 18. OK, so what's happening here is because the Benny is at 10.</v>
+
+00:17:46.240 --> 00:18:15.090
+<v Sohoni, Sohum>And after executing the be any the PC or the program counter would by default go to 14 because every every clock cycle it's incremented by 4 by default to point to the next instruction. What we're saying is we need to add four more to that because it because we want to get 218 and that 18 - 14 is 4. And then we'll there's actually a division by 4 that's happening, and that's how we end up with a one.</v>
+
+00:18:15.950 --> 00:18:24.050
+<v Sohoni, Sohum>OK, I'm sure this last part was a little bit confusing as to why are why are we looking at 4:00 and then? How does it become a one so?</v>
+
+00:18:24.750 --> 00:18:28.730
+<v Sohoni, Sohum>Think about it and ask me any questions you might have about this.</v>
+
+00:18:36.830 --> 00:18:39.400
+<v Sohoni, Sohum>Don't give you another 30 seconds to think.</v>
+
+00:18:56.740 --> 00:18:58.590
+<v Sohoni, Sohum>Questions about what's going on here.</v>
+
+00:19:00.590 --> 00:19:01.190
+<v Sohoni, Sohum>Difference.</v>
+
+00:19:00.350 --> 00:19:10.240
+<v Rolando, Jackson>So that basically just stores the number of program counter increments. But it does that by 4, so that's that's how it that's how it does it.</v>
+
+00:19:13.470 --> 00:19:20.870
+<v Sohoni, Sohum>Yeah, so what's really happening in the hardware is that this one is actually then multiplied by 4.</v>
+
+00:19:22.090 --> 00:19:32.340
+<v Sohoni, Sohum>And that's how it takes the current PC or the program counter and adds the multiplied by 4 value to it to get the actual branch target.</v>
+
+00:19:34.350 --> 00:19:34.760
+<v Rolando, Jackson>Gotcha.</v>
+
+00:19:35.290 --> 00:19:59.150
+<v Sohoni, Sohum>Yeah, so it seems a little little bit extra work, right? So since we knew it was going to be just one instruction, why then go and make it 4 and then make it 1 and then again make it four? Well the answer really is is optimization of space and the next slide tries to illustrate that a little bit so we know for a fact that because each instruction is 32 bits.</v>
+
+00:19:59.940 --> 00:20:30.460
+<v Sohoni, Sohum>Then the addresses and we saw these addresses. In fact, if I go back up a couple of slides we see this address ends with a 0. The next one is ending with a four and eight and see which is 12 and then 10, which is 16. One, four width is 20 and so on. So all of these are multiples of four, right? Because each of them is a multiple of four. What that essentially means is the last two bits are always going to be 0 for all of these.</v>
+
+00:20:31.060 --> 00:20:38.040
+<v Sohoni, Sohum>Addresses that point specifically to instructions. OK, 'cause we can't really and shouldn't ever point into the middle of an instruction.</v>
+
+00:20:38.620 --> 00:20:42.000
+<v Sohoni, Sohum>Because we know that instead of storing.</v>
+
+00:20:42.690 --> 00:21:12.450
+<v Sohoni, Sohum>These two additional bids what we're saying is we're going to divide by 4. Now we as in the hardware does this for you, so you don't really need to do any of this, but you should be aware of what's happening here, so the hardware is the one that does this. 4 / 4 = 1, which is why again, we see this one over here and then the hardware itself also does a multiplication afterwards to get the additional zeros in there, and that way what we get is essentially.</v>
+
+00:21:12.890 --> 00:21:23.240
+<v Sohoni, Sohum>In 16 periods were getting 18 bits worth of reach above and beyond right? So it's relative to the current program counter.</v>
+
+00:21:24.420 --> 00:21:34.890
+<v Sohoni, Sohum>We instead of being able to branch 16 bits up or down, we're able to branch worth of 18 bits. Up or down. Is that optimization makes sense.</v>
+
+00:21:39.060 --> 00:21:40.000
+<v Bultman, Joshua>Yeah, yeah.</v>
+
+00:21:41.130 --> 00:21:41.440
+<v Sohoni, Sohum>OK.</v>
+
+00:21:42.360 --> 00:21:48.060
+<v Sohoni, Sohum>Good, I'm glad to hear some positive answers there all right? Well so.</v>
+
+00:21:48.730 --> 00:22:06.100
+<v Sohoni, Sohum>That and the essentially the encoding again and and this is true for all instructions. Obviously not just the 1420001 encoding that we laid out here, but each of these instructions essentially is going to look like what what you see here, OK?</v>
+
+00:22:06.480 --> 00:22:36.110
+<v Sohoni, Sohum>Uh, so once again the program counter and its importance, and then how branching is done, how jumping is done, which is slightly different. As I said before, J zero X 004008 seems to contain the value that we want to jump to right? In terms of what the instruction is, but again, if you look at the actual encoding of the instruction, this field has a two and not an 8.</v>
+
+00:22:36.470 --> 00:22:38.650
+<v Sohoni, Sohum>And so it's the same process where.</v>
+
+00:22:39.560 --> 00:22:50.890
+<v Sohoni, Sohum>Is that two is then going to get multiplied by 4 and become an 8 and we're saving 2 bits so that 26 bits for jump gives us 28 bits worth of reach.</v>
+
+00:22:52.080 --> 00:22:54.290
+<v Sohoni, Sohum>In terms of what we can address.</v>
+
+00:22:55.870 --> 00:22:59.340
+<v Sohoni, Sohum>So those were the main highlights of what I wanted to cover today.</v>
+
+00:22:59.990 --> 00:23:03.960
+<v Sohoni, Sohum>I'm I'm open to any questions and then I'm also.</v>
+
+00:23:04.500 --> 00:23:10.270
+<v Sohoni, Sohum>Uh, fine, if if someone wants to demo there in class.</v>
+
+00:23:11.790 --> 00:23:14.120
+<v Sohoni, Sohum>Programming thing that that I asked you to do.</v>
+
+00:23:14.180 --> 00:23:14.440
+<v Sohoni, Sohum>True.</v>
+
+00:23:15.670 --> 00:23:28.100
+<v Sohoni, Sohum>Or if you don't want to demo, that's fine with me as well. I can stick around and see if anyone needs help with with the programming assignments that had given for yesterday and today.</v>
+
+00:23:29.370 --> 00:23:31.770
+<v Sohoni, Sohum>So yeah, do you have any questions for me?</v>
+
+00:23:33.050 --> 00:23:33.890
+<v Sohoni, Sohum>Or any of that?</v>
+
+00:23:47.180 --> 00:23:50.010
+<v Sohoni, Sohum>Has anyone done the programming assignment?</v>
+
+00:23:52.060 --> 00:23:54.150
+<v Leonard, Benjamin>I've started, I just haven't finished it.</v>
+
+00:23:55.160 --> 00:23:55.550
+<v Sohoni, Sohum>OK.</v>
+
+00:23:56.630 --> 00:24:16.850
+<v Sohoni, Sohum>Alright, so, uh yeah so as I said I'll be around you just need to go to canvas and and take a look at what the other two programming assignments were. As I said the other day since your sections gotten more experience with doing these programs and I'm relatively comfortable that you'll be able to do these.</v>
+
+00:24:17.870 --> 00:24:26.430
+<v Sohoni, Sohum>But yeah, especially the branching and looping one, which I'm going to pull up here and I'm going to share my screen again just as a reminder of what I'm looking for.</v>
+
+00:24:28.660 --> 00:24:29.050
+<v Sohoni, Sohum>People.</v>
+
+00:24:32.910 --> 00:24:52.180
+<v Sohoni, Sohum>So the the demo part would not doing 'cause we're not in class but essentially want you to prompt the user to enter a string read in the string, right? The equivalent of a while loop that converts the string into all capital letters. OK, so a quick hint is that we need to use the load byte.</v>
+
+00:24:52.890 --> 00:25:23.470
+<v Sohoni, Sohum>I instruction to load a bite into a register at a time and we're going to use the lowered by it because it's training is composed of individual characters. Each of them is going to take up one byte OK, and then the other tip is, well, how do you know somethings a capital letter or not? Well, this you should have seen in your intro to Java or one of the courses earlier, but essentially it's the ASCII values for the characters have a particular range, so there is a particular upper bound and lower bound for all the CAP letters.</v>
+
+00:25:23.530 --> 00:25:26.660
+<v Sohoni, Sohum>And similarly, for all these small letters.</v>
+
+00:25:27.460 --> 00:25:27.910
+<v Sohoni, Sohum>OK.</v>
+
+00:25:28.830 --> 00:25:49.650
+<v Sohoni, Sohum>So those are my hintz and then yeah, go ahead and finish the program and submit it by tonight if you want to stick around in the class in the teams meeting here, that's fine. I'll be around and I'll answer questions, but I will turn off my video. My audio as well as the recording 'cause it doesn't make sense to just record empty space.</v>
+
+00:25:51.190 --> 00:25:56.140
+<v Sohoni, Sohum>Alright, I'll be here. You can type in your questions or simply unmute and ask your questions.</v>
+
+00:25:57.580 --> 00:26:01.470
+<v Sohoni, Sohum>K If I don't see you take care, I'll see you tomorrow.</v>

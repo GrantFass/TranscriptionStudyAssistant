@@ -1,0 +1,33 @@
+header {
+    justify-content: center;
+    font-size: xx-large;
+}
+
+section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 100%;
+}
+
+#storeLectures {
+    margin-left: 3%;
+    border-right: 1px solid black;
+    width: 20%;
+}
+
+#viewLectures {
+    margin-left: 3%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}

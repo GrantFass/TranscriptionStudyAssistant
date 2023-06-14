@@ -1,0 +1,91 @@
+header {
+    justify-content: center;
+    font-size: x-large;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+#emailSection {
+    position: absolute;
+    width: "100%";
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+#loginTop {
+    position: absolute;
+    width: "100%";
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+#loginBottom {
+    position: absolute;
+    width: "100%";
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+#secondCheck {
+    position: absolute;
+    width: "100%";
+    margin-top: 130px;
+    display: flex;
+    justify-content: center;
+}
+#firstname {
+    position: absolute;
+    width: "100%";
+    margin-top: 190px;
+    display: flex;
+    justify-content: center;
+}
+#lastname {
+    position: absolute;
+    width: "100%";
+    margin-top: 220px;
+    display: flex;
+    justify-content: center;
+}
+#phone {
+    position: absolute;
+    width: "100%";
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+}
+#status {
+    position: absolute;
+    width: "100%";
+    margin-top: 310px;
+    display: flex;
+    justify-content: center;
+}
+#org {
+    position: absolute;
+    width: "100%";
+    margin-top:280px;
+    display: flex;
+    justify-content: center;
+}
+#forgotPassword {
+    position: absolute;
+    width: "100%";
+    margin-top:160px;
+    display: flex;
+    justify-content: center;
+}
+button {
+    margin-top: 340px;
+    width: 80px;
+    height: 30px;
+    background-color: #C6BFBE;
+    color: white;
+    border: solid 1px #C6BFBE;
+    border-radius: 11%;
+    font-size: large;
+}

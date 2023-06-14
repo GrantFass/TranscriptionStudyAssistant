@@ -1,0 +1,58 @@
+header {
+    justify-content: center;
+    font-size: x-large;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+#loginTop {
+    position: absolute;
+    width: "100%";
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#loginBottom {
+    position: absolute;
+    width: "100%";
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+#emailAccount {
+    position: absolute;
+    width: "100%";
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+#birthdate {
+    position: absolute;
+    width: "100%";
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+}
+
+#delete {
+    position: absolute;
+    width: "100%";
+    color: white;
+    background-color: darkred;
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15%;
+    border-color: white;
+}
+
+#concurrentConnections {
+    position: absolute;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}

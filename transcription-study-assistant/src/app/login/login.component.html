@@ -1,0 +1,22 @@
+<main>
+    <section>
+    <header>Login</header>
+    </section>
+    <section>
+        <section id="loginTop">
+            <label for="username">Username: </label>&nbsp;&nbsp;&nbsp;<input type="text" id="username" name="username">
+        </section>
+        <section id="loginBottom">
+            <label for="password">Password:  </label>&nbsp;&nbsp;&nbsp;<input type="text" id="password" name="password">
+        </section>
+        <section id="submitLogin" (click)="sendData()">
+        <button>Submit</button>
+        </section>
+        <section id="forgotPassword">
+            <a routerLink="../forgot-password" routerLinkActive="active">Forgot Password</a>
+        </section>
+        <section id="newAccount">
+            <a routerLink="../new-user" routerLinkActive="active">Create A New Account</a>
+        </section>
+    </section>
+</main>

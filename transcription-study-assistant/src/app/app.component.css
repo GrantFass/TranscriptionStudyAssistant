@@ -1,0 +1,92 @@
+
+input, button {
+    border: solid 1px #555B6E;
+    border-radius: 2px;
+    display: inline-block;
+    padding: 2;
+}
+input {
+    width: 400px;
+    height: 40px;
+    border-radius: 2px 0 0 2px;
+    color: white;
+    border: solid 1px #888c9c;
+    padding: 0 5px 0 10px;
+}
+button {
+    width: 500px;
+    height: 225px;
+    background-color: #C6BFBE;
+    color: white;
+    border: solid 1px #C6BFBE;
+    border-radius: 11%;
+    font-size: large;
+}
+article {
+    margin: 40px 0 10px 0;
+    color: #202845;
+}
+article, article > p {
+    color: #202845;
+}
+article> p:first-of-type {
+    font-weight: bold;
+    font-size: 22pt;
+}
+img {
+    width: 75px;
+    border-radius: 5pt;
+    margin-left:20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+label {
+    display: block;
+    color: #888c9c;
+}
+table {
+    width: 100%;
+}
+header {
+    font-size: x-large;
+}
+section {
+    display: flex;
+    justify-content: center;
+}
+#logo {
+    position: absolute;
+    left: 0;
+}
+#loginLink {
+    position: absolute;
+    right: 0;
+    margin-right: 125px;
+    margin-top: 10px;
+}
+#signup {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+#top {
+    position: absolute;
+    width: "100%";
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+#bottom {
+    position: absolute;
+    width: "100%";
+    margin-top: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin-top: 150px;
+    justify-content: center;
+
+}

@@ -1,0 +1,14 @@
+header {
+    justify-content: center;
+    font-size: x-large;
+}
+
+textarea {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}

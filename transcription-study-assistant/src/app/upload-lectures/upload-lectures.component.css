@@ -1,0 +1,35 @@
+header {
+    justify-content: center;
+    font-size: xx-large;
+}
+
+h2 {
+    justify-content: center;
+    font-size: x-large;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+}
+  
+.column {
+    flex: 50%;
+}
+
+#storeLectures {
+    margin-left: 3%;
+    border-right: 1px solid black;
+}
+
+#uploadLecturesCol {
+    margin-left: 3%;
+}
+
+textarea{
+    border-color: white;
+}

@@ -1,0 +1,3 @@
+NOTE: For the instructor survey, all mentions of "survey" have been changed to "preference poll" in Qualtrics. The questions and the survey flow has not been changed, which is why the instructor document will remain the same here.  
+[Senior_Design_Group_24_Transcript_Study_Assistant_Student_Survey.pdf](uploads/5f85e372ee824644cc62395fbd4aa58d/Senior_Design_Group_24_Transcript_Study_Assistant_Student_Survey.pdf)  
+[Senior_Design_Group_24_Transcription_Study_Assistant_Instructor_Survey.pdf](uploads/fe133e2ad464b7ba23114e1b5359a3d7/Senior_Design_Group_24_Transcription_Study_Assistant_Instructor_Survey.pdf)
